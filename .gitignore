@@ -1,0 +1,16 @@
+.lake/
+build/
+
+reference-data/reference-db-comparison.csv
+
+*.log
+*.tar
+*.tar.gz
+*.zip
+*.pdf
+
+*~
+*.tmp
+*.bak
+*.orig
+.DS_Store

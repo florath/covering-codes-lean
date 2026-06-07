@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this Lean artifact, please cite the accompanying paper and this repository."
+title: "Formal Foundations and Certified Bounds for q-ary Covering Codes in Lean 4"
+authors:
+  - family-names: "Florath"
+    given-names: "Andreas"
+    orcid: "https://orcid.org/0009-0001-6471-7372"
+repository-code: "https://github.com/florath/covering-codes-lean"
+license: "BSD-3-Clause"
+version: "pre-submission"

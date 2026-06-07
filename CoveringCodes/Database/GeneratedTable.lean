@@ -1,0 +1,456 @@
+import CoveringCodes.Database.GeneratedTable.Chunk0
+import CoveringCodes.Database.GeneratedTable.Chunk1
+import CoveringCodes.Database.GeneratedTable.Chunk2
+import CoveringCodes.Database.GeneratedTable.Chunk3
+import CoveringCodes.Database.GeneratedTable.Chunk4
+import CoveringCodes.Database.GeneratedTable.Chunk5
+import CoveringCodes.Database.GeneratedTable.Chunk6
+import CoveringCodes.Database.GeneratedTable.Chunk7
+import CoveringCodes.Database.GeneratedTable.Chunk8
+import CoveringCodes.Database.GeneratedTable.Chunk9
+import CoveringCodes.Database.GeneratedTable.Chunk10
+import CoveringCodes.Database.GeneratedTable.Chunk11
+import CoveringCodes.Database.GeneratedTable.Chunk12
+import CoveringCodes.Database.GeneratedTable.Chunk13
+import CoveringCodes.Database.GeneratedTable.Chunk14
+import CoveringCodes.Database.GeneratedTable.Chunk15
+import CoveringCodes.Database.GeneratedTable.Chunk16
+import CoveringCodes.Database.GeneratedTable.Chunk17
+import CoveringCodes.Database.GeneratedTable.Chunk18
+import CoveringCodes.Database.GeneratedTable.Chunk19
+import CoveringCodes.Database.GeneratedTable.Chunk20
+import CoveringCodes.Database.GeneratedTable.Chunk21
+import CoveringCodes.Database.GeneratedTable.Chunk22
+import CoveringCodes.Database.GeneratedTable.Chunk23
+import CoveringCodes.Database.GeneratedTable.Chunk24
+import CoveringCodes.Database.GeneratedTable.Chunk25
+import CoveringCodes.Database.GeneratedTable.Chunk26
+import CoveringCodes.Database.GeneratedTable.Chunk27
+import CoveringCodes.Database.GeneratedTable.Chunk28
+import CoveringCodes.Database.GeneratedTable.Chunk29
+import CoveringCodes.Database.GeneratedTable.Chunk30
+import CoveringCodes.Database.GeneratedTable.Chunk31
+import CoveringCodes.Database.GeneratedTable.Chunk32
+import CoveringCodes.Database.GeneratedTable.Chunk33
+import CoveringCodes.Database.GeneratedTable.Chunk34
+import CoveringCodes.Database.GeneratedTable.Chunk35
+import CoveringCodes.Database.GeneratedTable.Chunk36
+import CoveringCodes.Database.GeneratedTable.Chunk37
+import CoveringCodes.Database.GeneratedTable.Chunk38
+import CoveringCodes.Database.GeneratedTable.Chunk39
+import CoveringCodes.Database.GeneratedTable.Chunk40
+import CoveringCodes.Database.GeneratedTable.Chunk41
+import CoveringCodes.Database.GeneratedTable.Chunk42
+import CoveringCodes.Database.GeneratedTable.Chunk43
+import CoveringCodes.Database.GeneratedTable.Chunk44
+import CoveringCodes.Database.GeneratedTable.Chunk45
+import CoveringCodes.Database.GeneratedTable.Chunk46
+import CoveringCodes.Database.GeneratedTable.Chunk47
+import CoveringCodes.Database.GeneratedTable.Chunk48
+import CoveringCodes.Database.GeneratedTable.Chunk49
+import CoveringCodes.Database.GeneratedTable.Chunk50
+import CoveringCodes.Database.GeneratedTable.Chunk51
+import CoveringCodes.Database.GeneratedTable.Chunk52
+import CoveringCodes.Database.GeneratedTable.Chunk53
+import CoveringCodes.Database.GeneratedTable.Chunk54
+import CoveringCodes.Database.GeneratedTable.Chunk55
+import CoveringCodes.Database.GeneratedTable.Chunk56
+import CoveringCodes.Database.GeneratedTable.Chunk57
+import CoveringCodes.Database.GeneratedTable.Chunk58
+import CoveringCodes.Database.GeneratedTable.Chunk59
+import CoveringCodes.Database.GeneratedTable.Chunk60
+import CoveringCodes.Database.GeneratedTable.Chunk61
+import CoveringCodes.Database.GeneratedTable.Chunk62
+import CoveringCodes.Database.GeneratedTable.Chunk63
+import CoveringCodes.Database.GeneratedTable.Chunk64
+import CoveringCodes.Database.GeneratedTable.Chunk65
+import CoveringCodes.Database.GeneratedTable.Chunk66
+import CoveringCodes.Database.GeneratedTable.Chunk67
+import CoveringCodes.Database.GeneratedTable.Chunk68
+import CoveringCodes.Database.GeneratedTable.Chunk69
+import CoveringCodes.Database.GeneratedTable.Chunk70
+import CoveringCodes.Database.GeneratedTable.Chunk71
+import CoveringCodes.Database.GeneratedTable.Chunk72
+import CoveringCodes.Database.GeneratedTable.Chunk73
+import CoveringCodes.Database.GeneratedTable.Chunk74
+import CoveringCodes.Database.GeneratedTable.Chunk75
+import CoveringCodes.Database.GeneratedTable.Chunk76
+import CoveringCodes.Database.GeneratedTable.Chunk77
+import CoveringCodes.Database.GeneratedTable.Chunk78
+import CoveringCodes.Database.GeneratedTable.Chunk79
+import CoveringCodes.Database.GeneratedTable.Chunk80
+import CoveringCodes.Database.GeneratedTable.Chunk81
+import CoveringCodes.Database.GeneratedTable.Chunk82
+import CoveringCodes.Database.GeneratedTable.Chunk83
+import CoveringCodes.Database.GeneratedTable.Chunk84
+import CoveringCodes.Database.GeneratedTable.Chunk85
+import CoveringCodes.Database.GeneratedTable.Chunk86
+import CoveringCodes.Database.GeneratedTable.Chunk87
+import CoveringCodes.Database.GeneratedTable.Chunk88
+import CoveringCodes.Database.GeneratedTable.Chunk89
+import CoveringCodes.Database.GeneratedTable.Chunk90
+import CoveringCodes.Database.GeneratedTable.Chunk91
+import CoveringCodes.Database.GeneratedTable.Chunk92
+import CoveringCodes.Database.GeneratedTable.Chunk93
+import CoveringCodes.Database.GeneratedTable.Chunk94
+import CoveringCodes.Database.GeneratedTable.Chunk95
+import CoveringCodes.Database.GeneratedTable.Chunk96
+import CoveringCodes.Database.GeneratedTable.Chunk97
+import CoveringCodes.Database.GeneratedTable.Chunk98
+import CoveringCodes.Database.GeneratedTable.Chunk99
+import CoveringCodes.Database.GeneratedTable.Chunk100
+import CoveringCodes.Database.GeneratedTable.Chunk101
+import CoveringCodes.Database.GeneratedTable.Chunk102
+import CoveringCodes.Database.GeneratedTable.Chunk103
+import CoveringCodes.Database.GeneratedTable.Chunk104
+import CoveringCodes.Database.GeneratedTable.Chunk105
+import CoveringCodes.Database.GeneratedTable.Chunk106
+import CoveringCodes.Database.GeneratedTable.Chunk107
+import CoveringCodes.Database.GeneratedTable.Chunk108
+import CoveringCodes.Database.GeneratedTable.Chunk109
+import CoveringCodes.Database.GeneratedTable.Chunk110
+import CoveringCodes.Database.GeneratedTable.Chunk111
+import CoveringCodes.Database.GeneratedTable.Chunk112
+import CoveringCodes.Database.GeneratedTable.Chunk113
+import CoveringCodes.Database.GeneratedTable.Chunk114
+import CoveringCodes.Database.GeneratedTable.Chunk115
+import CoveringCodes.Database.GeneratedTable.Chunk116
+import CoveringCodes.Database.GeneratedTable.Chunk117
+import CoveringCodes.Database.GeneratedTable.Chunk118
+import CoveringCodes.Database.GeneratedTable.Chunk119
+import CoveringCodes.Database.GeneratedTable.Chunk120
+import CoveringCodes.Database.GeneratedTable.Chunk121
+import CoveringCodes.Database.GeneratedTable.Chunk122
+import CoveringCodes.Database.GeneratedTable.Chunk123
+import CoveringCodes.Database.GeneratedTable.Chunk124
+import CoveringCodes.Database.GeneratedTable.Chunk125
+import CoveringCodes.Database.GeneratedTable.Chunk126
+import CoveringCodes.Database.GeneratedTable.Chunk127
+import CoveringCodes.Database.GeneratedTable.Chunk128
+import CoveringCodes.Database.GeneratedTable.Chunk129
+import CoveringCodes.Database.GeneratedTable.Chunk130
+import CoveringCodes.Database.GeneratedTable.Chunk131
+import CoveringCodes.Database.GeneratedTable.Chunk132
+import CoveringCodes.Database.GeneratedTable.Chunk133
+import CoveringCodes.Database.GeneratedTable.Chunk134
+import CoveringCodes.Database.GeneratedTable.Chunk135
+import CoveringCodes.Database.GeneratedTable.Chunk136
+import CoveringCodes.Database.GeneratedTable.Chunk137
+import CoveringCodes.Database.GeneratedTable.Chunk138
+import CoveringCodes.Database.GeneratedTable.Chunk139
+import CoveringCodes.Database.GeneratedTable.Chunk140
+import CoveringCodes.Database.GeneratedTable.Chunk141
+import CoveringCodes.Database.GeneratedTable.Chunk142
+import CoveringCodes.Database.GeneratedTable.Chunk143
+import CoveringCodes.Database.GeneratedTable.Chunk144
+import CoveringCodes.Database.GeneratedTable.Chunk145
+import CoveringCodes.Database.GeneratedTable.Chunk146
+import CoveringCodes.Database.GeneratedTable.Chunk147
+import CoveringCodes.Database.GeneratedTable.Chunk148
+import CoveringCodes.Database.GeneratedTable.Chunk149
+import CoveringCodes.Database.GeneratedTable.Chunk150
+import CoveringCodes.Database.GeneratedTable.Chunk151
+import CoveringCodes.Database.GeneratedTable.Chunk152
+import CoveringCodes.Database.GeneratedTable.Chunk153
+import CoveringCodes.Database.GeneratedTable.Chunk154
+import CoveringCodes.Database.GeneratedTable.Chunk155
+import CoveringCodes.Database.GeneratedTable.Chunk156
+import CoveringCodes.Database.GeneratedTable.Chunk157
+import CoveringCodes.Database.GeneratedTable.Chunk158
+import CoveringCodes.Database.GeneratedTable.Chunk159
+import CoveringCodes.Database.GeneratedTable.Chunk160
+import CoveringCodes.Database.GeneratedTable.Chunk161
+import CoveringCodes.Database.GeneratedTable.Chunk162
+import CoveringCodes.Database.GeneratedTable.Chunk163
+import CoveringCodes.Database.GeneratedTable.Chunk164
+import CoveringCodes.Database.GeneratedTable.Chunk165
+import CoveringCodes.Database.GeneratedTable.Chunk166
+import CoveringCodes.Database.GeneratedTable.Chunk167
+import CoveringCodes.Database.GeneratedTable.Chunk168
+import CoveringCodes.Database.GeneratedTable.Chunk169
+import CoveringCodes.Database.GeneratedTable.Chunk170
+import CoveringCodes.Database.GeneratedTable.Chunk171
+import CoveringCodes.Database.GeneratedTable.Chunk172
+import CoveringCodes.Database.GeneratedTable.Chunk173
+import CoveringCodes.Database.GeneratedTable.Chunk174
+import CoveringCodes.Database.GeneratedTable.Chunk175
+import CoveringCodes.Database.GeneratedTable.Chunk176
+import CoveringCodes.Database.GeneratedTable.Chunk177
+import CoveringCodes.Database.GeneratedTable.Chunk178
+import CoveringCodes.Database.GeneratedTable.Chunk179
+import CoveringCodes.Database.GeneratedTable.Chunk180
+import CoveringCodes.Database.GeneratedTable.Chunk181
+import CoveringCodes.Database.GeneratedTable.Chunk182
+import CoveringCodes.Database.GeneratedTable.Chunk183
+import CoveringCodes.Database.GeneratedTable.Chunk184
+import CoveringCodes.Database.GeneratedTable.Chunk185
+import CoveringCodes.Database.GeneratedTable.Chunk186
+import CoveringCodes.Database.GeneratedTable.Chunk187
+import CoveringCodes.Database.GeneratedTable.Chunk188
+import CoveringCodes.Database.GeneratedTable.Chunk189
+import CoveringCodes.Database.GeneratedTable.Chunk190
+import CoveringCodes.Database.GeneratedTable.Chunk191
+import CoveringCodes.Database.GeneratedTable.Chunk192
+import CoveringCodes.Database.GeneratedTable.Chunk193
+import CoveringCodes.Database.GeneratedTable.Chunk194
+import CoveringCodes.Database.GeneratedTable.Chunk195
+import CoveringCodes.Database.GeneratedTable.Chunk196
+import CoveringCodes.Database.GeneratedTable.Chunk197
+import CoveringCodes.Database.GeneratedTable.Chunk198
+import CoveringCodes.Database.GeneratedTable.Chunk199
+import CoveringCodes.Database.GeneratedTable.Chunk200
+import CoveringCodes.Database.GeneratedTable.Chunk201
+import CoveringCodes.Database.GeneratedTable.Chunk202
+import CoveringCodes.Database.GeneratedTable.Chunk203
+import CoveringCodes.Database.GeneratedTable.Chunk204
+import CoveringCodes.Database.GeneratedTable.Chunk205
+import CoveringCodes.Database.GeneratedTable.Chunk206
+import CoveringCodes.Database.GeneratedTable.Chunk207
+import CoveringCodes.Database.GeneratedTable.Chunk208
+import CoveringCodes.Database.GeneratedTable.Chunk209
+import CoveringCodes.Database.GeneratedTable.Chunk210
+import CoveringCodes.Database.GeneratedTable.Chunk211
+
+namespace CoveringCodes.Database
+
+-- Auto-generated by `lake -KproofMode=native exe table_gen`. Do not edit manually.
+-- Re-run `lake -KproofMode=native exe table_gen` to regenerate after source changes.
+-- 52822 entries in 212 chunks of ≤250.
+
+-- Closure settings:
+--   computeQMax = 21
+--   computeNMax = 48
+--   computeRMax = 48
+--   maxPasses   = 52822
+--   doneAtPass  = 46
+--   chunkSize   = 250
+
+def precomputedTable : Array AnyBoundEntry :=
+  precomputedTable_chunk_0 ++
+  precomputedTable_chunk_1 ++
+  precomputedTable_chunk_2 ++
+  precomputedTable_chunk_3 ++
+  precomputedTable_chunk_4 ++
+  precomputedTable_chunk_5 ++
+  precomputedTable_chunk_6 ++
+  precomputedTable_chunk_7 ++
+  precomputedTable_chunk_8 ++
+  precomputedTable_chunk_9 ++
+  precomputedTable_chunk_10 ++
+  precomputedTable_chunk_11 ++
+  precomputedTable_chunk_12 ++
+  precomputedTable_chunk_13 ++
+  precomputedTable_chunk_14 ++
+  precomputedTable_chunk_15 ++
+  precomputedTable_chunk_16 ++
+  precomputedTable_chunk_17 ++
+  precomputedTable_chunk_18 ++
+  precomputedTable_chunk_19 ++
+  precomputedTable_chunk_20 ++
+  precomputedTable_chunk_21 ++
+  precomputedTable_chunk_22 ++
+  precomputedTable_chunk_23 ++
+  precomputedTable_chunk_24 ++
+  precomputedTable_chunk_25 ++
+  precomputedTable_chunk_26 ++
+  precomputedTable_chunk_27 ++
+  precomputedTable_chunk_28 ++
+  precomputedTable_chunk_29 ++
+  precomputedTable_chunk_30 ++
+  precomputedTable_chunk_31 ++
+  precomputedTable_chunk_32 ++
+  precomputedTable_chunk_33 ++
+  precomputedTable_chunk_34 ++
+  precomputedTable_chunk_35 ++
+  precomputedTable_chunk_36 ++
+  precomputedTable_chunk_37 ++
+  precomputedTable_chunk_38 ++
+  precomputedTable_chunk_39 ++
+  precomputedTable_chunk_40 ++
+  precomputedTable_chunk_41 ++
+  precomputedTable_chunk_42 ++
+  precomputedTable_chunk_43 ++
+  precomputedTable_chunk_44 ++
+  precomputedTable_chunk_45 ++
+  precomputedTable_chunk_46 ++
+  precomputedTable_chunk_47 ++
+  precomputedTable_chunk_48 ++
+  precomputedTable_chunk_49 ++
+  precomputedTable_chunk_50 ++
+  precomputedTable_chunk_51 ++
+  precomputedTable_chunk_52 ++
+  precomputedTable_chunk_53 ++
+  precomputedTable_chunk_54 ++
+  precomputedTable_chunk_55 ++
+  precomputedTable_chunk_56 ++
+  precomputedTable_chunk_57 ++
+  precomputedTable_chunk_58 ++
+  precomputedTable_chunk_59 ++
+  precomputedTable_chunk_60 ++
+  precomputedTable_chunk_61 ++
+  precomputedTable_chunk_62 ++
+  precomputedTable_chunk_63 ++
+  precomputedTable_chunk_64 ++
+  precomputedTable_chunk_65 ++
+  precomputedTable_chunk_66 ++
+  precomputedTable_chunk_67 ++
+  precomputedTable_chunk_68 ++
+  precomputedTable_chunk_69 ++
+  precomputedTable_chunk_70 ++
+  precomputedTable_chunk_71 ++
+  precomputedTable_chunk_72 ++
+  precomputedTable_chunk_73 ++
+  precomputedTable_chunk_74 ++
+  precomputedTable_chunk_75 ++
+  precomputedTable_chunk_76 ++
+  precomputedTable_chunk_77 ++
+  precomputedTable_chunk_78 ++
+  precomputedTable_chunk_79 ++
+  precomputedTable_chunk_80 ++
+  precomputedTable_chunk_81 ++
+  precomputedTable_chunk_82 ++
+  precomputedTable_chunk_83 ++
+  precomputedTable_chunk_84 ++
+  precomputedTable_chunk_85 ++
+  precomputedTable_chunk_86 ++
+  precomputedTable_chunk_87 ++
+  precomputedTable_chunk_88 ++
+  precomputedTable_chunk_89 ++
+  precomputedTable_chunk_90 ++
+  precomputedTable_chunk_91 ++
+  precomputedTable_chunk_92 ++
+  precomputedTable_chunk_93 ++
+  precomputedTable_chunk_94 ++
+  precomputedTable_chunk_95 ++
+  precomputedTable_chunk_96 ++
+  precomputedTable_chunk_97 ++
+  precomputedTable_chunk_98 ++
+  precomputedTable_chunk_99 ++
+  precomputedTable_chunk_100 ++
+  precomputedTable_chunk_101 ++
+  precomputedTable_chunk_102 ++
+  precomputedTable_chunk_103 ++
+  precomputedTable_chunk_104 ++
+  precomputedTable_chunk_105 ++
+  precomputedTable_chunk_106 ++
+  precomputedTable_chunk_107 ++
+  precomputedTable_chunk_108 ++
+  precomputedTable_chunk_109 ++
+  precomputedTable_chunk_110 ++
+  precomputedTable_chunk_111 ++
+  precomputedTable_chunk_112 ++
+  precomputedTable_chunk_113 ++
+  precomputedTable_chunk_114 ++
+  precomputedTable_chunk_115 ++
+  precomputedTable_chunk_116 ++
+  precomputedTable_chunk_117 ++
+  precomputedTable_chunk_118 ++
+  precomputedTable_chunk_119 ++
+  precomputedTable_chunk_120 ++
+  precomputedTable_chunk_121 ++
+  precomputedTable_chunk_122 ++
+  precomputedTable_chunk_123 ++
+  precomputedTable_chunk_124 ++
+  precomputedTable_chunk_125 ++
+  precomputedTable_chunk_126 ++
+  precomputedTable_chunk_127 ++
+  precomputedTable_chunk_128 ++
+  precomputedTable_chunk_129 ++
+  precomputedTable_chunk_130 ++
+  precomputedTable_chunk_131 ++
+  precomputedTable_chunk_132 ++
+  precomputedTable_chunk_133 ++
+  precomputedTable_chunk_134 ++
+  precomputedTable_chunk_135 ++
+  precomputedTable_chunk_136 ++
+  precomputedTable_chunk_137 ++
+  precomputedTable_chunk_138 ++
+  precomputedTable_chunk_139 ++
+  precomputedTable_chunk_140 ++
+  precomputedTable_chunk_141 ++
+  precomputedTable_chunk_142 ++
+  precomputedTable_chunk_143 ++
+  precomputedTable_chunk_144 ++
+  precomputedTable_chunk_145 ++
+  precomputedTable_chunk_146 ++
+  precomputedTable_chunk_147 ++
+  precomputedTable_chunk_148 ++
+  precomputedTable_chunk_149 ++
+  precomputedTable_chunk_150 ++
+  precomputedTable_chunk_151 ++
+  precomputedTable_chunk_152 ++
+  precomputedTable_chunk_153 ++
+  precomputedTable_chunk_154 ++
+  precomputedTable_chunk_155 ++
+  precomputedTable_chunk_156 ++
+  precomputedTable_chunk_157 ++
+  precomputedTable_chunk_158 ++
+  precomputedTable_chunk_159 ++
+  precomputedTable_chunk_160 ++
+  precomputedTable_chunk_161 ++
+  precomputedTable_chunk_162 ++
+  precomputedTable_chunk_163 ++
+  precomputedTable_chunk_164 ++
+  precomputedTable_chunk_165 ++
+  precomputedTable_chunk_166 ++
+  precomputedTable_chunk_167 ++
+  precomputedTable_chunk_168 ++
+  precomputedTable_chunk_169 ++
+  precomputedTable_chunk_170 ++
+  precomputedTable_chunk_171 ++
+  precomputedTable_chunk_172 ++
+  precomputedTable_chunk_173 ++
+  precomputedTable_chunk_174 ++
+  precomputedTable_chunk_175 ++
+  precomputedTable_chunk_176 ++
+  precomputedTable_chunk_177 ++
+  precomputedTable_chunk_178 ++
+  precomputedTable_chunk_179 ++
+  precomputedTable_chunk_180 ++
+  precomputedTable_chunk_181 ++
+  precomputedTable_chunk_182 ++
+  precomputedTable_chunk_183 ++
+  precomputedTable_chunk_184 ++
+  precomputedTable_chunk_185 ++
+  precomputedTable_chunk_186 ++
+  precomputedTable_chunk_187 ++
+  precomputedTable_chunk_188 ++
+  precomputedTable_chunk_189 ++
+  precomputedTable_chunk_190 ++
+  precomputedTable_chunk_191 ++
+  precomputedTable_chunk_192 ++
+  precomputedTable_chunk_193 ++
+  precomputedTable_chunk_194 ++
+  precomputedTable_chunk_195 ++
+  precomputedTable_chunk_196 ++
+  precomputedTable_chunk_197 ++
+  precomputedTable_chunk_198 ++
+  precomputedTable_chunk_199 ++
+  precomputedTable_chunk_200 ++
+  precomputedTable_chunk_201 ++
+  precomputedTable_chunk_202 ++
+  precomputedTable_chunk_203 ++
+  precomputedTable_chunk_204 ++
+  precomputedTable_chunk_205 ++
+  precomputedTable_chunk_206 ++
+  precomputedTable_chunk_207 ++
+  precomputedTable_chunk_208 ++
+  precomputedTable_chunk_209 ++
+  precomputedTable_chunk_210 ++
+  precomputedTable_chunk_211
+
+def lookupPrecomputed? (q n r : Nat) : Option (CertifiedBoundEntry q n r) :=
+  lookupEntry? precomputedTable q n r
+
+def lookupPrecomputed (q n r : Nat) : CertifiedBoundEntry q n r :=
+  match lookupPrecomputed? q n r with
+  | some e => e
+  | none =>
+    -- Outside the precomputed range, fall back to primitive bounds only.
+    -- This fallback intentionally does not run the bounded closure engine.
+    { lower      := primitiveLower q n r
+      upper      := primitiveUpper q n r
+      lowerTrace := .primitive (primitiveLowerName q n r) (primitiveLower_valid q n r)
+      upperTrace := .primitive (primitiveUpperName q n r) (primitiveUpper_valid q n r) }
+
+end CoveringCodes.Database

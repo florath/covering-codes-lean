@@ -1,0 +1,1262 @@
+% Shared bibliography for covering-code reference data.
+%
+% This file is both a BibTeX key registry and a literature-audit log for the
+% normalized reference-data CSV files and Lean primitive provenance labels.
+%
+% Audit note vocabulary:
+%   Result claim checked: the source title, abstract, paper table, or K{\'e}ri update
+%     page explicitly states the relevant bound or theorem scope.
+%   Metadata found; source label checked: authoritative metadata was found and
+%     the K{\'e}ri non-mixed table label was matched, but the proof and every
+%     individual CSV row were not independently rederived in this pass.
+%   K{\'e}ri update-page reference only: the K{\'e}ri update page gives the attribution,
+%     but no independent paper or stable bibliographic record was found.
+%   Rule: algorithmic, structural, or elementary provenance key, not literature.
+%
+% Key prefixes:
+%   lit_  external literature
+%   lean_ repository-local Lean source
+%   rule_ algorithmic, structural, or elementary rule
+
+@misc{rule_radius_monotonicity,
+  key = {rule_radius_monotonicity},
+  title = {Upper-bound radius monotonicity},
+  note = {Algorithmic proof-rule provenance key for an upper-bound radius monotonicity step.},
+}
+
+@misc{rule_puncturing,
+  key = {rule_puncturing},
+  title = {Upper-bound puncturing},
+  note = {Algorithmic proof-rule provenance key for an upper-bound puncturing step.},
+}
+
+@misc{rule_alphabet_projection,
+  key = {rule_alphabet_projection},
+  title = {Upper-bound alphabet projection},
+  note = {Algorithmic proof-rule provenance key for an upper-bound alphabet projection step.},
+}
+
+@misc{rule_free_lengthening,
+  key = {rule_free_lengthening},
+  title = {Upper-bound free lengthening},
+  note = {Algorithmic proof-rule provenance key for an upper-bound free lengthening step.},
+}
+
+@misc{rule_dummy_coordinate_lengthening,
+  key = {rule_dummy_coordinate_lengthening},
+  title = {Upper-bound dummy-coordinate lengthening},
+  note = {Algorithmic proof-rule provenance key for an upper-bound dummy-coordinate lengthening step.},
+}
+
+@misc{rule_alphabet_expansion,
+  key = {rule_alphabet_expansion},
+  title = {Upper-bound alphabet expansion},
+  note = {Algorithmic proof-rule provenance key for an upper-bound alphabet expansion step.},
+}
+
+@misc{rule_direct_product,
+  key = {rule_direct_product},
+  title = {Upper-bound direct product},
+  note = {Algorithmic proof-rule provenance key for an upper-bound direct product step.},
+}
+
+@misc{rule_block_grouping,
+  key = {rule_block_grouping},
+  title = {Upper-bound block grouping},
+  note = {Algorithmic proof-rule provenance key for an upper-bound block grouping step.},
+}
+
+@misc{rule_block_ungrouping,
+  key = {rule_block_ungrouping},
+  title = {Upper-bound block ungrouping},
+  note = {Algorithmic proof-rule provenance key for an upper-bound block ungrouping step.},
+}
+
+@misc{rule_radius_back_propagation,
+  key = {rule_radius_back_propagation},
+  title = {Lower-bound radius back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound radius back-propagation step.},
+}
+
+@misc{rule_length_back_propagation,
+  key = {rule_length_back_propagation},
+  title = {Lower-bound length back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound length back-propagation step.},
+}
+
+@misc{rule_alphabet_back_propagation,
+  key = {rule_alphabet_back_propagation},
+  title = {Lower-bound alphabet back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound alphabet back-propagation step.},
+}
+
+@misc{rule_dummy_coordinate_back_propagation,
+  key = {rule_dummy_coordinate_back_propagation},
+  title = {Lower-bound dummy-coordinate back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound dummy-coordinate back-propagation step.},
+}
+
+@misc{rule_free_lengthening_lower_back_propagation,
+  key = {rule_free_lengthening_lower_back_propagation},
+  title = {Lower-bound free-lengthening back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound free-lengthening back-propagation step.},
+}
+
+@misc{rule_lower_direct_product_left,
+  key = {rule_lower_direct_product_left},
+  title = {Lower-bound direct-product left factor},
+  note = {Algorithmic proof-rule provenance key for a lower-bound direct-product left-factor step.},
+}
+
+@misc{rule_lower_direct_product_right,
+  key = {rule_lower_direct_product_right},
+  title = {Lower-bound direct-product right factor},
+  note = {Algorithmic proof-rule provenance key for a lower-bound direct-product right-factor step.},
+}
+
+@misc{rule_lower_block_group_back_propagation,
+  key = {rule_lower_block_group_back_propagation},
+  title = {Lower-bound block-group back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound block-group back-propagation step.},
+}
+
+@misc{rule_lower_block_ungroup_back_propagation,
+  key = {rule_lower_block_ungroup_back_propagation},
+  title = {Lower-bound block-ungroup back-propagation},
+  note = {Algorithmic proof-rule provenance key for a lower-bound block-ungroup back-propagation step.},
+}
+
+@misc{rule_adjoint_code_constructions,
+  key = {rule_adjoint_code_constructions},
+  title = {Adjoint-code constructions},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule/reference-table construction label; the K{\'e}ri q >= 6 non-mixed table uses this as an upper-bound source label. No independent paper was identified in this pass.},
+}
+
+@misc{rule_amalgamated_direct_sum,
+  key = {rule_amalgamated_direct_sum},
+  title = {Amalgamated direct-sum construction},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: rule; K{\'e}ri update page explicitly attributes several upper bounds to an amalgamated direct sum construction. This is an algorithmic construction label, not a literature entry.},
+}
+
+@misc{lit_bartoli_davydov_marcugini_pambianco_2020,
+  author = {Bartoli, Daniele and Davydov, Alexander A. and Marcugini, Stefano and Pambianco, Fernanda},
+  title = {Tables, Bounds and Graphics of Short Linear Codes with Covering Radius 3 and Codimension 4 and 5},
+  year = {2020},
+  doi = {10.48550/arXiv.1712.07078},
+  url = {https://arxiv.org/abs/1712.07078},
+  eprint = {1712.07078},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.IT},
+  note = {Audit status: report-import, table_or_theorem_read; deep-research report used arXiv/ar5iv tables for documentation-only upper-bound citations. Repository pass verified metadata and imported only rows where the reported linear-code length directly matches the CSV length.},
+}
+
+@misc{lit_bertolo_di_pasquale_santisi_2004_2006,
+  author = {Bertolo, Riccardo and Di Pasquale, Franco and Santisi, Francesco and others},
+  title = {Sistemi per totocalcio, totip, superenalotto, totogol},
+  year = {2004},
+  url = {http://www.toto1x2.it},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri bibliography entry [6] lists this web source, and the K{\'e}ri update page gives specific non-mixed upper-bound attributions from 2004--2006. No independent stable paper record was found.},
+}
+
+@misc{lit_bertolo_di_pasquale_santisi_2005_2006,
+  author = {Bertolo, Riccardo and Di Pasquale, Franco and Santisi, Francesco},
+  title = {Sistemi per totocalcio, totip, superenalotto, totogol},
+  year = {2005},
+  url = {http://www.toto1x2.it},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update entries in 2005--2006 explicitly attribute the relevant ternary non-mixed upper bounds to these authors. No independent stable paper record was found.},
+}
+
+@misc{lit_bertolo_di_pasquale_santisi_2006,
+  author = {Bertolo, Riccardo and Di Pasquale, Franco and Santisi, Francesco},
+  title = {Sistemi per totocalcio, totip, superenalotto, totogol},
+  year = {2006},
+  url = {http://www.toto1x2.it},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page attributes K2(14,2) <= 248 to these authors in 2006. No independent stable paper record was found.},
+}
+
+@article{lit_bertolo_ostergard_weakly_2004,
+  author = {Bertolo, Riccardo and {\"O}sterg{\aa}rd, Patric R. J. and Weakley, William D.},
+  title = {An Updated Table of Binary/Ternary Mixed Covering Codes},
+  journal = {Journal of Combinatorial Designs},
+  volume = {12},
+  number = {3},
+  pages = {157--176},
+  year = {2004},
+  doi = {10.1002/jcd.20008},
+  url = {https://doi.org/10.1002/jcd.20008},
+  issn = {1063-8539, 1520-6610},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. The source is a mixed-code table paper; only its non-mixed special-case labels are used here. Individual bounds were not independently rederived.},
+}
+
+@article{lit_bhandari_chanduka_lal_1998,
+  author = {Bhandari, Mahesh C. and Chanduka, K. K. P. and Lal, Arbind K.},
+  title = {On Lower Bounds for Covering Codes},
+  journal = {Designs, Codes and Cryptography},
+  volume = {15},
+  number = {3},
+  pages = {237--243},
+  year = {1998},
+  doi = {10.1023/A:1008364924033},
+  url = {https://doi.org/10.1023/A:1008364924033},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_bhandari_durairajan_1996,
+  author = {Bhandari, Mahesh C. and Durairajan, C.},
+  title = {A Note on Bounds for q-ary Covering Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {42},
+  number = {5},
+  pages = {1640--1642},
+  year = {1996},
+  doi = {10.1109/18.532916},
+  url = {https://doi.org/10.1109/18.532916},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: result claim checked at theorem-scope level; K{\'e}ri update page cites special cases of this paper product-type lower-bound inequality. Individual CSV rows were not rederived.},
+}
+
+@article{lit_blass_litsyn_1998,
+  author = {Blass, U. and Litsyn, S.},
+  title = {Several New Lower Bounds on the Size of Codes with Covering Radius One},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {44},
+  number = {5},
+  pages = {1998--2002},
+  year = {1998},
+  doi = {10.1109/18.705582},
+  url = {https://doi.org/10.1109/18.705582},
+  issn = {0018-9448},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{lit_blass_litsyn_1998_and_1999,
+  author = {Blass, U. and Litsyn, S.},
+  title = {Composite K{\'e}ri label for Blass--Litsyn lower-bound papers},
+  year = {1998},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: composite reference; K{\'e}ri bibliography lists both Several new lower bounds for football pool systems, Ars Combinatoria 50 (1998), 297--302, and The smallest covering code of length 8 and radius 2 has 12 words, Ars Combinatoria 52 (1999), 309--318. Individual CSV rows were not independently rederived.},
+}
+
+@article{lit_blokhuis_lam_1984,
+  author = {Blokhuis, A. and Lam, C. W. H.},
+  title = {More Coverings by Rook Domains},
+  journal = {Journal of Combinatorial Theory, Series A},
+  volume = {36},
+  number = {2},
+  pages = {240--244},
+  year = {1984},
+  doi = {10.1016/0097-3165(84)90010-4},
+  url = {https://doi.org/10.1016/0097-3165(84)90010-4},
+  issn = {0097-3165},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@incollection{lit_brualdi_pless_1990,
+  author = {Brualdi, Richard A. and Pless, Vera S.},
+  title = {On the Length of Codes with a Given Covering Radius},
+  booktitle = {Coding Theory and Design Theory},
+  series = {The IMA Volumes in Mathematics and Its Applications},
+  pages = {9--15},
+  publisher = {Springer},
+  year = {1990},
+  doi = {10.1007/978-1-4613-8994-1_2},
+  url = {https://doi.org/10.1007/978-1-4613-8994-1_2},
+  issn = {0940-6573},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_chen_honkala_1990,
+  author = {Chen, W. and Honkala, Iiro S.},
+  title = {Lower Bounds for q-ary Covering Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {36},
+  number = {3},
+  pages = {664--671},
+  year = {1990},
+  doi = {10.1109/18.54887},
+  url = {https://doi.org/10.1109/18.54887},
+  issn = {0018-9448},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri q-ary tables and update page for improved sphere-covering-bound context. Individual rows were not independently rederived.},
+}
+
+@book{lit_cohen_honkala_litsyn_lobstein_1997,
+  author = {Cohen, G{\'e}rard and Honkala, Iiro and Litsyn, Simon and Lobstein, Antoine},
+  title = {Covering Codes},
+  series = {North-Holland Mathematical Library},
+  volume = {54},
+  publisher = {North-Holland},
+  address = {Amsterdam},
+  year = {1997},
+  url = {https://shop.elsevier.com/books/covering-codes/cohen/978-0-444-82511-7},
+  issn = {0924-6509},
+  isbn = {978-0-444-82511-7},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. This is a monograph/table source; individual CSV rows were not independently rederived.},
+}
+
+@article{lit_cohen_lobstein_sloane_1986,
+  author = {Cohen, G{\'e}rard D. and Lobstein, Antoine C. and Sloane, N. J. A.},
+  title = {Further Results on the Covering Radius of Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {32},
+  number = {5},
+  pages = {680--694},
+  year = {1986},
+  doi = {10.1109/TIT.1986.1057227},
+  url = {https://doi.org/10.1109/TIT.1986.1057227},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_davydov_ostergard_2000,
+  author = {Davydov, Alexander A. and {\"O}sterg{\aa}rd, Patric R. J.},
+  title = {New Linear Codes with Covering Radius 2 and Odd Basis},
+  journal = {Designs, Codes and Cryptography},
+  volume = {16},
+  number = {1},
+  pages = {29--39},
+  year = {1999},
+  doi = {10.1023/A:1008370224461},
+  url = {https://doi.org/10.1023/A:1008370224461},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: result claim checked via K{\'e}ri update page; K{\'e}ri label says Davydov--{\"O}sterg{\aa}rd 2000, while the identified published article is dated 1999. The specific K5(10,3) implication was not independently rederived.},
+}
+
+@misc{lit_davydov_marcugini_pambianco_2024,
+  author = {Davydov, Alexander A. and Marcugini, Stefano and Pambianco, Fernanda},
+  title = {Further Results on Covering Codes with Radius R and Codimension tR + 1},
+  year = {2024},
+  doi = {10.48550/arXiv.2310.02715},
+  url = {https://arxiv.org/abs/2310.02715},
+  eprint = {2310.02715},
+  archivePrefix = {arXiv},
+  primaryClass = {math.CO},
+  note = {Audit status: needs_followup, abstract_only; deep-research report identified asymptotic upper-bound families for length functions, but no CSV-safe finite q <= 21 row was imported.},
+}
+
+@article{lit_di_pasquale_ostergard_2003,
+  author = {Di Pasquale, Franco and {\"O}sterg{\aa}rd, Patric R. J.},
+  title = {An Improved Upper Bound for the Football Pool Problem for Nine Matches},
+  journal = {Journal of Combinatorial Theory, Series A},
+  volume = {102},
+  number = {1},
+  pages = {204--206},
+  year = {2003},
+  doi = {10.1016/S0097-3165(03)00010-4},
+  url = {https://doi.org/10.1016/S0097-3165(03)00010-4},
+  issn = {0097-3165},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{rule_direct_sum,
+  key = {rule_direct_sum},
+  title = {Direct-sum construction},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule; K{\'e}ri q >= 6 table uses direct sum as an upper-bound construction label. No external bibliographic source is attached to this key.},
+}
+
+@article{lit_etzion_greenberg_1993,
+  author = {Etzion, Tuvi and Greenberg, G. and Honkala, Iiro S.},
+  title = {Normal and Abnormal Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {39},
+  number = {4},
+  pages = {1453--1456},
+  year = {1993},
+  doi = {10.1109/18.243469},
+  url = {https://doi.org/10.1109/18.243469},
+  issn = {0018-9448},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@phdthesis{lit_gijswijt_2005,
+  author = {Gijswijt, Dion C.},
+  title = {Matrix Algebras and Semidefinite Programming Techniques for Codes},
+  school = {University of Amsterdam},
+  year = {2005},
+  url = {https://hdl.handle.net/11245/1.247328},
+  note = {Audit status: result claim checked at thesis-scope level; the thesis states new lower bounds for non-binary covering codes and is the K{\'e}ri q=4,5 table source label. Individual CSV rows were not independently rederived.},
+}
+
+@misc{lit_gijswijt_polak_2025,
+  author = {Gijswijt, Dion and Polak, Sven},
+  title = {Semidefinite Lower Bounds for Covering Codes},
+  year = {2025},
+  doi = {10.48550/arXiv.2504.01932},
+  url = {https://arxiv.org/abs/2504.01932},
+  eprint = {2504.01932},
+  archivePrefix = {arXiv},
+  primaryClass = {math.CO},
+  note = {Audit status: table_or_theorem_read; repository pass downloaded the arXiv PDF and scanned ar5iv/PDF Tables 1--3. All in-range lower-bound improvements from those tables were imported into the post-Keri CSV. The two binary radius-one SDP values that the paper says were surpassed by Wu--Chen remain cited to Wu--Chen instead.},
+}
+
+@article{lit_gommard_plagne_2003,
+  author = {Gommard, R. L. G. and Plagne, Alain},
+  title = {K5(7,3) <= 100},
+  journal = {Journal of Combinatorial Theory, Series A},
+  volume = {104},
+  number = {2},
+  pages = {365--370},
+  year = {2003},
+  doi = {10.1016/j.jcta.2003.08.004},
+  url = {https://doi.org/10.1016/j.jcta.2003.08.004},
+  issn = {0097-3165},
+  note = {Audit status: result claim checked; the paper title directly states the relevant K5(7,3) upper bound used in the CSV.},
+}
+
+@article{lit_graham_sloane_1985,
+  author = {Graham, R. L. and Sloane, N. J. A.},
+  title = {On the Covering Radius of Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {31},
+  number = {3},
+  pages = {385--401},
+  year = {1985},
+  doi = {10.1109/TIT.1985.1057039},
+  url = {https://doi.org/10.1109/TIT.1985.1057039},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_haas_2000,
+  author = {Haas, Wolfgang},
+  title = {Lower Bounds for q-ary Codes of Covering Radius One},
+  journal = {Discrete Mathematics},
+  volume = {219},
+  number = {1--3},
+  pages = {97--106},
+  year = {2000},
+  doi = {10.1016/S0012-365X(99)00338-6},
+  url = {https://doi.org/10.1016/S0012-365X(99)00338-6},
+  issn = {0012-365X},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@article{lit_haas_2002,
+  author = {Haas, Wolfgang},
+  title = {Binary and Ternary Codes of Covering Radius One: Some New Lower Bounds},
+  journal = {Discrete Mathematics},
+  volume = {256},
+  number = {1--2},
+  pages = {161--178},
+  year = {2002},
+  doi = {10.1016/S0012-365X(00)00461-1},
+  url = {https://doi.org/10.1016/S0012-365X(00)00461-1},
+  issn = {0012-365X},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{lit_haas_2006,
+  author = {Haas, Wolfgang},
+  title = {K{\'e}ri table label for Haas covering-code lower bounds, 2006},
+  year = {2006},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: mixed certainty; K{\'e}ri update page attributes K3(7,1) >= 156 and K3(8,1) >= 402 to Haas in 2006, later published as Lower bounds for the football pool problem for 7 and 8 matches, Electron. J. Combin. 14 (2007), R27, doi:10.37236/945. The quaternary label also points to Haas lower-bound work later published in Ars Combinatoria 99 (2011). Individual rows were not independently rederived.},
+}
+
+@phdthesis{lit_haas_2007_2008,
+  author = {Haas, Wolfgang},
+  title = {The Covering Excess Method in the Theory of Covering Codes},
+  school = {Albert-Ludwigs-Universitat Freiburg},
+  year = {2008},
+  url = {https://freidok.uni-freiburg.de/data/6264},
+  note = {Audit status: result claim checked at source-scope level; K{\'e}ri update page attributes improved binary lower bounds to Haas, and the dissertation/source abstract covers the covering-excess method and binary lower bounds. Individual CSV rows were not independently rederived.},
+}
+
+@article{lit_haas_halupczok_schlage_puchta_2009,
+  author = {Haas, Wolfgang and Halupczok, Immanuel and Schlage-Puchta, Jan-Christoph},
+  title = {Lower Bounds for q-ary Codes with Large Covering Radius},
+  journal = {The Electronic Journal of Combinatorics},
+  volume = {16},
+  number = {1},
+  pages = {R133},
+  year = {2009},
+  doi = {10.37236/222},
+  url = {https://doi.org/10.37236/222},
+  issn = {1077-8926},
+  note = {Audit status: result claim checked at table/theorem-scope level; the paper states lower bounds for Kq(n,R) with large covering radius and includes tables of new lower bounds. Individual CSV rows were not rederived.},
+}
+
+@article{lit_haas_schlage_puchta_quistorff_2008_2009,
+  author = {Haas, Wolfgang and Quistorff, J{\"o}rn and Schlage-Puchta, Jan-Christoph},
+  title = {Lower Bounds on Covering Codes via Partition Matrices},
+  journal = {Journal of Combinatorial Theory, Series A},
+  volume = {116},
+  number = {2},
+  pages = {478--484},
+  year = {2009},
+  doi = {10.1016/j.jcta.2008.06.008},
+  url = {https://doi.org/10.1016/j.jcta.2008.06.008},
+  issn = {0097-3165},
+  note = {Audit status: result claim checked at theorem-scope level; the paper proves partition-matrix lower bounds and a recursive lower bound. Individual CSV rows were not independently rederived.},
+}
+
+@article{lit_habsieger_1996,
+  author = {Habsieger, Laurent},
+  title = {Ternary Covering Codes},
+  journal = {The Electronic Journal of Combinatorics},
+  volume = {3},
+  number = {2},
+  year = {1996},
+  doi = {10.37236/1281},
+  url = {https://doi.org/10.37236/1281},
+  issn = {1077-8926},
+  note = {Audit status: result claim checked at paper-scope level; the paper abstract states improved lower bounds for ternary 1-covering codes and some larger-radius cases. Individual CSV rows were not rederived.},
+}
+
+@article{lit_habsieger_1997,
+  author = {Habsieger, Laurent},
+  title = {Binary Codes with Covering Radius One: Some New Lower Bounds},
+  journal = {Discrete Mathematics},
+  volume = {176},
+  number = {1--3},
+  pages = {115--130},
+  year = {1997},
+  doi = {10.1016/S0012-365X(96)00290-7},
+  url = {https://doi.org/10.1016/S0012-365X(96)00290-7},
+  issn = {0012-365X},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_habsieger_plagne_2000,
+  author = {Habsieger, Laurent and Plagne, Alain},
+  title = {New Lower Bounds for Covering Codes},
+  journal = {Discrete Mathematics},
+  volume = {222},
+  number = {1--3},
+  pages = {125--149},
+  year = {2000},
+  doi = {10.1016/S0012-365X(00)00011-X},
+  url = {https://doi.org/10.1016/S0012-365X(00)00011-X},
+  issn = {0012-365X},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_hamalainen_honkala_kaikkonen_litsyn_1993,
+  author = {H{\"a}m{\"a}l{\"a}inen, H. O. and Honkala, Iiro S. and Kaikkonen, M. K. and Litsyn, S. N.},
+  title = {Bounds for Binary Multiple Covering Codes},
+  journal = {Designs, Codes and Cryptography},
+  volume = {3},
+  number = {3},
+  pages = {251--275},
+  year = {1993},
+  doi = {10.1007/BF01388486},
+  url = {https://doi.org/10.1007/BF01388486},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_hamalainen_honkala_litsyn_ostergard_1995,
+  author = {H{\"a}m{\"a}l{\"a}inen, H. O. and Honkala, Iiro S. and Litsyn, S. N. and {\"O}sterg{\aa}rd, Patric R. J.},
+  title = {Bounds for Binary Codes that are Multiple Coverings of the Farthest-Off Points},
+  journal = {SIAM Journal on Discrete Mathematics},
+  volume = {8},
+  number = {2},
+  pages = {196--207},
+  year = {1995},
+  doi = {10.1137/S0895480193252100},
+  url = {https://doi.org/10.1137/S0895480193252100},
+  issn = {0895-4801, 1095-7146},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_hamalainen_rankinen_1991,
+  author = {H{\"a}m{\"a}l{\"a}inen, H. O. and Rankinen, S.},
+  title = {Upper Bounds for Football Pool Problems and Mixed Covering Codes},
+  journal = {Journal of Combinatorial Theory, Series A},
+  volume = {56},
+  number = {1},
+  pages = {84--95},
+  year = {1991},
+  doi = {10.1016/0097-3165(91)90024-B},
+  url = {https://doi.org/10.1016/0097-3165(91)90024-B},
+  issn = {0097-3165},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary/ternary tables. Only non-mixed rows are used here; individual upper-bound rows were not independently rederived.},
+}
+
+@misc{rule_hamming_code,
+  key = {rule_hamming_code},
+  title = {Hamming-code construction},
+  note = {Audit status: rule; exact values are attributed to Hamming/perfect-code constructions in the K{\'e}ri non-mixed tables. This is a standard construction label, not a literature entry.},
+}
+
+@article{lit_honkala_1991,
+  author = {Honkala, Iiro S.},
+  title = {Modified Bounds for Covering Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {37},
+  number = {2},
+  pages = {351--365},
+  year = {1991},
+  doi = {10.1109/18.75253},
+  url = {https://doi.org/10.1109/18.75253},
+  issn = {0018-9448},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_honkala_hamalainen_1988,
+  author = {Honkala, Iiro S. and H{\"a}m{\"a}l{\"a}inen, H. O.},
+  title = {A New Construction for Covering Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {34},
+  number = {5},
+  pages = {1343--1344},
+  year = {1988},
+  doi = {10.1109/18.21265},
+  url = {https://doi.org/10.1109/18.21265},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@misc{rule_improved_sphere_covering_bound,
+  key = {rule_improved_sphere_covering_bound},
+  title = {Improved sphere-covering bound},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: rule; K{\'e}ri tables and update page cite the improved sphere-covering bound, including cases worked out by Chen and Honkala. Individual CSV values were not rederived in this pass.},
+}
+
+@article{lit_kalbfleisch_stanton_1969,
+  author = {Kalbfleisch, J. G. and Stanton, R. G.},
+  title = {A Combinatorial Problem in Matching},
+  journal = {Journal of the London Mathematical Society},
+  volume = {s1-44},
+  number = {1},
+  pages = {60--64},
+  year = {1969},
+  doi = {10.1112/jlms/s1-44.1.60},
+  url = {https://doi.org/10.1112/jlms/s1-44.1.60},
+  issn = {0024-6107},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri q-ary tables. K{\'e}ri bibliography also lists a corrigendum in Journal of the London Mathematical Society 1 (1969), 398. Individual bounds were not rederived.},
+}
+
+@article{lit_kamps_van_lint_1967,
+  author = {Kamps, H. J. L. and van Lint, J. H.},
+  title = {The Football Pool Problem for 5 Matches},
+  journal = {Journal of Combinatorial Theory},
+  volume = {3},
+  number = {4},
+  pages = {315--325},
+  year = {1967},
+  doi = {10.1016/S0021-9800(67)80102-9},
+  url = {https://doi.org/10.1016/S0021-9800(67)80102-9},
+  issn = {0021-9800},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@incollection{lit_kamps_van_lint_1970,
+  author = {Kamps, H. J. L. and van Lint, J. H.},
+  title = {A Covering Problem},
+  booktitle = {Combinatorial Theory and Its Applications},
+  series = {Colloquia Mathematica Societatis J{\'a}nos Bolyai},
+  volume = {4},
+  pages = {679--685},
+  publisher = {North-Holland},
+  address = {Amsterdam},
+  year = {1970},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: metadata found in K{\'e}ri bibliography; source label checked in K{\'e}ri quinary table. Individual lower-bound row was not independently rederived.},
+}
+
+@misc{lit_keri_2006,
+  author = {K{\'e}ri, Gerzson},
+  title = {K{\'e}ri Computational Lower-Bound Updates, 2006},
+  year = {2006},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page gives the attribution, but no independent stable paper record was found during this pass.},
+}
+
+@article{lit_keri_2008,
+  author = {K{\'e}ri, Gerzson},
+  title = {The Covering Radius of Extreme Binary 2-surjective Codes},
+  journal = {Designs, Codes and Cryptography},
+  volume = {46},
+  number = {2},
+  pages = {191--198},
+  year = {2008},
+  doi = {10.1007/s10623-007-9150-x},
+  url = {https://doi.org/10.1007/s10623-007-9150-x},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: metadata found; source label checked against K{\'e}ri q=4,5 table/update labels. The individual CSV bound was not independently rederived.},
+}
+
+@misc{lit_keri_2008_2009,
+  author = {K{\'e}ri, Gerzson},
+  title = {K{\'e}ri Computational Lower-Bound Updates, 2008--2009},
+  year = {2009},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page explicitly marks several relevant ternary lower bounds as computational results by G.K. No independent paper was found.},
+}
+
+@misc{lit_keri_2009,
+  author = {K{\'e}ri, Gerzson},
+  title = {K{\'e}ri Computational and Derived Covering-Code Updates, 2009},
+  year = {2009},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page records the relevant non-mixed bounds and some derivations from K{\'e}ri--{\"O}sterg{\aa}rd 2005. No independent paper was found for this label.},
+}
+
+@article{lit_keri_ostergard_2003,
+  author = {K{\'e}ri, Gerzson and {\"O}sterg{\aa}rd, Patric R. J.},
+  title = {On the Covering Radius of Small Codes},
+  journal = {Studia Scientiarum Mathematicarum Hungarica},
+  volume = {40},
+  number = {1--2},
+  pages = {243--256},
+  year = {2003},
+  url = {https://research.aalto.fi/en/publications/on-the-covering-radius-of-small-codes/},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{lit_keri_ostergard_2003_2006,
+  author = {K{\'e}ri, Gerzson and {\"O}sterg{\aa}rd, Patric R. J.},
+  title = {Composite K{\'e}ri label for On the Covering Radius of Small Codes and later observed special cases},
+  year = {2003},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: composite reference; base metadata is K{\'e}ri--{\"O}sterg{\aa}rd, Studia Sci. Math. Hungar. 40 (2003), 243--256. K{\'e}ri update page records additional special cases detected later. Individual CSV rows were not independently rederived.},
+}
+
+@article{lit_keri_ostergard_2005,
+  author = {K{\'e}ri, Gerzson and {\"O}sterg{\aa}rd, Patric R. J.},
+  title = {Bounds for Covering Codes over Large Alphabets},
+  journal = {Designs, Codes and Cryptography},
+  volume = {37},
+  number = {1},
+  pages = {45--60},
+  year = {2005},
+  doi = {10.1007/s10623-004-3804-8},
+  url = {https://doi.org/10.1007/s10623-004-3804-8},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: result claim checked at paper-scope level; the paper collects lower and upper bounds for 6 <= q <= 21 and is the main q >= 6 K{\'e}ri table source. Individual CSV rows were not independently rederived.},
+}
+
+@misc{rule_known_smaller_q_bound,
+  key = {rule_known_smaller_q_bound},
+  title = {Known same-length, same-radius bound for smaller alphabet},
+  url = {https://old.sztaki.hu/~keri/codes/4-5_tables.pdf},
+  note = {Audit status: rule; K{\'e}ri table upper-bound label for transferring a known bound with the same n and R from smaller q. No external bibliographic source is attached to this key.},
+}
+
+@article{lit_laarhoven_aarts_van_lint_wille_1989,
+  author = {van Laarhoven, P. J. M. and Aarts, E. H. L. and van Lint, J. H. and Wille, L. T.},
+  title = {New Upper Bounds for the Football Pool Problem for 6, 7, and 8 Matches},
+  journal = {Journal of Combinatorial Theory, Series A},
+  volume = {52},
+  number = {2},
+  pages = {304--312},
+  year = {1989},
+  doi = {10.1016/0097-3165(89)90036-8},
+  url = {https://doi.org/10.1016/0097-3165(89)90036-8},
+  issn = {0097-3165},
+  note = {Audit status: result claim checked; the abstract states upper bounds 73, 186, and 486 for the ternary radius-one cases used by the CSV.},
+}
+
+@article{lit_lang_quistorff_schneider_2006,
+  author = {Lang, Wolfgang and Quistorff, J{\"o}rn and Schneider, Ekkehard},
+  title = {Integer Programming for Covering Codes},
+  journal = {Journal of Combinatorial Mathematics and Combinatorial Computing},
+  volume = {66},
+  pages = {279--288},
+  year = {2008},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: metadata found in K{\'e}ri bibliography; K{\'e}ri update page records the relevant 2006 non-mixed lower-bound improvements. Individual CSV rows were not independently rederived.},
+}
+
+@misc{lit_lang_quistorff_schneider_2006_2007,
+  author = {Lang, Wolfgang and Quistorff, J{\"o}rn and Schneider, Ekkehard},
+  title = {Composite K{\'e}ri label for integer-programming covering-code results},
+  year = {2007},
+  url = {https://www.htw-berlin.de/forschung/online-forschungskatalog/publikationen/publikation/?eid=1295},
+  note = {Audit status: composite reference; K{\'e}ri bibliography lists Integer programming for covering codes, JCMCC 66 (2008), 279--288, and New results on integer programming for codes, Congr. Numer. 188 (2007), 97--107, ISSN 0384-9864. K{\'e}ri update page explicitly lists the 2007 non-mixed lower-bound improvements. Individual rows were not rederived.},
+}
+
+@misc{rule_length_monotonicity,
+  key = {rule_length_monotonicity},
+  title = {Length monotonicity upper bound},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule; K{\'e}ri q >= 6 table states Kq(n+1,R) <= q Kq(n,R) as an upper-bound source label.},
+}
+
+@article{lit_li_chen_1994,
+  author = {Li, D. and Chen, W.},
+  title = {New Lower Bounds for Binary Covering Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {40},
+  number = {4},
+  pages = {1122--1129},
+  year = {1994},
+  doi = {10.1109/18.335963},
+  url = {https://doi.org/10.1109/18.335963},
+  issn = {0018-9448},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_li_ji_yin_2008,
+  author = {Li, Y. and Ji, L. and Yin, J.},
+  title = {Covering Arrays of Strength 3 and 4 from Holey Difference Matrices},
+  journal = {Designs, Codes and Cryptography},
+  volume = {50},
+  number = {3},
+  pages = {339--350},
+  year = {2009},
+  doi = {10.1007/s10623-008-9235-1},
+  url = {https://doi.org/10.1007/s10623-008-9235-1},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: result claim checked at K{\'e}ri-update level; K{\'e}ri update page cites this source for covering-array bounds and resulting q-ary covering-code upper bounds. Individual implications were not rederived.},
+}
+
+@article{lit_linderoth_margot_thain_2007,
+  author = {Linderoth, Jeff and Margot, Fran{\c c}ois and Thain, Douglas},
+  title = {Improving Bounds on the Football Pool Problem by Integer Programming and High-Throughput Computing},
+  journal = {INFORMS Journal on Computing},
+  volume = {21},
+  number = {3},
+  pages = {445--457},
+  year = {2009},
+  doi = {10.1287/ijoc.1090.0334},
+  url = {https://doi.org/10.1287/ijoc.1090.0334},
+  issn = {1091-9856, 1526-5528},
+  note = {Audit status: result claim checked at K{\'e}ri-update level; K{\'e}ri update page attributes K3(6,1) >= 71 to the 2007 preprint, and this is the identified published paper.},
+}
+
+@misc{rule_linear_code,
+  key = {rule_linear_code},
+  title = {Linear-code construction},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule/reference-table construction label; the K{\'e}ri q >= 6 table uses linear code as an upper-bound source label. No specific paper was identified in this pass.},
+}
+
+@phdthesis{lit_mollard_1981,
+  author = {Mollard, Michel},
+  title = {Les invariants du n-cube},
+  school = {Universit{\'e} de Grenoble},
+  year = {1981},
+  url = {https://dblp.org/rec/phd/hal/Mollard81},
+  note = {Audit status: partially found; this thesis matches Lobstein bibliography records for Mollard 1981, but K{\'e}ri bibliography does not list a Mollard entry and the exact CSV upper-bound claims were not independently checked. Treat as unchecked reference.},
+}
+
+@misc{rule_nonexistence_perfect_code,
+  key = {rule_nonexistence_perfect_code},
+  title = {Non-existence of perfect code},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule; K{\'e}ri q >= 6 table uses non-existence of a perfect code as a lower-bound source label. No specific paper was attached to this key in this pass.},
+}
+
+@article{lit_ostergard_1991,
+  author = {{\"O}sterg{\aa}rd, Patric R. J.},
+  title = {Upper Bounds for q-ary Covering Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {37},
+  number = {3},
+  pages = {660--664},
+  year = {1991},
+  doi = {10.1109/18.79926},
+  url = {https://doi.org/10.1109/18.79926},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri q-ary tables. K{\'e}ri bibliography also notes an erratum/correction at IEEE Trans. Inform. Theory 37 (1991), 1738. Individual upper-bound rows were not independently rederived.},
+}
+
+@misc{lit_ostergard_1991_and_1992,
+  author = {{\"O}sterg{\aa}rd, Patric R. J.},
+  title = {Composite K{\'e}ri label for q-ary and subnormal covering-code constructions},
+  year = {1991},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: composite reference; K{\'e}ri bibliography lists Upper bounds for q-ary covering codes, IEEE Trans. Inform. Theory 37 (1991), 660--664, doi:10.1109/18.79926, and Further results on (k,t)-subnormal covering codes, IEEE Trans. Inform. Theory 38 (1992), 206--210, doi:10.1109/18.108275. Individual rows were not rederived.},
+}
+
+@misc{lit_ostergard_1994,
+  author = {{\"O}sterg{\aa}rd, Patric R. J.},
+  title = {Composite K{\'e}ri label for {\"O}sterg{\aa}rd 1994 covering-code upper bounds},
+  year = {1994},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: composite reference; K{\'e}ri bibliography lists Construction methods for mixed covering codes, Proc. 21st Nordic Congress of Mathematicians (1994), 387--407, and New upper bounds for the football pool problem for 11 and 12 matches, JCTA 67 (1994), 161--168, doi:10.1016/0097-3165(94)90010-8. Individual rows were not rederived.},
+}
+
+@article{lit_ostergard_1999,
+  author = {{\"O}sterg{\aa}rd, Patric R. J.},
+  title = {New Constructions for q-ary Covering Codes},
+  journal = {Ars Combinatoria},
+  volume = {52},
+  pages = {51--63},
+  year = {1999},
+  url = {https://research.aalto.fi/en/publications/new-constructions-for-q-ary-covering-codes},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{lit_ostergard_2005,
+  author = {{\"O}sterg{\aa}rd, Patric R. J.},
+  title = {K{\'e}ri update-page lower-bound attributions to {\"O}sterg{\aa}rd, 2005},
+  year = {2005},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page attributes K2(10,3)=12 and K2(12,4)>=11 to Patric R. J. {\"O}sterg{\aa}rd in 2005. No independent paper was found.},
+}
+
+@article{lit_ostergard_blass_2001,
+  author = {{\"O}sterg{\aa}rd, Patric R. J. and Blass, U.},
+  title = {On the Size of Optimal Binary Codes of Length 9 and Covering Radius 1},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {47},
+  number = {6},
+  pages = {2556--2557},
+  year = {2001},
+  doi = {10.1109/18.945268},
+  url = {https://doi.org/10.1109/18.945268},
+  issn = {0018-9448},
+  note = {Audit status: result claim checked by title/scope; source label checked in K{\'e}ri binary table for K2(9,1).},
+}
+
+@techreport{lit_ostergard_hamalainen_1993,
+  author = {{\"O}sterg{\aa}rd, Patric R. J. and H{\"a}m{\"a}l{\"a}inen, H. O.},
+  title = {New Upper Bounds for Binary/Ternary Mixed Covering Codes},
+  number = {Research Report 22},
+  pages = {33},
+  institution = {Helsinki University of Technology, Digital Systems Laboratory},
+  year = {1993},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: metadata found in K{\'e}ri bibliography; source label checked in K{\'e}ri ternary table. Only non-mixed rows are used here; individual rows were not rederived.},
+}
+
+@article{lit_ostergard_kaikkonen_1998,
+  author = {{\"O}sterg{\aa}rd, Patric R. J. and Kaikkonen, M. K.},
+  title = {New Upper Bounds for Binary Covering Codes},
+  journal = {Discrete Mathematics},
+  volume = {178},
+  number = {1--3},
+  pages = {165--179},
+  year = {1998},
+  doi = {10.1016/S0012-365X(97)81825-0},
+  url = {https://doi.org/10.1016/S0012-365X(97)81825-0},
+  issn = {0012-365X},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_ostergard_weakly_1999,
+  author = {{\"O}sterg{\aa}rd, Patric R. J. and Weakley, William D.},
+  title = {Constructing Covering Codes with Given Automorphisms},
+  journal = {Designs, Codes and Cryptography},
+  volume = {16},
+  number = {1},
+  pages = {65--73},
+  year = {1999},
+  doi = {10.1023/A:1008326409439},
+  url = {https://doi.org/10.1023/A:1008326409439},
+  issn = {0925-1022, 1573-7586},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_ostergard_weakly_2000,
+  author = {{\"O}sterg{\aa}rd, Patric R. J. and Weakley, William D.},
+  title = {Classification of Binary Covering Codes},
+  journal = {Journal of Combinatorial Designs},
+  volume = {8},
+  number = {6},
+  pages = {391--401},
+  year = {2000},
+  doi = {10.1002/1520-6610(2000)8:6<391::AID-JCD1>3.0.CO;2-R},
+  url = {https://doi.org/10.1002/1520-6610(2000)8:6<391::AID-JCD1>3.0.CO;2-R},
+  issn = {1063-8539, 1520-6610},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@misc{rule_perfect_code,
+  key = {rule_perfect_code},
+  title = {Perfect-code exact value},
+  note = {Audit status: rule; exact values are attributed to perfect-code constructions/nonexistence in the K{\'e}ri non-mixed tables. This is a standard structural source label, not a literature entry.},
+}
+
+@article{lit_plagne_2008,
+  author = {Plagne, Alain},
+  title = {A Remark on Haas' Method},
+  journal = {Discrete Mathematics},
+  volume = {309},
+  number = {10},
+  pages = {3318--3322},
+  year = {2009},
+  doi = {10.1016/j.disc.2008.09.042},
+  url = {https://doi.org/10.1016/j.disc.2008.09.042},
+  issn = {0012-365X},
+  note = {Audit status: result claim checked; the abstract states K2(27,1) >= 4794174. Other CSV uses of this label were not independently rederived.},
+}
+
+@misc{rule_q_ary_lifting,
+  key = {rule_q_ary_lifting},
+  title = {q-ary lifting from surjective-code bounds},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule; K{\'e}ri q >= 6 table states the lifting formulas Ktq(n,1) <= t^(n-1) Kq(n,1) and Ktq(n,R) <= sigma-t(n,n-R) Kq(n,R). Individual values were not rederived.},
+}
+
+@article{lit_quistorff_2001,
+  author = {Quistorff, J{\"o}rn},
+  title = {On Codes with Given Minimum Distance and Covering Radius},
+  journal = {Beitr{\"a}ge zur Algebra und Geometrie},
+  volume = {42},
+  number = {2},
+  pages = {601--611},
+  year = {2001},
+  url = {https://eudml.org/doc/228842},
+  issn = {0138-4821},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{rule_radius_length_monotonicity,
+  key = {rule_radius_length_monotonicity},
+  title = {Radius-length monotonicity upper bound},
+  url = {https://old.sztaki.hu/~keri/codes/6-21_tables.pdf},
+  note = {Audit status: rule; K{\'e}ri q >= 6 table states Kq(n+1,R+1) <= Kq(n,R) as an upper-bound source label.},
+}
+
+@misc{lit_rivas_soriano_2005_2006_2009,
+  author = {Rivas Soriano, Pedro Pablo},
+  title = {QuiniWin and K{\'e}ri table updates for ternary covering-code upper bounds},
+  year = {2009},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri bibliography lists QuiniWin, and K{\'e}ri update page records the relevant K3(12,3) upper-bound history. No independent stable paper was found.},
+}
+
+@misc{lit_rivas_soriano_2005_2008,
+  author = {Rivas Soriano, Pedro Pablo},
+  title = {QuiniWin and K{\'e}ri table updates for q-ary covering-code upper bounds},
+  year = {2008},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page attributes numerous non-mixed upper bounds and covering-array-derived implications to Rivas Soriano. No independent stable paper was found for this label.},
+}
+
+@misc{lit_rivas_soriano_2006_2008,
+  author = {Rivas Soriano, Pedro Pablo},
+  title = {QuiniWin and K{\'e}ri table updates for quaternary/quinary covering-code upper bounds},
+  year = {2008},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page attributes the relevant non-mixed upper bounds to Rivas Soriano in 2006--2008. No independent stable paper was found for this label.},
+}
+
+@misc{lit_rivas_soriano_2011,
+  author = {Rivas Soriano, Pedro Pablo},
+  title = {K{\'e}ri update-page attribution for K3(13,4) <= 335},
+  year = {2011},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page explicitly states K3(13,4) <= 335 on 2011-11-21 and attributes it to Pedro Pablo Rivas Soriano. No independent paper was found.},
+}
+
+@article{lit_rodemich_1970,
+  author = {Rodemich, Eugene R.},
+  title = {Coverings by Rook Domains},
+  journal = {Journal of Combinatorial Theory},
+  volume = {9},
+  number = {2},
+  pages = {117--128},
+  year = {1970},
+  doi = {10.1016/S0021-9800(70)80018-7},
+  url = {https://doi.org/10.1016/S0021-9800(70)80018-7},
+  issn = {0021-9800},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@misc{rule_sphere_covering_bound,
+  key = {rule_sphere_covering_bound},
+  title = {Sphere-covering lower bound},
+  note = {Audit status: rule; elementary sphere-covering lower-bound provenance key.},
+}
+
+@article{lit_stanton_horton_kalbfleisch_1969,
+  author = {Stanton, R. G. and Horton, J. D. and Kalbfleisch, J. G.},
+  title = {Covering Theorems for Vectors with Special Reference to the Case of Four and Five Components},
+  journal = {Journal of the London Mathematical Society},
+  volume = {s2-1},
+  number = {1},
+  pages = {493--499},
+  year = {1969},
+  doi = {10.1112/jlms/s2-1.1.493},
+  url = {https://doi.org/10.1112/jlms/s2-1.1.493},
+  issn = {0024-6107},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri non-mixed tables. Individual bounds were not independently rederived.},
+}
+
+@article{lit_stanton_kalbfleisch_1968,
+  author = {Stanton, R. G. and Kalbfleisch, J. G.},
+  title = {Covering Problems for Dichotomized Matchings},
+  journal = {Aequationes Mathematicae},
+  volume = {1},
+  number = {1--2},
+  pages = {94--103},
+  year = {1968},
+  doi = {10.1007/BF01817562},
+  url = {https://doi.org/10.1007/BF01817562},
+  issn = {0001-9054, 1420-8903},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@misc{lit_stanton_kalbfleisch_1968_and_1969,
+  author = {Stanton, R. G. and Kalbfleisch, J. G.},
+  title = {Composite K{\'e}ri label for Stanton--Kalbfleisch covering-problem papers},
+  year = {1968},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: composite reference; K{\'e}ri bibliography lists Covering problems for dichotomized matchings, Aequationes Mathematicae 1 (1968), 94--103, doi:10.1007/BF01817562, and Intersection inequalities for the covering problem, SIAM J. Appl. Math. 17 (1969), 1311--1316, doi:10.1137/0117123. Individual rows were not rederived.},
+}
+
+@article{lit_taussky_todd_1948,
+  author = {Taussky, Olga and Todd, John},
+  title = {Covering Theorems for Groups},
+  journal = {Annales de la Soci{\'e}t{\'e} Polonaise de Mathematique},
+  volume = {21},
+  pages = {303--305},
+  year = {1948},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: metadata found in K{\'e}ri bibliography; source label checked in K{\'e}ri binary/ternary tables. Individual lower-bound rows were not independently rederived.},
+}
+
+@misc{rule_trivial_lower,
+  key = {rule_trivial_lower},
+  title = {Trivial lower bound},
+  note = {Audit status: rule; elementary lower-bound provenance key for the normalized reference tables.},
+}
+
+@misc{rule_trivial_upper,
+  key = {rule_trivial_upper},
+  title = {Trivial upper bound},
+  note = {Audit status: rule; elementary upper-bound provenance key for covering by the full ambient space.},
+}
+
+@misc{lit_valinen_2002,
+  author = {V{\"a}linen, Kai},
+  title = {K{\'e}ri update-page attribution for K4(11,1) <= 131072},
+  year = {2002},
+  url = {https://old.sztaki.hu/~keri/codes/index.htm},
+  note = {Audit status: K{\'e}ri update-page reference only; K{\'e}ri update page attributes K4(11,1) <= 131072 to Kai V{\"a}linen (2002), independently also to Bertolo et al. No independent stable paper was found.},
+}
+
+@article{lit_van_wee_1988,
+  author = {van Wee, G. J. M.},
+  title = {Improved Sphere Bounds on the Covering Radius of Codes},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {34},
+  number = {2},
+  pages = {237--245},
+  year = {1988},
+  doi = {10.1109/18.2632},
+  url = {https://doi.org/10.1109/18.2632},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@misc{lit_wille_1990_and_1996,
+  author = {Wille, L. T.},
+  title = {Composite K{\'e}ri label for simulated-annealing binary covering-code papers},
+  year = {1990},
+  url = {https://old.sztaki.hu/~keri/codes/biblio.pdf},
+  note = {Audit status: composite reference; K{\'e}ri bibliography lists Improved binary code coverings by simulated annealing, Congr. Numer. 73 (1990), 53--58, and New binary covering codes obtained by simulated annealing, IEEE Trans. Inform. Theory 42 (1996), 300--302, doi:10.1109/18.481808. Individual upper-bound rows were not independently rederived.},
+}
+
+@article{lit_wu_chen_2024,
+  author = {Wu, Ying-Sian and Chen, Jun-Yo},
+  title = {Improved Lower Bounds on the Domination Number of Hypercubes and Binary Codes with Covering Radius One},
+  journal = {Discrete Mathematics},
+  volume = {347},
+  number = {2},
+  pages = {113752},
+  year = {2024},
+  doi = {10.1016/j.disc.2023.113752},
+  url = {https://doi.org/10.1016/j.disc.2023.113752},
+  issn = {0012-365X},
+  note = {Audit status: report-import, abstract_only; deep-research report derived the imported binary radius-one lower bounds from the abstract formula for n divisible by 6. Full paper proof was not checked in this repository pass.},
+}
+
+@article{lit_zhang_1991,
+  author = {Zhang, Z.},
+  title = {Linear Inequalities for Covering Codes. I. Pair Covering Inequalities},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {37},
+  number = {3},
+  pages = {573--582},
+  year = {1991},
+  doi = {10.1109/18.79914},
+  url = {https://doi.org/10.1109/18.79914},
+  issn = {0018-9448, 1557-9654},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@article{lit_zhang_lo_1992,
+  author = {Zhang, Z. and Lo, C.},
+  title = {Linear Inequalities for Covering Codes. II. Triple Covering Inequalities},
+  journal = {IEEE Transactions on Information Theory},
+  volume = {38},
+  number = {6},
+  pages = {1648--1662},
+  year = {1992},
+  doi = {10.1109/18.165440},
+  url = {https://doi.org/10.1109/18.165440},
+  issn = {0018-9448},
+  note = {Audit status: metadata found; source label checked in K{\'e}ri binary table. Individual bounds were not independently rederived.},
+}
+
+@misc{lean_quaternary_hamming,
+  key = {lean_quaternary_hamming},
+  title = {Lean source: quaternary Hamming upper bound},
+  note = {Reference tag for CoveringCodes/Database/Sources/QuaternaryHamming.lean},
+}
+
+@misc{lean_quaternary_radius_two,
+  key = {lean_quaternary_radius_two},
+  title = {Lean source: quaternary length-five radius-two upper bound},
+  note = {Reference tag for CoveringCodes/Database/Sources/QuaternaryRadiusTwo.lean},
+}
+
+@misc{lean_small_explicit_upper,
+  key = {lean_small_explicit_upper},
+  title = {Lean source: small explicit upper-bound seeds},
+  note = {Reference tag for CoveringCodes/Database/Sources/SmallExplicitUpper.lean},
+}
+
+@misc{lean_small_lower_bounds,
+  key = {lean_small_lower_bounds},
+  title = {Lean source: small local lower-bound arguments},
+  note = {Reference tag for CoveringCodes/Database/Sources/SmallLowerBounds.lean},
+}
+
+@misc{lean_sparse_slicer,
+  key = {lean_sparse_slicer},
+  title = {Lean source: sparse-slice lower bound},
+  note = {Reference tag for CoveringCodes/Database/Sources/SparseSlicer.lean},
+}
+
+@misc{lean_two_block_cyclic,
+  key = {lean_two_block_cyclic},
+  title = {Lean source: two-block cyclic radius-one construction},
+  note = {Reference tag for CoveringCodes/Database/Sources/TwoBlockCyclic.lean},
+}
+
+@misc{rule_binary_antipodal,
+  key = {rule_binary_antipodal},
+  title = {Binary antipodal covering-code construction},
+  note = {Algorithmic provenance key for K2(n,r) <= 2 when n <= 2r+1.},
+}
+
+@misc{rule_constant_symbol,
+  key = {rule_constant_symbol},
+  title = {Constant-symbol covering-code construction},
+  note = {Algorithmic provenance key for Kq(n,r) <= q when q*(n-r-1) < n.},
+}
+
+@misc{rule_large_radius_lower,
+  key = {rule_large_radius_lower},
+  title = {Large-radius lower bound},
+  note = {Algorithmic provenance key for Kq(n,r) >= 1 when the ambient space is nonempty.},
+}
+
+@misc{rule_large_radius_upper,
+  key = {rule_large_radius_upper},
+  title = {Large-radius upper bound},
+  note = {Algorithmic provenance key for Kq(n,r) <= 1 when r >= n.},
+}
+
+@misc{rule_radius_n_minus_one_exact,
+  key = {rule_radius_n_minus_one_exact},
+  title = {Radius n minus one exact value},
+  note = {Algorithmic provenance key for Kq(n,n-1) = q.},
+}
+
+@misc{rule_zero_radius_exact,
+  key = {rule_zero_radius_exact},
+  title = {Zero-radius exact value},
+  note = {Algorithmic provenance key for Kq(n,0) = q^n.},
+}

@@ -1,0 +1,1262 @@
+import CoveringCodes.Database.BoundTable
+
+set_option maxRecDepth 4000
+set_option maxHeartbeats 2000000
+
+namespace CoveringCodes.Database
+
+-- Auto-generated chunk 144. Do not edit manually.
+
+def precomputedTable_chunk_144 : Array AnyBoundEntry := #[
+  { key := { q := 14, n := 48, r := 34 }
+    lowerValue := 237226
+    upperValue := 56693912375296
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 34))
+    upperTrace := (.lengthenFreeN 11 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 37 34))) },
+  { key := { q := 14, n := 48, r := 35 }
+    lowerValue := 44680
+    upperValue := 4049565169664
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 35))
+    upperTrace := (.lengthenFreeN 10 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 38 35))) },
+  { key := { q := 14, n := 48, r := 36 }
+    lowerValue := 9289
+    upperValue := 289254654976
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 36))
+    upperTrace := (.lengthenFreeN 9 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 39 36))) },
+  { key := { q := 14, n := 48, r := 37 }
+    lowerValue := 2141
+    upperValue := 20661046784
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 37))
+    upperTrace := (.lengthenFreeN 8 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 40 37))) },
+  { key := { q := 14, n := 48, r := 38 }
+    lowerValue := 550
+    upperValue := 1475789056
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 38))
+    upperTrace := (.lengthenFreeN 7 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 41 38))) },
+  { key := { q := 14, n := 48, r := 39 }
+    lowerValue := 158
+    upperValue := 7529536
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 39))
+    upperTrace := (.lengthenFreeN 5 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 43 39))) },
+  { key := { q := 14, n := 48, r := 40 }
+    lowerValue := 52
+    upperValue := 537824
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 40))
+    upperTrace := (.lengthenFreeN 4 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 44 40))) },
+  { key := { q := 14, n := 48, r := 41 }
+    lowerValue := 19
+    upperValue := 38416
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 41))
+    upperTrace := (.lengthenFreeN 3 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 45 41))) },
+  { key := { q := 14, n := 48, r := 42 }
+    lowerValue := 14
+    upperValue := 2744
+    lowerTrace := (.lengthBack (by decide : 0 < 14) (.lengthBack (by decide : 0 < 14) (.lengthBack (by decide : 0 < 14) (.lengthBack (by decide : 0 < 14) (.radiusBack (by decide : 42 ≤ 43) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 14 44 43)))))))
+    upperTrace := (.lengthenFreeN 2 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 46 42))) },
+  { key := { q := 14, n := 48, r := 43 }
+    lowerValue := 14
+    upperValue := 196
+    lowerTrace := (.lengthBack (by decide : 0 < 14) (.lengthBack (by decide : 0 < 14) (.lengthBack (by decide : 0 < 14) (.radiusBack (by decide : 43 ≤ 44) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 14 45 44))))))
+    upperTrace := (.lengthenFreeN 1 (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 47 43))) },
+  { key := { q := 14, n := 48, r := 44 }
+    lowerValue := 14
+    upperValue := 14
+    lowerTrace := (.lengthBack (by decide : 0 < 14) (.lengthBack (by decide : 0 < 14) (.radiusBack (by decide : 44 ≤ 45) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 14 46 45)))))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 48 44)) },
+  { key := { q := 14, n := 48, r := 45 }
+    lowerValue := 14
+    upperValue := 14
+    lowerTrace := (.lengthBack (by decide : 0 < 14) (.radiusBack (by decide : 45 ≤ 46) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 14 47 46))))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 48 45)) },
+  { key := { q := 14, n := 48, r := 46 }
+    lowerValue := 14
+    upperValue := 14
+    lowerTrace := (.radiusBack (by decide : 46 ≤ 47) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 14 48 47)))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 48 46)) },
+  { key := { q := 14, n := 48, r := 47 }
+    lowerValue := 14
+    upperValue := 14
+    lowerTrace := (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 14 48 47))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 14 48 47)) },
+  { key := { q := 14, n := 48, r := 48 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 48 48))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 14 48 48)) },
+  { key := { q := 15, n := 0, r := 0 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 0))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 0)) },
+  { key := { q := 15, n := 0, r := 1 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 1))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 1)) },
+  { key := { q := 15, n := 0, r := 2 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 2))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 2)) },
+  { key := { q := 15, n := 0, r := 3 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 3))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 3)) },
+  { key := { q := 15, n := 0, r := 4 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 4))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 4)) },
+  { key := { q := 15, n := 0, r := 5 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 5))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 5)) },
+  { key := { q := 15, n := 0, r := 6 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 6))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 6)) },
+  { key := { q := 15, n := 0, r := 7 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 7))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 7)) },
+  { key := { q := 15, n := 0, r := 8 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 8))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 8)) },
+  { key := { q := 15, n := 0, r := 9 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 9))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 9)) },
+  { key := { q := 15, n := 0, r := 10 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 10))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 10)) },
+  { key := { q := 15, n := 0, r := 11 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 11))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 11)) },
+  { key := { q := 15, n := 0, r := 12 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 12))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 12)) },
+  { key := { q := 15, n := 0, r := 13 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 13))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 13)) },
+  { key := { q := 15, n := 0, r := 14 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 14))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 14)) },
+  { key := { q := 15, n := 0, r := 15 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 15))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 15)) },
+  { key := { q := 15, n := 0, r := 16 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 16))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 16)) },
+  { key := { q := 15, n := 0, r := 17 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 17))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 17)) },
+  { key := { q := 15, n := 0, r := 18 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 18))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 18)) },
+  { key := { q := 15, n := 0, r := 19 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 19))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 19)) },
+  { key := { q := 15, n := 0, r := 20 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 20))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 20)) },
+  { key := { q := 15, n := 0, r := 21 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 21))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 21)) },
+  { key := { q := 15, n := 0, r := 22 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 22))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 22)) },
+  { key := { q := 15, n := 0, r := 23 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 23))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 23)) },
+  { key := { q := 15, n := 0, r := 24 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 24))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 24)) },
+  { key := { q := 15, n := 0, r := 25 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 25))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 25)) },
+  { key := { q := 15, n := 0, r := 26 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 26))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 26)) },
+  { key := { q := 15, n := 0, r := 27 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 27))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 27)) },
+  { key := { q := 15, n := 0, r := 28 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 28))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 28)) },
+  { key := { q := 15, n := 0, r := 29 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 29))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 29)) },
+  { key := { q := 15, n := 0, r := 30 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 30))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 30)) },
+  { key := { q := 15, n := 0, r := 31 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 31))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 31)) },
+  { key := { q := 15, n := 0, r := 32 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 32))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 32)) },
+  { key := { q := 15, n := 0, r := 33 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 33))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 33)) },
+  { key := { q := 15, n := 0, r := 34 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 34))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 34)) },
+  { key := { q := 15, n := 0, r := 35 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 35))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 35)) },
+  { key := { q := 15, n := 0, r := 36 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 36))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 36)) },
+  { key := { q := 15, n := 0, r := 37 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 37))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 37)) },
+  { key := { q := 15, n := 0, r := 38 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 38))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 38)) },
+  { key := { q := 15, n := 0, r := 39 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 39))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 39)) },
+  { key := { q := 15, n := 0, r := 40 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 40))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 40)) },
+  { key := { q := 15, n := 0, r := 41 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 41))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 41)) },
+  { key := { q := 15, n := 0, r := 42 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 42))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 42)) },
+  { key := { q := 15, n := 0, r := 43 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 43))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 43)) },
+  { key := { q := 15, n := 0, r := 44 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 44))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 44)) },
+  { key := { q := 15, n := 0, r := 45 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 45))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 45)) },
+  { key := { q := 15, n := 0, r := 46 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 46))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 46)) },
+  { key := { q := 15, n := 0, r := 47 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 47))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 47)) },
+  { key := { q := 15, n := 0, r := 48 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 0 48))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 0 48)) },
+  { key := { q := 15, n := 1, r := 0 }
+    lowerValue := 15
+    upperValue := 15
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 0))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 1 0)) },
+  { key := { q := 15, n := 1, r := 1 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 1))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 1)) },
+  { key := { q := 15, n := 1, r := 2 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 2))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 2)) },
+  { key := { q := 15, n := 1, r := 3 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 3))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 3)) },
+  { key := { q := 15, n := 1, r := 4 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 4))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 4)) },
+  { key := { q := 15, n := 1, r := 5 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 5))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 5)) },
+  { key := { q := 15, n := 1, r := 6 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 6))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 6)) },
+  { key := { q := 15, n := 1, r := 7 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 7))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 7)) },
+  { key := { q := 15, n := 1, r := 8 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 8))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 8)) },
+  { key := { q := 15, n := 1, r := 9 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 9))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 9)) },
+  { key := { q := 15, n := 1, r := 10 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 10))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 10)) },
+  { key := { q := 15, n := 1, r := 11 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 11))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 11)) },
+  { key := { q := 15, n := 1, r := 12 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 12))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 12)) },
+  { key := { q := 15, n := 1, r := 13 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 13))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 13)) },
+  { key := { q := 15, n := 1, r := 14 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 14))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 14)) },
+  { key := { q := 15, n := 1, r := 15 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 15))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 15)) },
+  { key := { q := 15, n := 1, r := 16 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 16))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 16)) },
+  { key := { q := 15, n := 1, r := 17 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 17))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 17)) },
+  { key := { q := 15, n := 1, r := 18 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 18))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 18)) },
+  { key := { q := 15, n := 1, r := 19 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 19))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 19)) },
+  { key := { q := 15, n := 1, r := 20 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 20))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 20)) },
+  { key := { q := 15, n := 1, r := 21 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 21))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 21)) },
+  { key := { q := 15, n := 1, r := 22 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 22))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 22)) },
+  { key := { q := 15, n := 1, r := 23 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 23))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 23)) },
+  { key := { q := 15, n := 1, r := 24 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 24))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 24)) },
+  { key := { q := 15, n := 1, r := 25 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 25))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 25)) },
+  { key := { q := 15, n := 1, r := 26 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 26))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 26)) },
+  { key := { q := 15, n := 1, r := 27 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 27))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 27)) },
+  { key := { q := 15, n := 1, r := 28 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 28))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 28)) },
+  { key := { q := 15, n := 1, r := 29 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 29))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 29)) },
+  { key := { q := 15, n := 1, r := 30 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 30))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 30)) },
+  { key := { q := 15, n := 1, r := 31 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 31))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 31)) },
+  { key := { q := 15, n := 1, r := 32 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 32))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 32)) },
+  { key := { q := 15, n := 1, r := 33 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 33))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 33)) },
+  { key := { q := 15, n := 1, r := 34 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 34))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 34)) },
+  { key := { q := 15, n := 1, r := 35 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 35))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 35)) },
+  { key := { q := 15, n := 1, r := 36 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 36))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 36)) },
+  { key := { q := 15, n := 1, r := 37 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 37))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 37)) },
+  { key := { q := 15, n := 1, r := 38 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 38))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 38)) },
+  { key := { q := 15, n := 1, r := 39 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 39))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 39)) },
+  { key := { q := 15, n := 1, r := 40 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 40))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 40)) },
+  { key := { q := 15, n := 1, r := 41 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 41))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 41)) },
+  { key := { q := 15, n := 1, r := 42 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 42))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 42)) },
+  { key := { q := 15, n := 1, r := 43 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 43))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 43)) },
+  { key := { q := 15, n := 1, r := 44 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 44))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 44)) },
+  { key := { q := 15, n := 1, r := 45 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 45))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 45)) },
+  { key := { q := 15, n := 1, r := 46 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 46))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 46)) },
+  { key := { q := 15, n := 1, r := 47 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 47))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 47)) },
+  { key := { q := 15, n := 1, r := 48 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 1 48))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 1 48)) },
+  { key := { q := 15, n := 2, r := 0 }
+    lowerValue := 225
+    upperValue := 225
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 0))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 2 0)) },
+  { key := { q := 15, n := 2, r := 1 }
+    lowerValue := 15
+    upperValue := 15
+    lowerTrace := (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 2 1))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 15 2 1)) },
+  { key := { q := 15, n := 2, r := 2 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 2))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 2)) },
+  { key := { q := 15, n := 2, r := 3 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 3))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 3)) },
+  { key := { q := 15, n := 2, r := 4 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 4))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 4)) },
+  { key := { q := 15, n := 2, r := 5 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 5))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 5)) },
+  { key := { q := 15, n := 2, r := 6 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 6))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 6)) },
+  { key := { q := 15, n := 2, r := 7 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 7))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 7)) },
+  { key := { q := 15, n := 2, r := 8 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 8))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 8)) },
+  { key := { q := 15, n := 2, r := 9 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 9))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 9)) },
+  { key := { q := 15, n := 2, r := 10 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 10))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 10)) },
+  { key := { q := 15, n := 2, r := 11 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 11))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 11)) },
+  { key := { q := 15, n := 2, r := 12 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 12))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 12)) },
+  { key := { q := 15, n := 2, r := 13 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 13))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 13)) },
+  { key := { q := 15, n := 2, r := 14 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 14))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 14)) },
+  { key := { q := 15, n := 2, r := 15 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 15))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 15)) },
+  { key := { q := 15, n := 2, r := 16 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 16))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 16)) },
+  { key := { q := 15, n := 2, r := 17 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 17))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 17)) },
+  { key := { q := 15, n := 2, r := 18 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 18))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 18)) },
+  { key := { q := 15, n := 2, r := 19 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 19))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 19)) },
+  { key := { q := 15, n := 2, r := 20 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 20))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 20)) },
+  { key := { q := 15, n := 2, r := 21 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 21))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 21)) },
+  { key := { q := 15, n := 2, r := 22 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 22))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 22)) },
+  { key := { q := 15, n := 2, r := 23 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 23))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 23)) },
+  { key := { q := 15, n := 2, r := 24 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 24))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 24)) },
+  { key := { q := 15, n := 2, r := 25 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 25))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 25)) },
+  { key := { q := 15, n := 2, r := 26 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 26))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 26)) },
+  { key := { q := 15, n := 2, r := 27 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 27))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 27)) },
+  { key := { q := 15, n := 2, r := 28 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 28))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 28)) },
+  { key := { q := 15, n := 2, r := 29 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 29))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 29)) },
+  { key := { q := 15, n := 2, r := 30 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 30))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 30)) },
+  { key := { q := 15, n := 2, r := 31 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 31))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 31)) },
+  { key := { q := 15, n := 2, r := 32 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 32))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 32)) },
+  { key := { q := 15, n := 2, r := 33 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 33))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 33)) },
+  { key := { q := 15, n := 2, r := 34 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 34))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 34)) },
+  { key := { q := 15, n := 2, r := 35 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 35))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 35)) },
+  { key := { q := 15, n := 2, r := 36 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 36))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 36)) },
+  { key := { q := 15, n := 2, r := 37 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 37))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 37)) },
+  { key := { q := 15, n := 2, r := 38 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 38))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 38)) },
+  { key := { q := 15, n := 2, r := 39 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 39))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 39)) },
+  { key := { q := 15, n := 2, r := 40 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 40))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 40)) },
+  { key := { q := 15, n := 2, r := 41 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 41))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 41)) },
+  { key := { q := 15, n := 2, r := 42 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 42))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 42)) },
+  { key := { q := 15, n := 2, r := 43 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 43))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 43)) },
+  { key := { q := 15, n := 2, r := 44 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 44))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 44)) },
+  { key := { q := 15, n := 2, r := 45 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 45))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 45)) },
+  { key := { q := 15, n := 2, r := 46 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 46))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 46)) },
+  { key := { q := 15, n := 2, r := 47 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 47))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 47)) },
+  { key := { q := 15, n := 2, r := 48 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 2 48))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 2 48)) },
+  { key := { q := 15, n := 3, r := 0 }
+    lowerValue := 3375
+    upperValue := 3375
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 0))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 3 0)) },
+  { key := { q := 15, n := 3, r := 1 }
+    lowerValue := 90
+    upperValue := 113
+    lowerTrace := (.primitive "lean_sparse_slicer" (primitiveLower_valid 15 3 1))
+    upperTrace := (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1)) },
+  { key := { q := 15, n := 3, r := 2 }
+    lowerValue := 15
+    upperValue := 15
+    lowerTrace := (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 3 2))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 15 3 2)) },
+  { key := { q := 15, n := 3, r := 3 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 3))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 3)) },
+  { key := { q := 15, n := 3, r := 4 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 4))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 4)) },
+  { key := { q := 15, n := 3, r := 5 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 5))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 5)) },
+  { key := { q := 15, n := 3, r := 6 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 6))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 6)) },
+  { key := { q := 15, n := 3, r := 7 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 7))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 7)) },
+  { key := { q := 15, n := 3, r := 8 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 8))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 8)) },
+  { key := { q := 15, n := 3, r := 9 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 9))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 9)) },
+  { key := { q := 15, n := 3, r := 10 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 10))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 10)) },
+  { key := { q := 15, n := 3, r := 11 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 11))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 11)) },
+  { key := { q := 15, n := 3, r := 12 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 12))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 12)) },
+  { key := { q := 15, n := 3, r := 13 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 13))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 13)) },
+  { key := { q := 15, n := 3, r := 14 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 14))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 14)) },
+  { key := { q := 15, n := 3, r := 15 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 15))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 15)) },
+  { key := { q := 15, n := 3, r := 16 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 16))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 16)) },
+  { key := { q := 15, n := 3, r := 17 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 17))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 17)) },
+  { key := { q := 15, n := 3, r := 18 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 18))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 18)) },
+  { key := { q := 15, n := 3, r := 19 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 19))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 19)) },
+  { key := { q := 15, n := 3, r := 20 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 20))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 20)) },
+  { key := { q := 15, n := 3, r := 21 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 21))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 21)) },
+  { key := { q := 15, n := 3, r := 22 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 22))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 22)) },
+  { key := { q := 15, n := 3, r := 23 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 23))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 23)) },
+  { key := { q := 15, n := 3, r := 24 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 24))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 24)) },
+  { key := { q := 15, n := 3, r := 25 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 25))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 25)) },
+  { key := { q := 15, n := 3, r := 26 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 26))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 26)) },
+  { key := { q := 15, n := 3, r := 27 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 27))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 27)) },
+  { key := { q := 15, n := 3, r := 28 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 28))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 28)) },
+  { key := { q := 15, n := 3, r := 29 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 29))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 29)) },
+  { key := { q := 15, n := 3, r := 30 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 30))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 30)) },
+  { key := { q := 15, n := 3, r := 31 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 31))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 31)) },
+  { key := { q := 15, n := 3, r := 32 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 32))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 32)) },
+  { key := { q := 15, n := 3, r := 33 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 33))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 33)) },
+  { key := { q := 15, n := 3, r := 34 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 34))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 34)) },
+  { key := { q := 15, n := 3, r := 35 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 35))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 35)) },
+  { key := { q := 15, n := 3, r := 36 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 36))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 36)) },
+  { key := { q := 15, n := 3, r := 37 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 37))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 37)) },
+  { key := { q := 15, n := 3, r := 38 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 38))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 38)) },
+  { key := { q := 15, n := 3, r := 39 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 39))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 39)) },
+  { key := { q := 15, n := 3, r := 40 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 40))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 40)) },
+  { key := { q := 15, n := 3, r := 41 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 41))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 41)) },
+  { key := { q := 15, n := 3, r := 42 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 42))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 42)) },
+  { key := { q := 15, n := 3, r := 43 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 43))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 43)) },
+  { key := { q := 15, n := 3, r := 44 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 44))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 44)) },
+  { key := { q := 15, n := 3, r := 45 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 45))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 45)) },
+  { key := { q := 15, n := 3, r := 46 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 46))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 46)) },
+  { key := { q := 15, n := 3, r := 47 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 47))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 47)) },
+  { key := { q := 15, n := 3, r := 48 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 3 48))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 3 48)) },
+  { key := { q := 15, n := 4, r := 0 }
+    lowerValue := 50625
+    upperValue := 50625
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 0))
+    upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 4 0)) },
+  { key := { q := 15, n := 4, r := 1 }
+    lowerValue := 889
+    upperValue := 1695
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 1))
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+  { key := { q := 15, n := 4, r := 2 }
+    lowerValue := 42
+    upperValue := 113
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 2))
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 15) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+  { key := { q := 15, n := 4, r := 3 }
+    lowerValue := 15
+    upperValue := 15
+    lowerTrace := (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 4 3))
+    upperTrace := (.primitive "rule_constant_symbol" (primitiveUpper_valid 15 4 3)) },
+  { key := { q := 15, n := 4, r := 4 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 4))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 4)) },
+  { key := { q := 15, n := 4, r := 5 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 5))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 5)) },
+  { key := { q := 15, n := 4, r := 6 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 6))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 6)) },
+  { key := { q := 15, n := 4, r := 7 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 7))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 7)) },
+  { key := { q := 15, n := 4, r := 8 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 8))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 8)) },
+  { key := { q := 15, n := 4, r := 9 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 9))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 9)) },
+  { key := { q := 15, n := 4, r := 10 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 10))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 10)) },
+  { key := { q := 15, n := 4, r := 11 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 11))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 11)) },
+  { key := { q := 15, n := 4, r := 12 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 12))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 12)) },
+  { key := { q := 15, n := 4, r := 13 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 13))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 13)) },
+  { key := { q := 15, n := 4, r := 14 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 14))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 14)) },
+  { key := { q := 15, n := 4, r := 15 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 15))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 15)) },
+  { key := { q := 15, n := 4, r := 16 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 16))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 16)) },
+  { key := { q := 15, n := 4, r := 17 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 17))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 17)) },
+  { key := { q := 15, n := 4, r := 18 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 18))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 18)) },
+  { key := { q := 15, n := 4, r := 19 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 19))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 19)) },
+  { key := { q := 15, n := 4, r := 20 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 20))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 20)) },
+  { key := { q := 15, n := 4, r := 21 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 21))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 21)) },
+  { key := { q := 15, n := 4, r := 22 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 22))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 22)) },
+  { key := { q := 15, n := 4, r := 23 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 23))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 23)) },
+  { key := { q := 15, n := 4, r := 24 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 24))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 24)) },
+  { key := { q := 15, n := 4, r := 25 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 25))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 25)) },
+  { key := { q := 15, n := 4, r := 26 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 26))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 26)) },
+  { key := { q := 15, n := 4, r := 27 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 27))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 27)) },
+  { key := { q := 15, n := 4, r := 28 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 28))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 28)) },
+  { key := { q := 15, n := 4, r := 29 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 29))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 29)) },
+  { key := { q := 15, n := 4, r := 30 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 30))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 30)) },
+  { key := { q := 15, n := 4, r := 31 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 31))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 31)) },
+  { key := { q := 15, n := 4, r := 32 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 32))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 32)) },
+  { key := { q := 15, n := 4, r := 33 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 33))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 33)) },
+  { key := { q := 15, n := 4, r := 34 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 34))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 34)) },
+  { key := { q := 15, n := 4, r := 35 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 35))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 35)) },
+  { key := { q := 15, n := 4, r := 36 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 36))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 36)) },
+  { key := { q := 15, n := 4, r := 37 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 37))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 37)) },
+  { key := { q := 15, n := 4, r := 38 }
+    lowerValue := 1
+    upperValue := 1
+    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 4 38))
+    upperTrace := (.primitive "rule_large_radius_upper" (primitiveUpper_valid 15 4 38)) }]
+
+end CoveringCodes.Database
