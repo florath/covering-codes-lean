@@ -7,4 +7,4 @@ authors:
     orcid: "https://orcid.org/0009-0001-6471-7372"
 repository-code: "https://github.com/florath/covering-codes-lean"
 license: "BSD-3-Clause"
-version: "pre-submission"
+version: "0.1.0"

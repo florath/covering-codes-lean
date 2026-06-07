@@ -1,7 +1,7 @@
 # Developer Workflow
 
-This note is for day-to-day work in a Git checkout. The reviewer-facing build
-instructions stay in `README.md`.
+This note is for day-to-day work in a Git checkout. The main build instructions
+stay in `README.md`.
 
 ## Ground Rules
 
@@ -103,7 +103,7 @@ file is generated and should remain ignored.
 
 ## Heavy Checks
 
-`scripts/check.sh` is the heavy pre-submission path. It runs kernel-mode checks,
+`scripts/check.sh` is the heavy release-check path. It runs kernel-mode checks,
 verification modules, and smoke queries. Use it before a release-style commit,
 not after every small edit.
 

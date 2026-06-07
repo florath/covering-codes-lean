@@ -7,8 +7,8 @@ Do not run `lake clean`, `lake clear`, or delete `.lake/` as a cleanup step.
 
 ## Reviewer Path
 
-This is the fast path intended for artifact reviewers and ordinary reproducible
-checks.  It uses native proof mode for expensive finite proof leaves.
+This is the fast path for routine reproducibility checks.  It uses native proof
+mode for expensive finite proof leaves.
 
 ```bash
 scripts/build-proof-mode.sh native covering_codes
@@ -43,8 +43,8 @@ comparison script and should remain uncommitted unless intentionally promoted.
 
 ## Release Path
 
-Run the release path before creating the AFM submission tag.  Unlike the
-reviewer path, release validation uses kernel proof mode.
+Run the release path before creating a release tag.  Unlike the routine path,
+release validation uses kernel proof mode.
 
 ```bash
 scripts/check.sh
@@ -88,8 +88,8 @@ git status --ignored --short
 ## Tag And Archive
 
 After all required release checks pass, create an annotated release tag.  Use a
-stable, descriptive tag name, for example `afm-2026-submission-v1` for the
-first AFM submission artifact.
+stable, descriptive tag name, for example `afm-2026-submission-v1` for an AFM
+submission artifact.
 
 ```bash
 release_tag="<release-tag>"

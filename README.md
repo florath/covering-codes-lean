@@ -12,7 +12,7 @@ codeword.  The football pool problem is the special case `K_3(n,1)`.
 
 ## Quick start
 
-Minimal reviewer path:
+Build the command-line tool and run a few example covering-code queries:
 
 ```bash
 scripts/build-proof-mode.sh native covering_codes
@@ -21,14 +21,14 @@ lake -KproofMode=native exe covering_codes 3 8 3
 ```
 
 This builds the command-line executable and generated-table dependencies using
-native evaluation for expensive finite `covering_decide` proof leaves.  It is
-the intended first validation path for artifact reviewers; the stronger kernel
-certification build is listed below.
+native evaluation for expensive finite `covering_decide` proof leaves.  Native
+proof mode is the practical default for routine builds and interactive use; the
+stronger kernel replay path is described below.
 
 To monitor active generated-table chunks during a long build, run
 `scripts/watch-generated-build.sh` in another terminal.
 
-See `scripts/check.sh` for the heavy kernel pre-submission check, and
+See `scripts/check.sh` for the heavy kernel check, and
 `scripts/check-generated.sh` for the Git-checkout table-regeneration check.
 Developer-only workflows are summarized in `docs/HOWTO_DEVELOP.md`.
 
@@ -36,7 +36,7 @@ Developer-only workflows are summarized in `docs/HOWTO_DEVELOP.md`.
 
 Lake and Lean may compile several modules in parallel.  On machines with many
 CPU cores but limited memory per worker, the default parallelism can be too
-aggressive for this artifact.  In that case, set `LEAN_NUM_THREADS` in the
+aggressive for this project.  In that case, set `LEAN_NUM_THREADS` in the
 environment before running the build, choosing a value appropriate for the
 available RAM and core count.  Machines with fewer cores, or more memory per
 parallel worker, may not need this setting.
@@ -93,7 +93,7 @@ you opt in with `ALLOW_VAN_LAARHOVEN_KERNEL=1` for `check-proof-mode.sh`, or
 
 ## Reproducibility
 
-This artifact is built with the Lean toolchain pinned in
+This repository is built with the Lean toolchain pinned in
 `lean-toolchain`:
 
 ```text
@@ -101,31 +101,71 @@ leanprover/lean4:v4.30.0-rc2
 ```
 
 Lake is the Lake version bundled with that Lean toolchain.  The Lake dependency
-revisions are pinned in `lake-manifest.json`; reviewers should use the committed
+revisions are pinned in `lake-manifest.json`; users should use the committed
 manifest rather than updating dependencies.
 
 Run commands from the repository root.
 
 ### Command cost guide
 
-| Command | Purpose | Cost class | Needed for minimal validation? |
-|---|---|---|---|
-| `scripts/build-proof-mode.sh native covering_codes` | Builds the CLI and generated-table dependencies using native evaluation for expensive finite proof leaves. | Reviewer-fast path; minutes and a few GiB on the reference measurements. | Yes |
-| `lake -KproofMode=native exe covering_codes 3 8 3` | Smoke test for a closure-derived generated-table query. | Cheap after build. | Yes |
-| `lake -KproofMode=native exe covering_codes 3 6 1` | Smoke test for the van Laarhoven case-study source registration and provenance display. | Cheap after build. | Yes |
-| `lake -KproofMode=native exe covering_codes 2 7 1` | Smoke test for a primitive binary Hamming source query. | Cheap after build. | Recommended |
-| `scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedTableSmokeTest CoveringCodes.Database.ExactSmallCaseTest` | Rechecks generated-table and exact-small-case smoke modules in native proof mode. | Standard incremental build. | Recommended |
-| `LEAN_MEMORY_MB=64000 scripts/check-proof-mode.sh native CoveringCodes/Database/Sources/VanLaarhoven1989.lean` | Rechecks the committed van Laarhoven explicit-code certificates in native proof mode. | Expensive but bounded; kernel mode is much larger. | Recommended for the case study |
-| `scripts/check-generated-metadata.sh` | Checks committed generated-table metadata without regenerating the table. | Cheap. | Recommended |
-| `scripts/build-proof-mode.sh kernel covering_codes` | Builds the CLI and generated-table dependencies with ordinary kernel `decide` for finite proof leaves. | Very expensive; the van Laarhoven file alone measured about 77 min and 357 GiB RSS. | No |
-| `scripts/check.sh` | Runs the heavy kernel pre-submission check: no forbidden placeholders, kernel builds, verification modules, and smoke queries. | Heavy/pre-submission. | No |
-| `scripts/check-generated.sh` | Reruns `table_gen`, checks generated files by `git diff`, checks metadata, rebuilds the CLI, and runs smoke queries. | Expensive full regeneration. | No |
-| `lake -KproofMode=native exe table_gen` | Regenerates `GeneratedTable.lean` and chunk files. | Expensive. | No |
+Recommended first build:
+
+```bash
+scripts/build-proof-mode.sh native covering_codes
+lake -KproofMode=native exe covering_codes 3 6 1
+lake -KproofMode=native exe covering_codes 3 8 3
+lake -KproofMode=native exe covering_codes 2 7 1
+```
+
+The build command compiles the CLI and generated-table dependencies using
+native evaluation for expensive finite proof leaves.  The three `lake exe`
+commands are cheap after the build and exercise a van Laarhoven case-study
+query, a closure-derived generated-table query, and a primitive binary Hamming
+source query.
+
+Additional routine checks:
+
+```bash
+scripts/check-generated-metadata.sh
+scripts/build-proof-mode.sh native \
+  CoveringCodes.Database.GeneratedTableSmokeTest \
+  CoveringCodes.Database.ExactSmallCaseTest
+```
+
+The metadata script is cheap and does not regenerate the table.  The native
+module build is a standard incremental check for generated-table and exact-case
+smoke modules.
+
+Case-study certificate check:
+
+```bash
+LEAN_MEMORY_MB=64000 scripts/check-proof-mode.sh native \
+  CoveringCodes/Database/Sources/VanLaarhoven1989.lean
+```
+
+This rechecks the committed van Laarhoven explicit-code certificates in native
+proof mode.  It is expensive but bounded; kernel mode for the same file is much
+larger.
+
+Heavy checks and regeneration:
+
+```bash
+scripts/build-proof-mode.sh kernel covering_codes
+scripts/check.sh
+scripts/check-generated.sh
+lake -KproofMode=native exe table_gen
+```
+
+Kernel builds use ordinary kernel `decide` for finite proof leaves and are very
+expensive.  `scripts/check.sh` is the heavy release check.
+`scripts/check-generated.sh` and `lake -KproofMode=native exe table_gen`
+regenerate the precomputed table and are intended for source or generator
+changes, not ordinary use.
 
 Historical comparison data lives under `reference-data/`.  It is reference
 material only; it is not imported by Lean and does not certify any bound.
 
-### Standard reviewer checks
+### Standard build checks
 
 ```bash
 scripts/build-proof-mode.sh native covering_codes
@@ -133,16 +173,15 @@ lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
 ```
 
-These commands are the fast reviewer path for this repository.  If
-the build machine has many cores relative to available memory, set
-`LEAN_NUM_THREADS` as described above before running the build command.
+These commands are the practical first build and query checks for this
+repository.  If the build machine has many cores relative to available memory,
+set `LEAN_NUM_THREADS` as described above before running the build command.
 
 ### Kernel certification build
 
 The kernel certification build uses ordinary kernel `decide` for finite proof
-leaves.  This is the strongest replay path, but it is not needed for minimal
-reviewer validation and is known to be very expensive for the van Laarhoven
-case-study file.
+leaves.  This is the strongest replay path, but it is not needed for routine
+use and is known to be very expensive for the van Laarhoven case-study file.
 
 ```bash
 scripts/build-proof-mode.sh kernel covering_codes
@@ -169,7 +208,7 @@ scripts/build-proof-mode.sh native covering_codes
 The helper scripts encode these workflows:
 
 ```bash
-scripts/check.sh            # heavy kernel pre-submission check
+scripts/check.sh            # heavy kernel check
 scripts/check-generated.sh  # full native-mode table-regeneration check
 scripts/check-generated-metadata.sh  # cheap generated-table metadata check
 ```
@@ -303,9 +342,16 @@ chunks.  Use `GeneratedAPI` when you need `lookupPrecomputed` or `bestBounds`.
 
 ## Citation
 
-Citation metadata is provided in `CITATION.cff`. Once the AFM submission tag and
-paper/preprint are final, cite the tagged repository together with the
-accompanying paper.
+Citation metadata is provided in `CITATION.cff`.  For formal use, cite a
+released tag together with the relevant paper or preprint when available.
+
+---
+
+## Funding
+
+This work was partly funded by the Federal Ministry of Research, Technology and
+Space (BMFTR), Germany, under grant number 16KIS2240 of the SUSTAINET-guardian
+project.
 
 ---
 

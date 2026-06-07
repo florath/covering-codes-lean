@@ -103,8 +103,8 @@ q,n,r,bound_type,bound_value,references,year,best_flag,notes
 2,10,6,upper,2,trivial; binary table 2_tables.pdf upper ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; classification/count superscript 4 printed in table cell; raw cell 24
 2,10,7,lower,2,trivial; binary table 2_tables.pdf lower ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; raw cell 2
 2,10,7,upper,2,trivial; binary table 2_tables.pdf upper ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; raw cell 2
-2,10,8,lower,2,trivial; binary table 2_tables.pdf lower ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; OCR error corrected (raw cell 6 28 misread; correct value 2 confirmed by monotonicity K(10,7)=2 and sphere-covering bound)
-2,10,8,upper,2,trivial; binary table 2_tables.pdf upper ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; OCR error corrected (raw cell 6 28 misread; correct value 2 confirmed by monotonicity K(10,7)=2 and sphere-covering bound)
+2,10,8,lower,2,trivial; binary table 2_tables.pdf lower ref unmarked,,TRUE,"binary table 2_tables.pdf; exact value; OCR error corrected (raw cell 6 28 misread; correct value 2 confirmed by monotonicity K(10,7)=2 and sphere-covering bound)"
+2,10,8,upper,2,trivial; binary table 2_tables.pdf upper ref unmarked,,TRUE,"binary table 2_tables.pdf; exact value; OCR error corrected (raw cell 6 28 misread; correct value 2 confirmed by monotonicity K(10,7)=2 and sphere-covering bound)"
 2,10,9,lower,2,trivial; binary table 2_tables.pdf lower ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; classification/count superscript 10 printed in table cell; raw cell 210
 2,10,9,upper,2,trivial; binary table 2_tables.pdf upper ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; classification/count superscript 10 printed in table cell; raw cell 210
 2,10,10,lower,1,trivial; binary table 2_tables.pdf lower ref unmarked,,TRUE,binary table 2_tables.pdf; exact value; classification/count superscript 1 printed in table cell; raw cell 11
@@ -619,8 +619,8 @@ q,n,r,bound_type,bound_value,references,year,best_flag,notes
 3,7,3,upper,12,"Hamalainen-Rankinen, 1991; ternary table 3_tables.pdf upper ref u",1991,TRUE,ternary table 3_tables.pdf; raw cell u 11-12 u
 3,7,4,lower,3,trivial; ternary table 3_tables.pdf lower ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; raw cell 3
 3,7,4,upper,3,trivial; ternary table 3_tables.pdf upper ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; raw cell 3
-3,7,5,lower,3,trivial; ternary table 3_tables.pdf lower ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; OCR error corrected (raw cell 1 314 misread as 13; correct value 3 confirmed by monotonicity K(7,4)=3 and K(7,6)=3)
-3,7,5,upper,3,trivial; ternary table 3_tables.pdf upper ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; OCR error corrected (raw cell 1 314 misread as 13; correct value 3 confirmed by monotonicity K(7,4)=3 and K(7,6)=3)
+3,7,5,lower,3,trivial; ternary table 3_tables.pdf lower ref unmarked,,TRUE,"ternary table 3_tables.pdf; exact value; OCR error corrected (raw cell 1 314 misread as 13; correct value 3 confirmed by monotonicity K(7,4)=3 and K(7,6)=3)"
+3,7,5,upper,3,trivial; ternary table 3_tables.pdf upper ref unmarked,,TRUE,"ternary table 3_tables.pdf; exact value; OCR error corrected (raw cell 1 314 misread as 13; correct value 3 confirmed by monotonicity K(7,4)=3 and K(7,6)=3)"
 3,7,6,lower,3,trivial; ternary table 3_tables.pdf lower ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; classification/count superscript 64 printed in table cell; raw cell 364
 3,7,6,upper,3,trivial; ternary table 3_tables.pdf upper ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; classification/count superscript 64 printed in table cell; raw cell 364
 3,7,7,lower,1,trivial; ternary table 3_tables.pdf lower ref unmarked,,TRUE,ternary table 3_tables.pdf; exact value; classification/count superscript 1 printed in table cell; raw cell 11

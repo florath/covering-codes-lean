@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Heavy pre-submission kernel check: no sorry/admit, build, smoke-test.
+# Heavy release kernel check: no sorry/admit, build, smoke-test.
 # Run this before submitting changes that should be checked in kernel mode.
 # Does NOT re-run table_gen (use scripts/check-generated.sh for that).
 set -euo pipefail
