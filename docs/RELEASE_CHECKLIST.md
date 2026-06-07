@@ -88,8 +88,7 @@ git status --ignored --short
 ## Tag And Archive
 
 After all required release checks pass, create an annotated release tag.  Use a
-stable, descriptive tag name, for example `afm-2026-submission-v1` for an AFM
-submission artifact.
+stable, descriptive tag name, for example `paper-artifact-2026-v1`.
 
 ```bash
 release_tag="<release-tag>"
@@ -109,6 +108,6 @@ record the SWHID when available.
 Record these values for the manuscript and release notes:
 
 - repository URL;
-- AFM submission tag;
+- release tag;
 - full commit hash;
 - Software Heritage SWHID, once available.

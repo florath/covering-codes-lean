@@ -17,6 +17,8 @@ tables and Lean primitive provenance labels.  Keys use these prefixes:
 
 ## Keri
 
+Historical Keri web source: <https://old.sztaki.hu/~keri/codes/index.htm>.
+
 `keri/non_mixed_covering_codes.csv` is a machine-readable transcription of the
 Keri non-mixed covering-code tables.  It is treated as the historical Keri table
 snapshot whose web page was last updated on 2011-11-21.
