@@ -41,6 +41,8 @@ steps=(
   native_build_table_gen
   native_regenerate_table
   native_check_generated
+  native_dump_reference_data
+  native_check_reference_data
   native_build_covering_codes
   native_build_library_tests
   native_smoke_tests
@@ -60,6 +62,8 @@ describe_step() {
     native_build_table_gen) echo "Build table_gen in native proof mode" ;;
     native_regenerate_table) echo "Regenerate the precomputed table in native proof mode" ;;
     native_check_generated) echo "Check generated table diff and metadata" ;;
+    native_dump_reference_data) echo "Regenerate the Lean reference-data CSV in native proof mode" ;;
+    native_check_reference_data) echo "Check Lean reference-data diff and BibTeX keys" ;;
     native_build_covering_codes) echo "Build covering_codes in native proof mode" ;;
     native_build_library_tests) echo "Build library, examples, and test modules in native proof mode" ;;
     native_smoke_tests) echo "Run native smoke tests" ;;
@@ -329,6 +333,14 @@ run_step native_check_generated "$(describe_step native_check_generated)" \
       CoveringCodes/Database/GeneratedTable.lean \
       CoveringCodes/Database/GeneratedTable
     scripts/check-generated-metadata.sh
+  '
+run_step native_dump_reference_data "$(describe_step native_dump_reference_data)" \
+  lake -KproofMode=native exe reference_data_dump
+run_step native_check_reference_data "$(describe_step native_check_reference_data)" \
+  bash -c '
+    set -euo pipefail
+    git diff --exit-code -- reference-data/lean/non_mixed_covering_codes.csv
+    python3 -B reference-data/scripts/check_reference_keys.py
   '
 run_step native_build_covering_codes "$(describe_step native_build_covering_codes)" \
   scripts/build-proof-mode.sh native covering_codes
