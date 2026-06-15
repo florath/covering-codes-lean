@@ -294,9 +294,9 @@ def precomputedTable_chunk_87 : Array AnyBoundEntry := #[
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 4 1))
     upperTrace := (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
   { key := { q := 9, n := 4, r := 2 }
-    lowerValue := 16
+    lowerValue := 23
     upperValue := 41
-    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 4 2))
+    lowerTrace := (.alphabetBack (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_octonary_four_two_structural_lower" (primitiveLower_valid 8 4 2)))
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
   { key := { q := 9, n := 4, r := 3 }
     lowerValue := 9

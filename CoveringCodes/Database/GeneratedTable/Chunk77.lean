@@ -789,10 +789,10 @@ def precomputedTable_chunk_77 : Array AnyBoundEntry := #[
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 4 1))
     upperTrace := (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 8 3 1))) },
   { key := { q := 8, n := 4, r := 2 }
-    lowerValue := 13
-    upperValue := 32
-    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 4 2))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 8 3 1))) },
+    lowerValue := 23
+    upperValue := 23
+    lowerTrace := (.primitive "lean_octonary_four_two_structural_lower" (primitiveLower_valid 8 4 2))
+    upperTrace := (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)) },
   { key := { q := 8, n := 4, r := 3 }
     lowerValue := 8
     upperValue := 8
@@ -1035,14 +1035,14 @@ def precomputedTable_chunk_77 : Array AnyBoundEntry := #[
     upperTrace := (@UpperTrace.alphabetExpand 4 8 2 5 1 64 (by decide : 0 < 4) (by decide : 0 < 2) (by decide : 8 ≤ 2 * 4) (by decide : 0 < 8) (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
   { key := { q := 8, n := 5, r := 2 }
     lowerValue := 63
-    upperValue := 256
+    upperValue := 184
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 5 2))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 8 3 1)))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2))) },
   { key := { q := 8, n := 5, r := 3 }
     lowerValue := 9
-    upperValue := 32
+    upperValue := 23
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 5 3))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 8) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 8 3 1))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2))) },
   { key := { q := 8, n := 5, r := 4 }
     lowerValue := 8
     upperValue := 8

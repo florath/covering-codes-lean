@@ -76,6 +76,26 @@ theorem dist_deleteCoord_insertCoord_add_one_le (j : Fin (n + 1)) (a : Fin q)
     exact Finset.card_le_card hsub
   simpa [Sdel, Sfull, deleteCoord] using hle
 
+/-- Deleting a coordinate cannot increase Hamming distance from an inserted word. -/
+theorem dist_deleteCoord_le_dist_insertCoord (j : Fin (n + 1)) (a : Fin q)
+    (x : QaryWord q n) (c : QaryWord q (n + 1)) :
+    dist x (deleteCoord j c) ≤ dist (insertCoord j a x) c := by
+  classical
+  simp only [dist, hammingDist]
+  let Sdel : Finset (Fin n) :=
+    Finset.univ.filter (fun i : Fin n => x i ≠ deleteCoord j c i)
+  let Sfull : Finset (Fin (n + 1)) :=
+    Finset.univ.filter (fun k : Fin (n + 1) => insertCoord j a x k ≠ c k)
+  have hsub : Sdel.image (fun i : Fin n => j.succAbove i) ⊆ Sfull := by
+    intro k hk
+    rcases Finset.mem_image.mp hk with ⟨i, hi, rfl⟩
+    simp only [Sdel, Sfull, Finset.mem_filter, Finset.mem_univ, true_and] at hi ⊢
+    simpa [deleteCoord, insertCoord] using hi
+  calc
+    Sdel.card = (Sdel.image (fun i : Fin n => j.succAbove i)).card := by
+      rw [Finset.card_image_of_injective _ (succAbove_injective j)]
+    _ ≤ Sfull.card := Finset.card_le_card hsub
+
 end CoordinateDeletion
 
 end CoveringCodes

@@ -1,4 +1,5 @@
 import CoveringCodes.Bounds.Balls
+import CoveringCodes.Constructions.CoordinateDeletion
 import CoveringCodes.Database.Source
 import CoveringCodes.Database.Sources.Trivial
 import Mathlib.Tactic
@@ -211,6 +212,281 @@ theorem sparseBound_valid (q : Nat) (hq : 2 ≤ q) :
       exact hsmall
     exact sparseBound_le_of_candidate (q := q) (s := C.card / q) (m := C.card)
       (Nat.le_of_lt hslt) (Nat.div_mul_le_self C.card q) hmiss
+
+/-! ## A sharpened `7`-ary length-three lower bound -/
+
+private def coordFiber3 {q : Nat} (C : Finset (QaryWord q 3)) (j : Fin 3)
+    (a : Fin q) : Finset (QaryWord q 3) :=
+  C.filter (fun w => w j = a)
+
+private def tailFirstValuesInFiber3 {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) (a : Fin q) : Finset (Fin q) :=
+  (coordFiber3 C j a).image (fun w => deleteCoord j w 0)
+
+private def tailSecondValuesInFiber3 {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) (a : Fin q) : Finset (Fin q) :=
+  (coordFiber3 C j a).image (fun w => deleteCoord j w 1)
+
+private def missingTailFirstInFiber3 {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) (a : Fin q) : Finset (Fin q) :=
+  Finset.univ \ tailFirstValuesInFiber3 C j a
+
+private def missingTailSecondInFiber3 {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) (a : Fin q) : Finset (Fin q) :=
+  Finset.univ \ tailSecondValuesInFiber3 C j a
+
+private def tailPairValues3 {q : Nat} (C : Finset (QaryWord q 3)) (j : Fin 3) :
+    Finset (Fin q × Fin q) :=
+  C.image (fun w => (deleteCoord j w 0, deleteCoord j w 1))
+
+private theorem missingTailFirst_card_ge_of_small_fiber {q s : Nat}
+    (C : Finset (QaryWord q 3)) (j : Fin 3) (a : Fin q)
+    (hrow : (coordFiber3 C j a).card ≤ s) :
+    q - s ≤ (missingTailFirstInFiber3 C j a).card := by
+  have hval : (tailFirstValuesInFiber3 C j a).card ≤ s := by
+    exact Finset.card_image_le.trans hrow
+  have hsub : tailFirstValuesInFiber3 C j a ⊆ (Finset.univ : Finset (Fin q)) := by
+    intro x _hx
+    simp
+  rw [missingTailFirstInFiber3, Finset.card_sdiff_of_subset hsub]
+  simp [Fintype.card_fin]
+  omega
+
+private theorem missingTailSecond_card_ge_of_small_fiber {q s : Nat}
+    (C : Finset (QaryWord q 3)) (j : Fin 3) (a : Fin q)
+    (hrow : (coordFiber3 C j a).card ≤ s) :
+    q - s ≤ (missingTailSecondInFiber3 C j a).card := by
+  have hval : (tailSecondValuesInFiber3 C j a).card ≤ s := by
+    exact Finset.card_image_le.trans hrow
+  have hsub : tailSecondValuesInFiber3 C j a ⊆ (Finset.univ : Finset (Fin q)) := by
+    intro x _hx
+    simp
+  rw [missingTailSecondInFiber3, Finset.card_sdiff_of_subset hsub]
+  simp [Fintype.card_fin]
+  omega
+
+private theorem dist_fin_two_eq_two_of_both_ne {q : Nat} (x y : QaryWord q 2)
+    (h0 : x 0 ≠ y 0) (h1 : x 1 ≠ y 1) : dist x y = 2 := by
+  classical
+  simp only [dist, hammingDist]
+  have hfilter :
+      (Finset.univ.filter (fun i : Fin 2 => x i ≠ y i)) =
+        (Finset.univ : Finset (Fin 2)) := by
+    exact Finset.filter_true_of_mem (fun i _hi => by
+      fin_cases i
+      · exact h0
+      · exact h1)
+  rw [hfilter]
+  simp
+
+private theorem forced_tail_pair_subset_of_fiber_cover {q : Nat}
+    (C : Finset (QaryWord q 3)) (hC : CoversFinset C 1)
+    (j : Fin 3) (a : Fin q) :
+    (missingTailFirstInFiber3 C j a ×ˢ missingTailSecondInFiber3 C j a) ⊆
+      tailPairValues3 C j := by
+  intro p hp
+  rw [Finset.mem_product] at hp
+  rcases hp with ⟨hp0, hp1⟩
+  have hp0' := hp0
+  have hp1' := hp1
+  rw [missingTailFirstInFiber3, Finset.mem_sdiff] at hp0'
+  rw [missingTailSecondInFiber3, Finset.mem_sdiff] at hp1'
+  let x : QaryWord q 2 := ![p.1, p.2]
+  obtain ⟨d, hdC, hdist⟩ := hC (insertCoord j a x)
+  by_cases hdj : d j = a
+  · have hdFiber : d ∈ coordFiber3 C j a := by
+      simp [coordFiber3, hdC, hdj]
+    have htail0 : x 0 ≠ deleteCoord j d 0 := by
+      intro h
+      exact hp0'.2 (by
+        refine Finset.mem_image.mpr ⟨d, hdFiber, ?_⟩
+        simpa [x] using h.symm)
+    have htail1 : x 1 ≠ deleteCoord j d 1 := by
+      intro h
+      exact hp1'.2 (by
+        refine Finset.mem_image.mpr ⟨d, hdFiber, ?_⟩
+        simpa [x] using h.symm)
+    have htail_two : dist x (deleteCoord j d) = 2 :=
+      dist_fin_two_eq_two_of_both_ne x (deleteCoord j d) htail0 htail1
+    have htail_le := dist_deleteCoord_le_dist_insertCoord j a x d
+    have hfull_ge : 2 ≤ dist (insertCoord j a x) d := by
+      calc
+        2 = dist x (deleteCoord j d) := htail_two.symm
+        _ ≤ dist (insertCoord j a x) d := htail_le
+    omega
+  · have hdrop := dist_deleteCoord_insertCoord_add_one_le j a x d hdj
+    have htail_zero : dist x (deleteCoord j d) = 0 := by
+      have hle : dist x (deleteCoord j d) + 1 ≤ 1 := hdrop.trans hdist
+      omega
+    have htail_eq : x = deleteCoord j d := dist_eq_zero.mp htail_zero
+    refine Finset.mem_image.mpr ⟨d, hdC, ?_⟩
+    apply Prod.ext
+    · have h0 := congrFun htail_eq.symm (0 : Fin 2)
+      simpa [x] using h0
+    · have h1 := congrFun htail_eq.symm (1 : Fin 2)
+      simpa [x] using h1
+
+/-- In a `7`-ary length-three radius-one cover with at most `21` words, no
+coordinate-symbol fiber can have size at most two. -/
+theorem qarySevenThreeOne_fiber_card_gt_two_of_card_le_twenty_one
+    (C : Finset (QaryWord 7 3)) (hC : CoversFinset C 1)
+    (hcard : C.card ≤ 21) (j : Fin 3) (a : Fin 7) :
+    2 < (C.filter (fun w => w j = a)).card := by
+  change 2 < (coordFiber3 C j a).card
+  by_contra hnot
+  have hrow : (coordFiber3 C j a).card ≤ 2 := by omega
+  let B := missingTailFirstInFiber3 C j a
+  let D := missingTailSecondInFiber3 C j a
+  have hB : 5 ≤ B.card := by
+    simpa [B] using
+      missingTailFirst_card_ge_of_small_fiber (q := 7) (s := 2) C j a hrow
+  have hD : 5 ≤ D.card := by
+    simpa [D] using
+      missingTailSecond_card_ge_of_small_fiber (q := 7) (s := 2) C j a hrow
+  have hprod : 25 ≤ (B ×ˢ D).card := by
+    rw [Finset.card_product]
+    exact (by
+      have hmul := Nat.mul_le_mul hB hD
+      simpa using hmul)
+  have hsubset : B ×ˢ D ⊆ tailPairValues3 C j := by
+    simpa [B, D] using forced_tail_pair_subset_of_fiber_cover C hC j a
+  have hforced : (B ×ˢ D).card ≤ (tailPairValues3 C j).card :=
+    Finset.card_le_card hsubset
+  have hpairCard : (tailPairValues3 C j).card ≤ C.card := Finset.card_image_le
+  omega
+
+private theorem coordFiber3_card_sum {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) :
+    C.card = ∑ a : Fin q, (coordFiber3 C j a).card := by
+  unfold coordFiber3
+  simpa using
+    (Finset.card_eq_sum_card_fiberwise
+      (s := C) (t := (Finset.univ : Finset (Fin q)))
+      (f := fun w : QaryWord q 3 => w j) (by intro w _hw; simp))
+
+private theorem qarySevenThreeOne_fiber_card_eq_three_of_card_le_twenty_one
+    (C : Finset (QaryWord 7 3)) (hC : CoversFinset C 1)
+    (hcard : C.card ≤ 21) (j : Fin 3) (a : Fin 7) :
+    (coordFiber3 C j a).card = 3 := by
+  have hgt :=
+    qarySevenThreeOne_fiber_card_gt_two_of_card_le_twenty_one C hC hcard j a
+  change 2 < (coordFiber3 C j a).card at hgt
+  have hge : 3 ≤ (coordFiber3 C j a).card := by omega
+  have hle : (coordFiber3 C j a).card ≤ 3 := by
+    by_contra hnot
+    have hge4 : 4 ≤ (coordFiber3 C j a).card := by omega
+    have hsum_lower :
+        (∑ b : Fin 7, (if b = a then 4 else 3 : Nat)) ≤
+          ∑ b : Fin 7, (coordFiber3 C j b).card := by
+      exact Finset.sum_le_sum (fun b _hb => by
+        by_cases hba : b = a
+        · subst b
+          simpa using hge4
+        · have hgtb :=
+            qarySevenThreeOne_fiber_card_gt_two_of_card_le_twenty_one C hC hcard j b
+          change 2 < (coordFiber3 C j b).card at hgtb
+          have hgeb : 3 ≤ (coordFiber3 C j b).card := by omega
+          simpa [hba] using hgeb)
+    have hconst : (∑ b : Fin 7, (if b = a then 4 else 3 : Nat)) = 22 := by
+      fin_cases a <;> decide
+    have htotal : 22 ≤ C.card := by
+      rw [coordFiber3_card_sum C j]
+      exact hconst.symm ▸ hsum_lower
+    omega
+  exact le_antisymm hle hge
+
+/-- A certified strengthening of the sparse-slice bound in the single case
+needed by the `K_8(4,2)` singleton-fiber reduction. -/
+theorem qarySevenThreeOneLowerTwentyTwo : QaryKLower 7 3 1 22 := by
+  intro C hC
+  by_contra hnot
+  have hcard : C.card ≤ 21 := by omega
+  let firstSymbolsWithSecond (y : Fin 7) : Finset (Fin 7) :=
+    (coordFiber3 C 1 y).image (fun w => w 0)
+  let firstSymbolsWithThird (z : Fin 7) : Finset (Fin 7) :=
+    (coordFiber3 C 2 z).image (fun w => w 0)
+  have hfirstSecond_card (y : Fin 7) : (firstSymbolsWithSecond y).card ≤ 3 := by
+    calc
+      (firstSymbolsWithSecond y).card ≤ (coordFiber3 C 1 y).card := Finset.card_image_le
+      _ = 3 := qarySevenThreeOne_fiber_card_eq_three_of_card_le_twenty_one
+        C hC hcard 1 y
+  have hfirstThird_card (z : Fin 7) : (firstSymbolsWithThird z).card ≤ 3 := by
+    calc
+      (firstSymbolsWithThird z).card ≤ (coordFiber3 C 2 z).card := Finset.card_image_le
+      _ = 3 := qarySevenThreeOne_fiber_card_eq_three_of_card_le_twenty_one
+        C hC hcard 2 z
+  have hallPairs : (Finset.univ : Finset (Fin 7 × Fin 7)) ⊆ pair23Values3 C := by
+    intro p _hp
+    let A := firstSymbolsWithSecond p.1
+    let B := firstSymbolsWithThird p.2
+    have hA : A.card ≤ 3 := by simpa [A] using hfirstSecond_card p.1
+    have hB : B.card ≤ 3 := by simpa [B] using hfirstThird_card p.2
+    have hUnion_lt : (A ∪ B).card < (Finset.univ : Finset (Fin 7)).card := by
+      have hUnion := Finset.card_union_le A B
+      simp [Fintype.card_fin]
+      omega
+    obtain ⟨a, _ha_univ, ha_not⟩ :=
+      Finset.exists_mem_notMem_of_card_lt_card hUnion_lt
+    have hmissSecond : p.1 ∈ missingSecondInFiber3 C a := by
+      rw [missingSecondInFiber3, Finset.mem_sdiff]
+      refine ⟨by simp, ?_⟩
+      intro hpSecond
+      exact ha_not (by
+        rw [Finset.mem_union]
+        left
+        change a ∈ (coordFiber3 C 1 p.1).image (fun w => w 0)
+        rcases Finset.mem_image.mp hpSecond with ⟨c, hcFiber, hcSecond⟩
+        refine Finset.mem_image.mpr ⟨c, ?_, ?_⟩
+        · have hcFiber' := hcFiber
+          simp [coord0Fiber3] at hcFiber'
+          simp [coordFiber3, hcFiber'.1, hcSecond]
+        · have hcFiber' := hcFiber
+          simp [coord0Fiber3] at hcFiber'
+          exact hcFiber'.2)
+    have hmissThird : p.2 ∈ missingThirdInFiber3 C a := by
+      rw [missingThirdInFiber3, Finset.mem_sdiff]
+      refine ⟨by simp, ?_⟩
+      intro hpThird
+      exact ha_not (by
+        rw [Finset.mem_union]
+        right
+        change a ∈ (coordFiber3 C 2 p.2).image (fun w => w 0)
+        rcases Finset.mem_image.mp hpThird with ⟨c, hcFiber, hcThird⟩
+        refine Finset.mem_image.mpr ⟨c, ?_, ?_⟩
+        · have hcFiber' := hcFiber
+          simp [coord0Fiber3] at hcFiber'
+          simp [coordFiber3, hcFiber'.1, hcThird]
+        · have hcFiber' := hcFiber
+          simp [coord0Fiber3] at hcFiber'
+          exact hcFiber'.2)
+    have hforced := forced_pair23_subset_of_sparse_fiber_cover C hC a
+    exact hforced (by
+      rw [Finset.mem_product]
+      exact ⟨hmissSecond, hmissThird⟩)
+  have hfull : 49 ≤ (pair23Values3 C).card := by
+    have hcard_univ := Finset.card_le_card hallPairs
+    simpa [Fintype.card_fin] using hcard_univ
+  have hpairCard : (pair23Values3 C).card ≤ C.card := Finset.card_image_le
+  omega
+
+def qarySevenThreeOneLowerName : String :=
+  "lean_qary_seven_three_one_structural_lower"
+
+def qarySevenThreeOneLower (q n r : Nat) : Nat :=
+  if q = 7 ∧ n = 3 ∧ r = 1 then 22 else zeroLower q n r
+
+theorem qarySevenThreeOneLower_source_valid (q n r : Nat) :
+    QaryKLower q n r (qarySevenThreeOneLower q n r) := by
+  by_cases h : q = 7 ∧ n = 3 ∧ r = 1
+  · rcases h with ⟨rfl, rfl, rfl⟩
+    simpa [qarySevenThreeOneLower] using qarySevenThreeOneLowerTwentyTwo
+  · simpa [qarySevenThreeOneLower, h] using zeroLower_valid q n r
+
+def qarySevenThreeOneLowerSource : LowerBoundSource where
+  value := qarySevenThreeOneLower
+  trace := fun q n r =>
+    .primitive qarySevenThreeOneLowerName
+      (qarySevenThreeOneLower_source_valid q n r)
 
 def sparseSliceLowerName : String :=
   "lean_sparse_slicer"

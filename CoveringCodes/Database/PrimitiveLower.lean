@@ -1,6 +1,7 @@
 import CoveringCodes.Database.Sources.SphereCovering
 import CoveringCodes.Database.Sources.SmallCases
 import CoveringCodes.Database.Sources.SmallLowerBounds
+import CoveringCodes.Database.Sources.OctonaryFourTwo
 import CoveringCodes.Database.Sources.SparseSlicer
 
 namespace CoveringCodes
@@ -8,12 +9,14 @@ namespace Database
 
 def primitiveLowerSource : LowerBoundSource :=
   sphereLowerSource.max
-    (sparseSliceLowerSource.max
-      (smallLowerTernary331LowerSource.max
-        (smallLowerBinary251LowerSource.max
-          (smallLowerBinary262LowerSource.max
-            (zeroRadiusLowerSource.max
-              (largeRadiusLowerSource.max radiusNMinusOneLowerSource))))))
+    (octonaryFourRadiusTwoLowerSource.max
+      (qarySevenThreeOneLowerSource.max
+        (sparseSliceLowerSource.max
+          (smallLowerTernary331LowerSource.max
+            (smallLowerBinary251LowerSource.max
+              (smallLowerBinary262LowerSource.max
+                (zeroRadiusLowerSource.max
+                  (largeRadiusLowerSource.max radiusNMinusOneLowerSource))))))))
 
 def primitiveLower (q n r : Nat) : Nat :=
   primitiveLowerSource.value q n r
