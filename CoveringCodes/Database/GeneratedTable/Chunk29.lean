@@ -1255,8 +1255,8 @@ def precomputedTable_chunk_29 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 6 1)) },
   { key := { q := 3, n := 6, r := 2 }
     lowerValue := 10
-    upperValue := 24
+    upperValue := 17
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 6 2))
-    upperTrace := (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 5 2))) }]
+    upperTrace := (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 6 2)) }]
 
 end CoveringCodes.Database

@@ -26,6 +26,7 @@ private def primitiveUpperSources : List UpperBoundSource := [
   smallExplicitBinaryNineRadiusThreeUpperSource,
   smallExplicitBinarySixRadiusTwoUpperSource,
   smallExplicitTernaryFiveRadiusTwoUpperSource,
+  smallExplicitTernarySixRadiusTwoUpperSource,
   smallExplicitTernaryFiveRadiusThreeUpperSource,
   smallExplicitTernarySixRadiusThreeUpperSource,
   smallExplicitQuaternary331UpperSource,

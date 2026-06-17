@@ -23,6 +23,7 @@ inside Lean.
 * a binary length-nine radius-three code witnessing `K_2(9,3) <= 7`;
 * a binary length-six radius-two code witnessing `K_2(6,2) <= 4`;
 * a ternary length-five radius-two code witnessing `K_3(5,2) <= 8`;
+* a ternary length-six radius-two code witnessing `K_3(6,2) <= 17`;
 * a ternary length-five radius-three code witnessing `K_3(5,3) <= 3`;
 * a ternary length-six radius-three code witnessing `K_3(6,3) <= 6`;
 * a quaternary length-three radius-one code witnessing `K_4(3,1) <= 8`.
@@ -739,6 +740,61 @@ def smallExplicitTernaryFiveRadiusTwoUpperSource : UpperBoundSource where
   trace := fun q n r =>
     .primitive smallExplicitTernaryFiveRadiusTwoUpperName
       (smallExplicitTernaryFiveRadiusTwoUpper_valid q n r)
+
+private def ternarySixRadiusTwoCode : Finset (QaryWord 3 6) :=
+  {![f3_2, f3_0, f3_0, f3_1, f3_1, f3_0],
+    ![f3_1, f3_0, f3_1, f3_0, f3_0, f3_1],
+    ![f3_2, f3_1, f3_0, f3_2, f3_0, f3_2],
+    ![f3_2, f3_2, f3_1, f3_2, f3_1, f3_2],
+    ![f3_1, f3_0, f3_2, f3_2, f3_2, f3_0],
+    ![f3_0, f3_2, f3_0, f3_2, f3_1, f3_1],
+    ![f3_1, f3_1, f3_1, f3_2, f3_2, f3_1],
+    ![f3_2, f3_2, f3_0, f3_1, f3_2, f3_1],
+    ![f3_0, f3_1, f3_1, f3_0, f3_2, f3_0],
+    ![f3_1, f3_2, f3_1, f3_1, f3_2, f3_2],
+    ![f3_1, f3_1, f3_0, f3_1, f3_1, f3_2],
+    ![f3_0, f3_0, f3_1, f3_1, f3_0, f3_0],
+    ![f3_0, f3_0, f3_2, f3_0, f3_2, f3_2],
+    ![f3_1, f3_2, f3_2, f3_0, f3_0, f3_0],
+    ![f3_0, f3_2, f3_2, f3_1, f3_0, f3_2],
+    ![f3_2, f3_1, f3_2, f3_1, f3_1, f3_1],
+    ![f3_0, f3_1, f3_2, f3_2, f3_0, f3_1]}
+
+private theorem ternarySixRadiusTwo_card :
+    ternarySixRadiusTwoCode.card ≤ 17 := by
+  covering_decide
+
+set_option maxRecDepth 10000 in
+private theorem ternarySixRadiusTwo_covers :
+    CoversFinset ternarySixRadiusTwoCode 2 := by
+  show ∀ x : QaryWord 3 6,
+    ∃ c : QaryWord 3 6, c ∈ ternarySixRadiusTwoCode ∧ hammingDist x c ≤ 2
+  covering_decide
+
+def smallExplicitTernarySixRadiusTwoUpperName : String :=
+  "lean_small_explicit_upper"
+
+def smallExplicitTernarySixRadiusTwoExplicit : ExplicitQaryUpper 3 6 2 17 :=
+  { code := ternarySixRadiusTwoCode
+    card_le := ternarySixRadiusTwo_card
+    covers := ternarySixRadiusTwo_covers }
+
+def smallExplicitTernarySixRadiusTwoUpper (q n r : Nat) : Nat :=
+  if q = 3 ∧ n = 6 ∧ r = 2 then 17 else trivialUpper q n r
+
+theorem smallExplicitTernarySixRadiusTwoUpper_valid (q n r : Nat) :
+    QaryKUpper q n r (smallExplicitTernarySixRadiusTwoUpper q n r) := by
+  by_cases h : q = 3 ∧ n = 6 ∧ r = 2
+  · rcases h with ⟨rfl, rfl, rfl⟩
+    simpa [smallExplicitTernarySixRadiusTwoUpper] using
+      smallExplicitTernarySixRadiusTwoExplicit.toUpper
+  · simpa [smallExplicitTernarySixRadiusTwoUpper, h] using trivialUpper_valid q n r
+
+def smallExplicitTernarySixRadiusTwoUpperSource : UpperBoundSource where
+  value := smallExplicitTernarySixRadiusTwoUpper
+  trace := fun q n r =>
+    .primitive smallExplicitTernarySixRadiusTwoUpperName
+      (smallExplicitTernarySixRadiusTwoUpper_valid q n r)
 
 private def ternaryFiveRadiusThreeCode : Finset (QaryWord 3 5) :=
   {![f3_0, f3_0, f3_0, f3_0, f3_0],
