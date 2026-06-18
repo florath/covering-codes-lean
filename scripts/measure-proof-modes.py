@@ -20,12 +20,48 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-DEFAULT_TARGETS = [
-    ("smallExplicitUpper", "", "", "", "CoveringCodes/Database/Sources/SmallExplicitUpper.lean"),
-    ("smallLowerBounds", "", "", "", "CoveringCodes/Database/Sources/SmallLowerBounds.lean"),
-]
+VAN_LAARHOVEN_MODULE = "VanLaarhoven1989"
+SMALL_EXPLICIT_UPPER_DIR = "CoveringCodes/Database/Sources/SmallExplicitUpper"
+SMALL_LOWER_BOUNDS_DIR = "CoveringCodes/Database/Sources/SmallLowerBounds"
 
-VAN_LAARHOVEN_FILE = "VanLaarhoven1989.lean"
+SMALL_EXPLICIT_UPPER_CASES = [
+    (2, 3, 1),
+    (2, 5, 1),
+    (2, 6, 1),
+    (2, 6, 2),
+    (2, 7, 1),
+    (2, 7, 2),
+    (2, 8, 2),
+    (2, 9, 3),
+    (3, 3, 1),
+    (3, 4, 1),
+    (3, 5, 2),
+    (3, 5, 3),
+    (3, 6, 2),
+    (3, 6, 3),
+    (4, 3, 1),
+    (4, 4, 1),
+    (4, 4, 2),
+    (5, 3, 1),
+    (6, 3, 1),
+    (7, 3, 1),
+    (8, 3, 1),
+    (9, 3, 1),
+    (10, 3, 1),
+    (11, 3, 1),
+    (12, 3, 1),
+    (13, 3, 1),
+    (14, 3, 1),
+    (15, 3, 1),
+    (16, 3, 1),
+    (17, 3, 1),
+    (18, 3, 1),
+]
+SMALL_LOWER_BOUND_CASES = [
+    (2, 5, 1),
+    (2, 6, 2),
+    (3, 3, 1),
+]
 
 
 @dataclass(frozen=True)
@@ -35,6 +71,26 @@ class Target:
     n: str
     r: str
     file: str
+
+
+def case_target(label_prefix: str, directory: str, q: int, n: int, r: int) -> Target:
+    k_name = f"K_{q}_{n}_{r}"
+    return Target(
+        label=f"{label_prefix}{q}_{n}_{r}",
+        q=str(q),
+        n=str(n),
+        r=str(r),
+        file=f"{directory}/{k_name}.lean",
+    )
+
+
+def default_targets() -> list[Target]:
+    return [
+        *(case_target("smallExplicitUpperK", SMALL_EXPLICIT_UPPER_DIR, *case)
+          for case in SMALL_EXPLICIT_UPPER_CASES),
+        *(case_target("smallLowerBoundsK", SMALL_LOWER_BOUNDS_DIR, *case)
+          for case in SMALL_LOWER_BOUND_CASES),
+    ]
 
 
 @dataclass
@@ -75,7 +131,8 @@ def mode_values(mode: str) -> list[tuple[str, str]]:
 
 
 def is_van_laarhoven_target(target: Target) -> bool:
-    return Path(target.file).name == VAN_LAARHOVEN_FILE
+    path = Path(target.file)
+    return path.name == f"{VAN_LAARHOVEN_MODULE}.lean" or VAN_LAARHOVEN_MODULE in path.parts
 
 
 def safe_log_label(label: str) -> str:
@@ -225,7 +282,7 @@ def main() -> int:
         "--allow-van-laarhoven-kernel",
         action="store_true",
         help=(
-            "Allow kernel-mode measurements for VanLaarhoven1989.lean. "
+            "Allow kernel-mode measurements for VanLaarhoven1989 modules. "
             "These certificates have been reported to need >350 GB RAM and >75 minutes."
         ),
     )
@@ -247,6 +304,11 @@ def main() -> int:
         help="Do not prebuild target imports before timed Lean runs.",
     )
     parser.add_argument(
+        "--include-default-targets",
+        action="store_true",
+        help="Prepend the built-in split small-certificate targets to explicit targets.",
+    )
+    parser.add_argument(
         "--root",
         default=os.getcwd(),
         help="Repository root to run commands from.",
@@ -261,8 +323,10 @@ def main() -> int:
     args = parser.parse_args()
 
     targets = [parse_target(t) for t in args.targets]
-    if not targets:
-        targets = [Target(*row) for row in DEFAULT_TARGETS]
+    if args.include_default_targets:
+        targets = [*default_targets(), *targets]
+    elif not targets:
+        targets = default_targets()
 
     requested_modes = mode_values(args.mode)
     if (
@@ -271,7 +335,7 @@ def main() -> int:
         and any(is_van_laarhoven_target(target) for target in targets)
     ):
         parser.error(
-            "refusing VanLaarhoven1989.lean in kernel mode: reported >350 GB RAM and >75 minutes; "
+            "refusing VanLaarhoven1989 modules in kernel mode: reported >350 GB RAM and >75 minutes; "
             "use --mode native, or pass --allow-van-laarhoven-kernel with --timeout and --lean-memory-mb"
         )
 

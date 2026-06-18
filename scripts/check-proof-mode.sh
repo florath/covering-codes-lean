@@ -49,7 +49,7 @@ fi
 
 if [[ "${mode}" == "kernel" ]]; then
   for file in "$@"; do
-    if [[ "${file}" == *"VanLaarhoven1989.lean" && "${ALLOW_VAN_LAARHOVEN_KERNEL:-}" != "1" ]]; then
+    if [[ "${file}" == *"VanLaarhoven1989"* && "${ALLOW_VAN_LAARHOVEN_KERNEL:-}" != "1" ]]; then
       echo "Refusing van Laarhoven kernel check: reported >350 GB RAM and >75 minutes." >&2
       echo "Use native mode, or set ALLOW_VAN_LAARHOVEN_KERNEL=1 with LEAN_MEMORY_MB and an external timeout." >&2
       exit 3

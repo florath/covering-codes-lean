@@ -78,7 +78,8 @@ scripts/measure-proof-modes.py --mode both --timeout 600
 ```
 
 The measurement script prebuilds target imports first; the timed CSV rows then
-measure the selected Lean file runs themselves.
+measure the selected Lean file runs themselves.  Its default targets are the
+split small-certificate leaf files, not the aggregate import modules.
 
 For per-proof or per-`K_q(n,r)` CPU/RSS attribution, place that result in an
 isolated Lean file and pass it as `label,q,n,r,file` to the measurement script.
@@ -140,11 +141,13 @@ Case-study certificate check:
 
 ```bash
 LEAN_MEMORY_MB=64000 scripts/check-proof-mode.sh native \
-  CoveringCodes/Database/Sources/VanLaarhoven1989.lean
+  CoveringCodes/Database/Sources/VanLaarhoven1989/K_3_6_1.lean \
+  CoveringCodes/Database/Sources/VanLaarhoven1989/K_3_7_1.lean \
+  CoveringCodes/Database/Sources/VanLaarhoven1989/K_3_8_1.lean
 ```
 
 This rechecks the committed van Laarhoven explicit-code certificates in native
-proof mode.  It is expensive but bounded; kernel mode for the same file is much
+proof mode.  It is expensive but bounded; kernel mode for these modules is much
 larger.
 
 Heavy checks and regeneration:
