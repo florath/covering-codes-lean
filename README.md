@@ -15,6 +15,7 @@ codeword.  The football pool problem is the special case `K_3(n,1)`.
 Build the command-line tool and run a few example covering-code queries:
 
 ```bash
+scripts/external-certificates.py materialize --all
 scripts/build-proof-mode.sh native covering_codes
 lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
@@ -28,9 +29,11 @@ stronger kernel replay path is described below.
 To monitor active generated-table chunks during a long build, run
 `scripts/watch-generated-build.sh` in another terminal.
 
-See `scripts/check.sh` for the heavy kernel check, and
-`scripts/check-generated.sh` for the Git-checkout table-regeneration check.
+Use `scripts/release-qa-chain.sh` for the full pre-commit/pre-main QA path.
 Developer-only workflows are summarized in `docs/HOWTO_DEVELOP.md`.
+
+Some large proof certificates are stored outside git on Zenodo and are
+materialized on demand.  See [External certificate data](#external-certificate-data).
 
 ### Parallelism and memory
 
@@ -112,6 +115,7 @@ Run commands from the repository root.
 Recommended first build:
 
 ```bash
+scripts/external-certificates.py materialize --all
 scripts/build-proof-mode.sh native covering_codes
 lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
@@ -150,27 +154,61 @@ This rechecks the committed van Laarhoven explicit-code certificates in native
 proof mode.  It is expensive but bounded; kernel mode for these modules is much
 larger.
 
-Heavy checks and regeneration:
+Full QA and regeneration:
 
 ```bash
-scripts/build-proof-mode.sh kernel covering_codes
-scripts/check.sh
+scripts/release-qa-chain.sh
 scripts/check-generated.sh
 lake -KproofMode=native exe table_gen
 ```
 
 Kernel builds use ordinary kernel `decide` for finite proof leaves and are very
-expensive.  `scripts/check.sh` is the heavy release check.
-`scripts/check-generated.sh` and `lake -KproofMode=native exe table_gen`
-regenerate the precomputed table and are intended for source or generator
-changes, not ordinary use.
+expensive.  `scripts/release-qa-chain.sh` is the canonical full QA path before
+commits that may be pushed to `main`; it runs clean native and kernel phases,
+generated-table checks, reference-data checks, smoke tests, external certificate
+handling, and proof-mode measurements.  `scripts/check-generated.sh` and
+`lake -KproofMode=native exe table_gen` remain focused developer commands for
+source or generator changes.
 
 Historical comparison data lives under `reference-data/`.  It is reference
 material only; it is not imported by Lean and does not certify any bound.
 
+### External certificate data
+
+Large LRAT/CNF proof artifacts are archived outside git and described by
+`data/external-certificates/manifest.json`.  The current external bundle is
+`K_8_4_2-lrat`, archived on Zenodo at
+<https://zenodo.org/records/20784013>.
+
+For a clean checkout, materialize the external certificates before building
+Lean targets that use them:
+
+```bash
+scripts/external-certificates.py materialize K_8_4_2-lrat
+```
+
+To materialize every external certificate bundle listed in the manifest, use:
+
+```bash
+scripts/external-certificates.py materialize --all
+```
+
+To build the certificate-backed target and remove the extracted raw files
+afterward, run:
+
+```bash
+scripts/external-certificates.py check K_8_4_2-lrat --proof-mode native --clean-extracted
+```
+
+The full QA chain performs this external-certificate step automatically after
+each native/kernel clean phase.  Set
+`EXTERNAL_CERTIFICATE_STORAGE_LIMIT`, for example `20GiB`, to process external
+certificate bundles in storage-bounded batches.
+
 ### Standard build checks
 
 ```bash
+scripts/external-certificates.py materialize --all
 scripts/build-proof-mode.sh native covering_codes
 lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
@@ -211,7 +249,7 @@ scripts/build-proof-mode.sh native covering_codes
 The helper scripts encode these workflows:
 
 ```bash
-scripts/check.sh            # heavy kernel check
+scripts/release-qa-chain.sh # full pre-commit/pre-main QA chain
 scripts/check-generated.sh  # full native-mode table-regeneration check
 scripts/check-generated-metadata.sh  # cheap generated-table metadata check
 ```

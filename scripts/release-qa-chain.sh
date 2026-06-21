@@ -19,6 +19,9 @@ Options:
   --skip-measurements      Stop after the kernel smoke tests.
   --measurement-timeout S  Timeout per measurement run, default 14400.
   --lean-memory-mb MB      Pass Lean's -M memory cap to measurement runs.
+  --external-certificate-storage-limit SIZE
+                           Pass --storage-limit to external certificate checks.
+                           Defaults to EXTERNAL_CERTIFICATE_STORAGE_LIMIT.
   --measure-target SPEC    Measurement target spec. Can be repeated.
                            Default:
                              k8_4_2,8,4,2,CoveringCodes/Database/Sources/OctonaryFourTwo.lean
@@ -38,6 +41,7 @@ steps=(
   log_state
   check_source_policy
   clean_native
+  native_external_certificates
   native_build_table_gen
   native_regenerate_table
   native_check_generated
@@ -47,6 +51,7 @@ steps=(
   native_build_library_tests
   native_smoke_tests
   clean_kernel
+  kernel_external_certificates
   kernel_build_table_gen
   kernel_build_covering_codes
   kernel_build_library_tests
@@ -59,6 +64,7 @@ describe_step() {
     log_state) echo "Record repository, toolchain, and machine state" ;;
     check_source_policy) echo "Check Lean sources for sorry/admit/axiom/unsafe" ;;
     clean_native) echo "lake clean before native build" ;;
+    native_external_certificates) echo "Build external certificate-backed modules in native proof mode" ;;
     native_build_table_gen) echo "Build table_gen in native proof mode" ;;
     native_regenerate_table) echo "Regenerate the precomputed table in native proof mode" ;;
     native_check_generated) echo "Check generated table diff and metadata" ;;
@@ -68,6 +74,7 @@ describe_step() {
     native_build_library_tests) echo "Build library, examples, and test modules in native proof mode" ;;
     native_smoke_tests) echo "Run native smoke tests" ;;
     clean_kernel) echo "lake clean before kernel build" ;;
+    kernel_external_certificates) echo "Build external certificate-backed modules in kernel proof mode" ;;
     kernel_build_table_gen) echo "Build table_gen in kernel proof mode" ;;
     kernel_build_covering_codes) echo "Build covering_codes in kernel proof mode" ;;
     kernel_build_library_tests) echo "Build library, examples, and test modules in kernel proof mode" ;;
@@ -97,6 +104,7 @@ from_step=""
 skip_measurements=0
 measurement_timeout=14400
 lean_memory_mb=""
+external_certificate_storage_limit="${EXTERNAL_CERTIFICATE_STORAGE_LIMIT:-}"
 measure_targets=()
 
 while [[ $# -gt 0 ]]; do
@@ -123,6 +131,11 @@ while [[ $# -gt 0 ]]; do
     --lean-memory-mb)
       [[ $# -ge 2 ]] || { echo "missing value for --lean-memory-mb" >&2; exit 2; }
       lean_memory_mb="$2"
+      shift 2
+      ;;
+    --external-certificate-storage-limit)
+      [[ $# -ge 2 ]] || { echo "missing value for --external-certificate-storage-limit" >&2; exit 2; }
+      external_certificate_storage_limit="$2"
       shift 2
       ;;
     --measure-target)
@@ -321,7 +334,16 @@ run_step check_source_policy "$(describe_step check_source_policy)" \
     echo "source policy OK"
   '
 
+external_certificate_native_args=(check --all --proof-mode native --clean-extracted)
+external_certificate_kernel_args=(check --all --proof-mode kernel --clean-extracted)
+if [[ -n "${external_certificate_storage_limit}" ]]; then
+  external_certificate_native_args+=(--storage-limit "${external_certificate_storage_limit}")
+  external_certificate_kernel_args+=(--storage-limit "${external_certificate_storage_limit}")
+fi
+
 run_step clean_native "$(describe_step clean_native)" lake clean
+run_step native_external_certificates "$(describe_step native_external_certificates)" \
+  python3 -B scripts/external-certificates.py "${external_certificate_native_args[@]}"
 run_step native_build_table_gen "$(describe_step native_build_table_gen)" \
   scripts/build-proof-mode.sh native table_gen
 run_step native_regenerate_table "$(describe_step native_regenerate_table)" \
@@ -377,6 +399,8 @@ run_step native_smoke_tests "$(describe_step native_smoke_tests)" \
   '
 
 run_step clean_kernel "$(describe_step clean_kernel)" lake clean
+run_step kernel_external_certificates "$(describe_step kernel_external_certificates)" \
+  python3 -B scripts/external-certificates.py "${external_certificate_kernel_args[@]}"
 run_step kernel_build_table_gen "$(describe_step kernel_build_table_gen)" \
   scripts/build-proof-mode.sh kernel table_gen
 run_step kernel_build_covering_codes "$(describe_step kernel_build_covering_codes)" \

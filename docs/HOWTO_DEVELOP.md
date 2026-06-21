@@ -5,8 +5,10 @@ stay in `README.md`.
 
 ## Ground Rules
 
-Never run `lake clean` or `lake clear`. The build artifacts are expensive and
-may take hours, and large amounts of memory, to recreate.
+Do not run `lake clean` or `lake clear` as an ad hoc cleanup step. The build
+artifacts are expensive and may take hours, and large amounts of memory, to
+recreate. The full QA chain runs clean phases intentionally and records logs for
+them.
 
 Use the Lean version from `lean-toolchain` and the dependency revisions pinned
 in `lake-manifest.json`. Do not update dependencies as part of unrelated work.
@@ -19,6 +21,7 @@ For ordinary development, use native proof mode. It checks the same source
 structure while avoiding the most expensive kernel reductions.
 
 ```bash
+scripts/external-certificates.py materialize --all
 scripts/build-proof-mode.sh native covering_codes
 lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
@@ -101,11 +104,13 @@ python3 -B reference-data/scripts/compare_lean_post_keri_bounds.py
 The comparison script writes `reference-data/reference-db-comparison.csv`; that
 file is generated and should remain ignored.
 
-## Heavy Checks
+## Full QA
 
-`scripts/check.sh` is the heavy release-check path. It runs kernel-mode checks,
-verification modules, and smoke queries. Use it before a release-style commit,
-not after every small edit.
+`scripts/release-qa-chain.sh` is the full pre-commit/pre-main QA path. It runs
+clean native and kernel phases, generated-table checks, reference-data checks,
+smoke queries, external certificate handling, and proof-mode measurements. Use
+it before committing changes that may be pushed to `main`, not after every small
+edit.
 
 The van Laarhoven kernel certificates are especially expensive. Follow the
 explicit opt-in and memory guidance in `README.md` before running those in

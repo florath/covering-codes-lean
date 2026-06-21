@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "default_cache_dir": "data/external-certificates/cache",
+  "build": {
+    "driver": "scripts/build-proof-mode.sh",
+    "default_proof_mode": "kernel"
+  },
+  "bundles": [
+    {
+      "id": "K_8_4_2-lrat",
+      "name": "K_8(4,2) LRAT profile/block certificates",
+      "kind": "lrat-cnf-bundle",
+      "problem": {
+        "q": 8,
+        "n": 4,
+        "r": 2,
+        "statement": "K_8(4,2) = 23",
+        "role": "lower-bound finite SAT refutations"
+      },
+      "lean_targets": [
+        "CoveringCodes.Database.Sources.OctonaryFourTwoBlockLRAT"
+      ],
+      "archive": {
+        "filename": "K_8_4_2-lrat.tar.xz",
+        "format": "tar.xz",
+        "bytes": 1006732,
+        "sha256": "f1c4d1593a054287ba6ee6d4279695e1336d4365a020a172b5d5e2475100c0de"
+      },
+      "download": {
+        "local_path": "data/external-certificates/cache/K_8_4_2-lrat.tar.xz",
+        "urls": [
+          "https://zenodo.org/api/records/20784013/files/K_8_4_2-lrat.tar.xz/content",
+          "https://zenodo.org/records/20784013/files/K_8_4_2-lrat.tar.xz?download=1"
+        ]
+      },
+      "zenodo": {
+        "doi": "10.5281/zenodo.20784013",
+        "record": "https://zenodo.org/records/20784013",
+        "record_id": "20784013",
+        "environment": "production",
+        "concept_doi": "10.5281/zenodo.20784012",
+        "concept_record_id": "20784012"
+      },
+      "unpacked": {
+        "root": "data/K_8_4_2/lrat",
+        "bytes": 10720718
+      },
+      "files": [
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_e01_not_block.cnf",
+          "bytes": 385208,
+          "sha256": "54ac14842b74cfd3fbfa097d8355ab798b78127518d6ecc037b54397c3693e57"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_e01_not_block.lrat",
+          "bytes": 1571017,
+          "sha256": "1d7bc51aed7739efe171d04a15a396dfbfbb0827c318016398883317637e441f"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_lower_e01_not_block.cnf",
+          "bytes": 317540,
+          "sha256": "46f2b7a398950e1a051cb5108c3c046ac9781f7bfe3860e23ee09f5db0666efd"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_lower_e01_not_block.lrat",
+          "bytes": 2146997,
+          "sha256": "babd6e731bcba7cb2813ce5669406cfd2cb6c5f15bd6830a8c71e25a18c04fa3"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_lower_not_global.cnf",
+          "bytes": 899873,
+          "sha256": "2e2f161b963ac39226c2b84b05aaa040d290f8174483609368f2bb7c666ede6c"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_lower_not_global.lrat",
+          "bytes": 1938500,
+          "sha256": "c4764519785e00e27b5d8d70619813089d15bd1e35ba0ccee996ee8228a8c185"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_not_global.cnf",
+          "bytes": 967541,
+          "sha256": "458f2c517b3849c459b50597c69719a1fdb59faf746066a1027b81d9e204c819"
+        },
+        {
+          "path": "data/K_8_4_2/lrat/profile_block_not_global.lrat",
+          "bytes": 2494042,
+          "sha256": "5d5ecc18ff4846d6661b4b78965f5c5650b24212e149aab6a9b82186ffc75e70"
+        }
+      ]
+    }
+  ]
+}

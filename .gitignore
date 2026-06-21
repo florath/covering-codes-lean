@@ -6,8 +6,12 @@ reference-data/reference-db-comparison.csv
 *.log
 *.tar
 *.tar.gz
+*.tar.xz
 *.zip
 *.pdf
+
+data/external-certificates/cache/
+data/K_8_4_2/lrat/
 
 *~
 *.tmp
