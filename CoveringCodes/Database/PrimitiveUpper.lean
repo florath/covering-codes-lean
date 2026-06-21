@@ -6,6 +6,7 @@ import CoveringCodes.Database.Sources.QuaternaryRadiusTwo
 import CoveringCodes.Database.Sources.OctonaryFourTwo
 import CoveringCodes.Database.Sources.TwoBlockCyclic
 import CoveringCodes.Database.Sources.VanLaarhoven1989
+import CoveringCodes.Database.Sources.KnownBounds
 
 namespace CoveringCodes
 namespace Database
@@ -52,7 +53,8 @@ private def primitiveUpperSources : List UpperBoundSource := [
   twoBlockCyclic331UpperSource,
   vanLaarhoven6UpperSource,
   vanLaarhoven7UpperSource,
-  vanLaarhoven8UpperSource
+  vanLaarhoven8UpperSource,
+  knownBoundQ6N7R2UpperSource
 ]
 
 def primitiveUpperSource : UpperBoundSource :=
