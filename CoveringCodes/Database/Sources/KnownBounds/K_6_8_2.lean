@@ -130,7 +130,7 @@ private theorem knownBoundQ6N8R2Cert :
   simpa using h
 
 def knownBoundQ6N8R2UpperName : String :=
-  "known_bounds_q6_n8_r2_mixed_radius_one_blocks"
+  "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks"
 
 def knownBoundQ6N8R2Upper (q n r : Nat) : Nat :=
   if q = 6 ∧ n = 8 ∧ r = 2 then 5184 else trivialUpper q n r

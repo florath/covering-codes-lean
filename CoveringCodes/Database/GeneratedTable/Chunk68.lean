@@ -770,9 +770,9 @@ def precomputedTable_chunk_68 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 4 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 7 3 1))) },
   { key := { q := 7, n := 7, r := 2 }
     lowerValue := 1031
-    upperValue := 7889
+    upperValue := 2401
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 7 2))
-    upperTrace := (.lengthenFreeN 3 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))) },
+    upperTrace := (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2)) },
   { key := { q := 7, n := 7, r := 3 }
     lowerValue := 99
     upperValue := 1127
@@ -1015,14 +1015,14 @@ def precomputedTable_chunk_68 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 5 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 7 3 1))) },
   { key := { q := 7, n := 8, r := 2 }
     lowerValue := 5454
-    upperValue := 55223
+    upperValue := 16807
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 8 2))
-    upperTrace := (.lengthenFreeN 4 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 8, r := 3 }
     lowerValue := 439
-    upperValue := 7889
+    upperValue := 2401
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 8 3))
-    upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 8, r := 4 }
     lowerValue := 56
     upperValue := 1127

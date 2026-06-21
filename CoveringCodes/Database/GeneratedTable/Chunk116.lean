@@ -1040,9 +1040,9 @@ def precomputedTable_chunk_116 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 5 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
   { key := { q := 12, n := 8, r := 2 }
     lowerValue := 123665
-    upperValue := 1492992
+    upperValue := 1327104
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 8 2))
-    upperTrace := (.lengthenFreeN 3 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))))) },
+    upperTrace := (@UpperTrace.alphabetExpand 6 12 2 8 2 5184 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))) },
   { key := { q := 12, n := 8, r := 3 }
     lowerValue := 5512
     upperValue := 124416

@@ -215,14 +215,14 @@ def precomputedTable_chunk_51 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 13 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))) },
   { key := { q := 5, n := 16, r := 2 }
     lowerValue := 76870474
-    upperValue := 3173828125
+    upperValue := 2025000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 16 2))
-    upperTrace := (.lengthenFreeN 11 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 8 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 5, n := 16, r := 3 }
     lowerValue := 4034049
-    upperValue := 634765625
+    upperValue := 405000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 16 3))
-    upperTrace := (.lengthenFreeN 10 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 6 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
   { key := { q := 5, n := 16, r := 4 }
     lowerValue := 302908
     upperValue := 48828125
@@ -460,14 +460,14 @@ def precomputedTable_chunk_51 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 14 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))) },
   { key := { q := 5, n := 17, r := 2 }
     lowerValue := 339839401
-    upperValue := 15869140625
+    upperValue := 10125000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 17 2))
-    upperTrace := (.lengthenFreeN 12 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 9 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 5, n := 17, r := 3 }
     lowerValue := 16670807
-    upperValue := 3173828125
+    upperValue := 2025000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 17 3))
-    upperTrace := (.lengthenFreeN 11 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 7 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
   { key := { q := 5, n := 17, r := 4 }
     lowerValue := 1164714
     upperValue := 244140625
@@ -705,14 +705,14 @@ def precomputedTable_chunk_51 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 15 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))) },
   { key := { q := 5, n := 18, r := 2 }
     lowerValue := 1513168293
-    upperValue := 79345703125
+    upperValue := 50625000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 18 2))
-    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 10 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 5, n := 18, r := 3 }
     lowerValue := 69681200
-    upperValue := 15869140625
+    upperValue := 10125000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 18 3))
-    upperTrace := (.lengthenFreeN 12 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 8 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
   { key := { q := 5, n := 18, r := 4 }
     lowerValue := 4551575
     upperValue := 1220703125
@@ -950,14 +950,14 @@ def precomputedTable_chunk_51 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 16 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))) },
   { key := { q := 5, n := 19, r := 2 }
     lowerValue := 6780478610
-    upperValue := 396728515625
+    upperValue := 253125000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 19 2))
-    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 11 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 5, n := 19, r := 3 }
     lowerValue := 294212256
-    upperValue := 79345703125
+    upperValue := 50625000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 19 3))
-    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 9 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
   { key := { q := 5, n := 19, r := 4 }
     lowerValue := 18043475
     upperValue := 6103515625
@@ -1195,14 +1195,14 @@ def precomputedTable_chunk_51 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 17 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))) },
   { key := { q := 5, n := 20, r := 2 }
     lowerValue := 30556690690
-    upperValue := 1983642578125
+    upperValue := 1265625000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 20 2))
-    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 12 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 5, n := 20, r := 3 }
     lowerValue := 1253498662
-    upperValue := 396728515625
+    upperValue := 253125000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 20 3))
-    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.lengthenFreeN 10 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
   { key := { q := 5, n := 20, r := 4 }
     lowerValue := 72445579
     upperValue := 30517578125

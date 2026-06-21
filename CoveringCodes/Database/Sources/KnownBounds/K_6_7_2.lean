@@ -560,7 +560,7 @@ private theorem syncCode_card : syncCode.card <= 1296 := by
       norm_num
 
 def knownBoundQ6N7R2UpperName : String :=
-  "known_bounds_q6_n7_r2_synchronized_syndrome"
+  "lean_known_bounds_q6_n7_r2_synchronized_syndrome"
 
 def knownBoundQ6N7R2Explicit : ExplicitQaryUpper 6 7 2 1296 :=
   { code := syncCode
