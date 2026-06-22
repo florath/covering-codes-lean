@@ -142,12 +142,12 @@ def precomputedTable_chunk_84 : Array AnyBoundEntry := #[
     lowerValue := 346735967276247347795830
     upperValue := 14100910759985034693772836864
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 37 5))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 28 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 8, n := 37, r := 6 }
     lowerValue := 9239096998205456579876
     upperValue := 1762613844998129336721604608
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 37 6))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 2 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))))) },
   { key := { q := 8, n := 37, r := 7 }
     lowerValue := 296372102391031615159
     upperValue := 154742504910672534362390528
@@ -387,12 +387,12 @@ def precomputedTable_chunk_84 : Array AnyBoundEntry := #[
     lowerValue := 2410453908553326480757397
     upperValue := 112807286079880277550182694912
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 38 5))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 29 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 8, n := 38, r := 6 }
     lowerValue := 62293672761938103338746
     upperValue := 14100910759985034693772836864
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 38 6))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 2 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))))) },
   { key := { q := 8, n := 38, r := 7 }
     lowerValue := 1936208445684088012161
     upperValue := 1237940039285380274899124224
@@ -632,12 +632,12 @@ def precomputedTable_chunk_84 : Array AnyBoundEntry := #[
     lowerValue := 16821576060796332281668242
     upperValue := 902458288639042220401461559296
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 39 5))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 30 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 8, n := 39, r := 6 }
     lowerValue := 422007432663793886081622
     upperValue := 112807286079880277550182694912
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 39 6))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 2 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))))) },
   { key := { q := 8, n := 39, r := 7 }
     lowerValue := 12721750428472446895149
     upperValue := 9903520314283042199192993792
@@ -877,12 +877,12 @@ def precomputedTable_chunk_84 : Array AnyBoundEntry := #[
     lowerValue := 117818521790946751704531379
     upperValue := 7219666309112337763211692474368
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 40 5))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 31 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 8, n := 40, r := 6 }
     lowerValue := 2871749041666117054625989
     upperValue := 902458288639042220401461559296
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 40 6))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 2 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))))) },
   { key := { q := 8, n := 40, r := 7 }
     lowerValue := 84039862864053733572123
     upperValue := 79228162514264337593543950336
@@ -1122,12 +1122,12 @@ def precomputedTable_chunk_84 : Array AnyBoundEntry := #[
     lowerValue := 828051855761749695542115790
     upperValue := 57757330472898702105693539794944
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 41 5))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 32 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 8, n := 41, r := 6 }
     lowerValue := 19625484347684020335208435
     upperValue := 7219666309112337763211692474368
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 41 6))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 2 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))))) },
+    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))))) },
   { key := { q := 8, n := 41, r := 7 }
     lowerValue := 558010258742200982682620
     upperValue := 633825300114114700748351602688

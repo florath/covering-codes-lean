@@ -27,7 +27,7 @@ def precomputedTable_chunk_69 : Array AnyBoundEntry := #[
     lowerValue := 35
     upperValue := 729
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 9 5))
-    upperTrace := (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.lengthenDummyN 1 (by decide : 0 < 8) (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4))))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 7, n := 9, r := 6 }
     lowerValue := 8
     upperValue := 49

@@ -87,6 +87,63 @@
           "sha256": "5d5ecc18ff4846d6661b4b78965f5c5650b24212e149aab6a9b82186ffc75e70"
         }
       ]
+    },
+    {
+      "id": "K_9_9_5-tail-values",
+      "name": "K_9(9,5) syndrome tail repair table",
+      "kind": "syndrome-tail-table",
+      "problem": {
+        "q": 9,
+        "n": 9,
+        "r": 5,
+        "statement": "K_9(9,5) <= 729",
+        "role": "upper-bound systematic linear syndrome repair choices"
+      },
+      "lean_targets": [
+        "CoveringCodes.Database.Sources.KnownBounds.K_9_9_5"
+      ],
+      "archive": {
+        "filename": "K_9_9_5-tail-values.tar.xz",
+        "format": "tar.xz",
+        "bytes": 36948,
+        "sha256": "11fb8877cb368b45effc66f32e12aab7c738cd6d113443d82c69da5205298386"
+      },
+      "download": {
+        "local_path": "data/external-certificates/cache/K_9_9_5-tail-values.tar.xz",
+        "urls": [
+          "https://zenodo.org/api/records/20794263/files/K_9_9_5-tail-values.tar.xz/content",
+          "https://zenodo.org/records/20794263/files/K_9_9_5-tail-values.tar.xz?download=1"
+        ]
+      },
+      "zenodo": {
+        "doi": "10.5281/zenodo.20794263",
+        "record": "https://zenodo.org/records/20794263",
+        "record_id": "20794263",
+        "environment": "production",
+        "concept_doi": "10.5281/zenodo.20794262",
+        "concept_record_id": "20794262"
+      },
+      "unpacked": {
+        "root": "data/K_9_9_5/tail",
+        "bytes": 1096226
+      },
+      "files": [
+        {
+          "path": "data/K_9_9_5/tail/tail-values.txt",
+          "bytes": 1096226,
+          "sha256": "65084c8718b295526fa1a67aa05ea4b29660eecdad30e7bd31135e956421be05"
+        }
+      ],
+      "generated_files": [
+        {
+          "path": "CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean",
+          "kind": "q9-n9-r5-tail-data-lean",
+          "source": "data/K_9_9_5/tail/tail-values.txt",
+          "bytes": 1681944,
+          "sha256": "8f88048b07c24436ca87b0a5e9e0139f9d0ee24765f2ab9c89415d1f21e7b561",
+          "clean_with_extracted": false
+        }
+      ]
     }
   ]
 }

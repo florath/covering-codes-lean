@@ -12,6 +12,8 @@ reference-data/reference-db-comparison.csv
 
 data/external-certificates/cache/
 data/K_8_4_2/lrat/
+data/K_9_9_5/tail/
+CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean
 
 *~
 *.tmp

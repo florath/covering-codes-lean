@@ -2,6 +2,7 @@ import CoveringCodes.Database.Sources.KnownBounds.K_6_7_2
 import CoveringCodes.Database.Sources.KnownBounds.K_6_8_2
 import CoveringCodes.Database.Sources.KnownBounds.K_7_7_2
 import CoveringCodes.Database.Sources.KnownBounds.K_9_8_4
+import CoveringCodes.Database.Sources.KnownBounds.K_9_9_5
 
 /-!
 # Known-bound upper sources

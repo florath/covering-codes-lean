@@ -175,10 +175,11 @@ material only; it is not imported by Lean and does not certify any bound.
 
 ### External certificate data
 
-Large LRAT/CNF proof artifacts are archived outside git and described by
-`data/external-certificates/manifest.json`.  The current external bundle is
+Large proof artifacts are archived outside git and described by
+`data/external-certificates/manifest.json`.  The current external bundles are
 `K_8_4_2-lrat`, archived on Zenodo at
-<https://zenodo.org/records/20784013>.
+<https://zenodo.org/records/20784013>, and `K_9_9_5-tail-values`, archived at
+<https://zenodo.org/records/20794263>.
 
 For a clean checkout, materialize the external certificates before building
 Lean targets that use them:
@@ -199,6 +200,14 @@ afterward, run:
 ```bash
 scripts/external-certificates.py check K_8_4_2-lrat --proof-mode native --clean-extracted
 ```
+
+Some bundles also generate ignored Lean source files from the extracted data.
+For example, `K_9_9_5-tail-values` extracts
+`data/K_9_9_5/tail/tail-values.txt` and generates
+`CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean`.  The raw
+extracted data can be removed after the certificate-backed module is compiled;
+the generated Lean source remains so Lake can still resolve the imported module
+incrementally.
 
 The full QA chain performs this external-certificate step automatically after
 each native/kernel clean phase.  Set
