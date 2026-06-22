@@ -770,9 +770,9 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
   { key := { q := 8, n := 9, r := 3 }
     lowerValue := 4381
-    upperValue := 59049
+    upperValue := 29889
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 9 3))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 8, n := 9, r := 4 }
     lowerValue := 403
     upperValue := 5832
@@ -1015,14 +1015,14 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 2 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
   { key := { q := 8, n := 10, r := 3 }
     lowerValue := 24721
-    upperValue := 472392
+    upperValue := 239112
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 10 3))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2))))) },
+    upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3)))) },
   { key := { q := 8, n := 10, r := 4 }
     lowerValue := 1961
-    upperValue := 46656
+    upperValue := 29889
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 10 4))
-    upperTrace := (.lengthenFreeN 2 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3)))) },
   { key := { q := 8, n := 10, r := 5 }
     lowerValue := 225
     upperValue := 5832
