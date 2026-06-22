@@ -25,9 +25,9 @@ def precomputedTable_chunk_69 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 2 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 9, r := 5 }
     lowerValue := 35
-    upperValue := 1127
+    upperValue := 729
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 9 5))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.lengthenDummyN 1 (by decide : 0 < 8) (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4))))) },
   { key := { q := 7, n := 9, r := 6 }
     lowerValue := 8
     upperValue := 49
