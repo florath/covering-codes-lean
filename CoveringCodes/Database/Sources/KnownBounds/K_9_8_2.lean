@@ -31,9 +31,24 @@ private def sub9 (a b : Fin 9) : Fin 9 := ⟨(9 + a.val - b.val) % 9, by omega�
 private def mul9 (k : Nat) (a : Fin 9) : Fin 9 := ⟨(k * a.val) % 9, by omega⟩
 private def neg9 (a : Fin 9) : Fin 9 := ⟨(9 - a.val) % 9, by omega⟩
 private def asZ9 (a : Fin 9) : ZMod 9 := a.val
+private def z9Component (z : ZMod 9) : Fin 9 :=
+  ⟨z.val, ZMod.val_lt z⟩
 
 private def add9_5 (a b c d e : Fin 9) : Fin 9 :=
   add9 (add9 (add9 (add9 a b) c) d) e
+
+private theorem z9Component_asZ9 (a : Fin 9) : z9Component (asZ9 a) = a := by
+  fin_cases a <;> native_decide
+
+private theorem eq_fin9_of_asZ9_eq (a b : Fin 9) (h : asZ9 a = asZ9 b) : a = b := by
+  calc
+    a = z9Component (asZ9 a) := (z9Component_asZ9 a).symm
+    _ = z9Component (asZ9 b) := by rw [h]
+    _ = b := z9Component_asZ9 b
+
+private theorem asZ9_add9 (a b : Fin 9) :
+    asZ9 (add9 a b) = asZ9 a + asZ9 b := by
+  fin_cases a <;> fin_cases b <;> native_decide
 
 private theorem asZ9_sub9 (a b : Fin 9) :
     asZ9 (sub9 a b) = asZ9 a - asZ9 b := by
@@ -42,23 +57,45 @@ private theorem asZ9_sub9 (a b : Fin 9) :
 private theorem sub9_zero (a : Fin 9) : sub9 a f9_0 = a := by
   fin_cases a <;> native_decide
 
+private theorem asZ9_neg9 (a : Fin 9) : asZ9 (neg9 a) = -asZ9 a := by
+  fin_cases a <;> native_decide
+
+private theorem asZ9_mul9_2 (a : Fin 9) : asZ9 (mul9 2 a) = 2 * asZ9 a := by
+  fin_cases a <;> native_decide
+
+private theorem asZ9_mul9_3 (a : Fin 9) : asZ9 (mul9 3 a) = 3 * asZ9 a := by
+  fin_cases a <;> native_decide
+
+private theorem asZ9_mul9_5 (a : Fin 9) : asZ9 (mul9 5 a) = 5 * asZ9 a := by
+  fin_cases a <;> native_decide
+
+private theorem asZ9_mul9_7 (a : Fin 9) : asZ9 (mul9 7 a) = 7 * asZ9 a := by
+  fin_cases a <;> native_decide
+
+private theorem asZ9_add9_5 (a b c d e : Fin 9) :
+    asZ9 (add9_5 a b c d e) = asZ9 a + asZ9 b + asZ9 c + asZ9 d + asZ9 e := by
+  simp [add9_5, asZ9_add9]
+
 private theorem row0_zero_solve (p a b c d e : Fin 9)
     (h : asZ9 p + asZ9 a + 3 * asZ9 b + 2 * asZ9 c + 7 * asZ9 d + 5 * asZ9 e = 0) :
     neg9 (add9_5 a (mul9 3 b) (mul9 2 c) (mul9 7 d) (mul9 5 e)) = p := by
-  revert p a b c d e
-  covering_decide
+  apply eq_fin9_of_asZ9_eq
+  rw [asZ9_neg9, asZ9_add9_5, asZ9_mul9_3, asZ9_mul9_2, asZ9_mul9_7, asZ9_mul9_5]
+  linear_combination -h
 
 private theorem row1_zero_solve (p a b c d e : Fin 9)
     (h : asZ9 p + asZ9 a + 2 * asZ9 b + asZ9 c + 3 * asZ9 d + 2 * asZ9 e = 0) :
     neg9 (add9_5 a (mul9 2 b) c (mul9 3 d) (mul9 2 e)) = p := by
-  revert p a b c d e
-  covering_decide
+  apply eq_fin9_of_asZ9_eq
+  simp only [asZ9_neg9, asZ9_add9_5, asZ9_mul9_2, asZ9_mul9_3]
+  linear_combination -h
 
 private theorem row2_zero_solve (p a b c d e : Fin 9)
     (h : asZ9 p + asZ9 a + asZ9 b + asZ9 c + asZ9 d + asZ9 e = 0) :
     neg9 (add9_5 a b c d e) = p := by
-  revert p a b c d e
-  covering_decide
+  apply eq_fin9_of_asZ9_eq
+  rw [asZ9_neg9, asZ9_add9_5]
+  linear_combination -h
 
 private def linearWord (free : QaryWord 9 5) : QaryWord 9 8 :=
   fun i =>
@@ -115,9 +152,6 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 9 8)
 
 private def linearCode : Finset (QaryWord 9 8) :=
   (Finset.univ : Finset (QaryWord 9 5)).image linearWord
-
-private def z9Component (z : ZMod 9) : Fin 9 :=
-  ⟨z.val, ZMod.val_lt z⟩
 
 private theorem z9Component_inj {a b : ZMod 9}
     (h : z9Component a = z9Component b) : a = b := by
