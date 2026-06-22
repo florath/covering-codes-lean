@@ -1055,9 +1055,9 @@ def precomputedTable_chunk_116 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))))) },
   { key := { q := 12, n := 8, r := 5 }
     lowerValue := 43
-    upperValue := 864
+    upperValue := 264
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 8 5))
-    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1)))) },
+    upperTrace := (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5)) },
   { key := { q := 12, n := 8, r := 6 }
     lowerValue := 12
     upperValue := 72

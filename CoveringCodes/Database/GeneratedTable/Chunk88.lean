@@ -40,9 +40,9 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)) },
   { key := { q := 9, n := 8, r := 5 }
     lowerValue := 21
-    upperValue := 369
+    upperValue := 264
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 8 5))
-    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1)))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))))) },
   { key := { q := 9, n := 8, r := 6 }
     lowerValue := 9
     upperValue := 41
@@ -290,9 +290,9 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)) },
   { key := { q := 9, n := 9, r := 6 }
     lowerValue := 15
-    upperValue := 369
+    upperValue := 264
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 9 6))
-    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1)))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 1 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5)))))) },
   { key := { q := 9, n := 9, r := 7 }
     lowerValue := 9
     upperValue := 41
@@ -540,9 +540,9 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 10, r := 7 }
     lowerValue := 12
-    upperValue := 369
+    upperValue := 264
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 10 7))
-    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1)))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 2 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5)))))) },
   { key := { q := 9, n := 10, r := 8 }
     lowerValue := 9
     upperValue := 9
