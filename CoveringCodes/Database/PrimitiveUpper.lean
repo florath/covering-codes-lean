@@ -56,6 +56,7 @@ private def primitiveUpperSources : List UpperBoundSource := [
   vanLaarhoven8UpperSource,
   knownBoundQ2N24R4UpperSource,
   knownBoundQ2N28R5UpperSource,
+  knownBoundQ2N30R6UpperSource,
   knownBoundQ6N7R2UpperSource,
   knownBoundQ6N8R2UpperSource,
   knownBoundQ7N7R2UpperSource,
