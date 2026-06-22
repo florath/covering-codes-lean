@@ -2,6 +2,11 @@ import CoveringCodes.Database.BoundTable
 
 open CoveringCodes.Database
 
+def logProgress (msg : String) : IO Unit := do
+  IO.println msg
+  let out ← IO.getStdout
+  out.flush
+
 -- Produce a Lean string literal with " and \ escaped.
 def quotedStr (s : String) : String :=
   let body := s.foldl (fun acc c =>
@@ -224,26 +229,61 @@ def removeOldChunkFiles : IO Unit := do
     if name.startsWith "Chunk" && name.endsWith ".lean" then
       IO.FS.removeFile entry.path
 
+def runRelaxStage
+    (pass maxPasses step totalSteps : Nat)
+    (name : String)
+    (f : Array AnyBoundEntry → Array AnyBoundEntry)
+    (table : Array AnyBoundEntry) :
+    IO (Array AnyBoundEntry) := do
+  logProgress s!"  Pass {pass}/{maxPasses}, step {step}/{totalSteps}: {name} ..."
+  let table := f table
+  logProgress s!"  Pass {pass}/{maxPasses}, step {step}/{totalSteps}: {name} done"
+  return table
+
+def relaxOnceWithProgress
+    (pass maxPasses : Nat)
+    (table : Array AnyBoundEntry) :
+    IO (Array AnyBoundEntry) := do
+  let totalSteps := 16
+  let mut table := table
+  table ← runRelaxStage pass maxPasses 1 totalSteps "upper radius monotonicity" relaxUpperRadiusOnce table
+  table ← runRelaxStage pass maxPasses 2 totalSteps "lower radius back-propagation" relaxLowerRadiusOnce table
+  table ← runRelaxStage pass maxPasses 3 totalSteps "upper length puncturing" relaxUpperLengthOnce table
+  table ← runRelaxStage pass maxPasses 4 totalSteps "lower length back-propagation" relaxLowerLengthOnce table
+  table ← runRelaxStage pass maxPasses 5 totalSteps "upper alphabet projection" relaxUpperAlphabetOnce table
+  table ← runRelaxStage pass maxPasses 6 totalSteps "lower alphabet back-propagation" relaxLowerAlphabetOnce table
+  table ← runRelaxStage pass maxPasses 7 totalSteps "upper free-coordinate lengthening" relaxUpperLengthenFreeOnce table
+  table ← runRelaxStage pass maxPasses 8 totalSteps "upper dummy-coordinate lengthening" relaxUpperLengthenDummyOnce table
+  table ← runRelaxStage pass maxPasses 9 totalSteps "lower dummy-coordinate back-propagation" relaxLowerDummyBackOnce table
+  table ← runRelaxStage pass maxPasses 10 totalSteps "lower free-coordinate back-propagation" relaxLowerLengthenFreeBackOnce table
+  table ← runRelaxStage pass maxPasses 11 totalSteps "upper alphabet expansion" relaxUpperAlphabetExpandOnce table
+  table ← runRelaxStage pass maxPasses 12 totalSteps "upper block grouping" relaxUpperBlockGroupOnce table
+  table ← runRelaxStage pass maxPasses 13 totalSteps "lower block-group back-propagation" relaxLowerBlockGroupOnce table
+  table ← runRelaxStage pass maxPasses 14 totalSteps "upper block ungrouping" relaxUpperBlockUngroupOnce table
+  table ← runRelaxStage pass maxPasses 15 totalSteps "lower block-ungroup back-propagation" relaxLowerBlockUngroupOnce table
+  table ← runRelaxStage pass maxPasses 16 totalSteps "upper direct product" relaxUpperDirectProductOnce table
+  return table
+
 def main : IO Unit := do
-  IO.println s!"Computing bound table (up to {maxPasses} passes) ..."
+  logProgress s!"Computing bound table (up to {maxPasses} passes) ..."
   let mut table := initialTable
+  logProgress s!"Initialized {table.size} table entries."
   -- Track sum of all upper and lower values to detect convergence.
   let mut prevUpperSum := table.foldl (fun acc e => acc + e.upperValue) 0
   let mut prevLowerSum := table.foldl (fun acc e => acc + e.lowerValue) 0
   let mut doneAtPass := maxPasses
   for i in [:maxPasses] do
-    table := relaxOnce table
+    table ← relaxOnceWithProgress (i + 1) maxPasses table
     let newUpperSum := table.foldl (fun acc e => acc + e.upperValue) 0
     let newLowerSum := table.foldl (fun acc e => acc + e.lowerValue) 0
     if newUpperSum == prevUpperSum && newLowerSum == prevLowerSum then
-      IO.println s!"  Pass {i + 1}/{maxPasses}: converged — no changes. Stopping early."
+      logProgress s!"  Pass {i + 1}/{maxPasses}: converged - no changes. Stopping early."
       doneAtPass := i + 1
       break
     prevUpperSum := newUpperSum
     prevLowerSum := newLowerSum
-    if (i + 1) % 200 == 0 then
-      IO.println s!"  Pass {i + 1}/{maxPasses} ..."
-  IO.println s!"Done: {table.size} entries after {doneAtPass} passes."
+    logProgress s!"  Pass {i + 1}/{maxPasses}: updated bounds; continuing."
+  logProgress s!"Done: {table.size} entries after {doneAtPass} passes."
   let entries := table.toList
   let stats := computeStats entries
   printStats stats
@@ -255,12 +295,12 @@ def main : IO Unit := do
     chunks := chunks.push (remaining.take chunkSize)
     remaining := remaining.drop chunkSize
   let numChunks := chunks.size
-  IO.println s!"Writing {numChunks} chunk files to {chunkDir}/ ..."
+  logProgress s!"Writing {numChunks} chunk files to {chunkDir}/ ..."
   removeOldChunkFiles
   for i in [:numChunks] do
     writeChunkFile i chunks[i]!
     if (i + 1) % 10 == 0 then
-      IO.println s!"  wrote chunk {i + 1}/{numChunks}"
+      logProgress s!"  wrote chunk {i + 1}/{numChunks}"
   -- Write main GeneratedTable.lean that imports all chunks and combines them
   let imports := (List.range numChunks).map (fun i =>
     s!"import {chunkModuleBase}.Chunk{i}") |> String.intercalate "\n"
@@ -299,5 +339,5 @@ def main : IO Unit := do
     "      upperTrace := .primitive (primitiveUpperName q n r) (primitiveUpper_valid q n r) }\n\n" ++
     "end CoveringCodes.Database\n"
   IO.FS.writeFile "CoveringCodes/Database/GeneratedTable.lean" mainContent
-  IO.println s!"Written GeneratedTable.lean and {numChunks} chunk files."
-  IO.println "Next step: run `scripts/build-proof-mode.sh native covering_codes` to compile the precomputed table."
+  logProgress s!"Written GeneratedTable.lean and {numChunks} chunk files."
+  logProgress "Next step: run `scripts/build-proof-mode.sh native covering_codes` to compile the precomputed table."

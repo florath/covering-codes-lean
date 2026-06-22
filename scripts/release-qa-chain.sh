@@ -357,7 +357,11 @@ run_step native_check_generated "$(describe_step native_check_generated)" \
     scripts/check-generated-metadata.sh
   '
 run_step native_dump_reference_data "$(describe_step native_dump_reference_data)" \
-  lake -KproofMode=native exe reference_data_dump
+  bash -c '
+    set -euo pipefail
+    scripts/build-proof-mode.sh native reference_data_dump
+    lake -KproofMode=native env lean --run Tools/ReferenceDataDump/Main.lean
+  '
 run_step native_check_reference_data "$(describe_step native_check_reference_data)" \
   bash -c '
     set -euo pipefail
@@ -383,16 +387,16 @@ run_step native_smoke_tests "$(describe_step native_smoke_tests)" \
       local expected_range="$5"
       local expected_source="$6"
       local output
-      output="$(lake "-KproofMode=${mode}" exe covering_codes "${q}" "${n}" "${r}")"
+      output="$(lake "-KproofMode=${mode}" env lean --run Main.lean "${q}" "${n}" "${r}")"
       printf "%s\n" "${output}"
       grep -Fq "K_${q}(${n},${r})" <<< "${output}"
       grep -Fq "${expected_range}" <<< "${output}"
       grep -Fq "${expected_source}" <<< "${output}"
     }
 
-    lake -KproofMode=native exe covering_codes 8 4 2
-    lake -KproofMode=native exe covering_codes 3 8 3
-    lake -KproofMode=native exe covering_codes 2 7 1
+    lake -KproofMode=native env lean --run Main.lean 8 4 2
+    lake -KproofMode=native env lean --run Main.lean 3 8 3
+    lake -KproofMode=native env lean --run Main.lean 2 7 1
     check_covering_codes_result native 3 6 1 "[57, 73]" "lit_laarhoven_aarts_van_lint_wille_1989"
     check_covering_codes_result native 3 7 1 "[146, 186]" "lit_laarhoven_aarts_van_lint_wille_1989"
     check_covering_codes_result native 3 8 1 "[386, 486]" "lit_laarhoven_aarts_van_lint_wille_1989"
@@ -422,16 +426,16 @@ run_step kernel_smoke_tests "$(describe_step kernel_smoke_tests)" \
       local expected_range="$5"
       local expected_source="$6"
       local output
-      output="$(lake "-KproofMode=${mode}" exe covering_codes "${q}" "${n}" "${r}")"
+      output="$(lake "-KproofMode=${mode}" env lean --run Main.lean "${q}" "${n}" "${r}")"
       printf "%s\n" "${output}"
       grep -Fq "K_${q}(${n},${r})" <<< "${output}"
       grep -Fq "${expected_range}" <<< "${output}"
       grep -Fq "${expected_source}" <<< "${output}"
     }
 
-    lake -KproofMode=kernel exe covering_codes 8 4 2
-    lake -KproofMode=kernel exe covering_codes 3 8 3
-    lake -KproofMode=kernel exe covering_codes 2 7 1
+    lake -KproofMode=kernel env lean --run Main.lean 8 4 2
+    lake -KproofMode=kernel env lean --run Main.lean 3 8 3
+    lake -KproofMode=kernel env lean --run Main.lean 2 7 1
     check_covering_codes_result kernel 3 6 1 "[57, 73]" "lit_laarhoven_aarts_van_lint_wille_1989"
     check_covering_codes_result kernel 3 7 1 "[146, 186]" "lit_laarhoven_aarts_van_lint_wille_1989"
     check_covering_codes_result kernel 3 8 1 "[386, 486]" "lit_laarhoven_aarts_van_lint_wille_1989"

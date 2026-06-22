@@ -29,7 +29,7 @@ echo "==> Building covering_codes..."
 scripts/build-proof-mode.sh native covering_codes
 
 echo "==> Smoke tests..."
-lake -KproofMode=native exe covering_codes 3 8 3
-lake -KproofMode=native exe covering_codes 2 7 1
+lake -KproofMode=native env lean --run Main.lean 3 8 3
+lake -KproofMode=native env lean --run Main.lean 2 7 1
 
 echo "==> All regeneration checks passed."

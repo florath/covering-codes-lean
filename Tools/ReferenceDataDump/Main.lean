@@ -2,6 +2,11 @@ import CoveringCodes.Database.GeneratedAPI
 
 open CoveringCodes.Database
 
+def logReferenceProgress (msg : String) : IO Unit := do
+  IO.println msg
+  let out ← IO.getStdout
+  out.flush
+
 def outputPath : String :=
   "reference-data/lean/non_mixed_covering_codes.csv"
 
@@ -45,18 +50,18 @@ def csvRow (q n r : Nat) : String :=
   ]
   String.intercalate "," (fields.map csvEscape)
 
-def csvRows : List String := Id.run do
-  let mut rows : List String := []
-  for q in [2:computeQMax + 1] do
-    for n in [1:computeNMax + 1] do
-      for r in [1:computeRMax + 1] do
-        rows := csvRow q n r :: rows
-  return rows.reverse
-
-def csvContent : String :=
-  String.intercalate "\n" (csvHeader :: csvRows) ++ "\n"
-
 def main : IO Unit := do
   IO.FS.createDirAll "reference-data/lean"
-  IO.FS.writeFile outputPath csvContent
-  IO.println s!"Wrote {csvRows.length} rows to {outputPath}"
+  logReferenceProgress s!"Writing reference data to {outputPath} ..."
+  IO.FS.withFile outputPath IO.FS.Mode.write fun h => do
+    h.putStrLn csvHeader
+    let mut rows := 0
+    for q in [2:computeQMax + 1] do
+      logReferenceProgress s!"  q={q}: generating rows ..."
+      for n in [1:computeNMax + 1] do
+        for r in [1:computeRMax + 1] do
+          h.putStrLn (csvRow q n r)
+          rows := rows + 1
+      h.flush
+      logReferenceProgress s!"  q={q}: done ({rows} rows total)"
+    logReferenceProgress s!"Wrote {rows} rows to {outputPath}"
