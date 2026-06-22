@@ -1217,7 +1217,7 @@ def precomputedTable_chunk_31 : Array AnyBoundEntry := #[
     lowerValue := 1262
     upperValue := 59049
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 16 4))
-    upperTrace := (.lengthenFreeN 9 (.primitive "rule_constant_symbol" (primitiveUpper_valid 3 7 4))) },
+    upperTrace := (@UpperTrace.blockUngroup 3 2 8 2 59049 (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2))) },
   { key := { q := 3, n := 16, r := 5 }
     lowerValue := 248
     upperValue := 19683
