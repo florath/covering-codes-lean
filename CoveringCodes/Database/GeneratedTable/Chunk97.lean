@@ -790,9 +790,9 @@ def precomputedTable_chunk_97 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 2 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 10 3 1))))) },
   { key := { q := 10, n := 8, r := 4 }
     lowerValue := 200
-    upperValue := 5000
+    upperValue := 1156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 8 4))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 3 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 10 3 1))))) },
+    upperTrace := (.primitive "lean_known_bounds_q10_n8_r4_block_product" (primitiveUpper_valid 10 8 4)) },
   { key := { q := 10, n := 8, r := 5 }
     lowerValue := 27
     upperValue := 500
@@ -1035,14 +1035,14 @@ def precomputedTable_chunk_97 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 3 (.lengthenDummyN 2 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 10 3 1))))) },
   { key := { q := 10, n := 9, r := 4 }
     lowerValue := 1123
-    upperValue := 50000
+    upperValue := 11560
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 9 4))
-    upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 3 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 10 3 1))))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n8_r4_block_product" (primitiveUpper_valid 10 8 4))) },
   { key := { q := 10, n := 9, r := 5 }
     lowerValue := 121
-    upperValue := 5000
+    upperValue := 1156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 9 5))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 4 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 10 3 1))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 10) (.primitive "lean_known_bounds_q10_n8_r4_block_product" (primitiveUpper_valid 10 8 4))) },
   { key := { q := 10, n := 9, r := 6 }
     lowerValue := 19
     upperValue := 500
