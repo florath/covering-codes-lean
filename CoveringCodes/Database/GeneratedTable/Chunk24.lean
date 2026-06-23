@@ -915,9 +915,9 @@ def precomputedTable_chunk_24 : Array AnyBoundEntry := #[
     upperTrace := (.radiusMono (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q2_n28_r5_golay_antipodal_product" (primitiveUpper_valid 2 28 5))) },
   { key := { q := 2, n := 28, r := 7 }
     lowerValue := 160
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 28 7))
-    upperTrace := (.radiusMono (by decide : 6 ≤ 7) (.radiusMono (by decide : 5 ≤ 6) (.primitive "lean_known_bounds_q2_n28_r5_golay_antipodal_product" (primitiveUpper_valid 2 28 5)))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))))) },
   { key := { q := 2, n := 28, r := 8 }
     lowerValue := 57
     upperValue := 4096
@@ -1160,14 +1160,14 @@ def precomputedTable_chunk_24 : Array AnyBoundEntry := #[
     upperTrace := (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
   { key := { q := 2, n := 29, r := 7 }
     lowerValue := 247
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 29 7))
-    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))))) },
   { key := { q := 2, n := 29, r := 8 }
     lowerValue := 83
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 29 8))
-    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))))) },
   { key := { q := 2, n := 29, r := 9 }
     lowerValue := 33
     upperValue := 2048

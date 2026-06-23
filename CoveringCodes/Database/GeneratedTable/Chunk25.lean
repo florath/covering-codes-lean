@@ -155,19 +155,19 @@ def precomputedTable_chunk_25 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)) },
   { key := { q := 2, n := 30, r := 7 }
     lowerValue := 383
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 30 7))
-    upperTrace := (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))) },
   { key := { q := 2, n := 30, r := 8 }
     lowerValue := 125
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 30 8))
-    upperTrace := (.radiusMono (by decide : 7 ≤ 8) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))))) },
   { key := { q := 2, n := 30, r := 9 }
     lowerValue := 47
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 30 9))
-    upperTrace := (.lengthenFreeN 11 (.primitive "rule_constant_symbol" (primitiveUpper_valid 2 19 9))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 8 ≤ 9) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))))) },
   { key := { q := 2, n := 30, r := 10 }
     lowerValue := 21
     upperValue := 1024
@@ -400,19 +400,19 @@ def precomputedTable_chunk_25 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
   { key := { q := 2, n := 31, r := 7 }
     lowerValue := 602
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 31 7))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))) },
   { key := { q := 2, n := 31, r := 8 }
     lowerValue := 188
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 31 8))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))) },
   { key := { q := 2, n := 31, r := 9 }
     lowerValue := 68
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 31 9))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 8 ≤ 9) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))))) },
   { key := { q := 2, n := 31, r := 10 }
     lowerValue := 29
     upperValue := 2048
@@ -645,24 +645,24 @@ def precomputedTable_chunk_25 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 2 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
   { key := { q := 2, n := 32, r := 7 }
     lowerValue := 952
-    upperValue := 16384
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 32 7))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)) },
   { key := { q := 2, n := 32, r := 8 }
     lowerValue := 286
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 32 8))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
+    upperTrace := (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))) },
   { key := { q := 2, n := 32, r := 9 }
     lowerValue := 100
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 32 9))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 2) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.radiusMono (by decide : 8 ≤ 9) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))) },
   { key := { q := 2, n := 32, r := 10 }
     lowerValue := 40
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 32 10))
-    upperTrace := (.lengthenFreeN 11 (.primitive "rule_constant_symbol" (primitiveUpper_valid 2 21 10))) },
+    upperTrace := (.radiusMono (by decide : 9 ≤ 10) (.radiusMono (by decide : 8 ≤ 9) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))))) },
   { key := { q := 2, n := 32, r := 11 }
     lowerValue := 19
     upperValue := 1024
@@ -890,24 +890,24 @@ def precomputedTable_chunk_25 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 3 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
   { key := { q := 2, n := 33, r := 7 }
     lowerValue := 1517
-    upperValue := 32768
+    upperValue := 8192
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 33 7))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 2) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))))) },
+    upperTrace := (.primitive "lean_known_bounds_q2_n33_r7_bch31_tail" (primitiveUpper_valid 2 33 7)) },
   { key := { q := 2, n := 33, r := 8 }
     lowerValue := 440
-    upperValue := 16384
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 33 8))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 2) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))) },
   { key := { q := 2, n := 33, r := 9 }
     lowerValue := 148
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 33 9))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))) },
   { key := { q := 2, n := 33, r := 10 }
     lowerValue := 58
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 33 10))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 2) (.radiusMono (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.radiusMono (by decide : 8 ≤ 9) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))))) },
   { key := { q := 2, n := 33, r := 11 }
     lowerValue := 25
     upperValue := 2048
@@ -1135,29 +1135,29 @@ def precomputedTable_chunk_25 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 4 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
   { key := { q := 2, n := 34, r := 7 }
     lowerValue := 2435
-    upperValue := 65536
+    upperValue := 16384
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 34 7))
-    upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 1 (by decide : 0 < 2) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n33_r7_bch31_tail" (primitiveUpper_valid 2 33 7))) },
   { key := { q := 2, n := 34, r := 8 }
     lowerValue := 682
-    upperValue := 32768
+    upperValue := 8192
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 34 8))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 2 (by decide : 0 < 2) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n33_r7_bch31_tail" (primitiveUpper_valid 2 33 7))) },
   { key := { q := 2, n := 34, r := 9 }
     lowerValue := 222
-    upperValue := 16384
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 34 9))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 2) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6)))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))) },
   { key := { q := 2, n := 34, r := 10 }
     lowerValue := 83
-    upperValue := 8192
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 34 10))
-    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n30_r6_golay_antipodal_product" (primitiveUpper_valid 2 30 6))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 2) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7)))) },
   { key := { q := 2, n := 34, r := 11 }
     lowerValue := 35
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 34 11))
-    upperTrace := (.lengthenFreeN 11 (.primitive "rule_constant_symbol" (primitiveUpper_valid 2 23 11))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 2) (.radiusMono (by decide : 8 ≤ 9) (.radiusMono (by decide : 7 ≤ 8) (.primitive "lean_known_bounds_q2_n32_r7_bch31_tail" (primitiveUpper_valid 2 32 7))))) },
   { key := { q := 2, n := 34, r := 12 }
     lowerValue := 17
     upperValue := 1024
