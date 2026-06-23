@@ -47,6 +47,35 @@ q,n,r,lower_bound,upper_bound,lower_bound_reference,upper_bound_reference
 The reference columns should contain BibTeX keys from
 `references.bib`.  Multiple keys may be separated by semicolons.
 
+`lean-post-keri-comparison-history.csv` is an append-only audit ledger for the
+aggregate summary printed by `reference-data/scripts/compare_lean_post_keri_bounds.py`.
+Each row compares the Lean generated table with the post-Keri reference table
+over overlapping `(q,n,r)` triples that have both reference bounds.  The first
+column is the commit timestamp in UTC, followed by the total and tag counts,
+then a short commit hash and an optional `improvement` note.  Percentages are
+derivable from `total` and are not stored.
+
+The compact tag columns mean: `ref_tight` = `reference_tighter`, `exact` =
+`exact_agree`, `ref_lo` = `reference_better_lower`, `ref_hi` =
+`reference_better_upper`, `we_lo` = `we_better_lower`, `we_tight` =
+`we_tighter`, `we_hi` = `we_better_upper`, `agree_lo` = `agree_lower`,
+`agree_hi` = `agree_upper`, `missing` = `lean_missing`, and `contrad` =
+contradictions.
+
+The `improvement` column is intentionally sparse.  It records only bounds whose
+comparison tag changed relative to the previous history row, using compact forms
+such as `K_7(4,2)<=23 (was 25)` or `K_8(4,2)=23 (was [13,32])`; derived bound
+changes that do not move an aggregate tag are omitted.
+
+To update the history ledger, run the comparison script from the repository root,
+copy the printed `COMPARISON SUMMARY` counts into a new row, record the current
+commit hash, and leave absent tags as `0`.  If the row changes comparison tags,
+add the corresponding short bound changes in `improvement`.  This file is not
+updated automatically; it is intended for occasional human or agent-driven
+snapshots.
+The detailed row-level report remains `reference-data/reference-db-comparison.csv`
+and is still generated/ignored.
+
 ## Lean Dump
 
 `lean/non_mixed_covering_codes.csv` is a documentation dump of the generated
