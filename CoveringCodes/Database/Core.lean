@@ -12,4 +12,5 @@ import CoveringCodes.Database.Defs
 import CoveringCodes.Database.Lower
 import CoveringCodes.Database.Upper
 import CoveringCodes.Database.BoundTable
+import CoveringCodes.Database.BoundTableAPI
 import CoveringCodes.Database.RelationCoverage
