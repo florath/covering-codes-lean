@@ -9,11 +9,17 @@ reference-data/reference-db-comparison.csv
 *.tar.xz
 *.zip
 *.pdf
+__pycache__/
+*.pyc
 
 data/external-certificates/cache/
 data/K_8_4_2/lrat/
 data/K_9_9_5/tail/
 CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean
+CoveringCodes/SDP/GijswijtPolak2025/Generated/BinaryK2_13_1/
+CoveringCodes/SDP/GijswijtPolak2025/Generated/BinaryK2_13_1ComponentProbe/
+CoveringCodes/SDP/GijswijtPolak2025/Generated/BinaryK2_13_1DirectProbe/
+CoveringCodes/SDP/GijswijtPolak2025/Generated/BinaryK2_13_1FullObjectiveProbe/
 
 *~
 *.tmp

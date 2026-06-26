@@ -24,6 +24,20 @@ The `K_9_9_5-tail-values` bundle is archived on Zenodo at
 module `CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean` from
 that text file.
 
+The `K_2_13_1-gp2025-sdp-generated` bundle contains generated Lean proof
+payload files for the Gijswijt--Polak 2025 SDP certificate proving
+`K_2(13,1) >= 607`.  The generated Lean subtree is intentionally ignored by
+git and materialized from the local cache archive or, after upload, from the
+Zenodo URLs recorded in `manifest.json`.
+
+The GP2025 K2 bundle is generated through the compact-component semantic route.
+The old compact/full quotient-boundary fallback files
+`CompactDataQuotientCoeff*.lean` are not expected in a fresh bundle; the
+component route uses generated compact scalar-source semantic chunks and PSD
+component semantic chunks instead.  See
+`scripts/sdp/gp2025/README-K2-REGENERATION.md` for the regeneration runbook and
+wrapper script.
+
 Local archives live in `data/external-certificates/cache/`, which is ignored by
 git.  A typical workflow is:
 
@@ -31,6 +45,13 @@ git.  A typical workflow is:
 scripts/external-certificates.py materialize K_8_4_2-lrat
 scripts/external-certificates.py check K_8_4_2-lrat --proof-mode native --clean-extracted
 scripts/external-certificates.py clean K_8_4_2-lrat --extracted --yes
+```
+
+For the GP2025 K2 certificate, use:
+
+```bash
+scripts/external-certificates.py materialize K_2_13_1-gp2025-sdp-generated
+scripts/external-certificates.py check K_2_13_1-gp2025-sdp-generated --proof-mode native --clean-extracted
 ```
 
 To materialize every external certificate bundle listed in the manifest, use:

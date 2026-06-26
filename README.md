@@ -189,7 +189,11 @@ Large proof artifacts are archived outside git and described by
 `data/external-certificates/manifest.json`.  The current external bundles are
 `K_8_4_2-lrat`, archived on Zenodo at
 <https://zenodo.org/records/20784013>, and `K_9_9_5-tail-values`, archived at
-<https://zenodo.org/records/20794263>.
+<https://zenodo.org/records/20794263>.  The `K_2_13_1-gp2025-sdp-generated`
+bundle contains the generated Lean proof payload for the Gijswijt--Polak 2025
+SDP lower-bound certificate `K_2(13,1) >= 607`; it is staged through the same
+manifest/cache workflow and should receive final Zenodo record metadata before
+publication.
 
 For a clean checkout, materialize the external certificates before building
 Lean targets that use them:
