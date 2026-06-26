@@ -38,6 +38,9 @@ def coveringCodesLeanOptions : Array LeanOption :=
 package CoveringCodes where
   version := v!"0.1.0"
   leanOptions := coveringCodesLeanOptions
+  -- The generated GP2025 SDP proof data exceeds clang's default bracket depth
+  -- and is prohibitively expensive to optimize in native proof builds.
+  moreLeancArgs := #["-fbracket-depth=4096", "-O0"]
 
 require mathlib from git "https://github.com/leanprover-community/mathlib4"@"d9694e37437f9a5cb6f81f8b25c4c754b398e213"
 
