@@ -959,9 +959,9 @@ def precomputedTable_chunk_21 : Array AnyBoundEntry := #[
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 13 0))
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 2 13 0)) },
   { key := { q := 2, n := 13, r := 1 }
-    lowerValue := 586
+    lowerValue := 607
     upperValue := 1024
-    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 13 1))
+    lowerTrace := (.primitive "Gijswijt--Polak 2025 SDP certificate" (primitiveLower_valid 2 13 1))
     upperTrace := (.lengthenFreeN 6 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 7 1))) },
   { key := { q := 2, n := 13, r := 2 }
     lowerValue := 90
