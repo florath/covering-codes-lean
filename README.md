@@ -158,6 +158,7 @@ Full QA and regeneration:
 
 ```bash
 scripts/release-qa-chain.sh
+scripts/release-qa-parallel.sh
 scripts/check-generated.sh
 lake -KproofMode=native exe table_gen
 ```
@@ -166,9 +167,18 @@ Kernel builds use ordinary kernel `decide` for finite proof leaves and are very
 expensive.  `scripts/release-qa-chain.sh` is the canonical full QA path before
 commits that may be pushed to `main`; it runs clean native and kernel phases,
 generated-table checks, reference-data checks, smoke tests, external certificate
-handling, and proof-mode measurements.  `scripts/check-generated.sh` and
-`lake -KproofMode=native exe table_gen` remain focused developer commands for
-source or generator changes.
+handling, and release correctness checks.  Proof-mode compile/RSS measurements
+are performance telemetry and live in `scripts/release-proof-mode-measurements.sh`.
+`scripts/release-qa-parallel.sh` runs the same release QA native and kernel
+phases concurrently in isolated worktrees for machines with enough CPU and
+memory. `scripts/check-generated.sh` and `lake -KproofMode=native exe table_gen`
+remain focused developer commands for source or generator changes.
+
+Optional proof-mode performance telemetry:
+
+```bash
+scripts/release-proof-mode-measurements.sh
+```
 
 Historical comparison data lives under `reference-data/`.  It is reference
 material only; it is not imported by Lean and does not certify any bound.

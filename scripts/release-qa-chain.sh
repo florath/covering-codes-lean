@@ -9,22 +9,17 @@ usage() {
   cat <<'EOF'
 Usage: scripts/release-qa-chain.sh [OPTIONS]
 
-Runs a clean native build, clean kernel build, smoke tests, and proof-mode
-compile/RSS measurements.  Each step writes its own log under
+Runs a clean native build, clean kernel build, smoke tests, and release
+correctness checks.  Each step writes its own log under
 build/release-qa-runs/RUN_ID and creates a done marker only after success.
 
 Options:
   --resume DIR             Reuse a previous run directory and skip completed steps.
   --from STEP              Start or restart from STEP, even if earlier steps are done.
-  --skip-measurements      Stop after the kernel smoke tests.
-  --measurement-timeout S  Timeout per measurement run, default 14400.
-  --lean-memory-mb MB      Pass Lean's -M memory cap to measurement runs.
+  --phase PHASE            Run all, native, or kernel steps. Default: all.
   --external-certificate-storage-limit SIZE
                            Pass --storage-limit to external certificate checks.
                            Defaults to EXTERNAL_CERTIFICATE_STORAGE_LIMIT.
-  --measure-target SPEC    Measurement target spec. Can be repeated.
-                           Default:
-                             k8_4_2,8,4,2,CoveringCodes/Database/Sources/OctonaryFourTwo.lean
   --list-steps             Print step names and exit.
   -h, --help               Show this help.
 
@@ -37,7 +32,7 @@ Restart from a specific step:
 EOF
 }
 
-steps=(
+all_steps=(
   log_state
   check_source_policy
   clean_native
@@ -56,8 +51,35 @@ steps=(
   kernel_build_covering_codes
   kernel_build_library_tests
   kernel_smoke_tests
-  measure_proof_modes
 )
+
+native_steps=(
+  log_state
+  check_source_policy
+  clean_native
+  native_external_certificates
+  native_build_table_gen
+  native_regenerate_table
+  native_check_generated
+  native_dump_reference_data
+  native_check_reference_data
+  native_build_covering_codes
+  native_build_library_tests
+  native_smoke_tests
+)
+
+kernel_steps=(
+  log_state
+  check_source_policy
+  clean_kernel
+  kernel_external_certificates
+  kernel_build_table_gen
+  kernel_build_covering_codes
+  kernel_build_library_tests
+  kernel_smoke_tests
+)
+
+steps=("${all_steps[@]}")
 
 describe_step() {
   case "$1" in
@@ -79,7 +101,6 @@ describe_step() {
     kernel_build_covering_codes) echo "Build covering_codes in kernel proof mode" ;;
     kernel_build_library_tests) echo "Build library, examples, and test modules in kernel proof mode" ;;
     kernel_smoke_tests) echo "Run kernel smoke tests" ;;
-    measure_proof_modes) echo "Run compile/RSS proof-mode measurements" ;;
     *) echo "" ;;
   esac
 }
@@ -101,11 +122,9 @@ valid_step() {
 
 resume_dir=""
 from_step=""
-skip_measurements=0
-measurement_timeout=14400
-lean_memory_mb=""
+phase="all"
+list_steps_requested=0
 external_certificate_storage_limit="${EXTERNAL_CERTIFICATE_STORAGE_LIMIT:-}"
-measure_targets=()
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -119,18 +138,9 @@ while [[ $# -gt 0 ]]; do
       from_step="$2"
       shift 2
       ;;
-    --skip-measurements)
-      skip_measurements=1
-      shift
-      ;;
-    --measurement-timeout)
-      [[ $# -ge 2 ]] || { echo "missing value for --measurement-timeout" >&2; exit 2; }
-      measurement_timeout="$2"
-      shift 2
-      ;;
-    --lean-memory-mb)
-      [[ $# -ge 2 ]] || { echo "missing value for --lean-memory-mb" >&2; exit 2; }
-      lean_memory_mb="$2"
+    --phase)
+      [[ $# -ge 2 ]] || { echo "missing value for --phase" >&2; exit 2; }
+      phase="$2"
       shift 2
       ;;
     --external-certificate-storage-limit)
@@ -138,14 +148,9 @@ while [[ $# -gt 0 ]]; do
       external_certificate_storage_limit="$2"
       shift 2
       ;;
-    --measure-target)
-      [[ $# -ge 2 ]] || { echo "missing value for --measure-target" >&2; exit 2; }
-      measure_targets+=("$2")
-      shift 2
-      ;;
     --list-steps)
-      list_steps
-      exit 0
+      list_steps_requested=1
+      shift
       ;;
     -h|--help)
       usage
@@ -159,17 +164,27 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+case "${phase}" in
+  all) steps=("${all_steps[@]}") ;;
+  native) steps=("${native_steps[@]}") ;;
+  kernel) steps=("${kernel_steps[@]}") ;;
+  *)
+    echo "unknown phase for --phase: ${phase}" >&2
+    echo "Known phases: all, native, kernel" >&2
+    exit 2
+    ;;
+esac
+
+if [[ "${list_steps_requested}" -eq 1 ]]; then
+  list_steps
+  exit 0
+fi
+
 if [[ -n "${from_step}" ]] && ! valid_step "${from_step}"; then
   echo "unknown step for --from: ${from_step}" >&2
   echo "Known steps:" >&2
   list_steps >&2
   exit 2
-fi
-
-if [[ ${#measure_targets[@]} -eq 0 ]]; then
-  measure_targets=(
-    "k8_4_2,8,4,2,CoveringCodes/Database/Sources/OctonaryFourTwo.lean"
-  )
 fi
 
 if [[ -n "${resume_dir}" ]]; then
@@ -236,9 +251,12 @@ run_step() {
   local description="$2"
   shift 2
 
-  if [[ "${skip_measurements}" -eq 1 && "${step}" == "measure_proof_modes" ]]; then
-    echo "==> SKIP ${step}: measurements disabled"
-    printf '%s\t%s\tSKIP\t0\t\t\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "${step}" >> "${summary}"
+  local selected=0
+  local phase_step
+  for phase_step in "${steps[@]}"; do
+    [[ "${phase_step}" == "${step}" ]] && selected=1
+  done
+  if [[ "${selected}" -eq 0 ]]; then
     return 0
   fi
 
@@ -306,6 +324,7 @@ run_step() {
 }
 
 echo "Run directory: ${run_dir}"
+echo "Phase: ${phase}"
 echo "State snapshot: ${run_dir}/state.latest.log"
 
 run_step log_state "$(describe_step log_state)" \
@@ -441,19 +460,10 @@ run_step kernel_smoke_tests "$(describe_step kernel_smoke_tests)" \
     check_covering_codes_result kernel 3 8 1 "[386, 486]" "lit_laarhoven_aarts_van_lint_wille_1989"
   '
 
-measure_cmd=(
-  scripts/measure-proof-modes.py
-  --mode both
-  --timeout "${measurement_timeout}"
-  --output-dir "${run_dir}/proof-mode-measurements"
-)
-if [[ -n "${lean_memory_mb}" ]]; then
-  measure_cmd+=(--lean-memory-mb "${lean_memory_mb}")
+if [[ "${phase}" == "all" ]]; then
+  echo "==> All release QA steps completed"
+else
+  echo "==> Release QA ${phase} phase completed"
 fi
-measure_cmd+=("${measure_targets[@]}")
-
-run_step measure_proof_modes "$(describe_step measure_proof_modes)" "${measure_cmd[@]}"
-
-echo "==> All release QA steps completed"
 echo "Run directory: ${run_dir}"
 echo "Summary: ${summary}"

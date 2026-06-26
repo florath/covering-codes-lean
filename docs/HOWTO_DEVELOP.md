@@ -108,9 +108,19 @@ file is generated and should remain ignored.
 
 `scripts/release-qa-chain.sh` is the full pre-commit/pre-main QA path. It runs
 clean native and kernel phases, generated-table checks, reference-data checks,
-smoke queries, external certificate handling, and proof-mode measurements. Use
-it before committing changes that may be pushed to `main`, not after every small
-edit.
+smoke queries, external certificate handling, and release correctness checks.
+Use it before committing changes that may be pushed to `main`, not after every
+small edit.
+
+`scripts/release-qa-parallel.sh` runs the same native and kernel release QA
+phases concurrently in isolated worktrees. Use it on machines with enough CPU
+and memory; set `LEAN_NUM_THREADS` first if each phase needs fewer workers.
+
+Proof-mode compile/RSS measurements are separate performance telemetry:
+
+```bash
+scripts/release-proof-mode-measurements.sh
+```
 
 The van Laarhoven kernel certificates are especially expensive. Follow the
 explicit opt-in and memory guidance in `README.md` before running those in

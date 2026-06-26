@@ -49,10 +49,28 @@ comparison script and should remain uncommitted unless intentionally promoted.
 Run the full QA path before committing changes that may be pushed to `main` and
 before creating a release tag.  This is the canonical release validation path:
 it runs clean native and kernel builds, generated-table checks, reference-data
-checks, smoke tests, external certificate handling, and proof-mode measurements.
+checks, smoke tests, external certificate handling, and release correctness
+checks.
 
 ```bash
 scripts/release-qa-chain.sh
+```
+
+On machines with enough CPU and memory for simultaneous native and kernel
+builds, run the same release QA phases in isolated worktrees:
+
+```bash
+scripts/release-qa-parallel.sh
+```
+
+Use the sequential chain when you want the simplest per-step resume flow in a
+single checkout.
+
+Proof-mode compile/RSS measurements are performance telemetry, not release
+gates. Run them separately when needed:
+
+```bash
+scripts/release-proof-mode-measurements.sh
 ```
 
 If a run fails, resume it after fixing the problem:
