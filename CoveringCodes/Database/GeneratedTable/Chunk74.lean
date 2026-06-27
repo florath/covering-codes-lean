@@ -135,49 +135,49 @@ def precomputedTable_chunk_74 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 28 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 35, r := 3 }
     lowerValue := 263920596610630279062556
-    upperValue := 157775382034845806615042743
+    upperValue := 80497643895329493170940175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 3))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 26 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 35, r := 4 }
     lowerValue := 5466839536098125298235
-    upperValue := 22539340290692258087863249
+    upperValue := 11499663413618499024420025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 4))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 5 }
     lowerValue := 146057205558862350169
-    upperValue := 3219905755813179726837607
+    upperValue := 1642809059088357003488575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 5))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 6 }
     lowerValue := 4836572834167593062
-    upperValue := 459986536544739960976801
+    upperValue := 234687008441193857641225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 6))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 7 }
     lowerValue := 193200025689042239
-    upperValue := 65712362363534280139543
+    upperValue := 33526715491599122520175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 7))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 8 }
     lowerValue := 9129943498932680
-    upperValue := 9387480337647754305649
+    upperValue := 4789530784514160360025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 8))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 9 }
     lowerValue := 503044255858002
-    upperValue := 1341068619663964900807
+    upperValue := 684218683502022908575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 9))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 10 }
     lowerValue := 31958662039052
-    upperValue := 191581231380566414401
+    upperValue := 97745526214574701225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 10))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 11 }
     lowerValue := 2320884018238
-    upperValue := 27368747340080916343
+    upperValue := 13963646602082100175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 35 11))
-    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 9 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 35, r := 12 }
     lowerValue := 191357203333
     upperValue := 558545864083284007
@@ -380,49 +380,49 @@ def precomputedTable_chunk_74 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 29 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 36, r := 3 }
     lowerValue := 1694248392223590313039066
-    upperValue := 1104427674243920646305299201
+    upperValue := 563483507267306452196581225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 3))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 27 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 36, r := 4 }
     lowerValue := 34037561512863036904827
-    upperValue := 157775382034845806615042743
+    upperValue := 80497643895329493170940175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 4))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 5 }
     lowerValue := 881150574453947965799
-    upperValue := 22539340290692258087863249
+    upperValue := 11499663413618499024420025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 5))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 6 }
     lowerValue := 28244282709951305871
-    upperValue := 3219905755813179726837607
+    upperValue := 1642809059088357003488575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 6))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 7 }
     lowerValue := 1090932225656076753
-    upperValue := 459986536544739960976801
+    upperValue := 234687008441193857641225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 7))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 8 }
     lowerValue := 49791728487563870
-    upperValue := 65712362363534280139543
+    upperValue := 33526715491599122520175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 8))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 9 }
     lowerValue := 2646427909161855
-    upperValue := 9387480337647754305649
+    upperValue := 4789530784514160360025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 9))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 10 }
     lowerValue := 161970294304206
-    upperValue := 1341068619663964900807
+    upperValue := 684218683502022908575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 10))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 11 }
     lowerValue := 11315639849325
-    upperValue := 191581231380566414401
+    upperValue := 97745526214574701225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 36 11))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 9 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 36, r := 12 }
     lowerValue := 896166248181
     upperValue := 3909821048582988049
@@ -625,49 +625,49 @@ def precomputedTable_chunk_74 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 30 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 37, r := 3 }
     lowerValue := 10902736428208774352857833
-    upperValue := 7730993719707444524137094407
+    upperValue := 3944384550871145165376068575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 3))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 28 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 37, r := 4 }
     lowerValue := 212632165536000384875943
-    upperValue := 1104427674243920646305299201
+    upperValue := 563483507267306452196581225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 4))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 5 }
     lowerValue := 5338801643614336437346
-    upperValue := 157775382034845806615042743
+    upperValue := 80497643895329493170940175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 5))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 6 }
     lowerValue := 165819116265975349200
-    upperValue := 22539340290692258087863249
+    upperValue := 11499663413618499024420025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 6))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 7 }
     lowerValue := 6199740033442454130
-    upperValue := 3219905755813179726837607
+    upperValue := 1642809059088357003488575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 7))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 8 }
     lowerValue := 273613420203121461
-    upperValue := 459986536544739960976801
+    upperValue := 234687008441193857641225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 8))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 9 }
     lowerValue := 14045795380782670
-    upperValue := 65712362363534280139543
+    upperValue := 33526715491599122520175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 9))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 10 }
     lowerValue := 829268077284735
-    upperValue := 9387480337647754305649
+    upperValue := 4789530784514160360025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 10))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 11 }
     lowerValue := 55813764534175
-    upperValue := 1341068619663964900807
+    upperValue := 684218683502022908575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 37 11))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 9 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 37, r := 12 }
     lowerValue := 4252465331131
     upperValue := 27368747340080916343
@@ -870,49 +870,49 @@ def precomputedTable_chunk_74 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 31 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 38, r := 3 }
     lowerValue := 70321966369843704145163316
-    upperValue := 54116956037952111668959660849
+    upperValue := 27610691856098016157632480025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 3))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 29 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 38, r := 4 }
     lowerValue := 1332501374955776140768837
-    upperValue := 7730993719707444524137094407
+    upperValue := 3944384550871145165376068575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 4))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 5 }
     lowerValue := 32478725943612378157011
-    upperValue := 1104427674243920646305299201
+    upperValue := 563483507267306452196581225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 5))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 6 }
     lowerValue := 978403082708975473341
-    upperValue := 157775382034845806615042743
+    upperValue := 80497643895329493170940175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 6))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 7 }
     lowerValue := 35446431427975334740
-    upperValue := 22539340290692258087863249
+    upperValue := 11499663413618499024420025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 7))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 8 }
     lowerValue := 1514307827474495773
-    upperValue := 3219905755813179726837607
+    upperValue := 1642809059088357003488575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 8))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 9 }
     lowerValue := 75168243490401811
-    upperValue := 459986536544739960976801
+    upperValue := 234687008441193857641225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 9))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 10 }
     lowerValue := 4286440095172514
-    upperValue := 65712362363534280139543
+    upperValue := 33526715491599122520175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 10))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 11 }
     lowerValue := 278307630010194
-    upperValue := 9387480337647754305649
+    upperValue := 4789530784514160360025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 38 11))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 9 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 38, r := 12 }
     lowerValue := 20428527959207
     upperValue := 191581231380566414401
@@ -1115,49 +1115,49 @@ def precomputedTable_chunk_74 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 32 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 39, r := 3 }
     lowerValue := 454559333576483564343771797
-    upperValue := 378818692265664781682717625943
+    upperValue := 193274842992686113103427360175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 3))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 30 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 39, r := 4 }
     lowerValue := 8375308435087318695091866
-    upperValue := 54116956037952111668959660849
+    upperValue := 27610691856098016157632480025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 4))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 5 }
     lowerValue := 198344139855187670330267
-    upperValue := 7730993719707444524137094407
+    upperValue := 3944384550871145165376068575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 5))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 6 }
     lowerValue := 5800416211335123584937
-    upperValue := 1104427674243920646305299201
+    upperValue := 563483507267306452196581225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 6))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 7 }
     lowerValue := 203820015298279803379
-    upperValue := 157775382034845806615042743
+    upperValue := 80497643895329493170940175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 7))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 8 }
     lowerValue := 8437422775846751569
-    upperValue := 22539340290692258087863249
+    upperValue := 11499663413618499024420025
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 8))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 9 }
     lowerValue := 405428182594882984
-    upperValue := 3219905755813179726837607
+    upperValue := 1642809059088357003488575
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 9))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 10 }
     lowerValue := 22356020115490492
-    upperValue := 459986536544739960976801
+    upperValue := 234687008441193857641225
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 10))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 11 }
     lowerValue := 1401988263054838
-    upperValue := 65712362363534280139543
+    upperValue := 33526715491599122520175
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 39 11))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 9 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 8 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))))) },
   { key := { q := 7, n := 39, r := 12 }
     lowerValue := 99276655758067
     upperValue := 1341068619663964900807

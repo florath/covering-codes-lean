@@ -270,9 +270,9 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n7_r2_synchronized_syndrome" (primitiveUpper_valid 6 7 2))) },
   { key := { q := 6, n := 8, r := 4 }
     lowerValue := 33
-    upperValue := 648
+    upperValue := 343
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 8 4))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 3 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 6 3 1))))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 6) (by decide : 6 ≤ 7) (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4))) },
   { key := { q := 6, n := 8, r := 5 }
     lowerValue := 8
     upperValue := 36
