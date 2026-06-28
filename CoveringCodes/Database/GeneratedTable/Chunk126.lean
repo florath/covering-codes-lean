@@ -540,9 +540,9 @@ def precomputedTable_chunk_126 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 13 8 0)) },
   { key := { q := 13, n := 8, r := 1 }
     lowerValue := 8409596
-    upperValue := 31559905
+    upperValue := 30118144
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 13 8 1))
-    upperTrace := (.lengthenFreeN 5 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 13 3 1))) },
+    upperTrace := (@UpperTrace.alphabetExpand 7 13 2 8 1 117649 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 13 ≤ 2 * 7) (by decide : 0 < 13) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))) },
   { key := { q := 13, n := 8, r := 2 }
     lowerValue := 197562
     upperValue := 1817088
@@ -785,9 +785,9 @@ def precomputedTable_chunk_126 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 13 9 0)) },
   { key := { q := 13, n := 9, r := 1 }
     lowerValue := 97288986
-    upperValue := 410278765
+    upperValue := 391535872
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 13 9 1))
-    upperTrace := (.lengthenFreeN 6 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 13 3 1))) },
+    upperTrace := (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 13 2 8 1 117649 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 13 ≤ 2 * 7) (by decide : 0 < 13) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 13, n := 9, r := 2 }
     lowerValue := 2003496
     upperValue := 23622144
@@ -1030,9 +1030,9 @@ def precomputedTable_chunk_126 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 13 10 0)) },
   { key := { q := 13, n := 10, r := 1 }
     lowerValue := 1139326379
-    upperValue := 5333623945
+    upperValue := 5089966336
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 13 10 1))
-    upperTrace := (.lengthenFreeN 7 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 13 3 1))) },
+    upperTrace := (.lengthenFreeN 2 (@UpperTrace.alphabetExpand 7 13 2 8 1 117649 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 13 ≤ 2 * 7) (by decide : 0 < 13) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 13, n := 10, r := 2 }
     lowerValue := 20884486
     upperValue := 307087872

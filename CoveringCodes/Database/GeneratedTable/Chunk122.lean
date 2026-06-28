@@ -150,24 +150,24 @@ def precomputedTable_chunk_122 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 12 35 0)) },
   { key := { q := 12, n := 35, r := 1 }
     lowerValue := 153022857293845389762811810667005433
-    upperValue := 2461117621476013352018556621561004032
+    upperValue := 2187660107978678535127605885832003584
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 35 1))
-    upperTrace := (.lengthenFreeN 32 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenFreeN 21 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 12, n := 35, r := 2 }
     lowerValue := 816054253401090347583555890599247
     upperValue := 182305008998223211260633823819333632
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 35 2))
-    upperTrace := (.lengthenFreeN 26 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 35, r := 3 }
     lowerValue := 6724536567806865799907165086800
     upperValue := 15192084083185267605052818651611136
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 35 3))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 35, r := 4 }
     lowerValue := 76177261498675701080841773757
     upperValue := 1266007006932105633754401554300928
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 35 4))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 35, r := 5 }
     lowerValue := 1113256487559435545819214453
     upperValue := 36265825719409275966922961190912
@@ -395,24 +395,24 @@ def precomputedTable_chunk_122 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 12 36 0)) },
   { key := { q := 12, n := 36, r := 1 }
     lowerValue := 1785395151095949232698600269545514260
-    upperValue := 29533411457712160224222679458732048384
+    upperValue := 26251921295744142421531270629984043008
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 36 1))
-    upperTrace := (.lengthenFreeN 33 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenFreeN 22 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 12, n := 36, r := 2 }
     lowerValue := 9250027731544910349894218839437394
     upperValue := 2187660107978678535127605885832003584
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 36 2))
-    upperTrace := (.lengthenFreeN 27 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 36, r := 3 }
     lowerValue := 73987924487118989593737045963684
     upperValue := 182305008998223211260633823819333632
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 36 3))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 36, r := 4 }
     lowerValue := 812838662558953749434264763331
     upperValue := 15192084083185267605052818651611136
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 36 4))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 36, r := 5 }
     lowerValue := 11508962749072515789258227271
     upperValue := 435189908632911311603075534290944
@@ -640,24 +640,24 @@ def precomputedTable_chunk_122 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 12 37 0)) },
   { key := { q := 12, n := 37, r := 1 }
     lowerValue := 20847113970149760158274832559104975330
-    upperValue := 354400937492545922690672153504784580608
+    upperValue := 315023055548929709058375247559808516096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 37 1))
-    upperTrace := (.lengthenFreeN 34 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenFreeN 23 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 12, n := 37, r := 2 }
     lowerValue := 105015464106243698849002786430042102
     upperValue := 26251921295744142421531270629984043008
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 37 2))
-    upperTrace := (.lengthenFreeN 28 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 37, r := 3 }
     lowerValue := 816054253401090347583555890599247
     upperValue := 2187660107978678535127605885832003584
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 37 3))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 37, r := 4 }
     lowerValue := 8702403786644202771099233952118
     upperValue := 182305008998223211260633823819333632
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 37 4))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 37, r := 5 }
     lowerValue := 119496175318067267974867283430
     upperValue := 5222278903594935739236906411491328
@@ -885,24 +885,24 @@ def precomputedTable_chunk_122 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 12 38 0)) },
   { key := { q := 12, n := 38, r := 1 }
     lowerValue := 243597780424470705811249594771785105526
-    upperValue := 4252811249910551072288065842057414967296
+    upperValue := 3780276666587156508700502970717702193152
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 38 1))
-    upperTrace := (.lengthenFreeN 35 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenFreeN 24 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 12, n := 38, r := 2 }
     lowerValue := 1194022952175349497378554317977796019
     upperValue := 315023055548929709058375247559808516096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 38 2))
-    upperTrace := (.lengthenFreeN 29 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 38, r := 3 }
     lowerValue := 9021503654020800595424593952391404
     upperValue := 26251921295744142421531270629984043008
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 38 3))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 38, r := 4 }
     lowerValue := 93465022851567900368897815585472
     upperValue := 2187660107978678535127605885832003584
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 38 4))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 38, r := 5 }
     lowerValue := 1245784156535228917975769722869
     upperValue := 62667346843139228870842876937895936
@@ -1130,24 +1130,24 @@ def precomputedTable_chunk_122 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 12 39 0)) },
   { key := { q := 12, n := 39, r := 1 }
     lowerValue := 2848394511567996997253402238401245373445
-    upperValue := 51033734998926612867456790104688979607552
+    upperValue := 45363319999045878104406035648612426317824
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 39 1))
-    upperTrace := (.lengthenFreeN 36 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenFreeN 25 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 12, n := 39, r := 2 }
     lowerValue := 13595249691692163577038360796445100072
     upperValue := 3780276666587156508700502970717702193152
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 39 2))
-    upperTrace := (.lengthenFreeN 30 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 39, r := 3 }
     lowerValue := 99951007415823170107879237358315626
     upperValue := 315023055548929709058375247559808516096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 39 3))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 39, r := 4 }
     lowerValue := 1006838233111287142133026254785093
     upperValue := 26251921295744142421531270629984043008
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 39 4))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 12 4 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 4) (by decide : 12 ≤ 4 * 3) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))))) },
   { key := { q := 12, n := 39, r := 5 }
     lowerValue := 13037832934382273962829153143746
     upperValue := 752008162117670746450114523254751232

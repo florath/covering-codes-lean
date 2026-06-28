@@ -1190,9 +1190,9 @@ def precomputedTable_chunk_22 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 11 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 8 2))) },
   { key := { q := 2, n := 19, r := 3 }
     lowerValue := 452
-    upperValue := 7168
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 19 3))
-    upperTrace := (.lengthenFreeN 10 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 9 3))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))))) },
   { key := { q := 2, n := 19, r := 4 }
     lowerValue := 105
     upperValue := 2048

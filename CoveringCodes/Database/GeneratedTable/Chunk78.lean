@@ -525,9 +525,9 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2))) },
   { key := { q := 8, n := 8, r := 3 }
     lowerValue := 813
-    upperValue := 11776
+    upperValue := 8192
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 8 3))
-    upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2))))) },
+    upperTrace := (@UpperTrace.blockGroup 2 3 8 3 8192 (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))) },
   { key := { q := 8, n := 8, r := 4 }
     lowerValue := 89
     upperValue := 729

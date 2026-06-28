@@ -255,9 +255,9 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 8 0)) },
   { key := { q := 6, n := 8, r := 1 }
     lowerValue := 40967
-    upperValue := 124416
+    upperValue := 117649
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 8 1))
-    upperTrace := (@UpperTrace.alphabetExpand 3 6 2 8 1 486 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 6) (by decide : 6 ≤ 7) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))) },
   { key := { q := 6, n := 8, r := 2 }
     lowerValue := 2267
     upperValue := 5184
@@ -500,9 +500,9 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 9 0)) },
   { key := { q := 6, n := 9, r := 1 }
     lowerValue := 219081
-    upperValue := 746496
+    upperValue := 705894
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 9 1))
-    upperTrace := (@UpperTrace.alphabetExpand 3 6 2 9 1 1458 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1)))) },
+    upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 6) (by decide : 6 ≤ 7) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 6, n := 9, r := 2 }
     lowerValue := 10653
     upperValue := 31104
@@ -745,9 +745,9 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 10 0)) },
   { key := { q := 6, n := 10, r := 1 }
     lowerValue := 1185612
-    upperValue := 4478976
+    upperValue := 4235364
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 10 1))
-    upperTrace := (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 3 6 2 9 1 1458 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1))))) },
+    upperTrace := (.lengthenFreeN 2 (.alphabetProject (by decide : 0 < 6) (by decide : 6 ≤ 7) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 6, n := 10, r := 2 }
     lowerValue := 51417
     upperValue := 186624
@@ -990,9 +990,9 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 11 0)) },
   { key := { q := 6, n := 11, r := 1 }
     lowerValue := 6478519
-    upperValue := 26873856
+    upperValue := 25412184
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 11 1))
-    upperTrace := (.lengthenFreeN 2 (@UpperTrace.alphabetExpand 3 6 2 9 1 1458 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1))))) },
+    upperTrace := (.lengthenFreeN 3 (.alphabetProject (by decide : 0 < 6) (by decide : 6 ≤ 7) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 6, n := 11, r := 2 }
     lowerValue := 253527
     upperValue := 1119744
@@ -1235,9 +1235,9 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 12 0)) },
   { key := { q := 6, n := 12, r := 1 }
     lowerValue := 35684957
-    upperValue := 161243136
+    upperValue := 152473104
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 12 1))
-    upperTrace := (.lengthenFreeN 3 (@UpperTrace.alphabetExpand 3 6 2 9 1 1458 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1))))) },
+    upperTrace := (.lengthenFreeN 4 (.alphabetProject (by decide : 0 < 6) (by decide : 6 ≤ 7) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 6, n := 12, r := 2 }
     lowerValue := 1272229
     upperValue := 6718464

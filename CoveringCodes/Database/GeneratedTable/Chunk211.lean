@@ -130,99 +130,99 @@ def precomputedTable_chunk_211 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 21 48 0)) },
   { key := { q := 21, n := 48, r := 1 }
     lowerValue := 3046511063094988040109524223979246548625626704305056676350074
-    upperValue := 69865140491434689012687708045884500728178298789224947843635121
+    upperValue := 59748921053760887888678628147837876188351576792595091142294289
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 1))
-    upperTrace := (.lengthenFreeN 45 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))) },
+    upperTrace := (.lengthenFreeN 39 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))) },
   { key := { q := 21, n := 48, r := 2 }
     lowerValue := 6474899718538935260991666196872476691331687745818766912610
-    upperValue := 3326911451973080429175605145042119082294204704248807040173101
+    upperValue := 2845186716845756566127553721325613151826265561552147197252109
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 2))
-    upperTrace := (.lengthenFreeN 43 (.lengthenDummyN 1 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 37 (.lengthenDummyN 1 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 3 }
     lowerValue := 21089855468718866465982940181462949990594141890075746750
-    upperValue := 158424354855860972817885959287719956299724033535657478103481
+    upperValue := 135485081754559836482264462920267292944107883883435580821529
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 3))
-    upperTrace := (.lengthenFreeN 42 (.lengthenDummyN 2 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 36 (.lengthenDummyN 2 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 4 }
     lowerValue := 93621536606073369814785426500565121558724578128107927
-    upperValue := 7544016897898141562756474251796188395224953977888451338261
+    upperValue := 6451670559740944594393545853346061568767042089687408610549
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 4))
-    upperTrace := (.lengthenFreeN 41 (.lengthenDummyN 3 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 35 (.lengthenDummyN 3 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 5 }
     lowerValue := 531280356417688690057415263266943301677093037925889
-    upperValue := 359238899899911502988403535799818495010712094185164349441
+    upperValue := 307222407606711647352073612064098169941287718556543267169
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 5))
-    upperTrace := (.lengthenFreeN 40 (.lengthenDummyN 4 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 34 (.lengthenDummyN 4 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 6 }
     lowerValue := 3701787492957261496680436268642125195640720728163
-    upperValue := 17106614280948166808971596942848499762414861627864969021
+    upperValue := 14629638457462459397717791050671341425775605645549679389
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 6))
-    upperTrace := (.lengthenFreeN 39 (.lengthenDummyN 5 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 33 (.lengthenDummyN 5 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 7 }
     lowerValue := 30806158342002415194091007580747134046460937877
-    upperValue := 814600680045150800427218902040404750591183887041189001
+    upperValue := 696649450355355209415132907174825782179790745026175209
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 7))
-    upperTrace := (.lengthenFreeN 38 (.lengthenDummyN 6 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 6 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 8 }
     lowerValue := 300117479019013810904259432199931760451857188
-    upperValue := 38790508573578609544153281049543083361484947001961381
+    upperValue := 33173783350255009972149186055944084865704321191722629
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 8))
-    upperTrace := (.lengthenFreeN 37 (.lengthenDummyN 7 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 7 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 9 }
     lowerValue := 3371238236793491218790839301331587181964621
-    upperValue := 1847167074932314740197775288073480160070711761998161
+    upperValue := 1579703969059762379626151716949718326938301009129649
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 9))
-    upperTrace := (.lengthenFreeN 36 (.lengthenDummyN 8 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 8 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 10 }
     lowerValue := 43152500561620154703042340118759266131407
-    upperValue := 87960336901538797152275013717784769527176750571341
+    upperValue := 75223998526655351410769129378558015568490524244269
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 10))
-    upperTrace := (.lengthenFreeN 35 (.lengthenDummyN 9 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 9 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 11 }
     lowerValue := 623532190472304495342756091649082597593
-    upperValue := 4188587471501847483441667319894512834627464312921
+    upperValue := 3582095167935969114798529970407524550880501154489
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 11))
-    upperTrace := (.lengthenFreeN 34 (.lengthenDummyN 10 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 10 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 12 }
     lowerValue := 10093500498711465043856431502792007268
-    upperValue := 199456546261992737306746062852119658791784014901
+    upperValue := 170575960377903291180882379543215454803833388309
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 12))
-    upperTrace := (.lengthenFreeN 33 (.lengthenDummyN 11 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 11 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 13 }
     lowerValue := 181903973620675797976076025129887731
-    upperValue := 9497930774380606538416479183434269466275429281
+    upperValue := 8122664779900156722899160930629307371611113729
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 13))
-    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 12 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 12 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 14 }
     lowerValue := 3630897164868276425623202582395223
-    upperValue := 452282417827647930400784723020679498394068061
+    upperValue := 386793560947626510614245758601395589124338749
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 14))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 13 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 13 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 15 }
     lowerValue := 79925611296439107402966627225864
-    upperValue := 21537257991792758590513558239079976114003241
+    upperValue := 18418740997506024314964083742923599482111369
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 15))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 14 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 14 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 16 }
     lowerValue := 1933279769005525131844665806717
-    upperValue := 1025583713894893266214931344718094100666821
+    upperValue := 877082904643144014998289702043980927719589
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 16))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 15 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 15 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 17 }
     lowerValue := 51231120619894390879705505077
-    upperValue := 48837319709280631724520540224671147650801
+    upperValue := 41765852602054476904680462002094329891409
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 17))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 16 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 16 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 18 }
     lowerValue := 1483597653901281579789876801
-    upperValue := 2325586652822887224977168582127197507181
+    upperValue := 1988850123907356043080022000099729994829
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 18))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 17 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 17 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 19 }
     lowerValue := 46853724111654934613805164
-    upperValue := 110742221562994629760817551529866547961
+    upperValue := 94707148757493144908572476195225237849
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 21 48 19))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 18 (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 21 3 1))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 18 (by decide : 0 < 21) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 21 3 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 3) (by decide : 21 ≤ 3 * 7) (by decide : 0 < 21) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))))) },
   { key := { q := 21, n := 48, r := 20 }
     lowerValue := 1610971255353443430465440
     upperValue := 501096025171921401632658604207540941

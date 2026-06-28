@@ -45,19 +45,19 @@ def precomputedTable_chunk_38 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 3 47 0)) },
   { key := { q := 3, n := 47, r := 1 }
     lowerValue := 279882256410078981977
-    upperValue := 1969541804367222465762
+    upperValue := 984770902183611232881
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 47 1))
-    upperTrace := (.lengthenFreeN 39 (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1))) },
+    upperTrace := (.lengthenFreeN 34 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))) },
   { key := { q := 3, n := 47, r := 2 }
     lowerValue := 6016930155908011607
-    upperValue := 620040938411903368851
+    upperValue := 328256967394537077627
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 47 2))
-    upperTrace := (.lengthenFreeN 41 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 6 2))) },
+    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 1 (by decide : 0 < 3) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 3, n := 47, r := 3 }
     lowerValue := 198218373172287727
-    upperValue := 206680312803967789617
+    upperValue := 109418989131512359209
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 47 3))
-    upperTrace := (.lengthenFreeN 39 (.lengthenDummyN 1 (by decide : 0 < 3) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 6 2))))) },
+    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 2 (by decide : 0 < 3) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 3, n := 47, r := 4 }
     lowerValue := 8898594788971912
     upperValue := 36472996377170786403
@@ -290,19 +290,19 @@ def precomputedTable_chunk_38 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 3 48 0)) },
   { key := { q := 3, n := 48, r := 1 }
     lowerValue := 822334464710025874881
-    upperValue := 5908625413101667397286
+    upperValue := 2954312706550833698643
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 48 1))
-    upperTrace := (.lengthenFreeN 40 (.primitive "lit_laarhoven_aarts_van_lint_wille_1989" (primitiveUpper_valid 3 8 1))) },
+    upperTrace := (.lengthenFreeN 35 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))) },
   { key := { q := 3, n := 48, r := 2 }
     lowerValue := 17306670227136582744
-    upperValue := 1860122815235710106553
+    upperValue := 984770902183611232881
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 48 2))
-    upperTrace := (.lengthenFreeN 42 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 6 2))) },
+    upperTrace := (.lengthenFreeN 33 (.lengthenDummyN 1 (by decide : 0 < 3) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 3, n := 48, r := 3 }
     lowerValue := 557897025933349489
-    upperValue := 620040938411903368851
+    upperValue := 328256967394537077627
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 3 48 3))
-    upperTrace := (.lengthenFreeN 40 (.lengthenDummyN 1 (by decide : 0 < 3) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 6 2))))) },
+    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 2 (by decide : 0 < 3) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
   { key := { q := 3, n := 48, r := 4 }
     lowerValue := 24496359801106765
     upperValue := 109418989131512359209

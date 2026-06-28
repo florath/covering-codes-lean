@@ -185,14 +185,14 @@ def precomputedTable_chunk_23 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 12 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 8 2))) },
   { key := { q := 2, n := 20, r := 3 }
     lowerValue := 777
-    upperValue := 14336
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 20 3))
-    upperTrace := (.lengthenFreeN 11 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 9 3))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3))))) },
   { key := { q := 2, n := 20, r := 4 }
     lowerValue := 170
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 20 4))
-    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n24_r4_binary_golay_tail" (primitiveUpper_valid 2 24 4)))))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 3 ≤ 4) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))))) },
   { key := { q := 2, n := 20, r := 5 }
     lowerValue := 49
     upperValue := 1024
@@ -430,14 +430,14 @@ def precomputedTable_chunk_23 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 13 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 8 2))) },
   { key := { q := 2, n := 21, r := 3 }
     lowerValue := 1343
-    upperValue := 28672
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 21 3))
-    upperTrace := (.lengthenFreeN 12 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 9 3))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))) },
   { key := { q := 2, n := 21, r := 4 }
     lowerValue := 278
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 21 4))
-    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n24_r4_binary_golay_tail" (primitiveUpper_valid 2 24 4))))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 3 ≤ 4) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3))))) },
   { key := { q := 2, n := 21, r := 5 }
     lowerValue := 76
     upperValue := 2048
@@ -675,19 +675,19 @@ def precomputedTable_chunk_23 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 14 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 8 2))) },
   { key := { q := 2, n := 22, r := 3 }
     lowerValue := 2338
-    upperValue := 57344
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 22 3))
-    upperTrace := (.lengthenFreeN 13 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 9 3))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3))) },
   { key := { q := 2, n := 22, r := 4 }
     lowerValue := 461
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 22 4))
-    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n24_r4_binary_golay_tail" (primitiveUpper_valid 2 24 4)))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 3 ≤ 4) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))) },
   { key := { q := 2, n := 22, r := 5 }
     lowerValue := 119
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 22 5))
-    upperTrace := (.puncture (by decide : 0 < 2) (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 4 ≤ 5) (.primitive "lean_known_bounds_q2_n24_r4_binary_golay_tail" (primitiveUpper_valid 2 24 4))))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 4 ≤ 5) (.radiusMono (by decide : 3 ≤ 4) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3))))) },
   { key := { q := 2, n := 22, r := 6 }
     lowerValue := 39
     upperValue := 1024
@@ -920,19 +920,19 @@ def precomputedTable_chunk_23 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 15 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 8 2))) },
   { key := { q := 2, n := 23, r := 3 }
     lowerValue := 4096
-    upperValue := 114688
+    upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 23 3))
-    upperTrace := (.lengthenFreeN 14 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 9 3))) },
+    upperTrace := (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)) },
   { key := { q := 2, n := 23, r := 4 }
     lowerValue := 770
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 23 4))
-    upperTrace := (.puncture (by decide : 0 < 2) (.primitive "lean_known_bounds_q2_n24_r4_binary_golay_tail" (primitiveUpper_valid 2 24 4))) },
+    upperTrace := (.radiusMono (by decide : 3 ≤ 4) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3))) },
   { key := { q := 2, n := 23, r := 5 }
     lowerValue := 189
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 23 5))
-    upperTrace := (.puncture (by decide : 0 < 2) (.radiusMono (by decide : 4 ≤ 5) (.primitive "lean_known_bounds_q2_n24_r4_binary_golay_tail" (primitiveUpper_valid 2 24 4)))) },
+    upperTrace := (.radiusMono (by decide : 4 ≤ 5) (.radiusMono (by decide : 3 ≤ 4) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))) },
   { key := { q := 2, n := 23, r := 6 }
     lowerValue := 58
     upperValue := 1024
@@ -1165,9 +1165,9 @@ def precomputedTable_chunk_23 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 16 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 8 2))) },
   { key := { q := 2, n := 24, r := 3 }
     lowerValue := 7217
-    upperValue := 229376
+    upperValue := 8192
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 24 3))
-    upperTrace := (.lengthenFreeN 15 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 9 3))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3))) },
   { key := { q := 2, n := 24, r := 4 }
     lowerValue := 1296
     upperValue := 4096

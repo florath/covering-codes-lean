@@ -45,9 +45,9 @@ def precomputedTable_chunk_136 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 14 8 0)) },
   { key := { q := 14, n := 8, r := 1 }
     lowerValue := 14055134
-    upperValue := 52706752
+    upperValue := 30118144
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 8 1))
-    upperTrace := (.lengthenFreeN 5 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 14 3 1))) },
+    upperTrace := (@UpperTrace.alphabetExpand 7 14 2 8 1 117649 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 14 ≤ 2 * 7) (by decide : 0 < 14) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))) },
   { key := { q := 14, n := 8, r := 2 }
     lowerValue := 305105
     upperValue := 2107392
@@ -290,9 +290,9 @@ def precomputedTable_chunk_136 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 14 9 0)) },
   { key := { q := 14, n := 9, r := 1 }
     lowerValue := 175093617
-    upperValue := 737894528
+    upperValue := 421654016
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 9 1))
-    upperTrace := (.lengthenFreeN 6 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 14 3 1))) },
+    upperTrace := (@UpperTrace.alphabetExpand 7 14 2 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 14 ≤ 2 * 7) (by decide : 0 < 14) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 14, n := 9, r := 2 }
     lowerValue := 3331353
     upperValue := 29503488
@@ -535,9 +535,9 @@ def precomputedTable_chunk_136 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 14 10 0)) },
   { key := { q := 14, n := 10, r := 1 }
     lowerValue := 2208050802
-    upperValue := 10330523392
+    upperValue := 5903156224
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 10 1))
-    upperTrace := (.lengthenFreeN 7 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 14 3 1))) },
+    upperTrace := (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 7 14 2 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 14 ≤ 2 * 7) (by decide : 0 < 14) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))) },
   { key := { q := 14, n := 10, r := 2 }
     lowerValue := 37390726
     upperValue := 413048832
@@ -780,9 +780,9 @@ def precomputedTable_chunk_136 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 14 11 0)) },
   { key := { q := 14, n := 11, r := 1 }
     lowerValue := 28121980345
-    upperValue := 144627327488
+    upperValue := 82644187136
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 11 1))
-    upperTrace := (.lengthenFreeN 8 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 14 3 1))) },
+    upperTrace := (.lengthenFreeN 2 (@UpperTrace.alphabetExpand 7 14 2 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 14 ≤ 2 * 7) (by decide : 0 < 14) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))) },
   { key := { q := 14, n := 11, r := 2 }
     lowerValue := 429024809
     upperValue := 5782683648
@@ -1025,9 +1025,9 @@ def precomputedTable_chunk_136 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 14 12 0)) },
   { key := { q := 14, n := 12, r := 1 }
     lowerValue := 361107722136
-    upperValue := 2024782584832
+    upperValue := 1157018619904
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 14 12 1))
-    upperTrace := (.lengthenFreeN 9 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 14 3 1))) },
+    upperTrace := (.lengthenFreeN 3 (@UpperTrace.alphabetExpand 7 14 2 9 1 823543 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 14 ≤ 2 * 7) (by decide : 0 < 14) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1))))) },
   { key := { q := 14, n := 12, r := 2 }
     lowerValue := 5012281176
     upperValue := 80957571072

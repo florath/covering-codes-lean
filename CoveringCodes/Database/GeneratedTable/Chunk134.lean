@@ -95,9 +95,9 @@ def precomputedTable_chunk_134 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 13 47 0)) },
   { key := { q := 13, n := 47, r := 1 }
     lowerValue := 40113366415113697118527824777579739319829688919908
-    upperValue := 876852263125095723312379965836716877940291675183685
+    upperValue := 836794747244249404695813146262174091368023068357888
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 13 47 1))
-    upperTrace := (.lengthenFreeN 44 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 13 3 1))) },
+    upperTrace := (.lengthenFreeN 39 (@UpperTrace.alphabetExpand 7 13 2 8 1 117649 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 13 ≤ 2 * 7) (by decide : 0 < 13) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 13, n := 47, r := 2 }
     lowerValue := 145069430288481900748057153277128783489005077417
     upperValue := 50485504474663467386300620593195961721138536997376
@@ -340,9 +340,9 @@ def precomputedTable_chunk_134 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 13 48 0)) },
   { key := { q := 13, n := 48, r := 1 }
     lowerValue := 510628555145598102834639294612345208499391793963121
-    upperValue := 11399079420626244403060939555877319413223791777387905
+    upperValue := 10878331714175242261045570901408263187784299888652544
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 13 48 1))
-    upperTrace := (.lengthenFreeN 45 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 13 3 1))) },
+    upperTrace := (.lengthenFreeN 40 (@UpperTrace.alphabetExpand 7 13 2 8 1 117649 (by decide : 0 < 7) (by decide : 0 < 2) (by decide : 13 ≤ 2 * 7) (by decide : 0 < 13) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 7 8 1)))) },
   { key := { q := 13, n := 48, r := 2 }
     lowerValue := 1807462632854689651096484690976100615942365544950
     upperValue := 656311558170625076021908067711547502374800980965888
