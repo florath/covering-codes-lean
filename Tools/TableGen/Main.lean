@@ -266,7 +266,7 @@ def relaxOnceWithProgress
 
 def main : IO Unit := do
   logProgress s!"Computing bound table (up to {maxPasses} passes) ..."
-  let mut table := initialTable
+  let mut table := initialTable ()
   logProgress s!"Initialized {table.size} table entries."
   -- Track sum of all upper and lower values to detect convergence.
   let mut prevUpperSum := table.foldl (fun acc e => acc + e.upperValue) 0

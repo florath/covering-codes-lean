@@ -312,13 +312,13 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 2 23)
       rowParity10, hw0, hw1, hw2, hw3, hw4, hw5, hw6, hw7, hw8, hw9, hw10] <;>
     rfl
 
-private def binaryGolay23Code : Finset (QaryWord 2 23) :=
+private def binaryGolay23Code (_ : Unit) : Finset (QaryWord 2 23) :=
   (Finset.univ : Finset (QaryWord 2 12)).image linearWord
 
 private theorem binaryGolay23_card :
-    binaryGolay23Code.card ≤ 4096 := by
+    (binaryGolay23Code ()).card ≤ 4096 := by
   calc
-    binaryGolay23Code.card ≤ (Finset.univ : Finset (QaryWord 2 12)).card := by
+    (binaryGolay23Code ()).card ≤ (Finset.univ : Finset (QaryWord 2 12)).card := by
       simpa [binaryGolay23Code] using
         Finset.card_image_le (s := (Finset.univ : Finset (QaryWord 2 12)))
     _ = 4096 := by
@@ -750,7 +750,7 @@ private def repairCenter (x : QaryWord 2 23) : QaryWord 2 23 :=
   linearWord (linearFree (xorWord x e))
 
 private theorem repairCenter_mem (x : QaryWord 2 23) :
-    repairCenter x ∈ binaryGolay23Code := by
+    repairCenter x ∈ binaryGolay23Code () := by
   exact Finset.mem_image.mpr ⟨linearFree (xorWord x (syndromeCorrection (syndromeIndex x))),
     Finset.mem_univ _, rfl⟩
 
@@ -767,15 +767,13 @@ private theorem repairCenter_dist (x : QaryWord 2 23) :
   exact xorWord_dist_le_of_support x e (by simpa [e] using table_weight (syndromeIndex x))
 
 private theorem binaryGolay23_covers :
-    CoversFinset binaryGolay23Code 3 := by
+    CoversFinset (binaryGolay23Code ()) 3 := by
   intro x
   exact ⟨repairCenter x, repairCenter_mem x, repairCenter_dist x⟩
 
 /-- The binary `[23,12]` Golay code gives `K_2(23,3) <= 4096`. -/
-def binaryGolay23Explicit : ExplicitQaryUpper 2 23 3 4096 :=
-  { code := binaryGolay23Code
-    card_le := binaryGolay23_card
-    covers := binaryGolay23_covers }
+theorem binaryGolay23Upper : QaryKUpper 2 23 3 4096 :=
+  ⟨binaryGolay23Code (), binaryGolay23_card, binaryGolay23_covers⟩
 
 end Database
 end CoveringCodes

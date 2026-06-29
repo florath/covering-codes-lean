@@ -1247,7 +1247,7 @@ def precomputedTable_chunk_39 : Array AnyBoundEntry := #[
     lowerValue := 2622
     upperValue := 4096
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 8 1))
-    upperTrace := (.lengthenFreeN 3 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
+    upperTrace := (@UpperTrace.blockGroup 2 2 8 1 4096 (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 15 1)))) },
   { key := { q := 4, n := 8, r := 2 }
     lowerValue := 237
     upperValue := 1024

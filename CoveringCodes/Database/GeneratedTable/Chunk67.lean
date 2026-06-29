@@ -55,9 +55,9 @@ def precomputedTable_chunk_67 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 48 0)) },
   { key := { q := 6, n := 48, r := 1 }
     lowerValue := 93162895051263722987913739102874170
-    upperValue := 831565100272391008892118930510839808
+    upperValue := 701633053354829913752725347618521088
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 48 1))
-    upperTrace := (.lengthenFreeN 34 (@UpperTrace.alphabetExpand 3 6 2 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
+    upperTrace := (.lengthenFreeN 16 (@UpperTrace.alphabetExpand 2 6 3 32 1 134217728 (by decide : 0 < 2) (by decide : 0 < 3) (by decide : 6 ≤ 3 * 2) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))) },
   { key := { q := 6, n := 48, r := 2 }
     lowerValue := 789432780399935207625864460595362
     upperValue := 69297091689365917407676577542569984

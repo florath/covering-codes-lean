@@ -1207,7 +1207,7 @@ def precomputedTable_chunk_21 : Array AnyBoundEntry := #[
     lowerValue := 1093
     upperValue := 2048
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 2 14 1))
-    upperTrace := (.lengthenFreeN 7 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 2 7 1))) },
+    upperTrace := (.puncture (by decide : 0 < 2) (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 15 1))) },
   { key := { q := 2, n := 14, r := 2 }
     lowerValue := 155
     upperValue := 768

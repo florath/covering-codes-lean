@@ -381,19 +381,19 @@ private theorem linearWord_linearMsg_eq_of_isLinear (w : QaryWord 2 26)
   fin_cases i <;>
     simp [linearWord, linearMsg, rowMessageParity0, rowMessageParity1, rowMessageParity2, rowMessageParity3, rowMessageParity4, rowMessageParity5, rowMessageParity6, rowMessageParity7, rowMessageParity8, rowMessageParity9, rowMessageParity10, rowMessageParity11, rowMessageParity12, rowMessageParity13, rowMessageParity14, rowMessageParity15, p26_0, p26_1, p26_2, p26_3, p26_4, p26_5, p26_6, p26_7, p26_8, p26_9, p26_10, p26_11, p26_12, p26_13, p26_14, p26_15, p26_16, p26_17, p26_18, p26_19, p26_20, p26_21, p26_22, p26_23, p26_24, p26_25, hw0, hw1, hw2, hw3, hw4, hw5, hw6, hw7, hw8, hw9, hw10, hw11, hw12, hw13, hw14, hw15]
 
-private def linearCode : Finset (QaryWord 2 26) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 2 26) :=
   Finset.univ.filter IsLinearWord
 
 private theorem linearCode_subset_generated :
-    linearCode ⊆ (Finset.univ : Finset (QaryWord 2 10)).image linearWord := by
+    (linearCode ()) ⊆ (Finset.univ : Finset (QaryWord 2 10)).image linearWord := by
   intro w hw
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and] at hw
   exact Finset.mem_image.mpr ⟨linearMsg w, Finset.mem_univ _,
     linearWord_linearMsg_eq_of_isLinear w hw⟩
 
-private theorem linearCode_card : linearCode.card <= 1024 := by
+private theorem linearCode_card : (linearCode ()).card <= 1024 := by
   calc
-    linearCode.card <= ((Finset.univ : Finset (QaryWord 2 10)).image linearWord).card :=
+    (linearCode ()).card <= ((Finset.univ : Finset (QaryWord 2 10)).image linearWord).card :=
       Finset.card_le_card linearCode_subset_generated
     _ <= (Finset.univ : Finset (QaryWord 2 10)).card := Finset.card_image_le
     _ = 1024 := by
@@ -475,7 +475,7 @@ private partial def markSyndromeSums (start remaining syndrome mask : Nat) (tabl
       markSyndromeSums (i + 1) (remaining - 1)
         (syndrome ^^^ (caseColumns.getD i 0)) (mask ^^^ (1 <<< i)) table) table
 
-private def repairTable : Array Nat :=
+private def repairTable (_ : Unit) : Array Nat :=
   markSyndromeSums 0 6 0 0 (Array.replicate syndromeCount invalidRepairMask)
 
 private def repairEntryPropWith (table : Array Nat) (idx : Fin syndromeCount) : Prop :=
@@ -492,24 +492,24 @@ private instance repairEntryPropWith_decidable (table : Array Nat) (idx : Fin sy
 private def repairEntryOkWith (table : Array Nat) (idx : Nat) : Bool :=
   if hidx : idx < syndromeCount then decide (repairEntryPropWith table ⟨idx, hidx⟩) else false
 
-private def repairTableOk : Bool :=
-  let table := repairTable
+private def repairTableOk (_ : Unit) : Bool :=
+  let table := repairTable ()
   (List.range syndromeCount).all (repairEntryOkWith table)
 
 set_option maxRecDepth 20000 in
-private theorem repairTableOk_true : repairTableOk = true := by
+private theorem repairTableOk_true : repairTableOk () = true := by
   native_decide
 
 private theorem repairEntryProp_of_idx (idx : Fin syndromeCount) :
-    repairEntryPropWith repairTable idx := by
+    repairEntryPropWith (repairTable ()) idx := by
   have hAll := repairTableOk_true
-  have hAll' : ∀ x < syndromeCount, repairEntryOkWith repairTable x = true := by
+  have hAll' : ∀ x < syndromeCount, repairEntryOkWith (repairTable ()) x = true := by
     simpa [repairTableOk] using hAll
   have hEntry := hAll' idx.val idx.isLt
   simpa [repairEntryOkWith, idx.isLt] using hEntry
 
 private def repairMask (idx : Fin syndromeCount) : Nat :=
-  repairTable.getD idx.val invalidRepairMask
+  (repairTable ()).getD idx.val invalidRepairMask
 
 private theorem repairMask_spec (idx : Fin syndromeCount) :
     maskWeight (repairMask idx) <= 6 ∧ syndromeIndex (maskWord (repairMask idx)) = idx := by
@@ -683,7 +683,7 @@ private theorem xorWord_dist_le_of_maskWeight (x : QaryWord 2 26) (mask : Nat) :
     exact hi hx.symm
   simpa [hammingDist, maskWeight] using Finset.card_le_card hsubset
 
-private theorem linearCode_covers : CoversFinset linearCode 6 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 6 := by
   intro x
   let idx := syndromeIndex x
   let mask := repairMask idx
@@ -704,10 +704,8 @@ private theorem linearCode_covers : CoversFinset linearCode 6 := by
 def knownBoundQ2N26R6UpperName : String :=
   "lean_known_bounds_q2_n26_r6_binary_linear_syndrome"
 
-def knownBoundQ2N26R6Explicit : ExplicitQaryUpper 2 26 6 1024 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+theorem knownBoundQ2N26R6Cert : QaryKUpper 2 26 6 1024 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 def knownBoundQ2N26R6Upper (q n r : Nat) : Nat :=
   if q = 2 ∧ n = 26 ∧ r = 6 then 1024 else trivialUpper q n r
@@ -716,7 +714,7 @@ theorem knownBoundQ2N26R6Upper_valid (q n r : Nat) :
     QaryKUpper q n r (knownBoundQ2N26R6Upper q n r) := by
   by_cases h : q = 2 ∧ n = 26 ∧ r = 6
   · rcases h with ⟨rfl, rfl, rfl⟩
-    simpa [knownBoundQ2N26R6Upper] using knownBoundQ2N26R6Explicit.toUpper
+    simpa [knownBoundQ2N26R6Upper] using knownBoundQ2N26R6Cert
   · simpa [knownBoundQ2N26R6Upper, h] using trivialUpper_valid q n r
 
 def knownBoundQ2N26R6UpperSource : UpperBoundSource where

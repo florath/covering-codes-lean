@@ -153,7 +153,7 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 9 6)
   funext i
   fin_cases i <;> simp [linearWord, linearFree, hw0, hw1, hw2]
 
-private def linearCode : Finset (QaryWord 9 6) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 9 6) :=
   (Finset.univ : Finset (QaryWord 9 3)).image linearWord
 
 private def packSyndrome (s0 s1 s2 : Fin 9) : Fin 729 :=
@@ -330,31 +330,29 @@ private theorem linearRepair_dist (x : QaryWord 9 6) : hammingDist x (linearRepa
   simpa [linearRepair] using subtractError_dist_le_of_support x (syndromeCorrection (syndromeIndex x))
     (table_weight (syndromeIndex x))
 
-private theorem linearCode_covers : CoversFinset linearCode 2 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 2 := by
   intro x
   refine ⟨linearRepair x, ?_, linearRepair_dist x⟩
   exact Finset.mem_image.mpr
     ⟨linearFree (linearRepair x), Finset.mem_univ _,
       linearWord_linearFree_eq_of_isLinear (linearRepair x) (linearRepair_isLinear x)⟩
 
-private theorem linearCode_card : linearCode.card ≤ 729 := by
+private theorem linearCode_card : (linearCode ()).card ≤ 729 := by
   calc
-    linearCode.card ≤ (Finset.univ : Finset (QaryWord 9 3)).card := by
+    (linearCode ()).card ≤ (Finset.univ : Finset (QaryWord 9 3)).card := by
       simpa [linearCode] using Finset.card_image_le (s := (Finset.univ : Finset (QaryWord 9 3)))
     _ = 729 := by
       rw [Finset.card_univ, qaryWord_card]
       norm_num
 
-private def linearHeadExplicit : ExplicitQaryUpper 9 6 2 729 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+private theorem linearHeadUpper : QaryKUpper 9 6 2 729 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 private theorem knownBoundQ9N9R3Cert :
     QaryKUpper 9 9 3 29889 := by
   have h := upper_direct_product
     (q := 9) (n₁ := 6) (n₂ := 3) (r₁ := 2) (r₂ := 1) (U₁ := 729) (U₂ := 41)
-    linearHeadExplicit.toUpper smallExplicitNonary931Explicit.toUpper
+    linearHeadUpper smallExplicitNonary931Explicit.toUpper
   norm_num at h
   simpa using h
 

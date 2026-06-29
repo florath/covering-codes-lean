@@ -890,9 +890,9 @@ def precomputedTable_chunk_63 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 31 0)) },
   { key := { q := 6, n := 31, r := 1 }
     lowerValue := 8502843066182052226915
-    upperValue := 49127537715718523977728
+    upperValue := 41451359947637504606208
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 31 1))
-    upperTrace := (.lengthenFreeN 17 (@UpperTrace.alphabetExpand 3 6 2 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
+    upperTrace := (@UpperTrace.alphabetExpand 2 6 3 31 1 67108864 (by decide : 0 < 2) (by decide : 0 < 3) (by decide : 6 ≤ 3 * 2) (by decide : 0 < 6) (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))) },
   { key := { q := 6, n := 31, r := 2 }
     lowerValue := 112591759470707083219
     upperValue := 4093961476309876998144
@@ -1135,9 +1135,9 @@ def precomputedTable_chunk_63 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 6 32 0)) },
   { key := { q := 6, n := 32, r := 1 }
     lowerValue := 49432677701530440275727
-    upperValue := 294765226294311143866368
+    upperValue := 248708159685825027637248
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 32 1))
-    upperTrace := (.lengthenFreeN 18 (@UpperTrace.alphabetExpand 3 6 2 14 1 177147 (by decide : 0 < 3) (by decide : 0 < 2) (by decide : 6 ≤ 2 * 3) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1))))) },
+    upperTrace := (@UpperTrace.alphabetExpand 2 6 3 32 1 134217728 (by decide : 0 < 2) (by decide : 0 < 3) (by decide : 6 ≤ 3 * 2) (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1)))) },
   { key := { q := 6, n := 32, r := 2 }
     lowerValue := 633600916324050703320
     upperValue := 24563768857859261988864

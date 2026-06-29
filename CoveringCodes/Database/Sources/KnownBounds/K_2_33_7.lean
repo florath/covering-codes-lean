@@ -26,7 +26,7 @@ private theorem knownBoundQ2N33R7Cert :
     QaryKUpper 2 33 7 8192 := by
   have h := upper_direct_product
     (q := 2) (n₁ := 31) (n₂ := 2) (r₁ := 7) (r₂ := 0) (U₁ := 2048) (U₂ := 4)
-    binaryBCH31Radius7Explicit.toUpper zeroRadiusTail2Cert
+    binaryBCH31Radius7Upper zeroRadiusTail2Cert
   simpa using h
 
 def knownBoundQ2N33R7UpperName : String :=

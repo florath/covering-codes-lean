@@ -150,7 +150,7 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 9 8)
   funext i
   fin_cases i <;> simp [linearWord, linearFree, hw0, hw1, hw2]
 
-private def linearCode : Finset (QaryWord 9 8) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 9 8) :=
   (Finset.univ : Finset (QaryWord 9 5)).image linearWord
 
 private theorem z9Component_inj {a b : ZMod 9}
@@ -360,16 +360,16 @@ private theorem linearRepair_dist (x : QaryWord 9 8) : hammingDist x (linearRepa
   simpa [linearRepair] using subtractError_dist_le_of_support x (syndromeCorrection (syndromeIndex x))
     (table_weight (syndromeIndex x))
 
-private theorem linearCode_covers : CoversFinset linearCode 2 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 2 := by
   intro x
   refine ⟨linearRepair x, ?_, linearRepair_dist x⟩
   exact Finset.mem_image.mpr
     ⟨linearFree (linearRepair x), Finset.mem_univ _,
       linearWord_linearFree_eq_of_isLinear (linearRepair x) (linearRepair_isLinear x)⟩
 
-private theorem linearCode_card : linearCode.card ≤ 59049 := by
+private theorem linearCode_card : (linearCode ()).card ≤ 59049 := by
   calc
-    linearCode.card ≤ (Finset.univ : Finset (QaryWord 9 5)).card := by
+    (linearCode ()).card ≤ (Finset.univ : Finset (QaryWord 9 5)).card := by
       simpa [linearCode] using Finset.card_image_le (s := (Finset.univ : Finset (QaryWord 9 5)))
     _ = 59049 := by
       rw [Finset.card_univ, qaryWord_card]
@@ -378,10 +378,8 @@ private theorem linearCode_card : linearCode.card ≤ 59049 := by
 def knownBoundQ9N8R2UpperName : String :=
   "lean_known_bounds_q9_n8_r2_linear_syndrome"
 
-def knownBoundQ9N8R2Explicit : ExplicitQaryUpper 9 8 2 59049 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+theorem knownBoundQ9N8R2Cert : QaryKUpper 9 8 2 59049 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 def knownBoundQ9N8R2Upper (q n r : Nat) : Nat :=
   if q = 9 ∧ n = 8 ∧ r = 2 then 59049 else trivialUpper q n r
@@ -390,7 +388,7 @@ theorem knownBoundQ9N8R2Upper_valid (q n r : Nat) :
     QaryKUpper q n r (knownBoundQ9N8R2Upper q n r) := by
   by_cases h : q = 9 ∧ n = 8 ∧ r = 2
   · rcases h with ⟨rfl, rfl, rfl⟩
-    simpa [knownBoundQ9N8R2Upper] using knownBoundQ9N8R2Explicit.toUpper
+    simpa [knownBoundQ9N8R2Upper] using knownBoundQ9N8R2Cert
   · simpa [knownBoundQ9N8R2Upper, h] using trivialUpper_valid q n r
 
 def knownBoundQ9N8R2UpperSource : UpperBoundSource where

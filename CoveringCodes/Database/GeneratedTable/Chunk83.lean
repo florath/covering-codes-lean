@@ -145,14 +145,14 @@ def precomputedTable_chunk_83 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 8 32 0)) },
   { key := { q := 8, n := 32, r := 1 }
     lowerValue := 352125166730063722637973113
-    upperValue := 4951760157141521099596496896
+    upperValue := 1237940039285380274899124224
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 32 1))
-    upperTrace := (.lengthenFreeN 26 (@UpperTrace.alphabetExpand 4 8 2 6 1 256 (by decide : 0 < 4) (by decide : 0 < 2) (by decide : 8 ≤ 2 * 4) (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))) },
   { key := { q := 8, n := 32, r := 2 }
     lowerValue := 3229979310785777552837212
-    upperValue := 278851018446969680223535104
+    upperValue := 154742504910672534362390528
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 32 2))
-    upperTrace := (.lengthenFreeN 24 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))))) },
   { key := { q := 8, n := 32, r := 3 }
     lowerValue := 45907839462109849695734
     upperValue := 17643351475811353224019968
@@ -390,14 +390,14 @@ def precomputedTable_chunk_83 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 8 33 0)) },
   { key := { q := 8, n := 33, r := 1 }
     lowerValue := 2732005603940149572191170702
-    upperValue := 39614081257132168796771975168
+    upperValue := 9903520314283042199192993792
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 33 1))
-    upperTrace := (.lengthenFreeN 27 (@UpperTrace.alphabetExpand 4 8 2 6 1 256 (by decide : 0 < 4) (by decide : 0 < 2) (by decide : 8 ≤ 2 * 4) (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))) },
   { key := { q := 8, n := 33, r := 2 }
     lowerValue := 24280773065971295615551318
-    upperValue := 2230808147575757441788280832
+    upperValue := 1237940039285380274899124224
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 33 2))
-    upperTrace := (.lengthenFreeN 25 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))))) },
   { key := { q := 8, n := 33, r := 3 }
     lowerValue := 334029666275688744391789
     upperValue := 141146811806490825792159744
@@ -635,14 +635,14 @@ def precomputedTable_chunk_83 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 8 34 0)) },
   { key := { q := 8, n := 34, r := 1 }
     lowerValue := 21215909627250701280279551555
-    upperValue := 316912650057057350374175801344
+    upperValue := 79228162514264337593543950336
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 34 1))
-    upperTrace := (.lengthenFreeN 28 (@UpperTrace.alphabetExpand 4 8 2 6 1 256 (by decide : 0 < 4) (by decide : 0 < 2) (by decide : 8 ≤ 2 * 4) (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))) },
   { key := { q := 8, n := 34, r := 2 }
     lowerValue := 182869388376836324509045472
-    upperValue := 17846465180606059534306246656
+    upperValue := 9903520314283042199192993792
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 34 2))
-    upperTrace := (.lengthenFreeN 26 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))))) },
   { key := { q := 8, n := 34, r := 3 }
     lowerValue := 2437508364858342117249363
     upperValue := 1129174494451926606337277952
@@ -880,14 +880,14 @@ def precomputedTable_chunk_83 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 8 35 0)) },
   { key := { q := 8, n := 35, r := 1 }
     lowerValue := 164897639054078621332904482001
-    upperValue := 2535301200456458802993406410752
+    upperValue := 633825300114114700748351602688
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 35 1))
-    upperTrace := (.lengthenFreeN 29 (@UpperTrace.alphabetExpand 4 8 2 6 1 256 (by decide : 0 < 4) (by decide : 0 < 2) (by decide : 8 ≤ 2 * 4) (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))) },
   { key := { q := 8, n := 35, r := 2 }
     lowerValue := 1379708826478804831396704282
-    upperValue := 142771721444848476274449973248
+    upperValue := 79228162514264337593543950336
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 35 2))
-    upperTrace := (.lengthenFreeN 27 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))))) },
   { key := { q := 8, n := 35, r := 3 }
     lowerValue := 17835895490949156522120964
     upperValue := 9033395955615412850698223616
@@ -1125,14 +1125,14 @@ def precomputedTable_chunk_83 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 8 36 0)) },
   { key := { q := 8, n := 36, r := 1 }
     lowerValue := 1282682030270461370684411148523
-    upperValue := 20282409603651670423947251286016
+    upperValue := 5070602400912917605986812821504
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 36 1))
-    upperTrace := (.lengthenFreeN 30 (@UpperTrace.alphabetExpand 4 8 2 6 1 256 (by decide : 0 < 4) (by decide : 0 < 2) (by decide : 8 ≤ 2 * 4) (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))) },
   { key := { q := 8, n := 36, r := 2 }
     lowerValue := 10426968918755477517692896591
-    upperValue := 1142173771558787810195599785984
+    upperValue := 633825300114114700748351602688
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 36 2))
-    upperTrace := (.lengthenFreeN 28 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r2_linear_syndrome" (primitiveUpper_valid 9 8 2)))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1))))) },
   { key := { q := 8, n := 36, r := 3 }
     lowerValue := 130846710717255709361579563
     upperValue := 72267167644923302805585788928

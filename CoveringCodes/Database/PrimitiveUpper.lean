@@ -3,6 +3,9 @@ import CoveringCodes.Database.Sources.SmallCases
 import CoveringCodes.Database.Sources.SmallExplicitUpper
 import CoveringCodes.Database.Sources.QuaternaryHamming
 import CoveringCodes.Database.Sources.QuaternaryRadiusTwo
+import CoveringCodes.Database.Sources.BinaryHamming
+import CoveringCodes.Database.Sources.ExtensionFieldHamming
+import CoveringCodes.Database.Sources.TernaryGolay
 import CoveringCodes.Database.Sources.HammingUpper
 import CoveringCodes.Database.Sources.OctonaryFourTwo
 import CoveringCodes.Database.Sources.TwoBlockCyclic
@@ -51,6 +54,9 @@ private def primitiveUpperSources : List UpperBoundSource := [
   smallExplicitEighteenary1831UpperSource,
   quaternaryHammingFiveUpperSource,
   quaternaryFiveRadiusTwoUpperSource,
+  binaryHammingUpperSource,
+  extensionFieldHammingUpperSource,
+  ternaryGolayUpperSource,
   hammingPerfectUpperSource,
   twoBlockCyclic331UpperSource,
   vanLaarhoven6UpperSource,

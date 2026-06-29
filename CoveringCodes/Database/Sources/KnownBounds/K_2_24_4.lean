@@ -27,7 +27,7 @@ private theorem knownBoundQ2N24R4Cert :
     QaryKUpper 2 24 4 4096 := by
   have h := upper_direct_product
     (q := 2) (n₁ := 23) (n₂ := 1) (r₁ := 3) (r₂ := 1) (U₁ := 4096) (U₂ := 1)
-    binaryGolay23Explicit.toUpper oneTailCert
+    binaryGolay23Upper oneTailCert
   simpa using h
 
 def knownBoundQ2N24R4UpperName : String :=

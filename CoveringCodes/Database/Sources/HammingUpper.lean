@@ -102,11 +102,11 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 5 6)
   funext i
   fin_cases i <;> simp [linearWord, linearFree, h0w, h1w]
 
-private def linearCode : Finset (QaryWord 5 6) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 5 6) :=
   Finset.univ.filter IsLinearWord
 
 private theorem linearCode_subset_generated :
-    linearCode ⊆ (Finset.univ : Finset (QaryWord 5 4)).image linearWord := by
+    (linearCode ()) ⊆ (Finset.univ : Finset (QaryWord 5 4)).image linearWord := by
   intro w hw
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and] at hw
   exact Finset.mem_image.mpr ⟨linearFree w, Finset.mem_univ _,
@@ -228,25 +228,23 @@ private theorem linearRepair_dist (x : QaryWord 5 6) : hammingDist x (linearRepa
   simpa [linearRepair] using subtractError_dist_le_of_support x (correction (syndromeIndex x))
     (correction_weight (syndromeIndex x))
 
-private theorem linearCode_covers : CoversFinset linearCode 1 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 1 := by
   intro x
   refine ⟨linearRepair x, ?_, linearRepair_dist x⟩
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and]
   exact linearRepair_isLinear x
 
-private theorem linearCode_card : linearCode.card <= 625 := by
+private theorem linearCode_card : (linearCode ()).card <= 625 := by
   calc
-    linearCode.card <= ((Finset.univ : Finset (QaryWord 5 4)).image linearWord).card :=
+    (linearCode ()).card <= ((Finset.univ : Finset (QaryWord 5 4)).image linearWord).card :=
       Finset.card_le_card linearCode_subset_generated
     _ <= (Finset.univ : Finset (QaryWord 5 4)).card := Finset.card_image_le
     _ = 625 := by
       rw [Finset.card_univ, qaryWord_card]
       norm_num
 
-def explicit : ExplicitQaryUpper 5 6 1 625 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+theorem upper : QaryKUpper 5 6 1 625 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 end QuinaryHamming
 
@@ -409,11 +407,11 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 7 8)
   funext i
   fin_cases i <;> simp [linearWord, linearFree, h0w, h1w]
 
-private def linearCode : Finset (QaryWord 7 8) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 7 8) :=
   Finset.univ.filter IsLinearWord
 
 private theorem linearCode_subset_generated :
-    linearCode ⊆ (Finset.univ : Finset (QaryWord 7 6)).image linearWord := by
+    (linearCode ()) ⊆ (Finset.univ : Finset (QaryWord 7 6)).image linearWord := by
   intro w hw
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and] at hw
   exact Finset.mem_image.mpr ⟨linearFree w, Finset.mem_univ _,
@@ -550,25 +548,23 @@ private theorem linearRepair_dist (x : QaryWord 7 8) : hammingDist x (linearRepa
   simpa [linearRepair] using subtractError_dist_le_of_support x (correction (syndromeIndex x))
     (correction_weight (syndromeIndex x))
 
-private theorem linearCode_covers : CoversFinset linearCode 1 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 1 := by
   intro x
   refine ⟨linearRepair x, ?_, linearRepair_dist x⟩
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and]
   exact linearRepair_isLinear x
 
-private theorem linearCode_card : linearCode.card <= 117649 := by
+private theorem linearCode_card : (linearCode ()).card <= 117649 := by
   calc
-    linearCode.card <= ((Finset.univ : Finset (QaryWord 7 6)).image linearWord).card :=
+    (linearCode ()).card <= ((Finset.univ : Finset (QaryWord 7 6)).image linearWord).card :=
       Finset.card_le_card linearCode_subset_generated
     _ <= (Finset.univ : Finset (QaryWord 7 6)).card := Finset.card_image_le
     _ = 117649 := by
       rw [Finset.card_univ, qaryWord_card]
       norm_num
 
-def explicit : ExplicitQaryUpper 7 8 1 117649 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+theorem upper : QaryKUpper 7 8 1 117649 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 end SeptenaryHamming
 
@@ -703,11 +699,11 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 3 13)
   funext i
   fin_cases i <;> simp [linearWord, linearFree, h0w, h1w, h2w]
 
-private def linearCode : Finset (QaryWord 3 13) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 3 13) :=
   Finset.univ.filter IsLinearWord
 
 private theorem linearCode_subset_generated :
-    linearCode ⊆ (Finset.univ : Finset (QaryWord 3 10)).image linearWord := by
+    (linearCode ()) ⊆ (Finset.univ : Finset (QaryWord 3 10)).image linearWord := by
   intro w hw
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and] at hw
   exact Finset.mem_image.mpr ⟨linearFree w, Finset.mem_univ _,
@@ -874,25 +870,23 @@ private theorem linearRepair_dist (x : QaryWord 3 13) : hammingDist x (linearRep
   simpa [linearRepair] using subtractError_dist_le_of_support x (correction (syndromeIndex x))
     (correction_weight (syndromeIndex x))
 
-private theorem linearCode_covers : CoversFinset linearCode 1 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 1 := by
   intro x
   refine ⟨linearRepair x, ?_, linearRepair_dist x⟩
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and]
   exact linearRepair_isLinear x
 
-private theorem linearCode_card : linearCode.card <= 59049 := by
+private theorem linearCode_card : (linearCode ()).card <= 59049 := by
   calc
-    linearCode.card <= ((Finset.univ : Finset (QaryWord 3 10)).image linearWord).card :=
+    (linearCode ()).card <= ((Finset.univ : Finset (QaryWord 3 10)).image linearWord).card :=
       Finset.card_le_card linearCode_subset_generated
     _ <= (Finset.univ : Finset (QaryWord 3 10)).card := Finset.card_image_le
     _ = 59049 := by
       rw [Finset.card_univ, qaryWord_card]
       norm_num
 
-def explicit : ExplicitQaryUpper 3 13 1 59049 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+theorem upper : QaryKUpper 3 13 1 59049 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 end TernaryHamming
 
@@ -912,16 +906,16 @@ theorem hammingPerfectUpper_valid (q n r : Nat) :
     QaryKUpper q n r (hammingPerfectUpper q n r) := by
   by_cases h23 : q = 2 ∧ n = 23 ∧ r = 3
   · rcases h23 with ⟨rfl, rfl, rfl⟩
-    simpa [hammingPerfectUpper] using binaryGolay23Explicit.toUpper
+    simpa [hammingPerfectUpper] using binaryGolay23Upper
   · by_cases h313 : q = 3 ∧ n = 13 ∧ r = 1
     · rcases h313 with ⟨rfl, rfl, rfl⟩
-      simpa [hammingPerfectUpper] using TernaryHamming.explicit.toUpper
+      simpa [hammingPerfectUpper] using TernaryHamming.upper
     · by_cases h56 : q = 5 ∧ n = 6 ∧ r = 1
       · rcases h56 with ⟨rfl, rfl, rfl⟩
-        simpa [hammingPerfectUpper] using QuinaryHamming.explicit.toUpper
+        simpa [hammingPerfectUpper] using QuinaryHamming.upper
       · by_cases h78 : q = 7 ∧ n = 8 ∧ r = 1
         · rcases h78 with ⟨rfl, rfl, rfl⟩
-          simpa [hammingPerfectUpper] using SeptenaryHamming.explicit.toUpper
+          simpa [hammingPerfectUpper] using SeptenaryHamming.upper
         · simp [hammingPerfectUpper, h23, h313, h56, h78]
           exact trivialUpper_valid q n r
 

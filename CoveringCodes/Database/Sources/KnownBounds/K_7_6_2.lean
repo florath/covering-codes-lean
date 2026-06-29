@@ -91,11 +91,11 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 7 6)
   funext i
   fin_cases i <;> simp [linearWord, linearFree, h0w, h1w, h2w]
 
-private def linearCode : Finset (QaryWord 7 6) :=
+private def linearCode (_ : Unit) : Finset (QaryWord 7 6) :=
   Finset.univ.filter IsLinearWord
 
 private theorem linearCode_subset_generated :
-    linearCode ⊆ (Finset.univ : Finset (QaryWord 7 3)).image linearWord := by
+    (linearCode ()) ⊆ (Finset.univ : Finset (QaryWord 7 3)).image linearWord := by
   intro w hw
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and] at hw
   exact Finset.mem_image.mpr ⟨linearFree w, Finset.mem_univ _,
@@ -266,25 +266,23 @@ private theorem linearRepair_dist (x : QaryWord 7 6) : hammingDist x (linearRepa
   simpa [linearRepair] using subtractError_dist_le_of_support x (syndromeCorrection (syndromeIndex x))
     (table_weight (syndromeIndex x))
 
-private theorem linearCode_covers : CoversFinset linearCode 2 := by
+private theorem linearCode_covers : CoversFinset (linearCode ()) 2 := by
   intro x
   refine ⟨linearRepair x, ?_, linearRepair_dist x⟩
   simp only [linearCode, Finset.mem_filter, Finset.mem_univ, true_and]
   exact linearRepair_isLinear x
 
-private theorem linearCode_card : linearCode.card <= 343 := by
+private theorem linearCode_card : (linearCode ()).card <= 343 := by
   calc
-    linearCode.card <= ((Finset.univ : Finset (QaryWord 7 3)).image linearWord).card :=
+    (linearCode ()).card <= ((Finset.univ : Finset (QaryWord 7 3)).image linearWord).card :=
       Finset.card_le_card linearCode_subset_generated
     _ <= (Finset.univ : Finset (QaryWord 7 3)).card := Finset.card_image_le
     _ = 343 := by
       rw [Finset.card_univ, qaryWord_card]
       norm_num
 
-def knownBoundQ7N6R2Explicit : ExplicitQaryUpper 7 6 2 343 :=
-  { code := linearCode
-    card_le := linearCode_card
-    covers := linearCode_covers }
+theorem knownBoundQ7N6R2Upper : QaryKUpper 7 6 2 343 :=
+  ⟨linearCode (), linearCode_card, linearCode_covers⟩
 
 end Database
 end CoveringCodes

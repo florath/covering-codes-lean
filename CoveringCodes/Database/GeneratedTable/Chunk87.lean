@@ -785,9 +785,9 @@ def precomputedTable_chunk_87 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 3 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
   { key := { q := 9, n := 6, r := 2 }
     lowerValue := 527
-    upperValue := 3321
+    upperValue := 2187
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 6 2))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))))) },
+    upperTrace := (@UpperTrace.blockGroup 3 2 6 2 2187 (.lengthenFreeN 1 (.primitive "lean_ternary_golay_upper" (primitiveUpper_valid 3 11 2)))) },
   { key := { q := 9, n := 6, r := 3 }
     lowerValue := 48
     upperValue := 369
@@ -1030,14 +1030,14 @@ def precomputedTable_chunk_87 : Array AnyBoundEntry := #[
     upperTrace := (@UpperTrace.blockGroup 3 2 7 1 177147 (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 3 13 1)))) },
   { key := { q := 9, n := 7, r := 2 }
     lowerValue := 3414
-    upperValue := 29889
+    upperValue := 19683
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 7 2))
-    upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 1 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))))) },
+    upperTrace := (.lengthenFreeN 1 (@UpperTrace.blockGroup 3 2 6 2 2187 (.lengthenFreeN 1 (.primitive "lean_ternary_golay_upper" (primitiveUpper_valid 3 11 2))))) },
   { key := { q := 9, n := 7, r := 3 }
     lowerValue := 248
-    upperValue := 3321
+    upperValue := 2187
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 7 3))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 2 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (@UpperTrace.blockGroup 3 2 6 2 2187 (.lengthenFreeN 1 (.primitive "lean_ternary_golay_upper" (primitiveUpper_valid 3 11 2))))) },
   { key := { q := 9, n := 7, r := 4 }
     lowerValue := 30
     upperValue := 369

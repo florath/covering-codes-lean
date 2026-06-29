@@ -27,7 +27,7 @@ private theorem q7n3r1Upper : QaryKUpper 7 3 1 25 := by
     smallExplicitSeptenary731Upper_valid 7 3 1
 
 private theorem q7n9r3Product : QaryKUpper 7 9 3 8575 := by
-  have h := upper_direct_product knownBoundQ7N6R2Explicit.toUpper q7n3r1Upper
+  have h := upper_direct_product knownBoundQ7N6R2Upper q7n3r1Upper
   simpa using h
 
 def knownBoundQ7N9R3Upper (q n r : Nat) : Nat :=

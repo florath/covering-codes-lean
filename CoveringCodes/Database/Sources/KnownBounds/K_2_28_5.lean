@@ -27,7 +27,7 @@ private theorem knownBoundQ2N28R5Cert :
     QaryKUpper 2 28 5 8192 := by
   have h := upper_direct_product
     (q := 2) (n₁ := 5) (n₂ := 23) (r₁ := 2) (r₂ := 3) (U₁ := 2) (U₂ := 4096)
-    antipodalTail5Cert binaryGolay23Explicit.toUpper
+    antipodalTail5Cert binaryGolay23Upper
   simpa using h
 
 def knownBoundQ2N28R5UpperName : String :=

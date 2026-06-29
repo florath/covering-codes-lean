@@ -235,9 +235,9 @@ def precomputedTable_chunk_148 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 21 0)) },
   { key := { q := 15, n := 21, r := 1 }
     lowerValue := 16908085068201614638507
-    upperValue := 167001782444000244140625
+    upperValue := 139314069504000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 21 1))
-    upperTrace := (.lengthenFreeN 18 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenFreeN 12 (@UpperTrace.alphabetExpand 8 15 2 9 1 2097152 (by decide : 0 < 8) (by decide : 0 < 2) (by decide : 15 ≤ 2 * 8) (by decide : 0 < 15) (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1)))) },
   { key := { q := 15, n := 21, r := 2 }
     lowerValue := 120320470271848421623
     upperValue := 4708235109375000000000
@@ -480,9 +480,9 @@ def precomputedTable_chunk_148 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 22 0)) },
   { key := { q := 15, n := 22, r := 1 }
     lowerValue := 242130344423275549434922
-    upperValue := 2505026736660003662109375
+    upperValue := 2089711042560000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 22 1))
-    upperTrace := (.lengthenFreeN 19 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenFreeN 13 (@UpperTrace.alphabetExpand 8 15 2 9 1 2097152 (by decide : 0 < 8) (by decide : 0 < 2) (by decide : 15 ≤ 2 * 8) (by decide : 0 < 15) (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1)))) },
   { key := { q := 15, n := 22, r := 2 }
     lowerValue := 1641291574570410108049
     upperValue := 70623526640625000000000
@@ -725,9 +725,9 @@ def precomputedTable_chunk_148 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 23 0)) },
   { key := { q := 15, n := 23, r := 1 }
     lowerValue := 3474532960996539231055293
-    upperValue := 37575401049900054931640625
+    upperValue := 31345665638400000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 23 1))
-    upperTrace := (.lengthenFreeN 20 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenFreeN 14 (@UpperTrace.alphabetExpand 8 15 2 9 1 2097152 (by decide : 0 < 8) (by decide : 0 < 2) (by decide : 15 ≤ 2 * 8) (by decide : 0 < 15) (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1)))) },
   { key := { q := 15, n := 23, r := 2 }
     lowerValue := 22485507130730343443948
     upperValue := 1059352899609375000000000
@@ -970,9 +970,9 @@ def precomputedTable_chunk_148 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 24 0)) },
   { key := { q := 15, n := 24, r := 1 }
     lowerValue := 49952855181092678262501160
-    upperValue := 563631015748500823974609375
+    upperValue := 470184984576000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 24 1))
-    upperTrace := (.lengthenFreeN 21 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenFreeN 15 (@UpperTrace.alphabetExpand 8 15 2 9 1 2097152 (by decide : 0 < 8) (by decide : 0 < 2) (by decide : 15 ≤ 2 * 8) (by decide : 0 < 15) (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1)))) },
   { key := { q := 15, n := 24, r := 2 }
     lowerValue := 309262987452983164155254
     upperValue := 15890293494140625000000000
@@ -1215,9 +1215,9 @@ def precomputedTable_chunk_148 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 15 25 0)) },
   { key := { q := 15, n := 25, r := 1 }
     lowerValue := 719406504103770622840294472
-    upperValue := 8454465236227512359619140625
+    upperValue := 7052774768640000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 25 1))
-    upperTrace := (.lengthenFreeN 22 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenFreeN 16 (@UpperTrace.alphabetExpand 8 15 2 9 1 2097152 (by decide : 0 < 8) (by decide : 0 < 2) (by decide : 15 ≤ 2 * 8) (by decide : 0 < 15) (.primitive "lean_extension_field_hamming_upper" (primitiveUpper_valid 8 9 1)))) },
   { key := { q := 15, n := 25, r := 2 }
     lowerValue := 4268933457429688232099937
     upperValue := 238354402412109375000000000

@@ -452,13 +452,13 @@ private theorem linearWord_linearFree_eq_of_isLinear (w : QaryWord 2 31)
     simp [linearWord, linearFree, rowFreeParity0, rowFreeParity1, rowFreeParity2, rowFreeParity3, rowFreeParity4, rowFreeParity5, rowFreeParity6, rowFreeParity7, rowFreeParity8, rowFreeParity9, rowFreeParity10, rowFreeParity11, rowFreeParity12, rowFreeParity13, rowFreeParity14, rowFreeParity15, rowFreeParity16, rowFreeParity17, rowFreeParity18, rowFreeParity19, hw0, hw1, hw2, hw3, hw4, hw5, hw6, hw7, hw8, hw9, hw10, hw11, hw12, hw13, hw14, hw15, hw16, hw17, hw18, hw19] <;>
     rfl
 
-private def bch31Code : Finset (QaryWord 2 31) :=
+private def bch31Code (_ : Unit) : Finset (QaryWord 2 31) :=
   (Finset.univ : Finset (QaryWord 2 11)).image linearWord
 
 private theorem bch31_card :
-    bch31Code.card ≤ 2048 := by
+    (bch31Code ()).card ≤ 2048 := by
   calc
-    bch31Code.card ≤ (Finset.univ : Finset (QaryWord 2 11)).card := by
+    (bch31Code ()).card ≤ (Finset.univ : Finset (QaryWord 2 11)).card := by
       simpa [bch31Code] using
         Finset.card_image_le (s := (Finset.univ : Finset (QaryWord 2 11)))
     _ = 2048 := by
@@ -621,7 +621,7 @@ partial def markSyndromeSums (start remaining syndrome mask : Nat) (table : Arra
       markSyndromeSums (i + 1) (remaining - 1)
         (syndrome ^^^ (bch31Columns.getD i 0)) (mask ^^^ (1 <<< i)) table) table
 
-private def bch31RepairTable : Array Nat :=
+private def bch31RepairTable (_ : Unit) : Array Nat :=
   markSyndromeSums 0 7 0 0 (Array.replicate syndromeCount invalidRepairMask)
 
 private def repairEntryPropWith (table : Array Nat) (idx : Nat) : Prop :=
@@ -657,24 +657,24 @@ private instance repairEntryPropWith_decidable (table : Array Nat) (idx : Nat) :
 private def repairEntryOkWith (table : Array Nat) (idx : Nat) : Bool :=
   decide (repairEntryPropWith table idx)
 
-private def repairTableOk : Bool :=
-  let table := bch31RepairTable
+private def repairTableOk (_ : Unit) : Bool :=
+  let table := bch31RepairTable ()
   (List.range syndromeCount).all (repairEntryOkWith table)
 
 set_option maxRecDepth 20000 in
-private theorem repairTableOk_true : repairTableOk = true := by
+private theorem repairTableOk_true : repairTableOk () = true := by
   native_decide
 
 private theorem repairEntryProp_of_idx (idx : Fin syndromeCount) :
-    repairEntryPropWith bch31RepairTable idx.val := by
+    repairEntryPropWith (bch31RepairTable ()) idx.val := by
   have hAll := repairTableOk_true
-  have hAll' : ∀ x < syndromeCount, repairEntryOkWith bch31RepairTable x = true := by
+  have hAll' : ∀ x < syndromeCount, repairEntryOkWith (bch31RepairTable ()) x = true := by
     simpa [repairTableOk] using hAll
   have hEntry := hAll' idx.val idx.isLt
   exact of_decide_eq_true hEntry
 
 private def repairMask (p0 : Fin 2) (p1 : Fin 2) (p2 : Fin 2) (p3 : Fin 2) (p4 : Fin 2) (p5 : Fin 2) (p6 : Fin 2) (p7 : Fin 2) (p8 : Fin 2) (p9 : Fin 2) (p10 : Fin 2) (p11 : Fin 2) (p12 : Fin 2) (p13 : Fin 2) (p14 : Fin 2) (p15 : Fin 2) (p16 : Fin 2) (p17 : Fin 2) (p18 : Fin 2) (p19 : Fin 2) : Nat :=
-  bch31RepairTable.getD (packSyndrome p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19).val invalidRepairMask
+  (bch31RepairTable ()).getD (packSyndrome p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19).val invalidRepairMask
 
 private theorem repairMask_spec (p0 : Fin 2) (p1 : Fin 2) (p2 : Fin 2) (p3 : Fin 2) (p4 : Fin 2) (p5 : Fin 2) (p6 : Fin 2) (p7 : Fin 2) (p8 : Fin 2) (p9 : Fin 2) (p10 : Fin 2) (p11 : Fin 2) (p12 : Fin 2) (p13 : Fin 2) (p14 : Fin 2) (p15 : Fin 2) (p16 : Fin 2) (p17 : Fin 2) (p18 : Fin 2) (p19 : Fin 2) :
     maskWeight31 (repairMask p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19) ≤ 7 ∧
@@ -1000,7 +1000,7 @@ private theorem xorWord_dist_le_of_maskWeight (x : QaryWord 2 31) (mask : Nat) :
   simpa [hammingDist, maskWeight31] using Finset.card_le_card hsubset
 
 private theorem bch31_covers :
-    CoversFinset bch31Code 7 := by
+    CoversFinset (bch31Code ()) 7 := by
   intro x
   let p0 := rowParity0 x
   let p1 := rowParity1 x
@@ -1036,10 +1036,8 @@ private theorem bch31_covers :
     rw [hc]
     exact (xorWord_dist_le_of_maskWeight x mask).trans hweight
 
-def binaryBCH31Radius7Explicit : ExplicitQaryUpper 2 31 7 2048 where
-  code := bch31Code
-  card_le := bch31_card
-  covers := bch31_covers
+theorem binaryBCH31Radius7Upper : QaryKUpper 2 31 7 2048 :=
+  ⟨bch31Code (), bch31_card, bch31_covers⟩
 
 end Database
 end CoveringCodes

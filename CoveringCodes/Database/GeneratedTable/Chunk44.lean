@@ -140,14 +140,14 @@ def precomputedTable_chunk_44 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 4 29 0)) },
   { key := { q := 4, n := 29, r := 1 }
     lowerValue := 3275345183542179
-    upperValue := 18014398509481984
+    upperValue := 9007199254740992
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 29 1))
-    upperTrace := (.lengthenFreeN 24 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
+    upperTrace := (.lengthenFreeN 13 (@UpperTrace.blockGroup 2 2 16 1 134217728 (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))) },
   { key := { q := 4, n := 29, r := 2 }
     lowerValue := 77025755251661
-    upperValue := 4503599627370496
+    upperValue := 2251799813685248
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 29 2))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 11 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (@UpperTrace.blockGroup 2 2 16 1 134217728 (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))))) },
   { key := { q := 4, n := 29, r := 3 }
     lowerValue := 2814749767107
     upperValue := 140737488355328
@@ -385,14 +385,14 @@ def precomputedTable_chunk_44 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 4 30 0)) },
   { key := { q := 4, n := 30, r := 1 }
     lowerValue := 12669467083591726
-    upperValue := 72057594037927936
+    upperValue := 36028797018963968
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 30 1))
-    upperTrace := (.lengthenFreeN 25 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
+    upperTrace := (.lengthenFreeN 14 (@UpperTrace.blockGroup 2 2 16 1 134217728 (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))) },
   { key := { q := 4, n := 30, r := 2 }
     lowerValue := 287798678134510
-    upperValue := 18014398509481984
+    upperValue := 9007199254740992
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 30 2))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 12 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (@UpperTrace.blockGroup 2 2 16 1 134217728 (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))))) },
   { key := { q := 4, n := 30, r := 3 }
     lowerValue := 10146634613618
     upperValue := 562949953421312
@@ -630,14 +630,14 @@ def precomputedTable_chunk_44 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 4 31 0)) },
   { key := { q := 4, n := 31, r := 1 }
     lowerValue := 49060489557738170
-    upperValue := 288230376151711744
+    upperValue := 144115188075855872
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 31 1))
-    upperTrace := (.lengthenFreeN 26 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
+    upperTrace := (@UpperTrace.alphabetExpand 2 4 2 31 1 67108864 (by decide : 0 < 2) (by decide : 0 < 2) (by decide : 4 ≤ 2 * 2) (by decide : 0 < 4) (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))) },
   { key := { q := 4, n := 31, r := 2 }
     lowerValue := 1077748543684831
-    upperValue := 72057594037927936
+    upperValue := 36028797018963968
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 31 2))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (@UpperTrace.blockGroup 2 2 16 1 134217728 (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))))) },
   { key := { q := 4, n := 31, r := 3 }
     lowerValue := 36704387144849
     upperValue := 2251799813685248
@@ -875,14 +875,14 @@ def precomputedTable_chunk_44 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 4 32 0)) },
   { key := { q := 4, n := 32, r := 1 }
     lowerValue := 190172619316593316
-    upperValue := 1152921504606846976
+    upperValue := 576460752303423488
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 32 1))
-    upperTrace := (.lengthenFreeN 27 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
+    upperTrace := (@UpperTrace.alphabetExpand 2 4 2 32 1 134217728 (by decide : 0 < 2) (by decide : 0 < 2) (by decide : 4 ≤ 2 * 2) (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1)))) },
   { key := { q := 4, n := 32, r := 2 }
     lowerValue := 4044451671499573
-    upperValue := 288230376151711744
+    upperValue := 144115188075855872
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 32 2))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 4) (@UpperTrace.alphabetExpand 2 4 2 31 1 67108864 (by decide : 0 < 2) (by decide : 0 < 2) (by decide : 4 ≤ 2 * 2) (by decide : 0 < 4) (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1)))) },
   { key := { q := 4, n := 32, r := 3 }
     lowerValue := 133207761885816
     upperValue := 9007199254740992
@@ -1120,14 +1120,14 @@ def precomputedTable_chunk_44 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 4 33 0)) },
   { key := { q := 4, n := 33, r := 1 }
     lowerValue := 737869762948382065
-    upperValue := 4611686018427387904
+    upperValue := 2305843009213693952
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 33 1))
-    upperTrace := (.lengthenFreeN 28 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))) },
+    upperTrace := (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 2 4 2 32 1 134217728 (by decide : 0 < 2) (by decide : 0 < 2) (by decide : 4 ≤ 2 * 2) (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))) },
   { key := { q := 4, n := 33, r := 2 }
     lowerValue := 15207538395473662
-    upperValue := 1152921504606846976
+    upperValue := 576460752303423488
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 4 33 2))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 1 (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_quaternary_hamming" (primitiveUpper_valid 4 5 1))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 4) (@UpperTrace.alphabetExpand 2 4 2 32 1 134217728 (by decide : 0 < 2) (by decide : 0 < 2) (by decide : 4 ≤ 2 * 2) (by decide : 0 < 4) (.lengthenFreeN 1 (.primitive "lean_binary_hamming_upper" (primitiveUpper_valid 2 31 1))))) },
   { key := { q := 4, n := 33, r := 3 }
     lowerValue := 484917433130295
     upperValue := 36028797018963968
