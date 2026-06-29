@@ -10,24 +10,24 @@ namespace CoveringCodes.Database
 def precomputedTable_chunk_199 : Array AnyBoundEntry := #[
   { key := { q := 20, n := 35, r := 15 }
     lowerValue := 67076004835173989
-    upperValue := 52428800000000000000000000
+    upperValue := 41943040000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 35 15))
-    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 35, r := 16 }
     lowerValue := 2811125959007403
-    upperValue := 2621440000000000000000000
+    upperValue := 2097152000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 35 16))
-    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 12 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 35, r := 17 }
     lowerValue := 131697456197478
-    upperValue := 131072000000000000000000
+    upperValue := 104857600000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 35 17))
-    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 11 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 35, r := 18 }
     lowerValue := 6891591479260
-    upperValue := 6553600000000000000000
+    upperValue := 5242880000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 35 18))
-    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 10 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 35, r := 19 }
     lowerValue := 402771905694
     upperValue := 32768000000000000000
@@ -185,94 +185,94 @@ def precomputedTable_chunk_199 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 20 36 0)) },
   { key := { q := 20, n := 36, r := 1 }
     lowerValue := 100320403994160583941605839416058394160583942
-    upperValue := 1717986918400000000000000000000000000000000000
+    upperValue := 1374389534720000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 1))
-    upperTrace := (.lengthenFreeN 33 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))) },
+    upperTrace := (.lengthenFreeN 29 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))) },
   { key := { q := 20, n := 36, r := 2 }
     lowerValue := 301249267851741446200381386581329592530084
-    upperValue := 85899345920000000000000000000000000000000000
+    upperValue := 68719476736000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 2))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 3 }
     lowerValue := 1396698298289427886923891862778225202040
-    upperValue := 4294967296000000000000000000000000000000000
+    upperValue := 3435973836800000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 3))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 4 }
     lowerValue := 8894850189933679378085977997027782334
-    upperValue := 214748364800000000000000000000000000000000
+    upperValue := 171798691840000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 4))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 5 }
     lowerValue := 73012985326119324831311785161858519
-    upperValue := 10737418240000000000000000000000000000000
+    upperValue := 8589934592000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 5))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 6 }
     lowerValue := 742297067822648650002670911844108
-    upperValue := 536870912000000000000000000000000000000
+    upperValue := 429496729600000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 6))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 7 }
     lowerValue := 9096697963030618266307645432893
-    upperValue := 26843545600000000000000000000000000000
+    upperValue := 21474836480000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 7))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 8 }
     lowerValue := 131777091677135594152588872094
-    upperValue := 1342177280000000000000000000000000000
+    upperValue := 1073741824000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 8))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 9 }
     lowerValue := 2223905303786901670035530286
-    upperValue := 67108864000000000000000000000000000
+    upperValue := 53687091200000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 9))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 10 }
     lowerValue := 43237831025283865262739454
-    upperValue := 3355443200000000000000000000000000
+    upperValue := 2684354560000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 10))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 11 }
     lowerValue := 960073591659025084919405
-    upperValue := 167772160000000000000000000000000
+    upperValue := 134217728000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 11))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 12 }
     lowerValue := 24180530304049037243888
-    upperValue := 8388608000000000000000000000000
+    upperValue := 6710886400000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 12))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 13 }
     lowerValue := 687074315934838913571
-    upperValue := 419430400000000000000000000000
+    upperValue := 335544320000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 13))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 14 }
     lowerValue := 21932090582816709720
-    upperValue := 20971520000000000000000000000
+    upperValue := 16777216000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 14))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 15 }
     lowerValue := 783929107264952101
-    upperValue := 1048576000000000000000000000
+    upperValue := 838860800000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 15))
-    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 16 }
     lowerValue := 31299389224179773
-    upperValue := 52428800000000000000000000
+    upperValue := 41943040000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 16))
-    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 17 }
     lowerValue := 1393532189345851
-    upperValue := 2621440000000000000000000
+    upperValue := 2097152000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 17))
-    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 12 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 18 }
     lowerValue := 69114608196507
-    upperValue := 131072000000000000000000
+    upperValue := 104857600000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 36 18))
-    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 11 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 36, r := 19 }
     lowerValue := 3816955795222
     upperValue := 655360000000000000000
@@ -430,94 +430,94 @@ def precomputedTable_chunk_199 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 20 37 0)) },
   { key := { q := 20, n := 37, r := 1 }
     lowerValue := 1952257861818181818181818181818181818181818182
-    upperValue := 34359738368000000000000000000000000000000000000
+    upperValue := 27487790694400000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 1))
-    upperTrace := (.lengthenFreeN 34 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))) },
+    upperTrace := (.lengthenFreeN 30 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))) },
   { key := { q := 20, n := 37, r := 2 }
     lowerValue := 5699786566250570231825156554555633890432547
-    upperValue := 1717986918400000000000000000000000000000000000
+    upperValue := 1374389534720000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 2))
-    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 3 }
     lowerValue := 25672460224942075883767723733533374826004
-    upperValue := 85899345920000000000000000000000000000000000
+    upperValue := 68719476736000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 3))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 4 }
     lowerValue := 158694750439118813415674866911041084916
-    upperValue := 4294967296000000000000000000000000000000000
+    upperValue := 3435973836800000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 4))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 5 }
     lowerValue := 1263243425944888403708947128580716536
-    upperValue := 214748364800000000000000000000000000000000
+    upperValue := 171798691840000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 5))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 6 }
     lowerValue := 12442475141710564973715913062334201
-    upperValue := 10737418240000000000000000000000000000000
+    upperValue := 8589934592000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 6))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 7 }
     lowerValue := 147572919296282920557177286204348
-    upperValue := 536870912000000000000000000000000000000
+    upperValue := 429496729600000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 7))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 8 }
     lowerValue := 2066704461585914228209080341000
-    upperValue := 26843545600000000000000000000000000000
+    upperValue := 21474836480000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 8))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 9 }
     lowerValue := 33678974507889719689773505669
-    upperValue := 1342177280000000000000000000000000000
+    upperValue := 1073741824000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 9))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 10 }
     lowerValue := 631484081011576906408357928
-    upperValue := 67108864000000000000000000000000000
+    upperValue := 53687091200000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 10))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 11 }
     lowerValue := 13504235568029064972524225
-    upperValue := 3355443200000000000000000000000000
+    upperValue := 2684354560000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 11))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 12 }
     lowerValue := 327087405405039482108032
-    upperValue := 167772160000000000000000000000000
+    upperValue := 134217728000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 12))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 13 }
     lowerValue := 8923779809137586280509
-    upperValue := 8388608000000000000000000000000
+    upperValue := 6710886400000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 13))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 14 }
     lowerValue := 273042110213007744436
-    upperValue := 419430400000000000000000000000
+    upperValue := 335544320000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 14))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 15 }
     lowerValue := 9337346993290500280
-    upperValue := 20971520000000000000000000000
+    upperValue := 16777216000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 15))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 16 }
     lowerValue := 355958084204227131
-    upperValue := 1048576000000000000000000000
+    upperValue := 838860800000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 16))
-    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 17 }
     lowerValue := 15098424366447240
-    upperValue := 52428800000000000000000000
+    upperValue := 41943040000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 17))
-    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 18 }
     lowerValue := 711664273946966
-    upperValue := 2621440000000000000000000
+    upperValue := 2097152000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 37 18))
-    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 12 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 37, r := 19 }
     lowerValue := 37251260028853
     upperValue := 13107200000000000000000
@@ -675,94 +675,94 @@ def precomputedTable_chunk_199 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 20 38 0)) },
   { key := { q := 20, n := 38, r := 1 }
     lowerValue := 38019074266113416320885200553250345781466113417
-    upperValue := 687194767360000000000000000000000000000000000000
+    upperValue := 549755813888000000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 1))
-    upperTrace := (.lengthenFreeN 35 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))) },
+    upperTrace := (.lengthenFreeN 31 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))) },
   { key := { q := 20, n := 38, r := 2 }
     lowerValue := 108004489852498565849135187382615734010200153
-    upperValue := 34359738368000000000000000000000000000000000000
+    upperValue := 27487790694400000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 2))
-    upperTrace := (.lengthenFreeN 33 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 3 }
     lowerValue := 472973080255477611295690781170338539323156
-    upperValue := 1717986918400000000000000000000000000000000000
+    upperValue := 1374389534720000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 3))
-    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 4 }
     lowerValue := 2840304576895786938964231950765305296998
-    upperValue := 85899345920000000000000000000000000000000000
+    upperValue := 68719476736000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 4))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 5 }
     lowerValue := 21945711800833150802041649215840518128
-    upperValue := 4294967296000000000000000000000000000000000
+    upperValue := 3435973836800000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 5))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 6 }
     lowerValue := 209620513728715860976592717662671959
-    upperValue := 214748364800000000000000000000000000000000
+    upperValue := 171798691840000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 6))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 7 }
     lowerValue := 2408669750247480680071293031825162
-    upperValue := 10737418240000000000000000000000000000000
+    upperValue := 8589934592000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 7))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 8 }
     lowerValue := 32647089956615855959375426979140
-    upperValue := 536870912000000000000000000000000000000
+    upperValue := 429496729600000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 8))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 9 }
     lowerValue := 514330590998758146189177384108
-    upperValue := 26843545600000000000000000000000000000
+    upperValue := 21474836480000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 9))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 10 }
     lowerValue := 9312194828783331365151652192
-    upperValue := 1342177280000000000000000000000000000
+    upperValue := 1073741824000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 10))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 11 }
     lowerValue := 192051573775881468586344414
-    upperValue := 67108864000000000000000000000000000
+    upperValue := 53687091200000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 11))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 12 }
     lowerValue := 4480033074146007076540511
-    upperValue := 3355443200000000000000000000000000
+    upperValue := 2684354560000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 12))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 13 }
     lowerValue := 117544320149470273456455
-    upperValue := 167772160000000000000000000000000
+    upperValue := 134217728000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 13))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 14 }
     lowerValue := 3453288273715217270299
-    upperValue := 8388608000000000000000000000000
+    upperValue := 6710886400000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 14))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 15 }
     lowerValue := 113196993567812080595
-    upperValue := 419430400000000000000000000000
+    upperValue := 335544320000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 15))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 16 }
     lowerValue := 4128683833572205971
-    upperValue := 20971520000000000000000000000
+    upperValue := 16777216000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 16))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 17 }
     lowerValue := 167211290783415829
-    upperValue := 1048576000000000000000000000
+    upperValue := 838860800000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 17))
-    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 18 }
     lowerValue := 7508729633340258
-    upperValue := 52428800000000000000000000
+    upperValue := 41943040000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 38 18))
-    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 13 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 38, r := 19 }
     lowerValue := 373533566326753
     upperValue := 262144000000000000000000
@@ -920,94 +920,94 @@ def precomputedTable_chunk_199 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 20 39 0)) },
   { key := { q := 20, n := 39, r := 1 }
     lowerValue := 740910800388140161725067385444743935309973045823
-    upperValue := 13743895347200000000000000000000000000000000000000
+    upperValue := 10995116277760000000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 1))
-    upperTrace := (.lengthenFreeN 36 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))) },
+    upperTrace := (.lengthenFreeN 32 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))) },
   { key := { q := 20, n := 39, r := 2 }
     lowerValue := 2049469376229761820438930372833587456149834293
-    upperValue := 687194767360000000000000000000000000000000000000
+    upperValue := 549755813888000000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 2))
-    upperTrace := (.lengthenFreeN 34 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 3 }
     lowerValue := 8732847088805356610597642253119662456115426
-    upperValue := 34359738368000000000000000000000000000000000000
+    upperValue := 27487790694400000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 3))
-    upperTrace := (.lengthenFreeN 33 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 4 }
     lowerValue := 50988366513726479822482301558229320944214
-    upperValue := 1717986918400000000000000000000000000000000000
+    upperValue := 1374389534720000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 4))
-    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 5 }
     lowerValue := 382728151654645897465294766687604739649
-    upperValue := 85899345920000000000000000000000000000000000
+    upperValue := 68719476736000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 5))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 6 }
     lowerValue := 3548428258293180431636167402986975035
-    upperValue := 4294967296000000000000000000000000000000000
+    upperValue := 3435973836800000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 6))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 7 }
     lowerValue := 39540781014558002827811618558995281
-    upperValue := 214748364800000000000000000000000000000000
+    upperValue := 171798691840000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 7))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 8 }
     lowerValue := 519227340337191899019324367934874
-    upperValue := 10737418240000000000000000000000000000000
+    upperValue := 8589934592000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 8))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 9 }
     lowerValue := 7916853363200750413062959914336
-    upperValue := 536870912000000000000000000000000000000
+    upperValue := 429496729600000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 9))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 10 }
     lowerValue := 138573931199400269104081459925
-    upperValue := 26843545600000000000000000000000000000
+    upperValue := 21474836480000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 10))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 11 }
     lowerValue := 2759659844664422413473007596
-    upperValue := 1342177280000000000000000000000000000
+    upperValue := 1073741824000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 11))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 12 }
     lowerValue := 62083960489265324914349686
-    upperValue := 67108864000000000000000000000000000
+    upperValue := 53687091200000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 12))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 13 }
     lowerValue := 1568815773388296138291340
-    upperValue := 3355443200000000000000000000000000
+    upperValue := 2684354560000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 13))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 14 }
     lowerValue := 44324254222264755463319
-    upperValue := 167772160000000000000000000000000
+    upperValue := 134217728000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 14))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 15 }
     lowerValue := 1395073795771664903684
-    upperValue := 8388608000000000000000000000000
+    upperValue := 6710886400000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 15))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 16 }
     lowerValue := 48773716670110788014
-    upperValue := 419430400000000000000000000000
+    upperValue := 335544320000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 16))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 17 }
     lowerValue := 1889928981940689024
-    upperValue := 20971520000000000000000000000
+    upperValue := 16777216000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 17))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 18 }
     lowerValue := 81034975226115729
-    upperValue := 1048576000000000000000000000
+    upperValue := 838860800000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 39 18))
-    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 14 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 39, r := 19 }
     lowerValue := 3840597046312807
     upperValue := 5242880000000000000000000
@@ -1165,94 +1165,94 @@ def precomputedTable_chunk_199 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 20 40 0)) },
   { key := { q := 20, n := 40, r := 1 }
     lowerValue := 14448247408357424441524310118265440210249671484889
-    upperValue := 274877906944000000000000000000000000000000000000000
+    upperValue := 219902325555200000000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 1))
-    upperTrace := (.lengthenFreeN 37 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))) },
+    upperTrace := (.lengthenFreeN 33 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))) },
   { key := { q := 20, n := 40, r := 2 }
     lowerValue := 38942683768067691196106835351578410503610881877
-    upperValue := 13743895347200000000000000000000000000000000000000
+    upperValue := 10995116277760000000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 2))
-    upperTrace := (.lengthenFreeN 35 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 1 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 3 }
     lowerValue := 161575836624588766658318302677820410129068118
-    upperValue := 687194767360000000000000000000000000000000000000
+    upperValue := 549755813888000000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 3))
-    upperTrace := (.lengthenFreeN 34 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 2 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 4 }
     lowerValue := 917936035999982281308572374451663944804163
-    upperValue := 34359738368000000000000000000000000000000000000
+    upperValue := 27487790694400000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 4))
-    upperTrace := (.lengthenFreeN 33 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 3 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 5 }
     lowerValue := 6699147206623895621338676547518566944938
-    upperValue := 1717986918400000000000000000000000000000000000
+    upperValue := 1374389534720000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 5))
-    upperTrace := (.lengthenFreeN 32 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 4 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 6 }
     lowerValue := 60339378070875799605436751267710062356
-    upperValue := 85899345920000000000000000000000000000000000
+    upperValue := 68719476736000000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 6))
-    upperTrace := (.lengthenFreeN 31 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 5 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 7 }
     lowerValue := 652638666080654758284147142831306827
-    upperValue := 4294967296000000000000000000000000000000000
+    upperValue := 3435973836800000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 7))
-    upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 6 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 8 }
     lowerValue := 8310979559681867551705409056023698
-    upperValue := 214748364800000000000000000000000000000000
+    upperValue := 171798691840000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 8))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 7 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 9 }
     lowerValue := 122770454087353304812137057793064
-    upperValue := 10737418240000000000000000000000000000000
+    upperValue := 8589934592000000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 9))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 8 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 10 }
     lowerValue := 2079800290102555005872330232775
-    upperValue := 536870912000000000000000000000000000000
+    upperValue := 429496729600000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 10))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 9 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 11 }
     lowerValue := 40042090181699570619835600004
-    upperValue := 26843545600000000000000000000000000000
+    upperValue := 21474836480000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 11))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 10 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 12 }
     lowerValue := 869863000355760399214559734
-    upperValue := 1342177280000000000000000000000000000
+    upperValue := 1073741824000000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 12))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 11 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 13 }
     lowerValue := 21198552356296649298888160
-    upperValue := 67108864000000000000000000000000000
+    upperValue := 53687091200000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 13))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 12 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 14 }
     lowerValue := 576833379995517580426808
-    upperValue := 3355443200000000000000000000000000
+    upperValue := 2684354560000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 14))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 13 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 15 }
     lowerValue := 17460124973034066890031
-    upperValue := 167772160000000000000000000000000
+    upperValue := 134217728000000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 15))
-    upperTrace := (.lengthenFreeN 22 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 18 (.lengthenDummyN 14 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 16 }
     lowerValue := 586128727084097829866
-    upperValue := 8388608000000000000000000000000
+    upperValue := 6710886400000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 16))
-    upperTrace := (.lengthenFreeN 21 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 17 (.lengthenDummyN 15 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 17 }
     lowerValue := 21770496881806815402
-    upperValue := 419430400000000000000000000000
+    upperValue := 335544320000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 17))
-    upperTrace := (.lengthenFreeN 20 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 16 (.lengthenDummyN 16 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 18 }
     lowerValue := 893110788371231551
-    upperValue := 20971520000000000000000000000
+    upperValue := 16777216000000000000000000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 20 40 18))
-    upperTrace := (.lengthenFreeN 19 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 20 3 1))))) },
+    upperTrace := (.lengthenFreeN 15 (.lengthenDummyN 17 (by decide : 0 < 20) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 10 20 2 7 1 200000 (by decide : 0 < 10) (by decide : 0 < 2) (by decide : 20 ≤ 2 * 10) (by decide : 0 < 20) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))))) },
   { key := { q := 20, n := 40, r := 19 }
     lowerValue := 40416872282639616
     upperValue := 104857600000000000000000000

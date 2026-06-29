@@ -285,9 +285,9 @@ def precomputedTable_chunk_97 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 10 6 0)) },
   { key := { q := 10, n := 6, r := 1 }
     lowerValue := 18182
-    upperValue := 40000
+    upperValue := 20000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 6 1))
-    upperTrace := (@UpperTrace.alphabetExpand 5 10 2 6 1 625 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))) },
+    upperTrace := (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1)) },
   { key := { q := 10, n := 6, r := 2 }
     lowerValue := 788
     upperValue := 5000
@@ -530,14 +530,14 @@ def precomputedTable_chunk_97 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 10 7 0)) },
   { key := { q := 10, n := 7, r := 1 }
     lowerValue := 156250
-    upperValue := 400000
+    upperValue := 200000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 7 1))
-    upperTrace := (@UpperTrace.alphabetExpand 5 10 2 7 1 3125 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1)))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))) },
   { key := { q := 10, n := 7, r := 2 }
     lowerValue := 5666
-    upperValue := 40000
+    upperValue := 20000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 7 2))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 10) (@UpperTrace.alphabetExpand 5 10 2 6 1 625 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1)))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 10) (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))) },
   { key := { q := 10, n := 7, r := 3 }
     lowerValue := 367
     upperValue := 5000
@@ -775,19 +775,19 @@ def precomputedTable_chunk_97 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 10 8 0)) },
   { key := { q := 10, n := 8, r := 1 }
     lowerValue := 1369864
-    upperValue := 4000000
+    upperValue := 2000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 8 1))
-    upperTrace := (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 5 10 2 7 1 3125 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 2 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))) },
   { key := { q := 10, n := 8, r := 2 }
     lowerValue := 42717
-    upperValue := 400000
+    upperValue := 200000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 8 2))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 10) (@UpperTrace.alphabetExpand 5 10 2 7 1 3125 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1)))) },
   { key := { q := 10, n := 8, r := 3 }
     lowerValue := 2317
-    upperValue := 40000
+    upperValue := 20000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 8 3))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 10) (@UpperTrace.alphabetExpand 5 10 2 6 1 625 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1)))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 10) (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))) },
   { key := { q := 10, n := 8, r := 4 }
     lowerValue := 200
     upperValue := 1156
@@ -1020,19 +1020,19 @@ def precomputedTable_chunk_97 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 10 9 0)) },
   { key := { q := 10, n := 9, r := 1 }
     lowerValue := 12195122
-    upperValue := 40000000
+    upperValue := 20000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 9 1))
-    upperTrace := (.lengthenFreeN 2 (@UpperTrace.alphabetExpand 5 10 2 7 1 3125 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 3 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))) },
   { key := { q := 10, n := 9, r := 2 }
     lowerValue := 333556
-    upperValue := 4000000
+    upperValue := 2000000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 9 2))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 10) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 5 10 2 7 1 3125 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1)))))) },
+    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))))) },
   { key := { q := 10, n := 9, r := 3 }
     lowerValue := 15569
-    upperValue := 400000
+    upperValue := 200000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 10 9 3))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 10) (@UpperTrace.alphabetExpand 5 10 2 7 1 3125 (by decide : 0 < 5) (by decide : 0 < 2) (by decide : 10 ≤ 2 * 5) (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 10) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1)))) },
   { key := { q := 10, n := 9, r := 4 }
     lowerValue := 1123
     upperValue := 11560

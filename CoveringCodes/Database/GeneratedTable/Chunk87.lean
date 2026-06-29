@@ -780,9 +780,9 @@ def precomputedTable_chunk_87 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 9 6 0)) },
   { key := { q := 9, n := 6, r := 1 }
     lowerValue := 10846
-    upperValue := 29889
+    upperValue := 20000
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 6 1))
-    upperTrace := (.lengthenFreeN 3 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.primitive "lean_known_bounds_q10_n6_r1_blokhuis_lam_syndrome" (primitiveUpper_valid 10 6 1))) },
   { key := { q := 9, n := 6, r := 2 }
     lowerValue := 527
     upperValue := 2187
