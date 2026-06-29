@@ -26,9 +26,11 @@ that text file.
 
 The `K_2_13_1-gp2025-sdp-generated` bundle contains generated Lean proof
 payload files for the Gijswijt--Polak 2025 SDP certificate proving
-`K_2(13,1) >= 607`.  The generated Lean subtree is intentionally ignored by
-git and materialized from the local cache archive or, after upload, from the
-Zenodo URLs recorded in `manifest.json`.
+`K_2(13,1) >= 607`.  It is archived on Zenodo at
+<https://zenodo.org/records/21024793> with DOI
+`10.5281/zenodo.21024793`.  The generated Lean subtree is intentionally ignored
+by git and materialized from the local cache archive or from the Zenodo URLs
+recorded in `manifest.json`.
 
 The GP2025 K2 bundle is generated through the compact-component semantic route.
 The old compact/full quotient-boundary fallback files

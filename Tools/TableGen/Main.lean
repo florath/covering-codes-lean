@@ -304,9 +304,9 @@ def main : IO Unit := do
   -- Write main GeneratedTable.lean that imports all chunks and combines them
   let imports := (List.range numChunks).map (fun i =>
     s!"import {chunkModuleBase}.Chunk{i}") |> String.intercalate "\n"
-  let chunkNames := (List.range numChunks).map (fun i =>
-    s!"precomputedTable_chunk_{i}")
-  let concatExpr := String.intercalate " ++\n  " chunkNames
+  let chunkDispatchCases := String.intercalate "\n" <|
+    (List.range numChunks).map (fun i =>
+      s!"  | {i} => lookupPrecomputedChunk? precomputedTable_chunk_{i} ({i} * precomputedChunkSize) q n r")
   -- Phase 9.2: closure settings header in GeneratedTable.lean
   let closureHeader :=
     "-- Closure settings:\n" ++
@@ -323,10 +323,25 @@ def main : IO Unit := do
     "-- Re-run `lake -KproofMode=native exe table_gen` to regenerate after source changes.\n" ++
     s!"-- {entries.length} entries in {numChunks} chunks of ≤{chunkSize}.\n\n" ++
     closureHeader ++
-    "def precomputedTable : Array AnyBoundEntry :=\n  " ++
-    concatExpr ++ "\n\n" ++
+    s!"def precomputedChunkSize : Nat := {chunkSize}\n\n" ++
+    "def lookupPrecomputedChunk? (chunk : Array AnyBoundEntry) (offset q n r : Nat) :\n" ++
+    "    Option (CertifiedBoundEntry q n r) :=\n" ++
+    "  match keyToIndex? { q, n, r } with\n" ++
+    "  | none => none\n" ++
+    "  | some i =>\n" ++
+    "    match chunk[i - offset]? with\n" ++
+    "    | none => none\n" ++
+    "    | some e => e.toCertified? q n r\n\n" ++
+    "def lookupPrecomputedChunkByIndex? (chunkIndex q n r : Nat) :\n" ++
+    "    Option (CertifiedBoundEntry q n r) :=\n" ++
+    "  match chunkIndex with\n" ++
+    chunkDispatchCases ++ "\n" ++
+    "  | _ => none\n\n" ++
     "def lookupPrecomputed? (q n r : Nat) : Option (CertifiedBoundEntry q n r) :=\n" ++
-    "  lookupEntry? precomputedTable q n r\n\n" ++
+    "  match keyToIndex? { q, n, r } with\n" ++
+    "  | none => none\n" ++
+    "  | some i =>\n" ++
+    "    lookupPrecomputedChunkByIndex? (i / precomputedChunkSize) q n r\n\n" ++
     "def lookupPrecomputed (q n r : Nat) : CertifiedBoundEntry q n r :=\n" ++
     "  match lookupPrecomputed? q n r with\n" ++
     "  | some e => e\n" ++

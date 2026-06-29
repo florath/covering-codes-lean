@@ -225,222 +225,239 @@ namespace CoveringCodes.Database
 --   doneAtPass  = 46
 --   chunkSize   = 250
 
-def precomputedTable : Array AnyBoundEntry :=
-  precomputedTable_chunk_0 ++
-  precomputedTable_chunk_1 ++
-  precomputedTable_chunk_2 ++
-  precomputedTable_chunk_3 ++
-  precomputedTable_chunk_4 ++
-  precomputedTable_chunk_5 ++
-  precomputedTable_chunk_6 ++
-  precomputedTable_chunk_7 ++
-  precomputedTable_chunk_8 ++
-  precomputedTable_chunk_9 ++
-  precomputedTable_chunk_10 ++
-  precomputedTable_chunk_11 ++
-  precomputedTable_chunk_12 ++
-  precomputedTable_chunk_13 ++
-  precomputedTable_chunk_14 ++
-  precomputedTable_chunk_15 ++
-  precomputedTable_chunk_16 ++
-  precomputedTable_chunk_17 ++
-  precomputedTable_chunk_18 ++
-  precomputedTable_chunk_19 ++
-  precomputedTable_chunk_20 ++
-  precomputedTable_chunk_21 ++
-  precomputedTable_chunk_22 ++
-  precomputedTable_chunk_23 ++
-  precomputedTable_chunk_24 ++
-  precomputedTable_chunk_25 ++
-  precomputedTable_chunk_26 ++
-  precomputedTable_chunk_27 ++
-  precomputedTable_chunk_28 ++
-  precomputedTable_chunk_29 ++
-  precomputedTable_chunk_30 ++
-  precomputedTable_chunk_31 ++
-  precomputedTable_chunk_32 ++
-  precomputedTable_chunk_33 ++
-  precomputedTable_chunk_34 ++
-  precomputedTable_chunk_35 ++
-  precomputedTable_chunk_36 ++
-  precomputedTable_chunk_37 ++
-  precomputedTable_chunk_38 ++
-  precomputedTable_chunk_39 ++
-  precomputedTable_chunk_40 ++
-  precomputedTable_chunk_41 ++
-  precomputedTable_chunk_42 ++
-  precomputedTable_chunk_43 ++
-  precomputedTable_chunk_44 ++
-  precomputedTable_chunk_45 ++
-  precomputedTable_chunk_46 ++
-  precomputedTable_chunk_47 ++
-  precomputedTable_chunk_48 ++
-  precomputedTable_chunk_49 ++
-  precomputedTable_chunk_50 ++
-  precomputedTable_chunk_51 ++
-  precomputedTable_chunk_52 ++
-  precomputedTable_chunk_53 ++
-  precomputedTable_chunk_54 ++
-  precomputedTable_chunk_55 ++
-  precomputedTable_chunk_56 ++
-  precomputedTable_chunk_57 ++
-  precomputedTable_chunk_58 ++
-  precomputedTable_chunk_59 ++
-  precomputedTable_chunk_60 ++
-  precomputedTable_chunk_61 ++
-  precomputedTable_chunk_62 ++
-  precomputedTable_chunk_63 ++
-  precomputedTable_chunk_64 ++
-  precomputedTable_chunk_65 ++
-  precomputedTable_chunk_66 ++
-  precomputedTable_chunk_67 ++
-  precomputedTable_chunk_68 ++
-  precomputedTable_chunk_69 ++
-  precomputedTable_chunk_70 ++
-  precomputedTable_chunk_71 ++
-  precomputedTable_chunk_72 ++
-  precomputedTable_chunk_73 ++
-  precomputedTable_chunk_74 ++
-  precomputedTable_chunk_75 ++
-  precomputedTable_chunk_76 ++
-  precomputedTable_chunk_77 ++
-  precomputedTable_chunk_78 ++
-  precomputedTable_chunk_79 ++
-  precomputedTable_chunk_80 ++
-  precomputedTable_chunk_81 ++
-  precomputedTable_chunk_82 ++
-  precomputedTable_chunk_83 ++
-  precomputedTable_chunk_84 ++
-  precomputedTable_chunk_85 ++
-  precomputedTable_chunk_86 ++
-  precomputedTable_chunk_87 ++
-  precomputedTable_chunk_88 ++
-  precomputedTable_chunk_89 ++
-  precomputedTable_chunk_90 ++
-  precomputedTable_chunk_91 ++
-  precomputedTable_chunk_92 ++
-  precomputedTable_chunk_93 ++
-  precomputedTable_chunk_94 ++
-  precomputedTable_chunk_95 ++
-  precomputedTable_chunk_96 ++
-  precomputedTable_chunk_97 ++
-  precomputedTable_chunk_98 ++
-  precomputedTable_chunk_99 ++
-  precomputedTable_chunk_100 ++
-  precomputedTable_chunk_101 ++
-  precomputedTable_chunk_102 ++
-  precomputedTable_chunk_103 ++
-  precomputedTable_chunk_104 ++
-  precomputedTable_chunk_105 ++
-  precomputedTable_chunk_106 ++
-  precomputedTable_chunk_107 ++
-  precomputedTable_chunk_108 ++
-  precomputedTable_chunk_109 ++
-  precomputedTable_chunk_110 ++
-  precomputedTable_chunk_111 ++
-  precomputedTable_chunk_112 ++
-  precomputedTable_chunk_113 ++
-  precomputedTable_chunk_114 ++
-  precomputedTable_chunk_115 ++
-  precomputedTable_chunk_116 ++
-  precomputedTable_chunk_117 ++
-  precomputedTable_chunk_118 ++
-  precomputedTable_chunk_119 ++
-  precomputedTable_chunk_120 ++
-  precomputedTable_chunk_121 ++
-  precomputedTable_chunk_122 ++
-  precomputedTable_chunk_123 ++
-  precomputedTable_chunk_124 ++
-  precomputedTable_chunk_125 ++
-  precomputedTable_chunk_126 ++
-  precomputedTable_chunk_127 ++
-  precomputedTable_chunk_128 ++
-  precomputedTable_chunk_129 ++
-  precomputedTable_chunk_130 ++
-  precomputedTable_chunk_131 ++
-  precomputedTable_chunk_132 ++
-  precomputedTable_chunk_133 ++
-  precomputedTable_chunk_134 ++
-  precomputedTable_chunk_135 ++
-  precomputedTable_chunk_136 ++
-  precomputedTable_chunk_137 ++
-  precomputedTable_chunk_138 ++
-  precomputedTable_chunk_139 ++
-  precomputedTable_chunk_140 ++
-  precomputedTable_chunk_141 ++
-  precomputedTable_chunk_142 ++
-  precomputedTable_chunk_143 ++
-  precomputedTable_chunk_144 ++
-  precomputedTable_chunk_145 ++
-  precomputedTable_chunk_146 ++
-  precomputedTable_chunk_147 ++
-  precomputedTable_chunk_148 ++
-  precomputedTable_chunk_149 ++
-  precomputedTable_chunk_150 ++
-  precomputedTable_chunk_151 ++
-  precomputedTable_chunk_152 ++
-  precomputedTable_chunk_153 ++
-  precomputedTable_chunk_154 ++
-  precomputedTable_chunk_155 ++
-  precomputedTable_chunk_156 ++
-  precomputedTable_chunk_157 ++
-  precomputedTable_chunk_158 ++
-  precomputedTable_chunk_159 ++
-  precomputedTable_chunk_160 ++
-  precomputedTable_chunk_161 ++
-  precomputedTable_chunk_162 ++
-  precomputedTable_chunk_163 ++
-  precomputedTable_chunk_164 ++
-  precomputedTable_chunk_165 ++
-  precomputedTable_chunk_166 ++
-  precomputedTable_chunk_167 ++
-  precomputedTable_chunk_168 ++
-  precomputedTable_chunk_169 ++
-  precomputedTable_chunk_170 ++
-  precomputedTable_chunk_171 ++
-  precomputedTable_chunk_172 ++
-  precomputedTable_chunk_173 ++
-  precomputedTable_chunk_174 ++
-  precomputedTable_chunk_175 ++
-  precomputedTable_chunk_176 ++
-  precomputedTable_chunk_177 ++
-  precomputedTable_chunk_178 ++
-  precomputedTable_chunk_179 ++
-  precomputedTable_chunk_180 ++
-  precomputedTable_chunk_181 ++
-  precomputedTable_chunk_182 ++
-  precomputedTable_chunk_183 ++
-  precomputedTable_chunk_184 ++
-  precomputedTable_chunk_185 ++
-  precomputedTable_chunk_186 ++
-  precomputedTable_chunk_187 ++
-  precomputedTable_chunk_188 ++
-  precomputedTable_chunk_189 ++
-  precomputedTable_chunk_190 ++
-  precomputedTable_chunk_191 ++
-  precomputedTable_chunk_192 ++
-  precomputedTable_chunk_193 ++
-  precomputedTable_chunk_194 ++
-  precomputedTable_chunk_195 ++
-  precomputedTable_chunk_196 ++
-  precomputedTable_chunk_197 ++
-  precomputedTable_chunk_198 ++
-  precomputedTable_chunk_199 ++
-  precomputedTable_chunk_200 ++
-  precomputedTable_chunk_201 ++
-  precomputedTable_chunk_202 ++
-  precomputedTable_chunk_203 ++
-  precomputedTable_chunk_204 ++
-  precomputedTable_chunk_205 ++
-  precomputedTable_chunk_206 ++
-  precomputedTable_chunk_207 ++
-  precomputedTable_chunk_208 ++
-  precomputedTable_chunk_209 ++
-  precomputedTable_chunk_210 ++
-  precomputedTable_chunk_211
+def precomputedChunkSize : Nat := 250
+
+def lookupPrecomputedChunk? (chunk : Array AnyBoundEntry) (offset q n r : Nat) :
+    Option (CertifiedBoundEntry q n r) :=
+  match keyToIndex? { q, n, r } with
+  | none => none
+  | some i =>
+    match chunk[i - offset]? with
+    | none => none
+    | some e => e.toCertified? q n r
+
+def lookupPrecomputedChunkByIndex? (chunkIndex q n r : Nat) :
+    Option (CertifiedBoundEntry q n r) :=
+  match chunkIndex with
+  | 0 => lookupPrecomputedChunk? precomputedTable_chunk_0 (0 * precomputedChunkSize) q n r
+  | 1 => lookupPrecomputedChunk? precomputedTable_chunk_1 (1 * precomputedChunkSize) q n r
+  | 2 => lookupPrecomputedChunk? precomputedTable_chunk_2 (2 * precomputedChunkSize) q n r
+  | 3 => lookupPrecomputedChunk? precomputedTable_chunk_3 (3 * precomputedChunkSize) q n r
+  | 4 => lookupPrecomputedChunk? precomputedTable_chunk_4 (4 * precomputedChunkSize) q n r
+  | 5 => lookupPrecomputedChunk? precomputedTable_chunk_5 (5 * precomputedChunkSize) q n r
+  | 6 => lookupPrecomputedChunk? precomputedTable_chunk_6 (6 * precomputedChunkSize) q n r
+  | 7 => lookupPrecomputedChunk? precomputedTable_chunk_7 (7 * precomputedChunkSize) q n r
+  | 8 => lookupPrecomputedChunk? precomputedTable_chunk_8 (8 * precomputedChunkSize) q n r
+  | 9 => lookupPrecomputedChunk? precomputedTable_chunk_9 (9 * precomputedChunkSize) q n r
+  | 10 => lookupPrecomputedChunk? precomputedTable_chunk_10 (10 * precomputedChunkSize) q n r
+  | 11 => lookupPrecomputedChunk? precomputedTable_chunk_11 (11 * precomputedChunkSize) q n r
+  | 12 => lookupPrecomputedChunk? precomputedTable_chunk_12 (12 * precomputedChunkSize) q n r
+  | 13 => lookupPrecomputedChunk? precomputedTable_chunk_13 (13 * precomputedChunkSize) q n r
+  | 14 => lookupPrecomputedChunk? precomputedTable_chunk_14 (14 * precomputedChunkSize) q n r
+  | 15 => lookupPrecomputedChunk? precomputedTable_chunk_15 (15 * precomputedChunkSize) q n r
+  | 16 => lookupPrecomputedChunk? precomputedTable_chunk_16 (16 * precomputedChunkSize) q n r
+  | 17 => lookupPrecomputedChunk? precomputedTable_chunk_17 (17 * precomputedChunkSize) q n r
+  | 18 => lookupPrecomputedChunk? precomputedTable_chunk_18 (18 * precomputedChunkSize) q n r
+  | 19 => lookupPrecomputedChunk? precomputedTable_chunk_19 (19 * precomputedChunkSize) q n r
+  | 20 => lookupPrecomputedChunk? precomputedTable_chunk_20 (20 * precomputedChunkSize) q n r
+  | 21 => lookupPrecomputedChunk? precomputedTable_chunk_21 (21 * precomputedChunkSize) q n r
+  | 22 => lookupPrecomputedChunk? precomputedTable_chunk_22 (22 * precomputedChunkSize) q n r
+  | 23 => lookupPrecomputedChunk? precomputedTable_chunk_23 (23 * precomputedChunkSize) q n r
+  | 24 => lookupPrecomputedChunk? precomputedTable_chunk_24 (24 * precomputedChunkSize) q n r
+  | 25 => lookupPrecomputedChunk? precomputedTable_chunk_25 (25 * precomputedChunkSize) q n r
+  | 26 => lookupPrecomputedChunk? precomputedTable_chunk_26 (26 * precomputedChunkSize) q n r
+  | 27 => lookupPrecomputedChunk? precomputedTable_chunk_27 (27 * precomputedChunkSize) q n r
+  | 28 => lookupPrecomputedChunk? precomputedTable_chunk_28 (28 * precomputedChunkSize) q n r
+  | 29 => lookupPrecomputedChunk? precomputedTable_chunk_29 (29 * precomputedChunkSize) q n r
+  | 30 => lookupPrecomputedChunk? precomputedTable_chunk_30 (30 * precomputedChunkSize) q n r
+  | 31 => lookupPrecomputedChunk? precomputedTable_chunk_31 (31 * precomputedChunkSize) q n r
+  | 32 => lookupPrecomputedChunk? precomputedTable_chunk_32 (32 * precomputedChunkSize) q n r
+  | 33 => lookupPrecomputedChunk? precomputedTable_chunk_33 (33 * precomputedChunkSize) q n r
+  | 34 => lookupPrecomputedChunk? precomputedTable_chunk_34 (34 * precomputedChunkSize) q n r
+  | 35 => lookupPrecomputedChunk? precomputedTable_chunk_35 (35 * precomputedChunkSize) q n r
+  | 36 => lookupPrecomputedChunk? precomputedTable_chunk_36 (36 * precomputedChunkSize) q n r
+  | 37 => lookupPrecomputedChunk? precomputedTable_chunk_37 (37 * precomputedChunkSize) q n r
+  | 38 => lookupPrecomputedChunk? precomputedTable_chunk_38 (38 * precomputedChunkSize) q n r
+  | 39 => lookupPrecomputedChunk? precomputedTable_chunk_39 (39 * precomputedChunkSize) q n r
+  | 40 => lookupPrecomputedChunk? precomputedTable_chunk_40 (40 * precomputedChunkSize) q n r
+  | 41 => lookupPrecomputedChunk? precomputedTable_chunk_41 (41 * precomputedChunkSize) q n r
+  | 42 => lookupPrecomputedChunk? precomputedTable_chunk_42 (42 * precomputedChunkSize) q n r
+  | 43 => lookupPrecomputedChunk? precomputedTable_chunk_43 (43 * precomputedChunkSize) q n r
+  | 44 => lookupPrecomputedChunk? precomputedTable_chunk_44 (44 * precomputedChunkSize) q n r
+  | 45 => lookupPrecomputedChunk? precomputedTable_chunk_45 (45 * precomputedChunkSize) q n r
+  | 46 => lookupPrecomputedChunk? precomputedTable_chunk_46 (46 * precomputedChunkSize) q n r
+  | 47 => lookupPrecomputedChunk? precomputedTable_chunk_47 (47 * precomputedChunkSize) q n r
+  | 48 => lookupPrecomputedChunk? precomputedTable_chunk_48 (48 * precomputedChunkSize) q n r
+  | 49 => lookupPrecomputedChunk? precomputedTable_chunk_49 (49 * precomputedChunkSize) q n r
+  | 50 => lookupPrecomputedChunk? precomputedTable_chunk_50 (50 * precomputedChunkSize) q n r
+  | 51 => lookupPrecomputedChunk? precomputedTable_chunk_51 (51 * precomputedChunkSize) q n r
+  | 52 => lookupPrecomputedChunk? precomputedTable_chunk_52 (52 * precomputedChunkSize) q n r
+  | 53 => lookupPrecomputedChunk? precomputedTable_chunk_53 (53 * precomputedChunkSize) q n r
+  | 54 => lookupPrecomputedChunk? precomputedTable_chunk_54 (54 * precomputedChunkSize) q n r
+  | 55 => lookupPrecomputedChunk? precomputedTable_chunk_55 (55 * precomputedChunkSize) q n r
+  | 56 => lookupPrecomputedChunk? precomputedTable_chunk_56 (56 * precomputedChunkSize) q n r
+  | 57 => lookupPrecomputedChunk? precomputedTable_chunk_57 (57 * precomputedChunkSize) q n r
+  | 58 => lookupPrecomputedChunk? precomputedTable_chunk_58 (58 * precomputedChunkSize) q n r
+  | 59 => lookupPrecomputedChunk? precomputedTable_chunk_59 (59 * precomputedChunkSize) q n r
+  | 60 => lookupPrecomputedChunk? precomputedTable_chunk_60 (60 * precomputedChunkSize) q n r
+  | 61 => lookupPrecomputedChunk? precomputedTable_chunk_61 (61 * precomputedChunkSize) q n r
+  | 62 => lookupPrecomputedChunk? precomputedTable_chunk_62 (62 * precomputedChunkSize) q n r
+  | 63 => lookupPrecomputedChunk? precomputedTable_chunk_63 (63 * precomputedChunkSize) q n r
+  | 64 => lookupPrecomputedChunk? precomputedTable_chunk_64 (64 * precomputedChunkSize) q n r
+  | 65 => lookupPrecomputedChunk? precomputedTable_chunk_65 (65 * precomputedChunkSize) q n r
+  | 66 => lookupPrecomputedChunk? precomputedTable_chunk_66 (66 * precomputedChunkSize) q n r
+  | 67 => lookupPrecomputedChunk? precomputedTable_chunk_67 (67 * precomputedChunkSize) q n r
+  | 68 => lookupPrecomputedChunk? precomputedTable_chunk_68 (68 * precomputedChunkSize) q n r
+  | 69 => lookupPrecomputedChunk? precomputedTable_chunk_69 (69 * precomputedChunkSize) q n r
+  | 70 => lookupPrecomputedChunk? precomputedTable_chunk_70 (70 * precomputedChunkSize) q n r
+  | 71 => lookupPrecomputedChunk? precomputedTable_chunk_71 (71 * precomputedChunkSize) q n r
+  | 72 => lookupPrecomputedChunk? precomputedTable_chunk_72 (72 * precomputedChunkSize) q n r
+  | 73 => lookupPrecomputedChunk? precomputedTable_chunk_73 (73 * precomputedChunkSize) q n r
+  | 74 => lookupPrecomputedChunk? precomputedTable_chunk_74 (74 * precomputedChunkSize) q n r
+  | 75 => lookupPrecomputedChunk? precomputedTable_chunk_75 (75 * precomputedChunkSize) q n r
+  | 76 => lookupPrecomputedChunk? precomputedTable_chunk_76 (76 * precomputedChunkSize) q n r
+  | 77 => lookupPrecomputedChunk? precomputedTable_chunk_77 (77 * precomputedChunkSize) q n r
+  | 78 => lookupPrecomputedChunk? precomputedTable_chunk_78 (78 * precomputedChunkSize) q n r
+  | 79 => lookupPrecomputedChunk? precomputedTable_chunk_79 (79 * precomputedChunkSize) q n r
+  | 80 => lookupPrecomputedChunk? precomputedTable_chunk_80 (80 * precomputedChunkSize) q n r
+  | 81 => lookupPrecomputedChunk? precomputedTable_chunk_81 (81 * precomputedChunkSize) q n r
+  | 82 => lookupPrecomputedChunk? precomputedTable_chunk_82 (82 * precomputedChunkSize) q n r
+  | 83 => lookupPrecomputedChunk? precomputedTable_chunk_83 (83 * precomputedChunkSize) q n r
+  | 84 => lookupPrecomputedChunk? precomputedTable_chunk_84 (84 * precomputedChunkSize) q n r
+  | 85 => lookupPrecomputedChunk? precomputedTable_chunk_85 (85 * precomputedChunkSize) q n r
+  | 86 => lookupPrecomputedChunk? precomputedTable_chunk_86 (86 * precomputedChunkSize) q n r
+  | 87 => lookupPrecomputedChunk? precomputedTable_chunk_87 (87 * precomputedChunkSize) q n r
+  | 88 => lookupPrecomputedChunk? precomputedTable_chunk_88 (88 * precomputedChunkSize) q n r
+  | 89 => lookupPrecomputedChunk? precomputedTable_chunk_89 (89 * precomputedChunkSize) q n r
+  | 90 => lookupPrecomputedChunk? precomputedTable_chunk_90 (90 * precomputedChunkSize) q n r
+  | 91 => lookupPrecomputedChunk? precomputedTable_chunk_91 (91 * precomputedChunkSize) q n r
+  | 92 => lookupPrecomputedChunk? precomputedTable_chunk_92 (92 * precomputedChunkSize) q n r
+  | 93 => lookupPrecomputedChunk? precomputedTable_chunk_93 (93 * precomputedChunkSize) q n r
+  | 94 => lookupPrecomputedChunk? precomputedTable_chunk_94 (94 * precomputedChunkSize) q n r
+  | 95 => lookupPrecomputedChunk? precomputedTable_chunk_95 (95 * precomputedChunkSize) q n r
+  | 96 => lookupPrecomputedChunk? precomputedTable_chunk_96 (96 * precomputedChunkSize) q n r
+  | 97 => lookupPrecomputedChunk? precomputedTable_chunk_97 (97 * precomputedChunkSize) q n r
+  | 98 => lookupPrecomputedChunk? precomputedTable_chunk_98 (98 * precomputedChunkSize) q n r
+  | 99 => lookupPrecomputedChunk? precomputedTable_chunk_99 (99 * precomputedChunkSize) q n r
+  | 100 => lookupPrecomputedChunk? precomputedTable_chunk_100 (100 * precomputedChunkSize) q n r
+  | 101 => lookupPrecomputedChunk? precomputedTable_chunk_101 (101 * precomputedChunkSize) q n r
+  | 102 => lookupPrecomputedChunk? precomputedTable_chunk_102 (102 * precomputedChunkSize) q n r
+  | 103 => lookupPrecomputedChunk? precomputedTable_chunk_103 (103 * precomputedChunkSize) q n r
+  | 104 => lookupPrecomputedChunk? precomputedTable_chunk_104 (104 * precomputedChunkSize) q n r
+  | 105 => lookupPrecomputedChunk? precomputedTable_chunk_105 (105 * precomputedChunkSize) q n r
+  | 106 => lookupPrecomputedChunk? precomputedTable_chunk_106 (106 * precomputedChunkSize) q n r
+  | 107 => lookupPrecomputedChunk? precomputedTable_chunk_107 (107 * precomputedChunkSize) q n r
+  | 108 => lookupPrecomputedChunk? precomputedTable_chunk_108 (108 * precomputedChunkSize) q n r
+  | 109 => lookupPrecomputedChunk? precomputedTable_chunk_109 (109 * precomputedChunkSize) q n r
+  | 110 => lookupPrecomputedChunk? precomputedTable_chunk_110 (110 * precomputedChunkSize) q n r
+  | 111 => lookupPrecomputedChunk? precomputedTable_chunk_111 (111 * precomputedChunkSize) q n r
+  | 112 => lookupPrecomputedChunk? precomputedTable_chunk_112 (112 * precomputedChunkSize) q n r
+  | 113 => lookupPrecomputedChunk? precomputedTable_chunk_113 (113 * precomputedChunkSize) q n r
+  | 114 => lookupPrecomputedChunk? precomputedTable_chunk_114 (114 * precomputedChunkSize) q n r
+  | 115 => lookupPrecomputedChunk? precomputedTable_chunk_115 (115 * precomputedChunkSize) q n r
+  | 116 => lookupPrecomputedChunk? precomputedTable_chunk_116 (116 * precomputedChunkSize) q n r
+  | 117 => lookupPrecomputedChunk? precomputedTable_chunk_117 (117 * precomputedChunkSize) q n r
+  | 118 => lookupPrecomputedChunk? precomputedTable_chunk_118 (118 * precomputedChunkSize) q n r
+  | 119 => lookupPrecomputedChunk? precomputedTable_chunk_119 (119 * precomputedChunkSize) q n r
+  | 120 => lookupPrecomputedChunk? precomputedTable_chunk_120 (120 * precomputedChunkSize) q n r
+  | 121 => lookupPrecomputedChunk? precomputedTable_chunk_121 (121 * precomputedChunkSize) q n r
+  | 122 => lookupPrecomputedChunk? precomputedTable_chunk_122 (122 * precomputedChunkSize) q n r
+  | 123 => lookupPrecomputedChunk? precomputedTable_chunk_123 (123 * precomputedChunkSize) q n r
+  | 124 => lookupPrecomputedChunk? precomputedTable_chunk_124 (124 * precomputedChunkSize) q n r
+  | 125 => lookupPrecomputedChunk? precomputedTable_chunk_125 (125 * precomputedChunkSize) q n r
+  | 126 => lookupPrecomputedChunk? precomputedTable_chunk_126 (126 * precomputedChunkSize) q n r
+  | 127 => lookupPrecomputedChunk? precomputedTable_chunk_127 (127 * precomputedChunkSize) q n r
+  | 128 => lookupPrecomputedChunk? precomputedTable_chunk_128 (128 * precomputedChunkSize) q n r
+  | 129 => lookupPrecomputedChunk? precomputedTable_chunk_129 (129 * precomputedChunkSize) q n r
+  | 130 => lookupPrecomputedChunk? precomputedTable_chunk_130 (130 * precomputedChunkSize) q n r
+  | 131 => lookupPrecomputedChunk? precomputedTable_chunk_131 (131 * precomputedChunkSize) q n r
+  | 132 => lookupPrecomputedChunk? precomputedTable_chunk_132 (132 * precomputedChunkSize) q n r
+  | 133 => lookupPrecomputedChunk? precomputedTable_chunk_133 (133 * precomputedChunkSize) q n r
+  | 134 => lookupPrecomputedChunk? precomputedTable_chunk_134 (134 * precomputedChunkSize) q n r
+  | 135 => lookupPrecomputedChunk? precomputedTable_chunk_135 (135 * precomputedChunkSize) q n r
+  | 136 => lookupPrecomputedChunk? precomputedTable_chunk_136 (136 * precomputedChunkSize) q n r
+  | 137 => lookupPrecomputedChunk? precomputedTable_chunk_137 (137 * precomputedChunkSize) q n r
+  | 138 => lookupPrecomputedChunk? precomputedTable_chunk_138 (138 * precomputedChunkSize) q n r
+  | 139 => lookupPrecomputedChunk? precomputedTable_chunk_139 (139 * precomputedChunkSize) q n r
+  | 140 => lookupPrecomputedChunk? precomputedTable_chunk_140 (140 * precomputedChunkSize) q n r
+  | 141 => lookupPrecomputedChunk? precomputedTable_chunk_141 (141 * precomputedChunkSize) q n r
+  | 142 => lookupPrecomputedChunk? precomputedTable_chunk_142 (142 * precomputedChunkSize) q n r
+  | 143 => lookupPrecomputedChunk? precomputedTable_chunk_143 (143 * precomputedChunkSize) q n r
+  | 144 => lookupPrecomputedChunk? precomputedTable_chunk_144 (144 * precomputedChunkSize) q n r
+  | 145 => lookupPrecomputedChunk? precomputedTable_chunk_145 (145 * precomputedChunkSize) q n r
+  | 146 => lookupPrecomputedChunk? precomputedTable_chunk_146 (146 * precomputedChunkSize) q n r
+  | 147 => lookupPrecomputedChunk? precomputedTable_chunk_147 (147 * precomputedChunkSize) q n r
+  | 148 => lookupPrecomputedChunk? precomputedTable_chunk_148 (148 * precomputedChunkSize) q n r
+  | 149 => lookupPrecomputedChunk? precomputedTable_chunk_149 (149 * precomputedChunkSize) q n r
+  | 150 => lookupPrecomputedChunk? precomputedTable_chunk_150 (150 * precomputedChunkSize) q n r
+  | 151 => lookupPrecomputedChunk? precomputedTable_chunk_151 (151 * precomputedChunkSize) q n r
+  | 152 => lookupPrecomputedChunk? precomputedTable_chunk_152 (152 * precomputedChunkSize) q n r
+  | 153 => lookupPrecomputedChunk? precomputedTable_chunk_153 (153 * precomputedChunkSize) q n r
+  | 154 => lookupPrecomputedChunk? precomputedTable_chunk_154 (154 * precomputedChunkSize) q n r
+  | 155 => lookupPrecomputedChunk? precomputedTable_chunk_155 (155 * precomputedChunkSize) q n r
+  | 156 => lookupPrecomputedChunk? precomputedTable_chunk_156 (156 * precomputedChunkSize) q n r
+  | 157 => lookupPrecomputedChunk? precomputedTable_chunk_157 (157 * precomputedChunkSize) q n r
+  | 158 => lookupPrecomputedChunk? precomputedTable_chunk_158 (158 * precomputedChunkSize) q n r
+  | 159 => lookupPrecomputedChunk? precomputedTable_chunk_159 (159 * precomputedChunkSize) q n r
+  | 160 => lookupPrecomputedChunk? precomputedTable_chunk_160 (160 * precomputedChunkSize) q n r
+  | 161 => lookupPrecomputedChunk? precomputedTable_chunk_161 (161 * precomputedChunkSize) q n r
+  | 162 => lookupPrecomputedChunk? precomputedTable_chunk_162 (162 * precomputedChunkSize) q n r
+  | 163 => lookupPrecomputedChunk? precomputedTable_chunk_163 (163 * precomputedChunkSize) q n r
+  | 164 => lookupPrecomputedChunk? precomputedTable_chunk_164 (164 * precomputedChunkSize) q n r
+  | 165 => lookupPrecomputedChunk? precomputedTable_chunk_165 (165 * precomputedChunkSize) q n r
+  | 166 => lookupPrecomputedChunk? precomputedTable_chunk_166 (166 * precomputedChunkSize) q n r
+  | 167 => lookupPrecomputedChunk? precomputedTable_chunk_167 (167 * precomputedChunkSize) q n r
+  | 168 => lookupPrecomputedChunk? precomputedTable_chunk_168 (168 * precomputedChunkSize) q n r
+  | 169 => lookupPrecomputedChunk? precomputedTable_chunk_169 (169 * precomputedChunkSize) q n r
+  | 170 => lookupPrecomputedChunk? precomputedTable_chunk_170 (170 * precomputedChunkSize) q n r
+  | 171 => lookupPrecomputedChunk? precomputedTable_chunk_171 (171 * precomputedChunkSize) q n r
+  | 172 => lookupPrecomputedChunk? precomputedTable_chunk_172 (172 * precomputedChunkSize) q n r
+  | 173 => lookupPrecomputedChunk? precomputedTable_chunk_173 (173 * precomputedChunkSize) q n r
+  | 174 => lookupPrecomputedChunk? precomputedTable_chunk_174 (174 * precomputedChunkSize) q n r
+  | 175 => lookupPrecomputedChunk? precomputedTable_chunk_175 (175 * precomputedChunkSize) q n r
+  | 176 => lookupPrecomputedChunk? precomputedTable_chunk_176 (176 * precomputedChunkSize) q n r
+  | 177 => lookupPrecomputedChunk? precomputedTable_chunk_177 (177 * precomputedChunkSize) q n r
+  | 178 => lookupPrecomputedChunk? precomputedTable_chunk_178 (178 * precomputedChunkSize) q n r
+  | 179 => lookupPrecomputedChunk? precomputedTable_chunk_179 (179 * precomputedChunkSize) q n r
+  | 180 => lookupPrecomputedChunk? precomputedTable_chunk_180 (180 * precomputedChunkSize) q n r
+  | 181 => lookupPrecomputedChunk? precomputedTable_chunk_181 (181 * precomputedChunkSize) q n r
+  | 182 => lookupPrecomputedChunk? precomputedTable_chunk_182 (182 * precomputedChunkSize) q n r
+  | 183 => lookupPrecomputedChunk? precomputedTable_chunk_183 (183 * precomputedChunkSize) q n r
+  | 184 => lookupPrecomputedChunk? precomputedTable_chunk_184 (184 * precomputedChunkSize) q n r
+  | 185 => lookupPrecomputedChunk? precomputedTable_chunk_185 (185 * precomputedChunkSize) q n r
+  | 186 => lookupPrecomputedChunk? precomputedTable_chunk_186 (186 * precomputedChunkSize) q n r
+  | 187 => lookupPrecomputedChunk? precomputedTable_chunk_187 (187 * precomputedChunkSize) q n r
+  | 188 => lookupPrecomputedChunk? precomputedTable_chunk_188 (188 * precomputedChunkSize) q n r
+  | 189 => lookupPrecomputedChunk? precomputedTable_chunk_189 (189 * precomputedChunkSize) q n r
+  | 190 => lookupPrecomputedChunk? precomputedTable_chunk_190 (190 * precomputedChunkSize) q n r
+  | 191 => lookupPrecomputedChunk? precomputedTable_chunk_191 (191 * precomputedChunkSize) q n r
+  | 192 => lookupPrecomputedChunk? precomputedTable_chunk_192 (192 * precomputedChunkSize) q n r
+  | 193 => lookupPrecomputedChunk? precomputedTable_chunk_193 (193 * precomputedChunkSize) q n r
+  | 194 => lookupPrecomputedChunk? precomputedTable_chunk_194 (194 * precomputedChunkSize) q n r
+  | 195 => lookupPrecomputedChunk? precomputedTable_chunk_195 (195 * precomputedChunkSize) q n r
+  | 196 => lookupPrecomputedChunk? precomputedTable_chunk_196 (196 * precomputedChunkSize) q n r
+  | 197 => lookupPrecomputedChunk? precomputedTable_chunk_197 (197 * precomputedChunkSize) q n r
+  | 198 => lookupPrecomputedChunk? precomputedTable_chunk_198 (198 * precomputedChunkSize) q n r
+  | 199 => lookupPrecomputedChunk? precomputedTable_chunk_199 (199 * precomputedChunkSize) q n r
+  | 200 => lookupPrecomputedChunk? precomputedTable_chunk_200 (200 * precomputedChunkSize) q n r
+  | 201 => lookupPrecomputedChunk? precomputedTable_chunk_201 (201 * precomputedChunkSize) q n r
+  | 202 => lookupPrecomputedChunk? precomputedTable_chunk_202 (202 * precomputedChunkSize) q n r
+  | 203 => lookupPrecomputedChunk? precomputedTable_chunk_203 (203 * precomputedChunkSize) q n r
+  | 204 => lookupPrecomputedChunk? precomputedTable_chunk_204 (204 * precomputedChunkSize) q n r
+  | 205 => lookupPrecomputedChunk? precomputedTable_chunk_205 (205 * precomputedChunkSize) q n r
+  | 206 => lookupPrecomputedChunk? precomputedTable_chunk_206 (206 * precomputedChunkSize) q n r
+  | 207 => lookupPrecomputedChunk? precomputedTable_chunk_207 (207 * precomputedChunkSize) q n r
+  | 208 => lookupPrecomputedChunk? precomputedTable_chunk_208 (208 * precomputedChunkSize) q n r
+  | 209 => lookupPrecomputedChunk? precomputedTable_chunk_209 (209 * precomputedChunkSize) q n r
+  | 210 => lookupPrecomputedChunk? precomputedTable_chunk_210 (210 * precomputedChunkSize) q n r
+  | 211 => lookupPrecomputedChunk? precomputedTable_chunk_211 (211 * precomputedChunkSize) q n r
+  | _ => none
 
 def lookupPrecomputed? (q n r : Nat) : Option (CertifiedBoundEntry q n r) :=
-  lookupEntry? precomputedTable q n r
+  match keyToIndex? { q, n, r } with
+  | none => none
+  | some i =>
+    lookupPrecomputedChunkByIndex? (i / precomputedChunkSize) q n r
 
 def lookupPrecomputed (q n r : Nat) : CertifiedBoundEntry q n r :=
   match lookupPrecomputed? q n r with
