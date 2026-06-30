@@ -239,6 +239,16 @@ private def tailPairValues3 {q : Nat} (C : Finset (QaryWord q 3)) (j : Fin 3) :
     Finset (Fin q × Fin q) :=
   C.image (fun w => (deleteCoord j w 0, deleteCoord j w 1))
 
+private def tailPairValuesOutsideBox3 {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) (a : Fin q) (R S : Finset (Fin q)) :
+    Finset (Fin q × Fin q) :=
+  (C.filter (fun w => w j ≠ a ∧ deleteCoord j w 0 ∈ R ∧ deleteCoord j w 1 ∈ S)).image
+    (fun w => (deleteCoord j w 0, deleteCoord j w 1))
+
+private def tailFirstRows3 {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) (T : Finset (Fin q)) : Finset (QaryWord q 3) :=
+  C.filter (fun w => deleteCoord j w 0 ∈ T)
+
 private theorem missingTailFirst_card_ge_of_small_fiber {q s : Nat}
     (C : Finset (QaryWord q 3)) (j : Fin 3) (a : Fin q)
     (hrow : (coordFiber3 C j a).card ≤ s) :
@@ -326,6 +336,266 @@ private theorem forced_tail_pair_subset_of_fiber_cover {q : Nat}
     · have h1 := congrFun htail_eq.symm (1 : Fin 2)
       simpa [x] using h1
 
+private theorem forced_tail_pair_subset_of_outside_box {q : Nat}
+    (C : Finset (QaryWord q 3)) (hC : CoversFinset C 1)
+    (j : Fin 3) (a : Fin q) {R S : Finset (Fin q)}
+    (hR : R ⊆ missingTailFirstInFiber3 C j a)
+    (hS : S ⊆ missingTailSecondInFiber3 C j a) :
+    R ×ˢ S ⊆ tailPairValuesOutsideBox3 C j a R S := by
+  intro p hp
+  rw [Finset.mem_product] at hp
+  rcases hp with ⟨hpR, hpS⟩
+  have hp0 : p.1 ∈ missingTailFirstInFiber3 C j a := hR hpR
+  have hp1 : p.2 ∈ missingTailSecondInFiber3 C j a := hS hpS
+  have hp0' := hp0
+  have hp1' := hp1
+  rw [missingTailFirstInFiber3, Finset.mem_sdiff] at hp0'
+  rw [missingTailSecondInFiber3, Finset.mem_sdiff] at hp1'
+  let x : QaryWord q 2 := ![p.1, p.2]
+  obtain ⟨d, hdC, hdist⟩ := hC (insertCoord j a x)
+  by_cases hdj : d j = a
+  · have hdFiber : d ∈ coordFiber3 C j a := by
+      simp [coordFiber3, hdC, hdj]
+    have htail0 : x 0 ≠ deleteCoord j d 0 := by
+      intro h
+      exact hp0'.2 (by
+        refine Finset.mem_image.mpr ⟨d, hdFiber, ?_⟩
+        simpa [x] using h.symm)
+    have htail1 : x 1 ≠ deleteCoord j d 1 := by
+      intro h
+      exact hp1'.2 (by
+        refine Finset.mem_image.mpr ⟨d, hdFiber, ?_⟩
+        simpa [x] using h.symm)
+    have htail_two : dist x (deleteCoord j d) = 2 :=
+      dist_fin_two_eq_two_of_both_ne x (deleteCoord j d) htail0 htail1
+    have htail_le := dist_deleteCoord_le_dist_insertCoord j a x d
+    have hfull_ge : 2 ≤ dist (insertCoord j a x) d := by
+      calc
+        2 = dist x (deleteCoord j d) := htail_two.symm
+        _ ≤ dist (insertCoord j a x) d := htail_le
+    omega
+  · have hdrop := dist_deleteCoord_insertCoord_add_one_le j a x d hdj
+    have htail_zero : dist x (deleteCoord j d) = 0 := by
+      have hle : dist x (deleteCoord j d) + 1 ≤ 1 := hdrop.trans hdist
+      omega
+    have htail_eq : x = deleteCoord j d := dist_eq_zero.mp htail_zero
+    refine Finset.mem_image.mpr ⟨d, ?_, ?_⟩
+    · simp [hdC, hdj]
+      constructor
+      · have h0 := congrFun htail_eq (0 : Fin 2)
+        have h0' : p.1 = d (j.succAbove 0) := by
+          simpa [x, deleteCoord] using h0
+        exact h0' ▸ hpR
+      · have h1 := congrFun htail_eq (1 : Fin 2)
+        have h1' : p.2 = d (j.succAbove 1) := by
+          simpa [x, deleteCoord] using h1
+        exact h1' ▸ hpS
+    · apply Prod.ext
+      · have h0 := congrFun htail_eq.symm (0 : Fin 2)
+        simpa [x] using h0
+      · have h1 := congrFun htail_eq.symm (1 : Fin 2)
+        simpa [x] using h1
+
+private theorem tailFirstRows_card_eq_sum {q : Nat}
+    (C : Finset (QaryWord q 3)) (j : Fin 3) (T : Finset (Fin q)) :
+    (tailFirstRows3 C j T).card =
+      ∑ b ∈ T, ((tailFirstRows3 C j T).filter
+        (fun w => deleteCoord j w 0 = b)).card := by
+  unfold tailFirstRows3
+  simpa using
+    (Finset.card_eq_sum_card_fiberwise
+      (s := C.filter (fun w => deleteCoord j w 0 ∈ T)) (t := T)
+      (f := fun w : QaryWord q 3 => deleteCoord j w 0)
+      (by
+        intro w hw
+        exact (Finset.mem_filter.mp hw).2))
+
+private theorem tailFirstRows_card_lower {q m : Nat}
+    (C : Finset (QaryWord q 3)) (j : Fin 3) (T : Finset (Fin q))
+    (hT : T.card = m)
+    (hmin : ∀ b ∈ T, m ≤ ((tailFirstRows3 C j T).filter
+      (fun w => deleteCoord j w 0 = b)).card) :
+    m * m ≤ (tailFirstRows3 C j T).card := by
+  rw [tailFirstRows_card_eq_sum C j T]
+  calc
+    m * m = T.card * m := by rw [hT]
+    _ = ∑ _b ∈ T, m := by simp [Finset.sum_const]
+    _ ≤ ∑ b ∈ T, ((tailFirstRows3 C j T).filter
+        (fun w => deleteCoord j w 0 = b)).card := by
+      exact Finset.sum_le_sum (fun b hb => hmin b hb)
+
+private theorem cross_section_quadratic_lower {q : Nat}
+    (C : Finset (QaryWord q 3)) (hC : CoversFinset C 1)
+    (j : Fin 3) (a : Fin q)
+    (hmin : ∀ j' a', (coordFiber3 C j a).card ≤ (coordFiber3 C j' a').card)
+    (hsmall : (coordFiber3 C j a).card ≤ q) :
+    (coordFiber3 C j a).card * (coordFiber3 C j a).card +
+        (q - (coordFiber3 C j a).card) * (q - (coordFiber3 C j a).card) ≤ C.card := by
+  let m := (coordFiber3 C j a).card
+  have hmissFirst : q - m ≤ (missingTailFirstInFiber3 C j a).card := by
+    simpa [m] using
+      missingTailFirst_card_ge_of_small_fiber (q := q) (s := m) C j a le_rfl
+  have hmissSecond : q - m ≤ (missingTailSecondInFiber3 C j a).card := by
+    simpa [m] using
+      missingTailSecond_card_ge_of_small_fiber (q := q) (s := m) C j a le_rfl
+  obtain ⟨R, hRsubset, hRcard⟩ := Finset.exists_subset_card_eq hmissFirst
+  obtain ⟨S, hSsubset, hScard⟩ := Finset.exists_subset_card_eq hmissSecond
+  let T : Finset (Fin q) := Finset.univ \ R
+  have hTcard : T.card = m := by
+    have hR_univ : R ⊆ (Finset.univ : Finset (Fin q)) := by intro x _; simp
+    change (Finset.univ \ R).card = m
+    rw [Finset.card_sdiff_of_subset hR_univ, hRcard]
+    simp [Fintype.card_fin]
+    omega
+  have hbox_subset :
+      R ×ˢ S ⊆ tailPairValuesOutsideBox3 C j a R S :=
+    forced_tail_pair_subset_of_outside_box C hC j a hRsubset hSsubset
+  have hbox_card :
+      (q - m) * (q - m) ≤
+        (C.filter (fun w => w j ≠ a ∧ deleteCoord j w 0 ∈ R ∧ deleteCoord j w 1 ∈ S)).card := by
+    calc
+      (q - m) * (q - m) = (R ×ˢ S).card := by simp [Finset.card_product, hRcard, hScard]
+      _ ≤ (tailPairValuesOutsideBox3 C j a R S).card := Finset.card_le_card hbox_subset
+      _ ≤ (C.filter (fun w => w j ≠ a ∧ deleteCoord j w 0 ∈ R ∧ deleteCoord j w 1 ∈ S)).card :=
+        Finset.card_image_le
+  have hrow_min :
+      ∀ b ∈ T, m ≤ ((tailFirstRows3 C j T).filter
+        (fun w => deleteCoord j w 0 = b)).card := by
+    intro b hb
+    have h := hmin (j.succAbove 0) b
+    have heq :
+        (tailFirstRows3 C j T).filter (fun w => deleteCoord j w 0 = b) =
+          C.filter (fun w => deleteCoord j w 0 = b) := by
+      ext w
+      simp only [tailFirstRows3, Finset.mem_filter]
+      constructor
+      · rintro ⟨⟨hwC, _hwT⟩, hwb⟩
+        exact ⟨hwC, hwb⟩
+      · rintro ⟨hwC, hwb⟩
+        exact ⟨⟨hwC, by rw [hwb]; exact hb⟩, hwb⟩
+    have h' : m ≤ (C.filter (fun w => deleteCoord j w 0 = b)).card := by
+      simpa [m, coordFiber3, deleteCoord] using h
+    rw [heq]
+    exact h'
+  have hrows_card : m * m ≤ (tailFirstRows3 C j T).card :=
+    tailFirstRows_card_lower C j T hTcard hrow_min
+  have hdisjoint :
+      Disjoint
+        (C.filter (fun w => w j ≠ a ∧ deleteCoord j w 0 ∈ R ∧ deleteCoord j w 1 ∈ S))
+        (tailFirstRows3 C j T) := by
+    rw [Finset.disjoint_left]
+    intro w hwbox hwrow
+    have hwrow' : w ∈ C ∧ deleteCoord j w 0 ∈ T := by
+      simpa [tailFirstRows3] using hwrow
+    have hrowT : deleteCoord j w 0 ∈ T := hwrow'.2
+    have hboxR : deleteCoord j w 0 ∈ R :=
+      (Finset.mem_filter.mp hwbox).2.2.1
+    change deleteCoord j w 0 ∈ Finset.univ \ R at hrowT
+    rw [Finset.mem_sdiff] at hrowT
+    exact hrowT.2 hboxR
+  have hunion_subset :
+      (C.filter (fun w => w j ≠ a ∧ deleteCoord j w 0 ∈ R ∧ deleteCoord j w 1 ∈ S)) ∪
+          tailFirstRows3 C j T ⊆ C := by
+    intro w hw
+    rcases Finset.mem_union.mp hw with h | h
+    · exact (Finset.mem_filter.mp h).1
+    · have h' : w ∈ C ∧ deleteCoord j w 0 ∈ T := by
+        simpa [tailFirstRows3] using h
+      exact h'.1
+  have htotal :
+      (C.filter (fun w => w j ≠ a ∧ deleteCoord j w 0 ∈ R ∧ deleteCoord j w 1 ∈ S)).card +
+          (tailFirstRows3 C j T).card ≤ C.card := by
+    rw [← Finset.card_union_of_disjoint hdisjoint]
+    exact Finset.card_le_card hunion_subset
+  change m * m + (q - m) * (q - m) ≤ C.card
+  omega
+
+private theorem coordFiber3_card_sum {q : Nat} (C : Finset (QaryWord q 3))
+    (j : Fin 3) :
+    C.card = ∑ a : Fin q, (coordFiber3 C j a).card := by
+  unfold coordFiber3
+  simpa using
+    (Finset.card_eq_sum_card_fiberwise
+      (s := C) (t := (Finset.univ : Finset (Fin q)))
+      (f := fun w : QaryWord q 3 => w j) (by intro w _hw; simp))
+
+private theorem exists_min_coord_fiber3 {q : Nat} (C : Finset (QaryWord q 3))
+    (hq : 0 < q) :
+    ∃ j : Fin 3, ∃ a : Fin q,
+      ∀ j' a', (coordFiber3 C j a).card ≤ (coordFiber3 C j' a').card := by
+  let I : Finset (Fin 3 × Fin q) := Finset.univ
+  have hI : I.Nonempty := by
+    refine ⟨((0 : Fin 3), ⟨0, hq⟩), ?_⟩
+    simp [I]
+  obtain ⟨p, _hp, hpmin⟩ :=
+    Finset.exists_min_image I (fun p : Fin 3 × Fin q => (coordFiber3 C p.1 p.2).card) hI
+  refine ⟨p.1, p.2, ?_⟩
+  intro j' a'
+  exact hpmin (j', a') (by simp [I])
+
+private theorem half_square_le_quadratic {q m : Nat} (hm : m ≤ q) :
+    (q * q + 1) / 2 ≤ m * m + (q - m) * (q - m) := by
+  let t := q - m
+  let X := m * m + t * t
+  have htq : m + t = q := by
+    dsimp [t]
+    omega
+  have h2 : q * q ≤ 2 * X := by
+    have h2z : (q * q : Int) ≤ (2 * X : Int) := by
+      have hs := sq_nonneg ((m : Int) - (t : Int))
+      have htqz : (q : Int) = (m : Int) + (t : Int) := by exact_mod_cast htq.symm
+      dsimp [X]
+      norm_num at hs ⊢
+      nlinarith
+    exact_mod_cast h2z
+  have hceil : (q * q + 1) / 2 ≤ X := by
+    omega
+  simpa [X, t] using hceil
+
+theorem qaryThreeOneHalfSquareLower_valid (q : Nat) (hq : 0 < q) :
+    QaryKLower q 3 1 ((q * q + 1) / 2) := by
+  intro C hC
+  by_contra hnot
+  have hcard_lt : C.card < (q * q + 1) / 2 := Nat.lt_of_not_ge hnot
+  obtain ⟨j, a, hmin⟩ := exists_min_coord_fiber3 C hq
+  let m := (coordFiber3 C j a).card
+  have hqm : q * m ≤ C.card := by
+    calc
+      q * m = ∑ _b : Fin q, m := by simp [Finset.sum_const, Fintype.card_fin]
+      _ ≤ ∑ b : Fin q, (coordFiber3 C 0 b).card := by
+        exact Finset.sum_le_sum (fun b _hb => hmin 0 b)
+      _ = C.card := (coordFiber3_card_sum C 0).symm
+  have hsmall : m ≤ q := by
+    have htarget : (q * q + 1) / 2 ≤ q * q := by omega
+    by_contra hnot_small
+    have hgt : q < m := by omega
+    have hqm_gt : q * q < q * m := by nlinarith
+    omega
+  have hquad := cross_section_quadratic_lower C hC j a hmin hsmall
+  have harith : (q * q + 1) / 2 ≤ m * m + (q - m) * (q - m) :=
+    half_square_le_quadratic hsmall
+  exact hnot (harith.trans hquad)
+
+def qaryThreeOneHalfSquareLowerName : String :=
+  "lean_qary_three_one_half_square_lower"
+
+def qaryThreeOneHalfSquareLower (q n r : Nat) : Nat :=
+  if 0 < q ∧ n = 3 ∧ r = 1 then (q * q + 1) / 2 else zeroLower q n r
+
+theorem qaryThreeOneHalfSquareLower_source_valid (q n r : Nat) :
+    QaryKLower q n r (qaryThreeOneHalfSquareLower q n r) := by
+  by_cases h : 0 < q ∧ n = 3 ∧ r = 1
+  · rcases h with ⟨hq, rfl, rfl⟩
+    simpa [qaryThreeOneHalfSquareLower, hq] using
+      qaryThreeOneHalfSquareLower_valid q hq
+  · simpa [qaryThreeOneHalfSquareLower, h] using zeroLower_valid q n r
+
+def qaryThreeOneHalfSquareLowerSource : LowerBoundSource where
+  value := qaryThreeOneHalfSquareLower
+  trace := fun q n r =>
+    .primitive qaryThreeOneHalfSquareLowerName
+      (qaryThreeOneHalfSquareLower_source_valid q n r)
+
 /-- In a `7`-ary length-three radius-one cover with at most `21` words, no
 coordinate-symbol fiber can have size at most two. -/
 theorem qarySevenThreeOne_fiber_card_gt_two_of_card_le_twenty_one
@@ -354,15 +624,6 @@ theorem qarySevenThreeOne_fiber_card_gt_two_of_card_le_twenty_one
     Finset.card_le_card hsubset
   have hpairCard : (tailPairValues3 C j).card ≤ C.card := Finset.card_image_le
   omega
-
-private theorem coordFiber3_card_sum {q : Nat} (C : Finset (QaryWord q 3))
-    (j : Fin 3) :
-    C.card = ∑ a : Fin q, (coordFiber3 C j a).card := by
-  unfold coordFiber3
-  simpa using
-    (Finset.card_eq_sum_card_fiberwise
-      (s := C) (t := (Finset.univ : Finset (Fin q)))
-      (f := fun w : QaryWord q 3 => w j) (by intro w _hw; simp))
 
 private theorem qarySevenThreeOne_fiber_card_eq_three_of_card_le_twenty_one
     (C : Finset (QaryWord 7 3)) (hC : CoversFinset C 1)

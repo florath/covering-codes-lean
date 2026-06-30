@@ -10,13 +10,14 @@ namespace Database
 def primitiveLowerSource : LowerBoundSource :=
   sphereLowerSource.max
     (octonaryFourRadiusTwoLowerSource.max
-      (qarySevenThreeOneLowerSource.max
-        (sparseSliceLowerSource.max
-          (smallLowerTernary331LowerSource.max
-            (smallLowerBinary251LowerSource.max
-              (smallLowerBinary262LowerSource.max
-                (zeroRadiusLowerSource.max
-                  (largeRadiusLowerSource.max radiusNMinusOneLowerSource))))))))
+      (qaryThreeOneHalfSquareLowerSource.max
+        (qarySevenThreeOneLowerSource.max
+          (sparseSliceLowerSource.max
+            (smallLowerTernary331LowerSource.max
+              (smallLowerBinary251LowerSource.max
+                (smallLowerBinary262LowerSource.max
+                  (zeroRadiusLowerSource.max
+                    (largeRadiusLowerSource.max radiusNMinusOneLowerSource)))))))))
 
 def primitiveLower (q n r : Nat) : Nat :=
   primitiveLowerSource.value q n r

@@ -21,7 +21,7 @@ def precomputedTable_chunk_39 : Array AnyBoundEntry := #[
   { key := { q := 4, n := 3, r := 1 }
     lowerValue := 8
     upperValue := 8
-    lowerTrace := (.primitive "lean_sparse_slicer" (primitiveLower_valid 4 3 1))
+    lowerTrace := (.primitive "lean_qary_three_one_half_square_lower" (primitiveLower_valid 4 3 1))
     upperTrace := (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 4 3 1)) },
   { key := { q := 4, n := 3, r := 2 }
     lowerValue := 4

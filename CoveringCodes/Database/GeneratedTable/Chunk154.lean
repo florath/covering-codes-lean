@@ -329,9 +329,9 @@ def precomputedTable_chunk_154 : Array AnyBoundEntry := #[
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 16 3 0))
     upperTrace := (.primitive "rule_trivial_upper" (primitiveUpper_valid 16 3 0)) },
   { key := { q := 16, n := 3, r := 1 }
-    lowerValue := 100
+    lowerValue := 128
     upperValue := 128
-    lowerTrace := (.primitive "lean_sparse_slicer" (primitiveLower_valid 16 3 1))
+    lowerTrace := (.primitive "lean_qary_three_one_half_square_lower" (primitiveLower_valid 16 3 1))
     upperTrace := (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)) },
   { key := { q := 16, n := 3, r := 2 }
     lowerValue := 16

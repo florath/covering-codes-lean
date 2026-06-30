@@ -516,7 +516,7 @@ def precomputedTable_chunk_29 : Array AnyBoundEntry := #[
   { key := { q := 3, n := 3, r := 1 }
     lowerValue := 5
     upperValue := 5
-    lowerTrace := (.primitive "lean_small_lower_bounds" (primitiveLower_valid 3 3 1))
+    lowerTrace := (.primitive "lean_qary_three_one_half_square_lower" (primitiveLower_valid 3 3 1))
     upperTrace := (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 3 3 1)) },
   { key := { q := 3, n := 3, r := 2 }
     lowerValue := 3
