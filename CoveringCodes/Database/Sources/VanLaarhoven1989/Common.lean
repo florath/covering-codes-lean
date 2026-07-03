@@ -2,6 +2,7 @@ import CoveringCodes.Database.ExplicitCode
 import CoveringCodes.Database.ProofMode
 import CoveringCodes.Database.Source
 import CoveringCodes.Database.Sources.Trivial
+import Mathlib.Tactic
 
 namespace CoveringCodes
 namespace Database
@@ -68,6 +69,20 @@ theorem mem_ternaryPackedWords {n : ℕ} (x : QaryWord 3 n) :
       rw [List.mem_map]
       refine ⟨packedWord (Fin.tail x), ih (Fin.tail x), ?_⟩
       simp [packedWord, packedWordAux]
+
+theorem packedWordAux_lt_pow : (n : ℕ) → (x : QaryWord 3 n) → packedWordAux n x < 3 ^ n
+  | 0, _ => by simp [packedWordAux]
+  | n + 1, x => by
+      have htail := packedWordAux_lt_pow n (Fin.tail x)
+      have hhead : (x 0).val < 3 := (x 0).isLt
+      have htail_le : packedWordAux n (Fin.tail x) + 1 ≤ 3 ^ n :=
+        Nat.succ_le_of_lt htail
+      simp [packedWordAux, pow_succ]
+      omega
+
+theorem packedWord_lt_pow {n : ℕ} (x : QaryWord 3 n) :
+    packedWord x < 3 ^ n :=
+  packedWordAux_lt_pow n x
 
 def packedSetCoord : {n : ℕ} → ℕ → Fin n → Fin 3 → ℕ
   | 0, _, i, _ => Fin.elim0 i
@@ -216,12 +231,56 @@ theorem packedMoveCertEntry?_sound {n : ℕ} {packed cert : Array ℕ} {m : ℕ}
 def allPackedMoveCerts {n : ℕ} (packed cert : Array ℕ) : Bool :=
   (ternaryPackedWords n).all fun m => packedMoveCertEntry? (n := n) packed cert m
 
+def allPackedMoveCertsRange {n : ℕ} (packed cert : Array ℕ) (start len : ℕ) : Bool :=
+  (List.range len).all fun offset =>
+    packedMoveCertEntry? (n := n) packed cert (start + offset)
+
+theorem allPackedMoveCertsRange_sound {n : ℕ} {packed cert : Array ℕ} {start len m : ℕ}
+    (h : allPackedMoveCertsRange (n := n) packed cert start len = true)
+    (hlo : start ≤ m) (hhi : m < start + len) :
+    ∃ move : PackedMove n, packed.contains (move.applyPacked m) = true := by
+  have hoff : m - start ∈ List.range len := by
+    rw [List.mem_range]
+    omega
+  have hcheck := (List.all_eq_true.mp h) (m - start) hoff
+  have hstart : start + (m - start) = m := Nat.add_sub_of_le hlo
+  exact packedMoveCertEntry?_sound (by simpa [allPackedMoveCertsRange, hstart] using hcheck)
+
 theorem packedMoveCert_covers {n : ℕ} {packed cert : Array ℕ}
     (h : allPackedMoveCerts (n := n) packed cert = true) :
     CoversFinset (codeFromPacked n packed) 1 := by
   intro x
   have hx := (List.all_eq_true.mp h) (packedWord x) (mem_ternaryPackedWords x)
   rcases packedMoveCertEntry?_sound hx with ⟨move, hmem⟩
+  refine ⟨move.apply x, ?_, move.dist_apply_le_one x⟩
+  apply mem_codeFromPacked_of_contains
+  simpa [PackedMove.packed_apply] using hmem
+
+theorem packedMoveCert_covers_of_ranges {n : ℕ} {packed cert : Array ℕ}
+    {chunkSize chunkCount : ℕ}
+    (hChunkSize : 0 < chunkSize)
+    (hExact : chunkCount * chunkSize = 3 ^ n)
+    (hRanges : ∀ i, i < chunkCount →
+      allPackedMoveCertsRange (n := n) packed cert (i * chunkSize) chunkSize = true) :
+    CoversFinset (codeFromPacked n packed) 1 := by
+  intro x
+  let m := packedWord x
+  have hm : m < 3 ^ n := packedWord_lt_pow x
+  let i := m / chunkSize
+  have hm0 : m < chunkCount * chunkSize := by
+    simpa [hExact] using hm
+  have hm1 : m < chunkSize * chunkCount := by
+    simpa [Nat.mul_comm] using hm0
+  have hi : i < chunkCount := by
+    simpa [i] using Nat.div_lt_of_lt_mul hm1
+  have hlo : i * chunkSize ≤ m := by
+    simpa [i] using Nat.div_mul_le_self m chunkSize
+  have hdecomp : i * chunkSize + m % chunkSize = m := by
+    simpa [i, Nat.mul_comm] using (Nat.div_add_mod m chunkSize)
+  have hmod : m % chunkSize < chunkSize := Nat.mod_lt m hChunkSize
+  have hhi : m < i * chunkSize + chunkSize := by
+    omega
+  rcases allPackedMoveCertsRange_sound (hRanges i hi) hlo hhi with ⟨move, hmem⟩
   refine ⟨move.apply x, ?_, move.dist_apply_le_one x⟩
   apply mem_codeFromPacked_of_contains
   simpa [PackedMove.packed_apply] using hmem

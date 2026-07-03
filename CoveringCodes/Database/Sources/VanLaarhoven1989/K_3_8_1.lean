@@ -224,14 +224,41 @@ private def vanLaarhoven8MoveCert : Array ℕ := #[
 private def vanLaarhoven8Code (_ : Unit) : Finset (QaryWord 3 8) :=
   codeFromPacked 8 vanLaarhoven8Packed
 
-private theorem vanLaarhoven8_witness_total :
-    allPackedMoveCerts (n := 8) vanLaarhoven8Packed vanLaarhoven8MoveCert = true := by
+private def vanLaarhoven8ChunkSize : ℕ := 2187
+
+private def vanLaarhoven8ChunkCount : ℕ := 3
+
+private theorem vanLaarhoven8_witness_chunk_0 :
+    allPackedMoveCertsRange (n := 8) vanLaarhoven8Packed vanLaarhoven8MoveCert
+      (0 * vanLaarhoven8ChunkSize) vanLaarhoven8ChunkSize = true := by
   covering_decide +kernel
+
+private theorem vanLaarhoven8_witness_chunk_1 :
+    allPackedMoveCertsRange (n := 8) vanLaarhoven8Packed vanLaarhoven8MoveCert
+      (1 * vanLaarhoven8ChunkSize) vanLaarhoven8ChunkSize = true := by
+  covering_decide +kernel
+
+private theorem vanLaarhoven8_witness_chunk_2 :
+    allPackedMoveCertsRange (n := 8) vanLaarhoven8Packed vanLaarhoven8MoveCert
+      (2 * vanLaarhoven8ChunkSize) vanLaarhoven8ChunkSize = true := by
+  covering_decide +kernel
+
+private theorem vanLaarhoven8_witness_ranges (i : ℕ) (hi : i < vanLaarhoven8ChunkCount) :
+    allPackedMoveCertsRange (n := 8) vanLaarhoven8Packed vanLaarhoven8MoveCert
+      (i * vanLaarhoven8ChunkSize) vanLaarhoven8ChunkSize = true := by
+  have hi' : i < 3 := by simpa [vanLaarhoven8ChunkCount] using hi
+  interval_cases i
+  · exact vanLaarhoven8_witness_chunk_0
+  · exact vanLaarhoven8_witness_chunk_1
+  · exact vanLaarhoven8_witness_chunk_2
 
 private theorem vanLaarhoven8_covers : CoversFinset (vanLaarhoven8Code ()) 1 := by
   simpa [vanLaarhoven8Code] using
-    (packedMoveCert_covers (packed := vanLaarhoven8Packed) (cert := vanLaarhoven8MoveCert)
-      (n := 8) vanLaarhoven8_witness_total)
+    (packedMoveCert_covers_of_ranges
+      (packed := vanLaarhoven8Packed) (cert := vanLaarhoven8MoveCert)
+      (n := 8) (chunkSize := vanLaarhoven8ChunkSize)
+      (chunkCount := vanLaarhoven8ChunkCount)
+      (by decide) (by decide) vanLaarhoven8_witness_ranges)
 
 private theorem vanLaarhoven8_card : (vanLaarhoven8Code ()).card ≤ 486 := by
   simpa [vanLaarhoven8Code, vanLaarhoven8Packed] using

@@ -47,6 +47,7 @@ all_steps=(
   native_smoke_tests
   clean_kernel
   kernel_external_certificates
+  kernel_van_laarhoven_certificates
   kernel_build_table_gen
   kernel_build_covering_codes
   kernel_build_library_tests
@@ -73,6 +74,7 @@ kernel_steps=(
   check_source_policy
   clean_kernel
   kernel_external_certificates
+  kernel_van_laarhoven_certificates
   kernel_build_table_gen
   kernel_build_covering_codes
   kernel_build_library_tests
@@ -97,6 +99,7 @@ describe_step() {
     native_smoke_tests) echo "Run native smoke tests" ;;
     clean_kernel) echo "lake clean before kernel build" ;;
     kernel_external_certificates) echo "Build external certificate-backed modules in kernel proof mode" ;;
+    kernel_van_laarhoven_certificates) echo "Build van Laarhoven certificates sequentially in kernel proof mode" ;;
     kernel_build_table_gen) echo "Build table_gen in kernel proof mode" ;;
     kernel_build_covering_codes) echo "Build covering_codes in kernel proof mode" ;;
     kernel_build_library_tests) echo "Build library, examples, and test modules in kernel proof mode" ;;
@@ -424,6 +427,17 @@ run_step native_smoke_tests "$(describe_step native_smoke_tests)" \
 run_step clean_kernel "$(describe_step clean_kernel)" lake clean
 run_step kernel_external_certificates "$(describe_step kernel_external_certificates)" \
   python3 -B scripts/external-certificates.py "${external_certificate_kernel_args[@]}"
+run_step kernel_van_laarhoven_certificates "$(describe_step kernel_van_laarhoven_certificates)" \
+  bash -c '
+    set -euo pipefail
+    for target in \
+      CoveringCodes.Database.Sources.VanLaarhoven1989.K_3_6_1 \
+      CoveringCodes.Database.Sources.VanLaarhoven1989.K_3_7_1 \
+      CoveringCodes.Database.Sources.VanLaarhoven1989.K_3_8_1
+    do
+      scripts/build-proof-mode.sh kernel "${target}"
+    done
+  '
 run_step kernel_build_table_gen "$(describe_step kernel_build_table_gen)" \
   scripts/build-proof-mode.sh kernel table_gen
 run_step kernel_build_covering_codes "$(describe_step kernel_build_covering_codes)" \

@@ -42,14 +42,41 @@ private def vanLaarhoven6MoveCert : Array ℕ := #[
 private def vanLaarhoven6Code (_ : Unit) : Finset (QaryWord 3 6) :=
   codeFromPacked 6 vanLaarhoven6Packed
 
-private theorem vanLaarhoven6_witness_total :
-    allPackedMoveCerts (n := 6) vanLaarhoven6Packed vanLaarhoven6MoveCert = true := by
+private def vanLaarhoven6ChunkSize : ℕ := 243
+
+private def vanLaarhoven6ChunkCount : ℕ := 3
+
+private theorem vanLaarhoven6_witness_chunk_0 :
+    allPackedMoveCertsRange (n := 6) vanLaarhoven6Packed vanLaarhoven6MoveCert
+      (0 * vanLaarhoven6ChunkSize) vanLaarhoven6ChunkSize = true := by
   covering_decide +kernel
+
+private theorem vanLaarhoven6_witness_chunk_1 :
+    allPackedMoveCertsRange (n := 6) vanLaarhoven6Packed vanLaarhoven6MoveCert
+      (1 * vanLaarhoven6ChunkSize) vanLaarhoven6ChunkSize = true := by
+  covering_decide +kernel
+
+private theorem vanLaarhoven6_witness_chunk_2 :
+    allPackedMoveCertsRange (n := 6) vanLaarhoven6Packed vanLaarhoven6MoveCert
+      (2 * vanLaarhoven6ChunkSize) vanLaarhoven6ChunkSize = true := by
+  covering_decide +kernel
+
+private theorem vanLaarhoven6_witness_ranges (i : ℕ) (hi : i < vanLaarhoven6ChunkCount) :
+    allPackedMoveCertsRange (n := 6) vanLaarhoven6Packed vanLaarhoven6MoveCert
+      (i * vanLaarhoven6ChunkSize) vanLaarhoven6ChunkSize = true := by
+  have hi' : i < 3 := by simpa [vanLaarhoven6ChunkCount] using hi
+  interval_cases i
+  · exact vanLaarhoven6_witness_chunk_0
+  · exact vanLaarhoven6_witness_chunk_1
+  · exact vanLaarhoven6_witness_chunk_2
 
 private theorem vanLaarhoven6_covers : CoversFinset (vanLaarhoven6Code ()) 1 := by
   simpa [vanLaarhoven6Code] using
-    (packedMoveCert_covers (packed := vanLaarhoven6Packed) (cert := vanLaarhoven6MoveCert)
-      (n := 6) vanLaarhoven6_witness_total)
+    (packedMoveCert_covers_of_ranges
+      (packed := vanLaarhoven6Packed) (cert := vanLaarhoven6MoveCert)
+      (n := 6) (chunkSize := vanLaarhoven6ChunkSize)
+      (chunkCount := vanLaarhoven6ChunkCount)
+      (by decide) (by decide) vanLaarhoven6_witness_ranges)
 
 private theorem vanLaarhoven6_card : (vanLaarhoven6Code ()).card ≤ 73 := by
   simpa [vanLaarhoven6Code, vanLaarhoven6Packed] using

@@ -87,14 +87,41 @@ private def vanLaarhoven7MoveCert : Array ℕ := #[
 private def vanLaarhoven7Code (_ : Unit) : Finset (QaryWord 3 7) :=
   codeFromPacked 7 vanLaarhoven7Packed
 
-private theorem vanLaarhoven7_witness_total :
-    allPackedMoveCerts (n := 7) vanLaarhoven7Packed vanLaarhoven7MoveCert = true := by
+private def vanLaarhoven7ChunkSize : ℕ := 729
+
+private def vanLaarhoven7ChunkCount : ℕ := 3
+
+private theorem vanLaarhoven7_witness_chunk_0 :
+    allPackedMoveCertsRange (n := 7) vanLaarhoven7Packed vanLaarhoven7MoveCert
+      (0 * vanLaarhoven7ChunkSize) vanLaarhoven7ChunkSize = true := by
   covering_decide +kernel
+
+private theorem vanLaarhoven7_witness_chunk_1 :
+    allPackedMoveCertsRange (n := 7) vanLaarhoven7Packed vanLaarhoven7MoveCert
+      (1 * vanLaarhoven7ChunkSize) vanLaarhoven7ChunkSize = true := by
+  covering_decide +kernel
+
+private theorem vanLaarhoven7_witness_chunk_2 :
+    allPackedMoveCertsRange (n := 7) vanLaarhoven7Packed vanLaarhoven7MoveCert
+      (2 * vanLaarhoven7ChunkSize) vanLaarhoven7ChunkSize = true := by
+  covering_decide +kernel
+
+private theorem vanLaarhoven7_witness_ranges (i : ℕ) (hi : i < vanLaarhoven7ChunkCount) :
+    allPackedMoveCertsRange (n := 7) vanLaarhoven7Packed vanLaarhoven7MoveCert
+      (i * vanLaarhoven7ChunkSize) vanLaarhoven7ChunkSize = true := by
+  have hi' : i < 3 := by simpa [vanLaarhoven7ChunkCount] using hi
+  interval_cases i
+  · exact vanLaarhoven7_witness_chunk_0
+  · exact vanLaarhoven7_witness_chunk_1
+  · exact vanLaarhoven7_witness_chunk_2
 
 private theorem vanLaarhoven7_covers : CoversFinset (vanLaarhoven7Code ()) 1 := by
   simpa [vanLaarhoven7Code] using
-    (packedMoveCert_covers (packed := vanLaarhoven7Packed) (cert := vanLaarhoven7MoveCert)
-      (n := 7) vanLaarhoven7_witness_total)
+    (packedMoveCert_covers_of_ranges
+      (packed := vanLaarhoven7Packed) (cert := vanLaarhoven7MoveCert)
+      (n := 7) (chunkSize := vanLaarhoven7ChunkSize)
+      (chunkCount := vanLaarhoven7ChunkCount)
+      (by decide) (by decide) vanLaarhoven7_witness_ranges)
 
 private theorem vanLaarhoven7_card : (vanLaarhoven7Code ()).card ≤ 186 := by
   simpa [vanLaarhoven7Code, vanLaarhoven7Packed] using
