@@ -249,6 +249,14 @@ quote_command() {
   printf '%q ' "$@"
 }
 
+utc_now() {
+  date -u +%Y-%m-%dT%H:%M:%SZ
+}
+
+log_msg() {
+  printf '[%s] %s\n' "$(utc_now)" "$*"
+}
+
 run_step() {
   local step="$1"
   local description="$2"
@@ -264,7 +272,7 @@ run_step() {
   fi
 
   if [[ -z "${from_step}" && -f "${done_dir}/${step}" ]]; then
-    echo "==> SKIP ${step}: already completed"
+    log_msg "==> SKIP ${step}: already completed"
     return 0
   fi
 
@@ -276,22 +284,27 @@ run_step() {
       [[ "${candidate}" == "${step}" ]] && break
     done
     if [[ "${found}" -eq 0 ]]; then
-      echo "==> SKIP ${step}: before --from ${from_step}"
+      log_msg "==> SKIP ${step}: before --from ${from_step}"
       return 0
     fi
   fi
 
   local log="${logs_dir}/${step}.log"
   local time_log="${logs_dir}/${step}.time.log"
-  local started ended status elapsed
+  local started ended status elapsed started_utc ended_utc
   started="$(date +%s)"
+  started_utc="$(utc_now)"
 
-  echo "==> ${step}: ${description}"
+  log_msg "==> ${step}: ${description}"
+  log_msg "    log: ${log}"
+  log_msg "    time log: ${time_log}"
   {
-    echo "UTC: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    echo "START_UTC: ${started_utc}"
     echo "PWD: ${PWD}"
     echo "STEP: ${step}"
     echo "DESC: ${description}"
+    echo "LOG: ${log}"
+    echo "TIME_LOG: ${time_log}"
     printf 'COMMAND: '
     quote_command "$@"
     echo
@@ -308,27 +321,34 @@ run_step() {
   set -e
 
   ended="$(date +%s)"
+  ended_utc="$(utc_now)"
   elapsed=$((ended - started))
+  {
+    echo
+    echo "END_UTC: ${ended_utc}"
+    echo "STATUS: ${status}"
+    echo "ELAPSED_SECONDS: ${elapsed}"
+  } >> "${log}"
 
   if [[ "${status}" -eq 0 ]]; then
-    date -u +%Y-%m-%dT%H:%M:%SZ > "${done_dir}/${step}"
+    echo "${ended_utc}" > "${done_dir}/${step}"
     rm -f "${run_dir}/LAST_FAILED"
     printf '%s\t%s\tOK\t%s\t%s\t%s\n' \
-      "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "${step}" "${elapsed}" "${log}" "${time_log}" >> "${summary}"
-    echo "    OK (${elapsed}s), log: ${log}"
+      "${ended_utc}" "${step}" "${elapsed}" "${log}" "${time_log}" >> "${summary}"
+    log_msg "    OK ${step} (${elapsed}s), log: ${log}"
   else
     echo "${step}" > "${run_dir}/LAST_FAILED"
     printf '%s\t%s\tFAIL:%s\t%s\t%s\t%s\n' \
-      "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "${step}" "${status}" "${elapsed}" "${log}" "${time_log}" >> "${summary}"
-    echo "    FAIL (${elapsed}s, exit ${status}), log: ${log}" >&2
-    echo "    Resume with: scripts/release-qa-chain.sh --resume ${run_dir}" >&2
+      "${ended_utc}" "${step}" "${status}" "${elapsed}" "${log}" "${time_log}" >> "${summary}"
+    log_msg "    FAIL ${step} (${elapsed}s, exit ${status}), log: ${log}" >&2
+    log_msg "    Resume with: scripts/release-qa-chain.sh --resume ${run_dir}" >&2
     exit "${status}"
   fi
 }
 
-echo "Run directory: ${run_dir}"
-echo "Phase: ${phase}"
-echo "State snapshot: ${run_dir}/state.latest.log"
+log_msg "Run directory: ${run_dir}"
+log_msg "Phase: ${phase}"
+log_msg "State snapshot: ${run_dir}/state.latest.log"
 
 run_step log_state "$(describe_step log_state)" \
   bash -c 'cat "$1"' _ "${run_dir}/state.latest.log"
@@ -475,9 +495,9 @@ run_step kernel_smoke_tests "$(describe_step kernel_smoke_tests)" \
   '
 
 if [[ "${phase}" == "all" ]]; then
-  echo "==> All release QA steps completed"
+  log_msg "==> All release QA steps completed"
 else
-  echo "==> Release QA ${phase} phase completed"
+  log_msg "==> Release QA ${phase} phase completed"
 fi
-echo "Run directory: ${run_dir}"
-echo "Summary: ${summary}"
+log_msg "Run directory: ${run_dir}"
+log_msg "Summary: ${summary}"
