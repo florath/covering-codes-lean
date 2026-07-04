@@ -1020,9 +1020,9 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3)))) },
   { key := { q := 8, n := 10, r := 4 }
     lowerValue := 1961
-    upperValue := 29889
+    upperValue := 11776
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 10 4))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3)))) },
+    upperTrace := (.primitive "lean_K_8_10_4_stage2_gf8_product_upper" (primitiveUpper_valid 8 10 4)) },
   { key := { q := 8, n := 10, r := 5 }
     lowerValue := 225
     upperValue := 5832

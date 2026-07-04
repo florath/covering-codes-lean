@@ -10,6 +10,7 @@ import CoveringCodes.Database.Sources.HammingUpper
 import CoveringCodes.Database.Sources.OctonaryFourTwo
 import CoveringCodes.Database.Sources.TwoBlockCyclic
 import CoveringCodes.Database.Sources.VanLaarhoven1989
+import CoveringCodes.Database.Sources.K_8_10_4
 import CoveringCodes.Database.Sources.KnownBounds
 
 namespace CoveringCodes
@@ -62,6 +63,7 @@ private def primitiveUpperSources : List UpperBoundSource := [
   vanLaarhoven6UpperSource,
   vanLaarhoven7UpperSource,
   vanLaarhoven8UpperSource,
+  K_8_10_4UpperSource,
   knownBoundQ2N24R4UpperSource,
   knownBoundQ2N26R6UpperSource,
   knownBoundQ2N26R8UpperSource,
