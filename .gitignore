@@ -3,6 +3,9 @@ build/
 
 reference-data/reference-db-comparison.csv
 
+# Large proof/search data is distributed separately from Git.
+data/K_16_4_2/
+
 *.log
 *.tar
 *.tar.gz
@@ -20,3 +23,4 @@ CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean
 *.bak
 *.orig
 .DS_Store
+__pycache__/

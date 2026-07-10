@@ -219,11 +219,12 @@ def copy_or_download(url: str, destination: Path) -> None:
                 with urllib.request.urlopen(url) as response:
                     shutil.copyfileobj(response, tmp_handle)
             elif parsed.scheme == "file":
-                source = Path(urllib.request.url2pathname(parsed.path))
+                source = Path(urllib.request.url2pathname(parsed.path)).expanduser()
                 with source.open("rb") as source_handle:
                     shutil.copyfileobj(source_handle, tmp_handle)
             elif parsed.scheme == "":
-                source = repo_path(url)
+                candidate = Path(url).expanduser()
+                source = candidate if candidate.is_absolute() else repo_path(candidate)
                 with source.open("rb") as source_handle:
                     shutil.copyfileobj(source_handle, tmp_handle)
             else:

@@ -14,7 +14,7 @@ mode for expensive finite proof leaves.
 
 ```bash
 scripts/external-certificates.py materialize --all
-scripts/build-proof-mode.sh native covering_codes
+scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedAPI covering_codes
 lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
 lake -KproofMode=native exe covering_codes 2 7 1

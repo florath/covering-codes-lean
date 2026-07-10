@@ -24,6 +24,14 @@ The `K_9_9_5-tail-values` bundle is archived on Zenodo at
 module `CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean` from
 that text file.
 
+The `K_16_4_2-lrat` bundle is archived on Zenodo at
+<https://zenodo.org/records/20798745> with DOI
+`10.5281/zenodo.20798745`.  It materializes under `data/K_16_4_2/lrat/`.
+Its routine Lean targets intentionally exclude the monolithic profile LRAT
+replays, which are retained in the archive but are known to be impractical for
+normal checks.  Tail-box certificates are split into one Lean module per spread
+so Lake can build them in parallel.
+
 Local archives live in `data/external-certificates/cache/`, which is ignored by
 git.  A typical workflow is:
 
@@ -39,16 +47,19 @@ To materialize every external certificate bundle listed in the manifest, use:
 scripts/external-certificates.py materialize --all
 ```
 
-After the Lean module has been compiled, downstream imports can use the `.olean`
-artifact without the extracted certificate files.  A clean rebuild still needs
-the external data again.  For generated Lean modules such as the
-`K_9_9_5_TailData.lean` table, the ignored generated source remains after
-`--clean-extracted` so Lake can still resolve the imported module.
+After the Lean module has been compiled, downstream imports can usually use the
+`.olean` artifact without the extracted certificate files.  A clean rebuild
+still needs the external data again, and graph-wide builds that reach K16
+`include_str` modules need the extracted K16 files to remain materialized.  For
+generated Lean modules such as the `K_9_9_5_TailData.lean` table, the ignored
+generated source remains after `--clean-extracted` so Lake can still resolve the
+imported module.
 
-The full QA chain calls the same helper automatically after each native/kernel
-clean phase.  Set
-`EXTERNAL_CERTIFICATE_STORAGE_LIMIT`, for example `20GiB`, to force external
-certificate checks to run in storage-bounded batches:
+The full QA chain materializes external certificate data before the native and
+kernel build phases.  Set `EXTERNAL_CERTIFICATE_STORAGE_LIMIT`, for example
+`20GiB`, to force external certificate checks to run in storage-bounded batches;
+the chain re-materializes the extracted files before later graph-wide builds
+that need them:
 
 ```bash
 EXTERNAL_CERTIFICATE_STORAGE_LIMIT=20GiB scripts/release-qa-chain.sh

@@ -7,6 +7,7 @@ import CoveringCodes.Database.Sources.BinaryHamming
 import CoveringCodes.Database.Sources.ExtensionFieldHamming
 import CoveringCodes.Database.Sources.TernaryGolay
 import CoveringCodes.Database.Sources.HammingUpper
+import CoveringCodes.Database.Sources.HexadecimaryFourTwo
 import CoveringCodes.Database.Sources.OctonaryFourTwo
 import CoveringCodes.Database.Sources.TwoBlockCyclic
 import CoveringCodes.Database.Sources.VanLaarhoven1989
@@ -51,6 +52,7 @@ private def primitiveUpperSources : List UpperBoundSource := [
   smallExplicitFourteenary1431UpperSource,
   smallExplicitFifteenary1531UpperSource,
   smallExplicitHexadecimal1631UpperSource,
+  hexadecimaryFourRadiusTwoUpperSource,
   smallExplicitSeventeenary1731UpperSource,
   smallExplicitEighteenary1831UpperSource,
   quaternaryHammingFiveUpperSource,

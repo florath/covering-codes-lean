@@ -43,8 +43,10 @@ require mathlib from git "https://github.com/leanprover-community/mathlib4"@"d96
 
 lean_lib CoveringCodes
 
-lean_exe covering_codes where root := `Main
+lean_lib Tools.TableGen where
+  globs := #[`Tools.TableGen.+]
 
-lean_exe table_gen where root := `Tools.TableGen.Main
+lean_lib Tools.ReferenceDataDump where
+  globs := #[`Tools.ReferenceDataDump.+]
 
-lean_exe reference_data_dump where root := `Tools.ReferenceDataDump.Main
+lean_exe covering_codes where root := `CoveringCodes.CLI

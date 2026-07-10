@@ -22,7 +22,7 @@ structure while avoiding the most expensive kernel reductions.
 
 ```bash
 scripts/external-certificates.py materialize --all
-scripts/build-proof-mode.sh native covering_codes
+scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedAPI covering_codes
 lake -KproofMode=native exe covering_codes 3 6 1
 lake -KproofMode=native exe covering_codes 3 8 3
 ```
@@ -46,7 +46,8 @@ layers are:
   sources.
 - `CoveringCodes/Database/BoundTable.lean`: closure engine.
 - `Tools/TableGen/Main.lean`: generated-table serializer.
-- `Main.lean`: command-line lookup tool.
+- `Main.lean`: interpreted proof-carrying lookup tool.
+- `CoveringCodes/CLI.lean`: compiled launcher for `lake exe covering_codes`.
 
 After changing a focused Lean file, prefer a focused native check first:
 
@@ -71,8 +72,8 @@ When a source bound or closure rule changes, regenerate the table and verify the
 committed generated output:
 
 ```bash
-scripts/build-proof-mode.sh native table_gen
-lake -KproofMode=native exe table_gen
+scripts/build-proof-mode.sh native Tools.TableGen.Main
+lake -KproofMode=native env lean --run Tools/TableGen/Main.lean
 scripts/check-generated-metadata.sh
 git diff --exit-code -- \
   CoveringCodes/Database/GeneratedTable.lean \
