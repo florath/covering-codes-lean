@@ -162,18 +162,21 @@ This is a research-level effort and is **explicitly out of scope** until Paths
   `HexadecimaryFourTwoSupportFromLRAT` are kernel-proved via `FromLRAT`
   (28 min and 20 min elaboration respectively).  Both added to `manifest.json`.
 - **Path 2 Step 2a complete:** `CoveringCodes/Database/Sources/LRATKernel.lean`
-  compiles.  All soundness lemmas are proved except two marked `sorry`:
-  - `Db.lookup_erase_mono` — Batteries does not yet expose `RBMap.find?_erase`.
-  - `LookupSound.insertCubeClauses` — inductive step on the cube fold.
-  The main soundness theorem `checkLeaves_branch_unsat_of_mem` is stated and
-  the proof structure is complete; it reduces to the two `sorry`s above.
+  compiles with all soundness lemmas fully proved — no `sorry`s remain.
+  - `Db.lookup_erase_mono`: proved via `Batteries.RBNode.All.del` (erase
+    is a subset operation — contrapositive through `All.del`/`All_def`/
+    `mem_toList`/`setBlack_toList`).
+  - `LookupSound.insertCubeClauses`: proved by induction on the literal list
+    through `insertCubeClausesAux` with a generalised `h_ind` helper.
+  - `checkLeaves_branch_unsat_of_mem`: the main soundness theorem is fully
+    proved.
 - `native_decide` is still used in all tail-box and split LRAT replay theorems.
 - The `LRATNative.lean` soundness proof (algorithm correctness) is and
   remains kernel-proved.  Only the per-certificate `_checked` instances use
   `native_decide`.
 - **Next (Path 2):** Step 2b — generator tool that converts `.cnf`/`.lrat`
   files into pre-parsed Lean source literals for `LRATKernel`; then Step 2c —
-  fill the two `sorry`s and update tail-box smoke files to use `decide`.
+  update tail-box smoke files to use `decide` instead of `native_decide`.
 
 ## Relationship to `covering_decide`
 
