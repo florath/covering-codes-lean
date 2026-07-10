@@ -161,14 +161,19 @@ This is a research-level effort and is **explicitly out of scope** until Paths
 - **Path 1 complete:** `HexadecimaryFourTwoOAFromLRAT` and
   `HexadecimaryFourTwoSupportFromLRAT` are kernel-proved via `FromLRAT`
   (28 min and 20 min elaboration respectively).  Both added to `manifest.json`.
+- **Path 2 Step 2a complete:** `CoveringCodes/Database/Sources/LRATKernel.lean`
+  compiles.  All soundness lemmas are proved except two marked `sorry`:
+  - `Db.lookup_erase_mono` — Batteries does not yet expose `RBMap.find?_erase`.
+  - `LookupSound.insertCubeClauses` — inductive step on the cube fold.
+  The main soundness theorem `checkLeaves_branch_unsat_of_mem` is stated and
+  the proof structure is complete; it reduces to the two `sorry`s above.
 - `native_decide` is still used in all tail-box and split LRAT replay theorems.
-- The `covering_decide` replacement was attempted and immediately failed even
-  on a tiny self-test: `String.Legacy.Iterator` and `Array` are both
-  kernel-irreducible compiler primitives.
 - The `LRATNative.lean` soundness proof (algorithm correctness) is and
   remains kernel-proved.  Only the per-certificate `_checked` instances use
   `native_decide`.
-- **Next:** Path 2 for the 16 tail-box certificates.
+- **Next (Path 2):** Step 2b — generator tool that converts `.cnf`/`.lrat`
+  files into pre-parsed Lean source literals for `LRATKernel`; then Step 2c —
+  fill the two `sorry`s and update tail-box smoke files to use `decide`.
 
 ## Relationship to `covering_decide`
 
