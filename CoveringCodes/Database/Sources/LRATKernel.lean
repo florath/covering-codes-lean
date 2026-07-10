@@ -306,9 +306,21 @@ private theorem Db.lookup_erase_mono (db : Db) (id id' : Nat)
     (clause : RawClause)
     (h : Batteries.RBMap.find? (Batteries.RBMap.erase db id) id' = some clause) :
     Batteries.RBMap.find? db id' = some clause := by
-  -- Batteries does not yet expose a direct `RBMap.find?_erase` lemma.
-  -- Provable from the fact that RBMap.erase cannot add new (key, value) pairs.
-  sorry
+  rw [Batteries.RBMap.find?_some] at h ⊢
+  obtain ⟨y, hmem, hcmp⟩ := h
+  refine ⟨y, ?_, hcmp⟩
+  rw [Batteries.RBMap.mem_toList] at hmem ⊢
+  -- hmem : (y, clause) ∈ (RBMap.erase db id).1  (RBNode.EMem)
+  -- Goal: (y, clause) ∈ db.1  (RBNode.EMem)
+  -- (RBMap.erase db id).1 = (db.1.del (compare id ·.1)).setBlack  (definitionally)
+  by_contra hn
+  have hall : db.1.All ((y, clause) ≠ ·) :=
+    Batteries.RBNode.All_def.mpr fun x hx heq => hn (heq ▸ hx)
+  -- hmem is at (erase db id).1, which is definitionally (db.1.del ...).setBlack
+  have hmem' : (y, clause) ∈ (db.1.del (compare id ·.1)).setBlack := hmem
+  rw [← Batteries.RBNode.mem_toList, Batteries.RBNode.setBlack_toList,
+      Batteries.RBNode.mem_toList] at hmem'
+  exact absurd rfl (Batteries.RBNode.All_def.mp (Batteries.RBNode.All.del hall) _ hmem')
 
 -- ===== LookupSound propagation =====
 
@@ -514,12 +526,30 @@ private theorem rawCnfToSat_rawCnfAppendCube (cnf : RawCnf) (cube : List Int) :
 
 /-- The base + cube DB is sound for the extended formula. -/
 private theorem LookupSound.insertCubeClauses
-    (cnf : RawCnf) (baseDb : Db)
-    (hbase : LookupSound (rawCnfToSat cnf ++ rawCubeToSat cube) baseDb)
-    (cube : List Int) :
+    (cnf : RawCnf) (cube : List Int) (baseDb : Db)
+    (hbase : LookupSound (rawCnfToSat cnf ++ rawCubeToSat cube) baseDb) :
     LookupSound (rawCnfToSat cnf ++ rawCubeToSat cube)
       (insertCubeClauses baseDb cnf.length cube) := by
-  sorry  -- TODO: inductive step on insertCubeClausesAux fold; same pattern as ofCnf proof
+  show LookupSound (rawCnfToSat cnf ++ rawCubeToSat cube)
+      (insertCubeClausesAux cube (cnf.length + 1) baseDb)
+  -- Generalise over the tail of the cube literal list, the start index, and the DB
+  -- so that the induction covers all recursive calls of insertCubeClausesAux.
+  suffices h_ind : ∀ (lits : List Int) (start : Nat) (db : Db),
+      LookupSound (rawCnfToSat cnf ++ rawCubeToSat cube) db →
+      (∀ lit, lit ∈ lits → lit ∈ cube) →
+      LookupSound (rawCnfToSat cnf ++ rawCubeToSat cube) (insertCubeClausesAux lits start db) from
+    h_ind cube (cnf.length + 1) baseDb hbase (fun _ h => h)
+  intro lits
+  induction lits with
+  | nil => intro start db hdb _; exact hdb
+  | cons lit rest ih =>
+    intro start db hdb hlits
+    -- insertCubeClausesAux (lit :: rest) start db
+    --   = insertCubeClausesAux rest (start + 1) (insert db start [lit])
+    apply ih (start + 1) (Batteries.RBMap.insert db start [lit])
+    · exact LookupSound.insert hdb (proof_of_cubeClause_mem
+        (List.mem_map.mpr ⟨lit, hlits lit (List.mem_cons.mpr (Or.inl rfl)), rfl⟩))
+    · intro x hx; exact hlits x (List.mem_cons_of_mem _ hx)
 
 -- ===== Main soundness theorem =====
 
@@ -539,7 +569,7 @@ theorem checkLeaves_branch_unsat_of_mem
     LookupSound.ofCnf_append_cube cnf leaf.cube
   have hcubeDb : LookupSound (rawCnfToSat cnf ++ rawCubeToSat leaf.cube)
       (insertCubeClauses (Db.ofCnf cnf) cnf.length leaf.cube) :=
-    LookupSound.insertCubeClauses cnf _ hbase leaf.cube
+    LookupSound.insertCubeClauses cnf leaf.cube _ hbase
   have hproof : Sat.Fmla.proof (rawCnfToSat cnf ++ rawCubeToSat leaf.cube) Sat.Clause.nil :=
     checkSteps_sound hcubeDb hleaf
   intro v hv
