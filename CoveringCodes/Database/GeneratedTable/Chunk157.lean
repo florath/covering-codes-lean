@@ -75,9 +75,9 @@ def precomputedTable_chunk_157 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 11 (by decide : 0 < 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2))) },
   { key := { q := 16, n := 17, r := 14 }
     lowerValue := 16
-    upperValue := 2048
+    upperValue := 1392
     lowerTrace := (.lengthBack (by decide : 0 < 16) (.radiusBack (by decide : 14 ≤ 15) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 16 15))))
-    upperTrace := (.lengthenDummyN 13 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)))) },
+    upperTrace := (.lengthenDummyN 12 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2)))) },
   { key := { q := 16, n := 17, r := 15 }
     lowerValue := 16
     upperValue := 16
