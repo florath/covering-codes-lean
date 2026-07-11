@@ -519,7 +519,7 @@ private theorem LookupSound.ofCnf_append_cube (cnf : RawCnf) (cube : List Int) :
   fun id clause h =>
     proof_mono_append_left (g := rawCubeToSat cube) (LookupSound.ofCnf cnf id clause h)
 
-private theorem rawCnfToSat_rawCnfAppendCube (cnf : RawCnf) (cube : List Int) :
+theorem rawCnfToSat_rawCnfAppendCube (cnf : RawCnf) (cube : List Int) :
     rawCnfToSat (rawCnfAppendCube cnf cube) = rawCnfToSat cnf ++ rawCubeToSat cube := by
   simp [rawCnfAppendCube, rawCubeClauses, rawCnfToSat, rawCubeToSat,
     rawUnitClause, rawClauseToSat]

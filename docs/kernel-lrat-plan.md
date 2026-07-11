@@ -156,7 +156,7 @@ This is a research-level effort and is **explicitly out of scope** until Paths
 
 ---
 
-## Current status (as of 2026-07-10)
+## Current status (as of 2026-07-11)
 
 - **Path 1 complete:** `HexadecimaryFourTwoOAFromLRAT` and
   `HexadecimaryFourTwoSupportFromLRAT` are kernel-proved via `FromLRAT`
@@ -170,13 +170,42 @@ This is a research-level effort and is **explicitly out of scope** until Paths
     through `insertCubeClausesAux` with a generalised `h_ind` helper.
   - `checkLeaves_branch_unsat_of_mem`: the main soundness theorem is fully
     proved.
-- `native_decide` is still used in all tail-box and split LRAT replay theorems.
-- The `LRATNative.lean` soundness proof (algorithm correctness) is and
-  remains kernel-proved.  Only the per-certificate `_checked` instances use
-  `native_decide`.
-- **Next (Path 2):** Step 2b — generator tool that converts `.cnf`/`.lrat`
-  files into pre-parsed Lean source literals for `LRATKernel`; then Step 2c —
-  update tail-box smoke files to use `decide` instead of `native_decide`.
+- **Path 2 Steps 2b + 2c complete (infrastructure):**
+  - `scripts/gen_lrat_kernel_data.py` — generator that converts `.cnf`/`.lrat`
+    pairs into pre-parsed Lean source literals for `LRATKernel`.  Supports
+    both single-file mode and `--batch-k16` for all 17 tail-box spreads.
+  - `HexadecimaryFourTwoTailBoxLRATKernelCommon.lean` — shared helper
+    (`tailBoxKernel_unsat_of_checked`) analogous to the `LRATNative` common.
+  - `HexadecimaryFourTwoTailBoxLRATKernel{ijk}.lean` (17 files) — per-spread
+    kernel smoke files using `decide` on `LRATKernel.checkLeaves`.  Each
+    imports a generated data module (`HexadecimaryFourTwoTailBoxLRATKernel{ijk}Data.lean`)
+    from the external certificate bundle (gitignored, not yet generated).
+  - `HexadecimaryFourTwoTailBoxLRATKernelSmoke.lean` — aggregate import.
+  - `manifest.json` updated: 17 kernel `lean_targets` + 17 `generated_files`
+    entries pointing to the generator.
+- `native_decide` is still used in all existing tail-box `_checked` theorems.
+  The new kernel smoke files provide PARALLEL kernel-provable proofs once
+  the generated data files are materialized.
+
+### Known unknowns — feasibility of `decide` for tail-box certificates
+
+The tail-box CNF files have 252K–1.79M clauses and 83K–414K LRAT steps.
+Generated data Lean files are 90–190 MB.  Key unknowns:
+
+| Factor | Concern | Assessment |
+|--------|---------|------------|
+| Generated file size | 90–190 MB Lean source | Large but external (not in git) |
+| Lean elaboration of large list literals | > 1.6 MB K_9_9_5 baseline | Unknown; needs empirical testing |
+| Kernel eval: build Db from 252K–937K clauses | O(n log n) insertions | Should be fast with GMP Nat |
+| Kernel eval: process 83K–414K LRAT steps | O(steps × log n) | Estimated sub-minute |
+| 4_4_4 (190 MB, 414K steps) | May be too large | High risk; try smaller first |
+
+**Recommended test order:** try the 3 smallest-LRAT files first (1_3_4, 1_4_4,
+2_2_3 at ~37–40 MB LRAT), then scale up.
+
+- **Next (Path 2):** Step 2d — after generating and verifying data files,
+  update `manifest.json` with actual `bytes`/`sha256` fields; then integrate
+  kernel proofs into the main semantic chain (update `OriginalBridge.lean`).
 
 ## Relationship to `covering_decide`
 
