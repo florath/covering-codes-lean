@@ -183,6 +183,14 @@ This is a research-level effort and is **explicitly out of scope** until Paths
   - `HexadecimaryFourTwoTailBoxLRATKernelSmoke.lean` — aggregate import.
   - `manifest.json` updated: 17 kernel `lean_targets` + 17 `generated_files`
     entries pointing to the generator.
+- **Path 2 Step 2d complete (external-certificates integration):**
+  - `scripts/external-certificates.py` updated: the `materialize` command now
+    calls `gen_lrat_kernel_data.py` automatically for each
+    `k16-4-2-tail-box-lrat-kernel-*-lean` `generated_files` entry after
+    extracting the raw `.cnf`/`.lrat` files from the archive.
+  - The `bytes`/`sha256` fields in `manifest.json` for the 17 generated data
+    files are not yet filled — to be computed after first successful generation
+    and feasibility testing.
 - `native_decide` is still used in all existing tail-box `_checked` theorems.
   The new kernel smoke files provide PARALLEL kernel-provable proofs once
   the generated data files are materialized.
@@ -203,9 +211,9 @@ Generated data Lean files are 90–190 MB.  Key unknowns:
 **Recommended test order:** try the 3 smallest-LRAT files first (1_3_4, 1_4_4,
 2_2_3 at ~37–40 MB LRAT), then scale up.
 
-- **Next (Path 2):** Step 2d — after generating and verifying data files,
-  update `manifest.json` with actual `bytes`/`sha256` fields; then integrate
-  kernel proofs into the main semantic chain (update `OriginalBridge.lean`).
+- **Remaining (Path 2):** After generating and verifying data files:
+  1. Fill `bytes`/`sha256` in `manifest.json` for the 17 `generated_files` entries.
+  2. Integrate kernel proofs into the main semantic chain (update `OriginalBridge.lean`).
 
 ## Relationship to `covering_decide`
 

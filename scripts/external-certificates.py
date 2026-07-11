@@ -365,6 +365,39 @@ def generate_file(bundle: dict[str, Any], file_info: dict[str, Any], force: bool
         source = repo_path(file_info["source"])
         values = read_tail_values(source)
         content = render_q9_n9_r5_tail_data(values)
+    elif kind is not None and kind.startswith("k16-4-2-tail-box-lrat-kernel-") and kind.endswith("-lean"):
+        sources = file_info.get("source", [])
+        if len(sources) != 2:
+            raise CertError(
+                f"expected 2 source files (cnf, lrat) for {bundle['id']} {kind}, got {len(sources)}"
+            )
+        suffix = kind[len("k16-4-2-tail-box-lrat-kernel-"):-len("-lean")]
+        cnf_path = repo_path(sources[0])
+        lrat_path = repo_path(sources[1])
+        prefix = f"tailBox{suffix}"
+        generator = REPO / file_info.get("generator", "scripts/gen_lrat_kernel_data.py")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        fd, tmp_str = tempfile.mkstemp(
+            prefix=target.name + ".", suffix=".tmp", dir=str(target.parent)
+        )
+        tmp_path = Path(tmp_str)
+        os.close(fd)
+        try:
+            subprocess.run(
+                [sys.executable, str(generator),
+                 "--cnf", str(cnf_path), "--lrat", str(lrat_path),
+                 "--prefix", prefix, "--output", str(tmp_path)],
+                cwd=REPO, check=True,
+            )
+        except Exception:
+            tmp_path.unlink(missing_ok=True)
+            raise
+        tmp_path.replace(target)
+        target.chmod(0o644)
+        if not file_ok(target, file_info.get("bytes"), file_info.get("sha256")):
+            raise CertError(f"generated file failed verification: {file_info['path']}")
+        print(f"generated: {bundle['id']} -> {rel(target)}")
+        return
     else:
         raise CertError(f"unsupported generated file kind for {bundle['id']}: {kind}")
 
