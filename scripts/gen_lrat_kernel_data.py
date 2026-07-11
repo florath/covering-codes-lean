@@ -99,6 +99,69 @@ def parse_lrat(lrat_path: str):
 
 
 # ---------------------------------------------------------------------------
+# Pre-deletion optimisation
+# ---------------------------------------------------------------------------
+
+def preapply_leading_deletes(clauses: list, steps: list):
+    """Pre-apply leading delete steps (all deletes before the first ADD).
+
+    The LRAT proofs for K16 tail-box certificates start with a massive delete
+    step that removes ~95% of the original CNF clauses.  Those clauses are
+    never referenced as hints and need not appear in the emitted Lean source.
+
+    Returns (live_clauses, remapped_steps) where:
+    - live_clauses   — clause content list for the surviving original clauses,
+                       in their original order; sequential new IDs are 1-indexed
+                       positions in this list (matching Db.ofCnf).
+    - remapped_steps — all steps after the leading deletes, with every clause
+                       ID updated to the new numbering.
+    """
+    # Collect clause IDs deleted before the first ADD step.
+    predeleted: set[int] = set()
+    first_add_idx = len(steps)
+    for i, step in enumerate(steps):
+        if step[0] == 'del':
+            predeleted.update(step[1])
+        else:
+            first_add_idx = i
+            break
+
+    if not predeleted:
+        return clauses, steps
+
+    # Build the live-clause list and an ID mapping: original_id → new_id.
+    # Original clauses are 1-indexed by position: clause[k] has ID k+1.
+    id_remap: dict[int, int] = {}
+    live_clauses: list = []
+    for k, clause in enumerate(clauses):
+        orig_id = k + 1
+        if orig_id not in predeleted:
+            new_id = len(live_clauses) + 1
+            id_remap[orig_id] = new_id
+            live_clauses.append(clause)
+
+    # ADD steps create new clause IDs starting just after the live CNF.
+    next_add_id = len(live_clauses) + 1
+
+    # Remap remaining steps (those after the leading deletes).
+    remapped_steps: list = []
+    for step in steps[first_add_idx:]:
+        if step[0] == 'del':
+            new_ids = [id_remap[i] for i in step[1] if i in id_remap]
+            if new_ids:
+                remapped_steps.append(('del', new_ids))
+        else:
+            _, orig_sid, lits, hints = step
+            new_sid = next_add_id
+            id_remap[orig_sid] = next_add_id
+            next_add_id += 1
+            new_hints = [id_remap[h] for h in hints]
+            remapped_steps.append(('add', new_sid, lits, new_hints))
+
+    return live_clauses, remapped_steps
+
+
+# ---------------------------------------------------------------------------
 # Emission
 # ---------------------------------------------------------------------------
 
@@ -108,6 +171,8 @@ def _ints(xs) -> str:
 
 def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     out.write('import CoveringCodes.Database.Sources.LRATKernel\n\n')
+    out.write('-- set_option maxHeartbeats 0 allows Lean to elaborate large list literals\n')
+    out.write('set_option maxHeartbeats 0\n\n')
     out.write('/-!\n')
     out.write(f'Auto-generated LRATKernel data for {prefix}.\n')
     out.write('Do not edit; regenerate with scripts/gen_lrat_kernel_data.py.\n')
@@ -196,6 +261,9 @@ def batch_k16(root: str):
         print(f'  CNF: {nvars} vars, {len(clauses)} clauses', file=sys.stderr)
         steps = parse_lrat(lrat_path)
         print(f'  LRAT: {len(steps)} steps', file=sys.stderr)
+        clauses, steps = preapply_leading_deletes(clauses, steps)
+        print(f'  After pre-deletion: {len(clauses)} clauses, {len(steps)} steps',
+              file=sys.stderr)
 
         with open(out_path, 'w') as f:
             emit_lean(f, prefix, nvars, clauses, steps)
@@ -238,6 +306,9 @@ def main():
     print(f'Parsing LRAT: {args.lrat}', file=sys.stderr)
     steps = parse_lrat(args.lrat)
     print(f'  {len(steps)} steps', file=sys.stderr)
+    clauses, steps = preapply_leading_deletes(clauses, steps)
+    print(f'  After pre-deletion: {len(clauses)} clauses, {len(steps)} steps',
+          file=sys.stderr)
 
     print(f'Writing: {args.output}', file=sys.stderr)
     with open(args.output, 'w') as f:
