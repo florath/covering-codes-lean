@@ -207,6 +207,7 @@ def _fmt_step(step) -> str:
 
 def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     out.write('import CoveringCodes.Database.Sources.LRATKernel\n\n')
+    out.write('set_option maxHeartbeats 0\n\n')
     out.write('/-!\n')
     out.write(f'Auto-generated LRATKernel data for {prefix}.\n')
     out.write('Do not edit; regenerate with scripts/gen_lrat_kernel_data.py.\n')
