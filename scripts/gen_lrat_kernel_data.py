@@ -169,10 +169,44 @@ def _ints(xs) -> str:
     return ', '.join(str(x) for x in xs)
 
 
+CHUNK_SIZE = 500
+
+
+def _emit_chunks(out, prefix: str, tag: str, type_str: str, items, fmt_item):
+    """Emit items as private chunk defs and a top-level concatenation."""
+    chunks = [items[i:i + CHUNK_SIZE] for i in range(0, max(len(items), 1), CHUNK_SIZE)]
+    chunk_names = []
+    for ci, chunk in enumerate(chunks):
+        name = f'{prefix}K{tag}Chunk{ci:04d}'
+        chunk_names.append(name)
+        out.write(f'private def {name} : {type_str} :=\n  [\n')
+        last = len(chunk) - 1
+        for j, item in enumerate(chunk):
+            sep = ',' if j < last else ''
+            out.write(f'    {fmt_item(item)}{sep}\n')
+        out.write('  ]\n\n')
+    # Top-level concatenation
+    out.write(f'def {prefix}K{tag} : {type_str} :=\n')
+    if not chunk_names:
+        out.write('  []\n\n')
+    else:
+        out.write('  ' + ' ++\n  '.join(chunk_names) + '\n\n')
+
+
+def _fmt_clause(clause) -> str:
+    return f'[{_ints(clause)}]'
+
+
+def _fmt_step(step) -> str:
+    if step[0] == 'del':
+        return f'.del [{_ints(step[1])}]'
+    else:
+        _, sid, lits, hints = step
+        return f'.add {sid} [{_ints(lits)}] [{_ints(hints)}]'
+
+
 def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     out.write('import CoveringCodes.Database.Sources.LRATKernel\n\n')
-    out.write('-- set_option maxHeartbeats 0 allows Lean to elaborate large list literals\n')
-    out.write('set_option maxHeartbeats 0\n\n')
     out.write('/-!\n')
     out.write(f'Auto-generated LRATKernel data for {prefix}.\n')
     out.write('Do not edit; regenerate with scripts/gen_lrat_kernel_data.py.\n')
@@ -183,25 +217,11 @@ def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     # NVars
     out.write(f'def {prefix}KNVars : Nat := {nvars}\n\n')
 
-    # CNF
-    out.write(f'def {prefix}KCnf : RawCnf :=\n  [\n')
-    last_cnf = len(clauses) - 1
-    for i, clause in enumerate(clauses):
-        sep = ',' if i < last_cnf else ''
-        out.write(f'    [{_ints(clause)}]{sep}\n')
-    out.write('  ]\n\n')
+    # CNF — emitted as CHUNK_SIZE-clause private chunks + concatenation
+    _emit_chunks(out, prefix, 'Cnf', 'RawCnf', clauses, _fmt_clause)
 
-    # Steps
-    out.write(f'def {prefix}KSteps : List Step :=\n  [\n')
-    last_step = len(steps) - 1
-    for i, step in enumerate(steps):
-        sep = ',' if i < last_step else ''
-        if step[0] == 'del':
-            out.write(f'    .del [{_ints(step[1])}]{sep}\n')
-        else:
-            _, sid, lits, hints = step
-            out.write(f'    .add {sid} [{_ints(lits)}] [{_ints(hints)}]{sep}\n')
-    out.write('  ]\n\n')
+    # Steps — emitted as CHUNK_SIZE-step private chunks + concatenation
+    _emit_chunks(out, prefix, 'Steps', 'List Step', steps, _fmt_step)
 
     # Leaf and Leaves
     out.write(f'def {prefix}KLeaf : Leaf :=\n')
