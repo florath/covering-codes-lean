@@ -38,6 +38,7 @@ EOF
 all_steps=(
   log_state
   check_source_policy
+  clean_external_certificates
   materialize_external_certificates
   clean_native
   native_external_certificates
@@ -63,6 +64,7 @@ all_steps=(
 native_steps=(
   log_state
   check_source_policy
+  clean_external_certificates
   materialize_external_certificates
   clean_native
   native_external_certificates
@@ -80,6 +82,7 @@ native_steps=(
 kernel_steps=(
   log_state
   check_source_policy
+  clean_external_certificates
   materialize_external_certificates
   clean_kernel
   kernel_external_certificates
@@ -97,6 +100,7 @@ describe_step() {
   case "$1" in
     log_state) echo "Record repository, toolchain, and machine state" ;;
     check_source_policy) echo "Check Lean sources for sorry/admit/axiom/unsafe" ;;
+    clean_external_certificates) echo "Remove all local external certificate archives, extracted files, and generated files" ;;
     materialize_external_certificates) echo "Fetch and extract all external certificate data" ;;
     clean_native) echo "lake clean before native build" ;;
     native_external_certificates) echo "Build external certificate-backed modules in native proof mode" ;;
@@ -388,6 +392,9 @@ run_step check_source_policy "$(describe_step check_source_policy)" \
     fi
     echo "source policy OK"
   '
+
+run_step clean_external_certificates "$(describe_step clean_external_certificates)" \
+  python3 -B scripts/external-certificates.py clean --all --extracted --archive --generated --yes
 
 external_certificate_native_args=(check --all --proof-mode native)
 external_certificate_kernel_args=(check --all --proof-mode kernel)

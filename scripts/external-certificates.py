@@ -532,7 +532,7 @@ def remove_empty_dirs(root: Path) -> None:
         current = current.parent
 
 
-def clean_bundle(manifest: dict[str, Any], bundle: dict[str, Any], extracted: bool, archive: bool) -> None:
+def clean_bundle(manifest: dict[str, Any], bundle: dict[str, Any], extracted: bool, archive: bool, generated: bool = False) -> None:
     if extracted:
         for file_info in bundle.get("files", []):
             path = repo_path(file_info["path"])
@@ -545,6 +545,11 @@ def clean_bundle(manifest: dict[str, Any], bundle: dict[str, Any], extracted: bo
         if root != REPO:
             remove_empty_dirs(root)
         print(f"removed extracted files: {bundle['id']}")
+    if generated:
+        for file_info in bundle.get("generated_files", []):
+            path = repo_path(file_info["path"])
+            path.unlink(missing_ok=True)
+        print(f"removed generated files: {bundle['id']}")
     if archive:
         path = archive_path(manifest, bundle)
         path.unlink(missing_ok=True)
@@ -651,11 +656,11 @@ def command_verify(args: argparse.Namespace) -> None:
 def command_clean(args: argparse.Namespace) -> None:
     if not args.yes:
         raise CertError("clean requires --yes")
-    if not args.extracted and not args.archive:
-        raise CertError("clean requires --extracted and/or --archive")
+    if not args.extracted and not args.archive and not args.generated:
+        raise CertError("clean requires --extracted, --archive, and/or --generated")
     manifest = load_manifest(args.manifest)
     for bundle in selected_bundles(args, manifest):
-        clean_bundle(manifest, bundle, extracted=args.extracted, archive=args.archive)
+        clean_bundle(manifest, bundle, extracted=args.extracted, archive=args.archive, generated=args.generated)
 
 
 def command_plan(args: argparse.Namespace) -> None:
@@ -770,6 +775,8 @@ def build_parser() -> argparse.ArgumentParser:
     add_selection(clean_parser)
     clean_parser.add_argument("--extracted", action="store_true")
     clean_parser.add_argument("--archive", action="store_true")
+    clean_parser.add_argument("--generated", action="store_true",
+                              help="also remove generated files regardless of clean_with_extracted")
     clean_parser.add_argument("--yes", action="store_true")
     clean_parser.set_defaults(func=command_clean)
 
