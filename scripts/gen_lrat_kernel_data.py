@@ -169,12 +169,23 @@ def _ints(xs) -> str:
     return ', '.join(str(x) for x in xs)
 
 
+def _encode_lit(l: int) -> int:
+    """Sign-magnitude encode: positive l → 2*l, negative l → 2*|l|+1."""
+    if l > 0:
+        return 2 * l
+    elif l < 0:
+        return 2 * (-l) + 1
+    return 0
+
+
 CHUNK_SIZE = 500
+CHUNK_SIZE_STEPS = 20
 
 
-def _emit_chunks(out, prefix: str, tag: str, type_str: str, items, fmt_item):
+def _emit_chunks(out, prefix: str, tag: str, type_str: str, items, fmt_item,
+                 chunk_size: int = CHUNK_SIZE, top_noncomputable: bool = False):
     """Emit items as private chunk defs and a top-level concatenation."""
-    chunks = [items[i:i + CHUNK_SIZE] for i in range(0, max(len(items), 1), CHUNK_SIZE)]
+    chunks = [items[i:i + chunk_size] for i in range(0, max(len(items), 1), chunk_size)]
     chunk_names = []
     for ci, chunk in enumerate(chunks):
         name = f'{prefix}K{tag}Chunk{ci:04d}'
@@ -185,8 +196,10 @@ def _emit_chunks(out, prefix: str, tag: str, type_str: str, items, fmt_item):
             sep = ',' if j < last else ''
             out.write(f'    {fmt_item(item)}{sep}\n')
         out.write('  ]\n\n')
-    # Top-level concatenation
-    out.write(f'def {prefix}K{tag} : {type_str} :=\n')
+    # Top-level concatenation — noncomputable when the list is too large for the
+    # native compiler (kernel evaluator used by `decide` still reduces it fine).
+    nc = 'noncomputable ' if top_noncomputable else ''
+    out.write(f'{nc}def {prefix}K{tag} : {type_str} :=\n')
     if not chunk_names:
         out.write('  []\n\n')
     else:
@@ -197,6 +210,10 @@ def _fmt_clause(clause) -> str:
     return f'[{_ints(clause)}]'
 
 
+def _fmt_nat_clause(clause) -> str:
+    return f'[{", ".join(str(_encode_lit(l)) for l in clause)}]'
+
+
 def _fmt_step(step) -> str:
     if step[0] == 'del':
         return f'.del [{_ints(step[1])}]'
@@ -205,9 +222,20 @@ def _fmt_step(step) -> str:
         return f'.add {sid} [{_ints(lits)}] [{_ints(hints)}]'
 
 
+def _fmt_raw_nat_step(step) -> str:
+    """Emit RawNatStep: clause sign-magnitude encoded, proof hints as direct Nat."""
+    if step[0] == 'del':
+        return f'.del [{_ints(step[1])}]'
+    else:
+        _, sid, lits, hints = step
+        encoded_lits = ', '.join(str(_encode_lit(l)) for l in lits)
+        return f'.add {sid} [{encoded_lits}] [{_ints(hints)}]'
+
+
 def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     out.write('import CoveringCodes.Database.Sources.LRATKernel\n\n')
-    out.write('set_option maxHeartbeats 0\n\n')
+    out.write('set_option maxHeartbeats 0\n')
+    out.write('set_option maxRecDepth 700\n\n')
     out.write('/-!\n')
     out.write(f'Auto-generated LRATKernel data for {prefix}.\n')
     out.write('Do not edit; regenerate with scripts/gen_lrat_kernel_data.py.\n')
@@ -218,16 +246,22 @@ def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     # NVars
     out.write(f'def {prefix}KNVars : Nat := {nvars}\n\n')
 
-    # CNF — emitted as CHUNK_SIZE-clause private chunks + concatenation
-    _emit_chunks(out, prefix, 'Cnf', 'RawCnf', clauses, _fmt_clause)
+    # CNF — emitted as RawNatCnf (Nat sign-magnitude encoded) for fast elaboration.
+    # KCnf is noncomputable: rawNatCnfToRawCnf produces List (List Int) which the
+    # native compiler can't handle at this scale; `decide` uses kernel reduction instead.
+    _emit_chunks(out, prefix, 'RawCnf', 'RawNatCnf', clauses, _fmt_nat_clause)
+    out.write(f'noncomputable def {prefix}KCnf : RawCnf := rawNatCnfToRawCnf {prefix}KRawCnf\n\n')
 
-    # Steps — emitted as CHUNK_SIZE-step private chunks + concatenation
-    _emit_chunks(out, prefix, 'Steps', 'List Step', steps, _fmt_step)
+    # Steps — emitted as RawNatStep (all-Nat encoding) for fast elaboration.
+    # KRawSteps and KSteps are noncomputable for the same reason as KCnf.
+    _emit_chunks(out, prefix, 'RawSteps', 'List RawNatStep', steps, _fmt_raw_nat_step,
+                 chunk_size=CHUNK_SIZE_STEPS, top_noncomputable=True)
+    out.write(f'noncomputable def {prefix}KSteps : List Step := rawNatStepsToSteps {prefix}KRawSteps\n\n')
 
     # Leaf and Leaves
-    out.write(f'def {prefix}KLeaf : Leaf :=\n')
+    out.write(f'noncomputable def {prefix}KLeaf : Leaf :=\n')
     out.write(f'  {{ cube := [], steps := {prefix}KSteps }}\n\n')
-    out.write(f'def {prefix}KLeaves : List Leaf :=\n')
+    out.write(f'noncomputable def {prefix}KLeaves : List Leaf :=\n')
     out.write(f'  [{prefix}KLeaf]\n\n')
 
     out.write('end Database\nend CoveringCodes\n')

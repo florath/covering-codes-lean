@@ -37,6 +37,20 @@ open Mathlib.Tactic.Sat
 abbrev RawClause := List Int
 abbrev RawCnf    := List RawClause
 
+-- Sign-magnitude Nat encoding: l > 0 → 2*l, l < 0 → 2*|l|+1 (avoids Int literal overhead).
+def natLitToInt (n : Nat) : Int :=
+  if n % 2 == 0 then (n / 2 : Int) else -(n / 2 : Int)
+abbrev RawNatClause := List Nat
+abbrev RawNatCnf    := List RawNatClause
+def rawNatCnfToRawCnf (cnf : RawNatCnf) : RawCnf :=
+  cnf.map (fun c => c.map natLitToInt)
+
+-- Step encoding with all-Nat fields; proof hints are positive clause IDs stored directly.
+-- Conversion to Step (defined below) is via RawNatStep.toStep after Step is declared.
+inductive RawNatStep where
+  | del (ids    : List Nat)
+  | add (id     : Nat) (clause : List Nat) (proof : List Nat)
+
 def rawClauseToSat (c : RawClause) : Sat.Clause := c.map Sat.Literal.ofInt
 def rawCnfToSat   (f : RawCnf)    : Sat.Fmla   := f.map rawClauseToSat
 
@@ -70,6 +84,13 @@ inductive Step where
   | del (ids   : List Nat)
   | add (id    : Nat) (clause : List Int) (proof : List Int)
   deriving DecidableEq, Repr
+
+def RawNatStep.toStep : RawNatStep → Step
+  | .del ids => Step.del ids
+  | .add id clause proof => Step.add id (clause.map natLitToInt) (proof.map Int.ofNat)
+
+def rawNatStepsToSteps (steps : List RawNatStep) : List Step :=
+  steps.map RawNatStep.toStep
 
 -- ===== Database — RBMap for O(log n) kernel-reducible lookup =====
 
