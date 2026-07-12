@@ -19,11 +19,10 @@ The soundness chain (`checkLeaves_branch_unsat_of_mem`) mirrors
 `LRATNative.checkParsedCubeLRATs_branch_unsat_of_mem`.
 
 ### Proof status
-All soundness lemmas are proved except two that require Batteries RBMap facts
-not yet exposed as top-level theorems (marked `sorry`):
-- `Db.lookup_erase_mono` — "erase cannot add new entries"; no direct Batteries
-  theorem for RBMap yet, but provable from membership properties.
-- `LookupSound.insertCubeClauses` — inductive step on the cube fold.
+All soundness lemmas are fully proved, including the two RBMap lemmas that
+required manual proofs from membership properties:
+- `Db.lookup_erase_mono` — proved via `Batteries.RBNode.All.del`
+- `LookupSound.insertCubeClauses` — proved by induction on the cube literal list
 -/
 
 namespace CoveringCodes
