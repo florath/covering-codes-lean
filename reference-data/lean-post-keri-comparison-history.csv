@@ -1,4 +1,5 @@
 timestamp_utc,total,ref_tight,exact,ref_lo,ref_hi,we_lo,we_tight,we_hi,agree_lo,agree_hi,partial,missing,contrad,commit,improvement
+2026-07-13T14:25:40Z,1145,621,451,70,1,2,0,0,0,0,0,0,0,069febd,"K_16(4,2)=87 (was reference_tighter)"
 2026-07-04T06:05:59Z,1145,622,451,70,1,1,0,0,0,0,0,0,0,c7bbf67265d8,"K_8(10,4)<=11776 (was 29889)"
 2026-06-30T05:04:04Z,1145,623,451,69,1,1,0,0,0,0,0,0,0,d2f43bb0232e,"K_q(3,1)=ceil(q^2/2) for q=5..21 (was lower gap)"
 2026-06-29T15:19:22Z,1145,623,434,86,1,1,0,0,0,0,0,0,0,4e714e2703d3,"K_10(6,1)<=20000 (was 40000); q=10 propagated upper bounds including K_10(10,2)<=20000000 (was 40000000)"
