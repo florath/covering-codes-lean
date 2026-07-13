@@ -35,7 +35,7 @@ leaves additionally rely on Lean's native compiled evaluator/runtime.
 6. Update trace statistics in `Tools/TableGen/Main.lean` if a new constructor was added.
 7. Update `RELATION_COVERAGE.md` to reflect the new status.
 8. If a primitive or explicit-code source changed: regenerate the table
-   (`lake -KproofMode=native exe table_gen`), then rebuild
+   (`lake -KproofMode=native env lean --run Tools/TableGen/Main.lean`), then rebuild
    (`scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedAPI`).
 
 ---
@@ -92,8 +92,8 @@ def primitiveLowerSource : LowerBoundSource :=
 
 ```bash
 scripts/build-proof-mode.sh native CoveringCodes.Database.Core
-scripts/build-proof-mode.sh native table_gen
-lake -KproofMode=native exe table_gen
+scripts/build-proof-mode.sh native Tools.TableGen.Main
+lake -KproofMode=native env lean --run Tools/TableGen/Main.lean
 scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedAPI
 ```
 
@@ -136,7 +136,7 @@ A closure-table relation must be added in four places:
 4. **`Tools/TableGen/Main.lean`**: serialisation branch in `serializeUpperTrace` /
    `serializeLowerTrace`, and a statistics counter in `TraceStats`.
 
-After adding, run `lake -KproofMode=native exe table_gen` to regenerate the
+After adding, run `lake -KproofMode=native env lean --run Tools/TableGen/Main.lean` to regenerate the
 table, then rebuild.
 Update `RELATION_COVERAGE.md` to mark the relation as `automatic`.
 
@@ -148,8 +148,8 @@ If a new relation can improve the precomputed table, follow the closure-table
 steps above, then re-run:
 
 ```bash
-scripts/build-proof-mode.sh native table_gen
-lake -KproofMode=native exe table_gen
+scripts/build-proof-mode.sh native Tools.TableGen.Main
+lake -KproofMode=native env lean --run Tools/TableGen/Main.lean
 scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedAPI
 ```
 

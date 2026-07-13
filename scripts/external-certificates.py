@@ -219,11 +219,12 @@ def copy_or_download(url: str, destination: Path) -> None:
                 with urllib.request.urlopen(url) as response:
                     shutil.copyfileobj(response, tmp_handle)
             elif parsed.scheme == "file":
-                source = Path(urllib.request.url2pathname(parsed.path))
+                source = Path(urllib.request.url2pathname(parsed.path)).expanduser()
                 with source.open("rb") as source_handle:
                     shutil.copyfileobj(source_handle, tmp_handle)
             elif parsed.scheme == "":
-                source = repo_path(url)
+                candidate = Path(url).expanduser()
+                source = candidate if candidate.is_absolute() else repo_path(candidate)
                 with source.open("rb") as source_handle:
                     shutil.copyfileobj(source_handle, tmp_handle)
             else:
@@ -364,6 +365,39 @@ def generate_file(bundle: dict[str, Any], file_info: dict[str, Any], force: bool
         source = repo_path(file_info["source"])
         values = read_tail_values(source)
         content = render_q9_n9_r5_tail_data(values)
+    elif kind is not None and kind.startswith("k16-4-2-tail-box-lrat-kernel-") and kind.endswith("-lean"):
+        sources = file_info.get("source", [])
+        if len(sources) != 2:
+            raise CertError(
+                f"expected 2 source files (cnf, lrat) for {bundle['id']} {kind}, got {len(sources)}"
+            )
+        suffix = kind[len("k16-4-2-tail-box-lrat-kernel-"):-len("-lean")]
+        cnf_path = repo_path(sources[0])
+        lrat_path = repo_path(sources[1])
+        prefix = f"tailBox{suffix}"
+        generator = REPO / file_info.get("generator", "scripts/gen_lrat_kernel_data.py")
+        target.parent.mkdir(parents=True, exist_ok=True)
+        fd, tmp_str = tempfile.mkstemp(
+            prefix=target.name + ".", suffix=".tmp", dir=str(target.parent)
+        )
+        tmp_path = Path(tmp_str)
+        os.close(fd)
+        try:
+            subprocess.run(
+                [sys.executable, str(generator),
+                 "--cnf", str(cnf_path), "--lrat", str(lrat_path),
+                 "--prefix", prefix, "--output", str(tmp_path)],
+                cwd=REPO, check=True,
+            )
+        except Exception:
+            tmp_path.unlink(missing_ok=True)
+            raise
+        tmp_path.replace(target)
+        target.chmod(0o644)
+        if not file_ok(target, file_info.get("bytes"), file_info.get("sha256")):
+            raise CertError(f"generated file failed verification: {file_info['path']}")
+        print(f"generated: {bundle['id']} -> {rel(target)}")
+        return
     else:
         raise CertError(f"unsupported generated file kind for {bundle['id']}: {kind}")
 
@@ -498,7 +532,7 @@ def remove_empty_dirs(root: Path) -> None:
         current = current.parent
 
 
-def clean_bundle(manifest: dict[str, Any], bundle: dict[str, Any], extracted: bool, archive: bool) -> None:
+def clean_bundle(manifest: dict[str, Any], bundle: dict[str, Any], extracted: bool, archive: bool, generated: bool = False) -> None:
     if extracted:
         for file_info in bundle.get("files", []):
             path = repo_path(file_info["path"])
@@ -511,6 +545,11 @@ def clean_bundle(manifest: dict[str, Any], bundle: dict[str, Any], extracted: bo
         if root != REPO:
             remove_empty_dirs(root)
         print(f"removed extracted files: {bundle['id']}")
+    if generated:
+        for file_info in bundle.get("generated_files", []):
+            path = repo_path(file_info["path"])
+            path.unlink(missing_ok=True)
+        print(f"removed generated files: {bundle['id']}")
     if archive:
         path = archive_path(manifest, bundle)
         path.unlink(missing_ok=True)
@@ -617,11 +656,11 @@ def command_verify(args: argparse.Namespace) -> None:
 def command_clean(args: argparse.Namespace) -> None:
     if not args.yes:
         raise CertError("clean requires --yes")
-    if not args.extracted and not args.archive:
-        raise CertError("clean requires --extracted and/or --archive")
+    if not args.extracted and not args.archive and not args.generated:
+        raise CertError("clean requires --extracted, --archive, and/or --generated")
     manifest = load_manifest(args.manifest)
     for bundle in selected_bundles(args, manifest):
-        clean_bundle(manifest, bundle, extracted=args.extracted, archive=args.archive)
+        clean_bundle(manifest, bundle, extracted=args.extracted, archive=args.archive, generated=args.generated)
 
 
 def command_plan(args: argparse.Namespace) -> None:
@@ -736,6 +775,8 @@ def build_parser() -> argparse.ArgumentParser:
     add_selection(clean_parser)
     clean_parser.add_argument("--extracted", action="store_true")
     clean_parser.add_argument("--archive", action="store_true")
+    clean_parser.add_argument("--generated", action="store_true",
+                              help="also remove generated files regardless of clean_with_extracted")
     clean_parser.add_argument("--yes", action="store_true")
     clean_parser.set_defaults(func=command_clean)
 

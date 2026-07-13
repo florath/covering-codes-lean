@@ -1,0 +1,24 @@
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT114
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT122
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT123
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT124
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT133
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT134
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT144
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT222
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT223
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT224
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT233
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT234
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT244
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT333
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT334
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT344
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT444
+
+/-!
+# K16 4-fiber tail-box LRAT smoke tests
+
+This aggregate module imports one LRAT replay module per tail-box spread so Lake
+can build the certificates in parallel when the individual modules are targeted.
+-/

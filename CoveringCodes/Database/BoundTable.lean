@@ -449,7 +449,7 @@ def relaxOnce (table : Array AnyBoundEntry) : Array AnyBoundEntry :=
 -- Bounded closure table
 
 -- (_ : Unit) argument prevents eager initialization at module-load time.
--- Only table_gen calls this; the covering_codes binary uses GeneratedTable instead.
+-- Only the table generator calls this; the covering_codes launcher uses GeneratedTable instead.
 def boundTable (_ : Unit) : Array AnyBoundEntry := Id.run do
   let mut table := initialTable ()
   for _ in [:maxPasses] do

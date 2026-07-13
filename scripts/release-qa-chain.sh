@@ -9,8 +9,8 @@ usage() {
   cat <<'EOF'
 Usage: scripts/release-qa-chain.sh [OPTIONS]
 
-Runs a clean native build, clean kernel build, smoke tests, and release
-correctness checks.  Each step writes its own log under
+Runs external certificate materialization, clean native and kernel builds,
+smoke tests, and release correctness checks.  Each step writes its own log under
 build/release-qa-runs/RUN_ID and creates a done marker only after success.
 
 Options:
@@ -19,6 +19,9 @@ Options:
   --phase PHASE            Run all, native, or kernel steps. Default: all.
   --external-certificate-storage-limit SIZE
                            Pass --storage-limit to external certificate checks.
+                           This enables batched checks; extracted files are
+                           re-materialized before later build phases that need
+                           include_str data.
                            Defaults to EXTERNAL_CERTIFICATE_STORAGE_LIMIT.
   --list-steps             Print step names and exit.
   -h, --help               Show this help.
@@ -35,8 +38,11 @@ EOF
 all_steps=(
   log_state
   check_source_policy
+  clean_external_certificates
+  materialize_external_certificates
   clean_native
   native_external_certificates
+  native_rematerialize_external_certificates
   native_build_table_gen
   native_regenerate_table
   native_check_generated
@@ -47,6 +53,7 @@ all_steps=(
   native_smoke_tests
   clean_kernel
   kernel_external_certificates
+  kernel_rematerialize_external_certificates
   kernel_van_laarhoven_certificates
   kernel_build_table_gen
   kernel_build_covering_codes
@@ -57,8 +64,11 @@ all_steps=(
 native_steps=(
   log_state
   check_source_policy
+  clean_external_certificates
+  materialize_external_certificates
   clean_native
   native_external_certificates
+  native_rematerialize_external_certificates
   native_build_table_gen
   native_regenerate_table
   native_check_generated
@@ -72,8 +82,11 @@ native_steps=(
 kernel_steps=(
   log_state
   check_source_policy
+  clean_external_certificates
+  materialize_external_certificates
   clean_kernel
   kernel_external_certificates
+  kernel_rematerialize_external_certificates
   kernel_van_laarhoven_certificates
   kernel_build_table_gen
   kernel_build_covering_codes
@@ -87,9 +100,12 @@ describe_step() {
   case "$1" in
     log_state) echo "Record repository, toolchain, and machine state" ;;
     check_source_policy) echo "Check Lean sources for sorry/admit/axiom/unsafe" ;;
+    clean_external_certificates) echo "Remove all local external certificate archives, extracted files, and generated files" ;;
+    materialize_external_certificates) echo "Fetch and extract all external certificate data" ;;
     clean_native) echo "lake clean before native build" ;;
     native_external_certificates) echo "Build external certificate-backed modules in native proof mode" ;;
-    native_build_table_gen) echo "Build table_gen in native proof mode" ;;
+    native_rematerialize_external_certificates) echo "Re-materialize external data after bounded native certificate checks" ;;
+    native_build_table_gen) echo "Build table generator module in native proof mode" ;;
     native_regenerate_table) echo "Regenerate the precomputed table in native proof mode" ;;
     native_check_generated) echo "Check generated table diff and metadata" ;;
     native_dump_reference_data) echo "Regenerate the Lean reference-data CSV in native proof mode" ;;
@@ -99,8 +115,9 @@ describe_step() {
     native_smoke_tests) echo "Run native smoke tests" ;;
     clean_kernel) echo "lake clean before kernel build" ;;
     kernel_external_certificates) echo "Build external certificate-backed modules in kernel proof mode" ;;
+    kernel_rematerialize_external_certificates) echo "Re-materialize external data after bounded kernel certificate checks" ;;
     kernel_van_laarhoven_certificates) echo "Build van Laarhoven certificates sequentially in kernel proof mode" ;;
-    kernel_build_table_gen) echo "Build table_gen in kernel proof mode" ;;
+    kernel_build_table_gen) echo "Build table generator module in kernel proof mode" ;;
     kernel_build_covering_codes) echo "Build covering_codes in kernel proof mode" ;;
     kernel_build_library_tests) echo "Build library, examples, and test modules in kernel proof mode" ;;
     kernel_smoke_tests) echo "Run kernel smoke tests" ;;
@@ -376,20 +393,33 @@ run_step check_source_policy "$(describe_step check_source_policy)" \
     echo "source policy OK"
   '
 
-external_certificate_native_args=(check --all --proof-mode native --clean-extracted)
-external_certificate_kernel_args=(check --all --proof-mode kernel --clean-extracted)
+run_step clean_external_certificates "$(describe_step clean_external_certificates)" \
+  python3 -B scripts/external-certificates.py clean --all --extracted --archive --generated --yes
+
+external_certificate_native_args=(check --all --proof-mode native)
+external_certificate_kernel_args=(check --all --proof-mode kernel)
 if [[ -n "${external_certificate_storage_limit}" ]]; then
-  external_certificate_native_args+=(--storage-limit "${external_certificate_storage_limit}")
-  external_certificate_kernel_args+=(--storage-limit "${external_certificate_storage_limit}")
+  external_certificate_native_args+=(--storage-limit "${external_certificate_storage_limit}" --clean-extracted)
+  external_certificate_kernel_args+=(--storage-limit "${external_certificate_storage_limit}" --clean-extracted)
 fi
 
+if [[ -z "${external_certificate_storage_limit}" ]]; then
+  run_step materialize_external_certificates "$(describe_step materialize_external_certificates)" \
+    python3 -B scripts/external-certificates.py materialize --all
+else
+  log_msg "==> SKIP materialize_external_certificates: bounded certificate checks materialize per batch"
+fi
 run_step clean_native "$(describe_step clean_native)" lake clean
 run_step native_external_certificates "$(describe_step native_external_certificates)" \
   python3 -B scripts/external-certificates.py "${external_certificate_native_args[@]}"
+if [[ -n "${external_certificate_storage_limit}" ]]; then
+  run_step native_rematerialize_external_certificates "$(describe_step native_rematerialize_external_certificates)" \
+    python3 -B scripts/external-certificates.py materialize --all
+fi
 run_step native_build_table_gen "$(describe_step native_build_table_gen)" \
-  scripts/build-proof-mode.sh native table_gen
+  scripts/build-proof-mode.sh native Tools.TableGen.Main
 run_step native_regenerate_table "$(describe_step native_regenerate_table)" \
-  lake -KproofMode=native exe table_gen
+  lake -KproofMode=native env lean --run Tools/TableGen/Main.lean
 run_step native_check_generated "$(describe_step native_check_generated)" \
   bash -c '
     set -euo pipefail
@@ -401,7 +431,7 @@ run_step native_check_generated "$(describe_step native_check_generated)" \
 run_step native_dump_reference_data "$(describe_step native_dump_reference_data)" \
   bash -c '
     set -euo pipefail
-    scripts/build-proof-mode.sh native reference_data_dump
+    scripts/build-proof-mode.sh native Tools.ReferenceDataDump.Main
     lake -KproofMode=native env lean --run Tools/ReferenceDataDump/Main.lean
   '
 run_step native_check_reference_data "$(describe_step native_check_reference_data)" \
@@ -411,7 +441,7 @@ run_step native_check_reference_data "$(describe_step native_check_reference_dat
     python3 -B reference-data/scripts/check_reference_keys.py
   '
 run_step native_build_covering_codes "$(describe_step native_build_covering_codes)" \
-  scripts/build-proof-mode.sh native covering_codes
+  scripts/build-proof-mode.sh native CoveringCodes.Database.GeneratedAPI covering_codes
 run_step native_build_library_tests "$(describe_step native_build_library_tests)" \
   scripts/build-proof-mode.sh native \
     CoveringCodes \
@@ -447,6 +477,10 @@ run_step native_smoke_tests "$(describe_step native_smoke_tests)" \
 run_step clean_kernel "$(describe_step clean_kernel)" lake clean
 run_step kernel_external_certificates "$(describe_step kernel_external_certificates)" \
   python3 -B scripts/external-certificates.py "${external_certificate_kernel_args[@]}"
+if [[ -n "${external_certificate_storage_limit}" ]]; then
+  run_step kernel_rematerialize_external_certificates "$(describe_step kernel_rematerialize_external_certificates)" \
+    python3 -B scripts/external-certificates.py materialize --all
+fi
 run_step kernel_van_laarhoven_certificates "$(describe_step kernel_van_laarhoven_certificates)" \
   bash -c '
     set -euo pipefail
@@ -459,9 +493,9 @@ run_step kernel_van_laarhoven_certificates "$(describe_step kernel_van_laarhoven
     done
   '
 run_step kernel_build_table_gen "$(describe_step kernel_build_table_gen)" \
-  scripts/build-proof-mode.sh kernel table_gen
+  scripts/build-proof-mode.sh kernel Tools.TableGen.Main
 run_step kernel_build_covering_codes "$(describe_step kernel_build_covering_codes)" \
-  scripts/build-proof-mode.sh kernel covering_codes
+  scripts/build-proof-mode.sh kernel CoveringCodes.Database.GeneratedAPI covering_codes
 run_step kernel_build_library_tests "$(describe_step kernel_build_library_tests)" \
   scripts/build-proof-mode.sh kernel \
     CoveringCodes \

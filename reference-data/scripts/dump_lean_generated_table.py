@@ -2,9 +2,9 @@
 """
 Deprecated compatibility wrapper for the Lean reference-data exporter.
 
-The canonical producer is the Lean/Lake executable:
+The canonical producer is the Lean reference-data exporter:
 
-  lake -KproofMode=native exe reference_data_dump
+  lake -KproofMode=native env lean --run Tools/ReferenceDataDump/Main.lean
 """
 
 import subprocess
@@ -15,10 +15,17 @@ REPO = Path(__file__).resolve().parents[2]
 
 
 def main() -> None:
-    command = ["lake", "-KproofMode=native", "exe", "reference_data_dump"]
+    command = [
+        "lake",
+        "-KproofMode=native",
+        "env",
+        "lean",
+        "--run",
+        "Tools/ReferenceDataDump/Main.lean",
+    ]
     print(
         "NOTE: this script is deprecated; running "
-        "`lake -KproofMode=native exe reference_data_dump` instead.",
+        "`lake -KproofMode=native env lean --run Tools/ReferenceDataDump/Main.lean` instead.",
         file=sys.stderr,
     )
     raise SystemExit(subprocess.call(command, cwd=REPO))

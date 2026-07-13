@@ -1,0 +1,27 @@
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel114
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel122
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel123
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel124
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel133
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel134
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel144
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel222
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel223
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel224
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel233
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel234
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel244
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel333
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel334
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel344
+import CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRATKernel444
+
+/-!
+# K16 4-fiber tail-box LRAT kernel smoke tests
+
+Aggregate module importing one kernel-provable (`decide`-based) LRAT replay
+module per tail-box spread.  Each per-spread module requires a generated data
+file (`HexadecimaryFourTwoTailBoxLRATKernel{ijk}Data.lean`) from the external
+certificate bundle; generate all files at once with:
+  python3 scripts/gen_lrat_kernel_data.py --batch-k16
+-/

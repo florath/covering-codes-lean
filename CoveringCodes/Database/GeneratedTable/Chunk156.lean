@@ -75,14 +75,14 @@ def precomputedTable_chunk_156 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 6 (by decide : 0 < 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2))) },
   { key := { q := 16, n := 12, r := 9 }
     lowerValue := 29
-    upperValue := 2048
+    upperValue := 1392
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 16 12 9))
-    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)))) },
+    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2)))) },
   { key := { q := 16, n := 12, r := 10 }
     lowerValue := 16
-    upperValue := 128
+    upperValue := 87
     lowerTrace := (.radiusBack (by decide : 10 ≤ 11) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 12 11)))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 16) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1))) },
+    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 16) (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2))) },
   { key := { q := 16, n := 12, r := 11 }
     lowerValue := 16
     upperValue := 16
@@ -325,14 +325,14 @@ def precomputedTable_chunk_156 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 7 (by decide : 0 < 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2))) },
   { key := { q := 16, n := 13, r := 10 }
     lowerValue := 23
-    upperValue := 2048
+    upperValue := 1392
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 16 13 10))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)))) },
+    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2)))) },
   { key := { q := 16, n := 13, r := 11 }
     lowerValue := 16
-    upperValue := 128
+    upperValue := 87
     lowerTrace := (.radiusBack (by decide : 11 ≤ 12) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 13 12)))
-    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 16) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1))) },
+    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 16) (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2))) },
   { key := { q := 16, n := 13, r := 12 }
     lowerValue := 16
     upperValue := 16
@@ -575,14 +575,14 @@ def precomputedTable_chunk_156 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 8 (by decide : 0 < 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2))) },
   { key := { q := 16, n := 14, r := 11 }
     lowerValue := 19
-    upperValue := 2048
+    upperValue := 1392
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 16 14 11))
-    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)))) },
+    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2)))) },
   { key := { q := 16, n := 14, r := 12 }
     lowerValue := 16
-    upperValue := 128
+    upperValue := 87
     lowerTrace := (.radiusBack (by decide : 12 ≤ 13) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 14 13)))
-    upperTrace := (.lengthenDummyN 11 (by decide : 0 < 16) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1))) },
+    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 16) (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2))) },
   { key := { q := 16, n := 14, r := 13 }
     lowerValue := 16
     upperValue := 16
@@ -825,14 +825,14 @@ def precomputedTable_chunk_156 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 9 (by decide : 0 < 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2))) },
   { key := { q := 16, n := 15, r := 12 }
     lowerValue := 16
-    upperValue := 2048
+    upperValue := 1392
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 16 15 12))
-    upperTrace := (.lengthenDummyN 11 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)))) },
+    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2)))) },
   { key := { q := 16, n := 15, r := 13 }
     lowerValue := 16
-    upperValue := 128
+    upperValue := 87
     lowerTrace := (.radiusBack (by decide : 13 ≤ 14) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 15 14)))
-    upperTrace := (.lengthenDummyN 12 (by decide : 0 < 16) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1))) },
+    upperTrace := (.lengthenDummyN 11 (by decide : 0 < 16) (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2))) },
   { key := { q := 16, n := 15, r := 14 }
     lowerValue := 16
     upperValue := 16
@@ -1075,14 +1075,14 @@ def precomputedTable_chunk_156 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 10 (by decide : 0 < 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2))) },
   { key := { q := 16, n := 16, r := 13 }
     lowerValue := 16
-    upperValue := 2048
+    upperValue := 1392
     lowerTrace := (.lengthBack (by decide : 0 < 16) (.radiusBack (by decide : 13 ≤ 14) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 15 14))))
-    upperTrace := (.lengthenDummyN 12 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1)))) },
+    upperTrace := (.lengthenDummyN 11 (by decide : 0 < 16) (.lengthenFreeN 1 (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2)))) },
   { key := { q := 16, n := 16, r := 14 }
     lowerValue := 16
-    upperValue := 128
+    upperValue := 87
     lowerTrace := (.radiusBack (by decide : 14 ≤ 15) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 16 16 15)))
-    upperTrace := (.lengthenDummyN 13 (by decide : 0 < 16) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 16 3 1))) },
+    upperTrace := (.lengthenDummyN 12 (by decide : 0 < 16) (.primitive "lean_hexadecimary_four_two_ca_upper" (primitiveUpper_valid 16 4 2))) },
   { key := { q := 16, n := 16, r := 15 }
     lowerValue := 16
     upperValue := 16

@@ -144,6 +144,529 @@
           "clean_with_extracted": false
         }
       ]
+    },
+    {
+      "id": "K_16_4_2-lrat",
+      "name": "K_16(4,2) LRAT certificates",
+      "kind": "lrat-cnf-bundle",
+      "problem": {
+        "q": 16,
+        "n": 4,
+        "r": 2,
+        "statement": "K_16(4,2) lower-bound certificate artifacts",
+        "role": "external lower-bound finite SAT refutations"
+      },
+      "lean_targets": [
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoE01SplitLRATSmoke",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoNotGlobalSplitLRATSmoke",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoOAFromLRAT",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoOANoSymDirect",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoOAOriginalLRATSmoke",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoSupportDirect",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoSupportFromLRAT",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoSupportOriginalLRATSmoke",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT114",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT122",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT123",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT124",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT133",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT134",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT144",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT222",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT223",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT224",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT233",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT234",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT244",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT333",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT334",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT344",
+        "CoveringCodes.Database.Sources.HexadecimaryFourTwoTailBoxLRAT444"
+      ],
+      "archive": {
+        "filename": "K_16_4_2-lrat.tar.xz",
+        "format": "tar.xz",
+        "bytes": 562785004,
+        "sha256": "9d79253e5583ac146290b236406a812bd698643c3bc1ed6cdd19ba439299e387"
+      },
+      "download": {
+        "local_path": "data/external-certificates/cache/K_16_4_2-lrat.tar.xz",
+        "urls": [
+          "https://zenodo.org/api/records/20798745/files/K_16_4_2-lrat.tar.xz/content",
+          "https://zenodo.org/records/20798745/files/K_16_4_2-lrat.tar.xz?download=1"
+        ]
+      },
+      "zenodo": {
+        "doi": "10.5281/zenodo.20798745",
+        "record": "https://zenodo.org/records/20798745",
+        "record_id": "20798745",
+        "environment": "production"
+      },
+      "unpacked": {
+        "root": "data/K_16_4_2/lrat",
+        "bytes": 11169477005
+      },
+      "files": [
+        {
+          "path": "data/K_16_4_2/lrat/core/profile_lower_e01_not_block_sequential_core.cnf",
+          "bytes": 35699646,
+          "sha256": "5a43b28a2ccdff9a5268cf5da3ada10d17e846718a6e2c22e9a16e7d2e6db2a6"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/core/profile_lower_e01_not_block_sequential_core_reindexed.lrat",
+          "bytes": 1370527463,
+          "sha256": "a2bf864947fb58d4a547d4175c44e4cac337a8ef00049e2be0353fd57c2872e6"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/core/profile_lower_not_global_block_sequential_core.cnf",
+          "bytes": 482696334,
+          "sha256": "6adb302bf223c116a098c1618d1b766be6704d4c922bb5f06503b8960f8560e1"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/core/profile_lower_not_global_block_sequential_core_reindexed.lrat",
+          "bytes": 2644300868,
+          "sha256": "4623f7fe25824377fd6b3cccd77656562c0b9ad92a1a39bdaad3e3b255007d17"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/oa_36_4_6_2.cnf",
+          "bytes": 518993,
+          "sha256": "a635d024aa81ec539bfaaaf2039954316e95397e2f1e9d963d5896abd5a41880"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/oa_36_4_6_2.lrat",
+          "bytes": 20951710,
+          "sha256": "72355e30c554c2fce04ab4696c93284860908e77d44d80deec56ffb783fe7d61"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/oa_36_4_6_2_no_sym.cnf",
+          "bytes": 518848,
+          "sha256": "1d5252b25b80b212806089967bcd6efa3e7c129f33cc304e51d5002ff49a86c1"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/present_profile_support_le5_coord0_sequential.cnf",
+          "bytes": 2827592,
+          "sha256": "ca36b935222f663b7c168f03219662a93d188b88ea4361ef22adee4a63ea75d5"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/present_profile_support_le5_prefix_coord0_sequential.cnf",
+          "bytes": 2825019,
+          "sha256": "af636c916569982a10c0a2d8a19ceb828da905b912f422867acb85f299547e28"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/present_profile_support_le5_sorted_coord0_sequential.cnf",
+          "bytes": 2833519,
+          "sha256": "0b6c8e65699b6fbc63a2b8acde7c1b7870a11410ac3b78e30b2540ba6341ce53"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/present_profile_support_le5_sorted_coord0_sequential.lrat",
+          "bytes": 20152620,
+          "sha256": "62ae188796bf0abfa3e0973acbb5ff11bb31a03004bb29998da2a142bc2d9c50"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/profile_lower_e01_not_block_sequential.cnf",
+          "bytes": 71784569,
+          "sha256": "908afc53c60c006d28cb67377294287edc1d9b81b304f8ef0d4283e0b01f9790"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/profile_lower_e01_not_block_sequential.lrat",
+          "bytes": 1474068413,
+          "sha256": "b80434c4fe716191796ad5ad678fe759498c7c61593e4ae42a32b74078a06c39"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/profile_lower_not_global_block_sequential.cnf",
+          "bytes": 485006611,
+          "sha256": "6e77e222179be835dc62190fb8b4a5c951e55752b2581f5e7ce00d4108e1d564"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/profile_lower_not_global_block_sequential.lrat",
+          "bytes": 2675374429,
+          "sha256": "2a98de59634bb37cad5cbc21d33eb49b911e14c430faec00b3eb865d55808c06"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/split_not_global_prefix_core/not_global_prefix_0001_p1_r00_c00.lrat",
+          "bytes": 3415936,
+          "sha256": "3ce37606edbdbd6e74442cddc4fd12b411a7183a97b87aa95fa4781f30b60c4b"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/split_prefix_core/e01_core_prefix_001_r00_c00.lrat",
+          "bytes": 52861358,
+          "sha256": "b55d2abe563fa09b51558a5e0044223fd56987674542ba2e25f4d82b4a294c56"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/split_prefix_core/e01_core_prefix_002_r00_c01.lrat",
+          "bytes": 86642856,
+          "sha256": "6ba1e2c8649dfe18111caa30e98fd7f9eddc4a01231113c254a084a7e17bd4fe"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/split_prefix_core/e01_core_prefix_003_r00_c02.lrat",
+          "bytes": 54161954,
+          "sha256": "3fdd801d6a281c704f4fed4a33bd6943699cfa1dbbf3fbd30b6f3a9bf8c739ab"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/split_prefix_core/e01_core_prefix_004_r00_c03.lrat",
+          "bytes": 41417997,
+          "sha256": "c1cd0cab297d5d3f958af35361fb0fb310e238398d1891f0e4615102dd7b152a"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/split_prefix_core/e01_core_prefix_005_r00_c04.lrat",
+          "bytes": 106129294,
+          "sha256": "c52f8eb0d1658ffb47f88a87a05506daa7c6bb8c96b483542e0e638ed2192c7d"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_1_4_fixlow.cnf",
+          "bytes": 75469813,
+          "sha256": "6549a4d02fdbb413a4b3a38d2a8cec3320b30d68e80b300c3b8aeeb0ca4d0650"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_1_4_fixlow.lrat",
+          "bytes": 46355912,
+          "sha256": "369ea0c582650c1b506577f3056ecab9c91fe710b4a99260b24c889fc103546f"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_2_fixlow.cnf",
+          "bytes": 73614862,
+          "sha256": "3d4a57ddd56386c954e59fc37f09f4d5d05cf90a74345fc6c9051567073c14f3"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_2_fixlow.lrat",
+          "bytes": 42219453,
+          "sha256": "063e2a233453640b49dc9567544c7187abede37f1101eda0dd3ff80a8cb07e42"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_3_fixlow.cnf",
+          "bytes": 61352792,
+          "sha256": "0dd3f62e518d418d233f6b02e725b98dfd6acfdcf7e22167bd86f4b5f702b18d"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_3_fixlow.lrat",
+          "bytes": 41278129,
+          "sha256": "f03ea620de4db50df20fb6487e901d554af4ea29a780d6a1b5fa4c7b12e78fc6"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_4_fixlow.cnf",
+          "bytes": 54530069,
+          "sha256": "d1901ef55b47891863518ed63bf3f183df52d0f5954f79ae415ab40c7b629c35"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_4_fixlow.lrat",
+          "bytes": 45211915,
+          "sha256": "9232a43e7b65c3f17144792bb6b0373ab3a1784a05e5491962c97905aebb90ef"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_3_fixlow.cnf",
+          "bytes": 50239851,
+          "sha256": "fa4094d45184dabc0ef506c5030c3a9f3c1357ce6827e691884ca1da9aec8da2"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_3_fixlow.lrat",
+          "bytes": 41710069,
+          "sha256": "074456cf851d571aeb7f8dc1f87a2ca0c51370f8a307a8aa210331e88befba74"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_4_fixlow.cnf",
+          "bytes": 44063368,
+          "sha256": "5a31854819d04dcd494323b2c115d4486076c339f34e6c2dfbf8e20084cf8af9"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_4_fixlow.lrat",
+          "bytes": 36704951,
+          "sha256": "8208064dcecd2ac69d63b25800046bde0e5b2757183069b8b63b998811db27c6"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_4_4_fixlow.cnf",
+          "bytes": 38412450,
+          "sha256": "e1e44275dfa9ca375b04e5e267ea3bb8b9f4b17054a87eae4a0a2590b94247ec"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_1_4_4_fixlow.lrat",
+          "bytes": 37989502,
+          "sha256": "aa2a0e34f7a0675846b530872ae79e51a1cde8d3177f904048c52e2ee7680c83"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_2_fixlow.cnf",
+          "bytes": 52123823,
+          "sha256": "fc65287c40746b2311bbb4301b6c8f37b27f53ff6e286c7a9db9032a71cbfddc"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_2_fixlow.lrat",
+          "bytes": 48738001,
+          "sha256": "cc803cffcef154437620b4c1fc477b9b0c0b7090aa287f4dc44ed0cca7d6eb05"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_3_fixlow.cnf",
+          "bytes": 41096960,
+          "sha256": "4251abd61d4d46c47d37111eaddae35978a02cc52c781ac8b4ff2365db60b435"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_3_fixlow.lrat",
+          "bytes": 39420420,
+          "sha256": "d9d897f30e49add131665f6d5f83ccaad0fe884c49f8ccaa0a1ddd1d865380f0"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_4_fixlow.cnf",
+          "bytes": 35316810,
+          "sha256": "861a57206d787da0b0abe344330e02aa68cfed5786d38bcfc4c5a61bea8cde92"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_4_fixlow.lrat",
+          "bytes": 41461799,
+          "sha256": "e3212e5f4806475bdb44f0c170b39ebc105655b041e1447d68dbb8a0210f705d"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_3_fixlow.cnf",
+          "bytes": 31215051,
+          "sha256": "17fee86786d7e01627885996365cabb1a570512f4e090fe204e1e192512a848e"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_3_fixlow.lrat",
+          "bytes": 41392946,
+          "sha256": "0c4ba434dfed2a45c92b48cceeb627d4f1b92600bda865da32d7098c1edcad52"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_4_fixlow.cnf",
+          "bytes": 25942787,
+          "sha256": "04c894e1cc433cbb28283a9f5e8a8ee055861e0bfd9db2b97486b4e0cfdaae7e"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_4_fixlow.lrat",
+          "bytes": 64463809,
+          "sha256": "cdb7f818a3218742f657dd74c7be6f1ff52d6c3e804b56e0e6b7d5003f84413f"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_4_4_fixlow.cnf",
+          "bytes": 21196108,
+          "sha256": "60511c5f6ad6cbc3a84130af5f850c70b2a0196490837d8d20cca1fd7d89cba7"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_2_4_4_fixlow.lrat",
+          "bytes": 42696056,
+          "sha256": "919cced61e7496e3a34fb83270c6709c7d43df3f767f5a612d8d52d4ac537ae9"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_3_fixlow.cnf",
+          "bytes": 22019816,
+          "sha256": "41815726e58eee8b97f2c07476975775eb41caa98fa8bb127df175473f11a67e"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_3_fixlow.lrat",
+          "bytes": 43216603,
+          "sha256": "9633b3436ec911731cbae14675f781e0df4476860c771242c7628b25563563c0"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_4_fixlow.cnf",
+          "bytes": 17256117,
+          "sha256": "2d04d31c589cb57a410fc641389d6770eb34d12e39d71127cbb20d94aff13467"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_4_fixlow.lrat",
+          "bytes": 47858058,
+          "sha256": "f7652d261d55ed00f3cfaec49725865912ab0904ebe8b8901e0ed165f741e5a6"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_3_4_4_fixlow.cnf",
+          "bytes": 13018682,
+          "sha256": "07079d091159a74c8444f0e8422d491515c59424af960a69f128aee8a2f01155"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_3_4_4_fixlow.lrat",
+          "bytes": 49062407,
+          "sha256": "94c779b730f94a2d595e4bbbc290af6107b73f986b46d06901b9705fd09c93d4"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_4_4_4_fixlow.cnf",
+          "bytes": 9095736,
+          "sha256": "7da380e620efb3829c6a24a9c77fc240087dbb52f2acfaa0a88148c90879c2a1"
+        },
+        {
+          "path": "data/K_16_4_2/lrat/tail_box_profile_spread_4_4_4_fixlow.lrat",
+          "bytes": 159015851,
+          "sha256": "06a4f859f2371b0f591363a718fd6e6003a08e8f629dcf59bf8e96bfa55669e1"
+        }
+      ],
+      "testing": {
+        "excluded_lean_targets": {
+          "reason": "Monolithic profile LRAT replays are retained in the private bundle but are known impractical for routine Lean checks; E01 core-map smoke currently stack-overflows; use split LRAT and per-spread tail-box smoke targets for routine testing while the split certificate is incomplete.",
+          "targets": [
+            "CoveringCodes.Database.Sources.HexadecimaryFourTwoE01CoreLRATSmoke",
+            "CoveringCodes.Database.Sources.HexadecimaryFourTwoE01CoreMapSmoke",
+            "CoveringCodes.Database.Sources.HexadecimaryFourTwoE01OriginalLRATSmoke",
+            "CoveringCodes.Database.Sources.HexadecimaryFourTwoNotGlobalCoreLRATSmoke",
+            "CoveringCodes.Database.Sources.HexadecimaryFourTwoNotGlobalOriginalLRATSmoke"
+          ]
+        }
+      },
+      "generated_files": [
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel114Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-114-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_1_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_1_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel122Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-122-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_2_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_2_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel123Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-123-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_3_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_3_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel124Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-124-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_2_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel133Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-133-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_3_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_3_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel134Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-134-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_3_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel144Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-144-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_4_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_1_4_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel222Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-222-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_2_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_2_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel223Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-223-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_3_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_3_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel224Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-224-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_2_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel233Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-233-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_3_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_3_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel234Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-234-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_3_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel244Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-244-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_4_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_2_4_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel333Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-333-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_3_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_3_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel334Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-334-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_3_3_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel344Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-344-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_3_4_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_3_4_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        },
+        {
+          "path": "CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel444Data.lean",
+          "kind": "k16-4-2-tail-box-lrat-kernel-444-lean",
+          "source": [
+            "data/K_16_4_2/lrat/tail_box_profile_spread_4_4_4_fixlow.cnf",
+            "data/K_16_4_2/lrat/tail_box_profile_spread_4_4_4_fixlow.lrat"
+          ],
+          "generator": "scripts/gen_lrat_kernel_data.py",
+          "clean_with_extracted": false
+        }
+      ]
     }
   ]
 }

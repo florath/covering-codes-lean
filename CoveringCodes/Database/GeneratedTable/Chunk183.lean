@@ -344,9 +344,9 @@ def precomputedTable_chunk_183 : Array AnyBoundEntry := #[
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 19 4 1))
     upperTrace := (.lengthenFreeN 1 (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 19 3 1))) },
   { key := { q := 19, n := 4, r := 2 }
-    lowerValue := 65
+    lowerValue := 87
     upperValue := 181
-    lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 19 4 2))
+    lowerTrace := (.alphabetBack (by decide : 0 < 18) (by decide : 18 ≤ 19) (.alphabetBack (by decide : 0 < 17) (by decide : 17 ≤ 18) (.alphabetBack (by decide : 0 < 16) (by decide : 16 ≤ 17) (.primitive "lean_hexadecimary_four_two_lrat_lower" (primitiveLower_valid 16 4 2)))))
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 19) (.primitive "lean_two_block_cyclic" (primitiveUpper_valid 19 3 1))) },
   { key := { q := 19, n := 4, r := 3 }
     lowerValue := 19
