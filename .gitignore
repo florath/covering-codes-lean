@@ -25,3 +25,6 @@ CoveringCodes/Database/Sources/HexadecimaryFourTwoSupportKernelData.lean
 *.orig
 .DS_Store
 __pycache__/
+
+# Local strategy documentation
+NATIVE_DECIDE_STRATEGY.md
