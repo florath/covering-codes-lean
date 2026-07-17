@@ -182,9 +182,17 @@ CHUNK_SIZE = 500
 CHUNK_SIZE_STEPS = 20
 
 
+BATCH_SIZE = 100  # Max chunks per List.flatten call; keeps list literals < maxRecDepth 700
+
+
 def _emit_chunks(out, prefix: str, tag: str, type_str: str, items, fmt_item,
                  chunk_size: int = CHUNK_SIZE, top_noncomputable: bool = False):
-    """Emit items as private chunk defs and a top-level concatenation."""
+    """Emit items as private chunk defs, then aggregate via two-level batching.
+
+    Two-level approach avoids list literals > BATCH_SIZE elements deep, which
+    would exceed Lean's maxRecDepth 700 during elaboration of the list literal.
+    Each List.flatten call sees at most BATCH_SIZE elements.
+    """
     chunks = [items[i:i + chunk_size] for i in range(0, max(len(items), 1), chunk_size)]
     chunk_names = []
     for ci, chunk in enumerate(chunks):
@@ -196,14 +204,29 @@ def _emit_chunks(out, prefix: str, tag: str, type_str: str, items, fmt_item,
             sep = ',' if j < last else ''
             out.write(f'    {fmt_item(item)}{sep}\n')
         out.write('  ]\n\n')
-    # Top-level concatenation — noncomputable when the list is too large for the
-    # native compiler (kernel evaluator used by `decide` still reduces it fine).
-    nc = 'noncomputable ' if top_noncomputable else ''
-    out.write(f'{nc}def {prefix}K{tag} : {type_str} :=\n')
+
     if not chunk_names:
-        out.write('  []\n\n')
-    else:
-        out.write('  ' + ' ++\n  '.join(chunk_names) + '\n\n')
+        out.write(f'def {prefix}K{tag} : {type_str} :=\n  []\n\n')
+        return
+    if len(chunk_names) == 1:
+        out.write(f'def {prefix}K{tag} : {type_str} :=\n  {chunk_names[0]}\n\n')
+        return
+
+    # Group chunks into batches of BATCH_SIZE; emit one batch-def per group.
+    batches = [chunk_names[i:i + BATCH_SIZE]
+               for i in range(0, len(chunk_names), BATCH_SIZE)]
+    batch_names = []
+    for bi, batch in enumerate(batches):
+        bname = f'{prefix}K{tag}Batch{bi:04d}'
+        batch_names.append(bname)
+        inner = ',\n    '.join(batch)
+        out.write(f'private def {bname} : {type_str} :=\n'
+                  f'  List.flatten [\n    {inner}]\n\n')
+
+    # Top-level: flatten over the batch-level names.
+    inner = ',\n    '.join(batch_names)
+    out.write(f'def {prefix}K{tag} : {type_str} :=\n'
+              f'  List.flatten [\n    {inner}]\n\n')
 
 
 def _fmt_clause(clause) -> str:
@@ -247,21 +270,20 @@ def emit_lean(out, prefix: str, nvars: int, clauses, steps):
     out.write(f'def {prefix}KNVars : Nat := {nvars}\n\n')
 
     # CNF — emitted as RawNatCnf (Nat sign-magnitude encoded) for fast elaboration.
-    # KCnf is noncomputable: rawNatCnfToRawCnf produces List (List Int) which the
-    # native compiler can't handle at this scale; `decide` uses kernel reduction instead.
+    # KCnf is computable: used in native_decide for the checkLeaves kernel checker.
     _emit_chunks(out, prefix, 'RawCnf', 'RawNatCnf', clauses, _fmt_nat_clause)
-    out.write(f'noncomputable def {prefix}KCnf : RawCnf := rawNatCnfToRawCnf {prefix}KRawCnf\n\n')
+    out.write(f'def {prefix}KCnf : RawCnf := rawNatCnfToRawCnf {prefix}KRawCnf\n\n')
 
     # Steps — emitted as RawNatStep (all-Nat encoding) for fast elaboration.
-    # KRawSteps and KSteps are noncomputable for the same reason as KCnf.
+    # KRawSteps is computable (all-Nat type); KSteps applies rawNatStepsToSteps.
     _emit_chunks(out, prefix, 'RawSteps', 'List RawNatStep', steps, _fmt_raw_nat_step,
-                 chunk_size=CHUNK_SIZE_STEPS, top_noncomputable=True)
-    out.write(f'noncomputable def {prefix}KSteps : List Step := rawNatStepsToSteps {prefix}KRawSteps\n\n')
+                 chunk_size=CHUNK_SIZE_STEPS, top_noncomputable=False)
+    out.write(f'def {prefix}KSteps : List Step := rawNatStepsToSteps {prefix}KRawSteps\n\n')
 
     # Leaf and Leaves
-    out.write(f'noncomputable def {prefix}KLeaf : Leaf :=\n')
+    out.write(f'def {prefix}KLeaf : Leaf :=\n')
     out.write(f'  {{ cube := [], steps := {prefix}KSteps }}\n\n')
-    out.write(f'noncomputable def {prefix}KLeaves : List Leaf :=\n')
+    out.write(f'def {prefix}KLeaves : List Leaf :=\n')
     out.write(f'  [{prefix}KLeaf]\n\n')
 
     out.write('end Database\nend CoveringCodes\n')

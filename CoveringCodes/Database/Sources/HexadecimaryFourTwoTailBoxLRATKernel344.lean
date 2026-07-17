@@ -20,9 +20,10 @@ namespace CoveringCodes
 namespace Database
 
 set_option maxHeartbeats 0 in
+set_option maxRecDepth 100000 in
 theorem tailBox344Kernel_checked :
     LRATKernel.checkLeaves tailBox344KNVars tailBox344KCnf tailBox344KLeaves = true := by
-  decide
+  native_decide
 
 theorem tailBox344Kernel_unsat :
     ∀ v : Sat.Valuation,

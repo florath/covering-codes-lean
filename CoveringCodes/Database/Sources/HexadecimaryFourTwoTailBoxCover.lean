@@ -996,7 +996,7 @@ theorem TailBoxDirect.canonicalFourFiberSpread_size_pos
   rcases hspread with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl |
     rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl <;>
     interval_cases coord <;>
-    native_decide
+    covering_decide
 
 theorem no_normalizedTailProfile_of_cover_lowFirst
     (C : Finset (QaryWord 16 4))
@@ -1167,7 +1167,7 @@ theorem TailBoxDirect.canonicalFourFiberSpread_components_le_four
     HexadecimaryFourTwoTailBoxDirect.spread444] at hspread
   rcases hspread with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl |
     rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl <;>
-    native_decide
+    covering_decide
 
 theorem no_normalizedTailProfile_of_cover_used_cards
     (C : Finset (QaryWord 16 4))

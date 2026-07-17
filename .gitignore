@@ -18,6 +18,11 @@ data/K_8_4_2/lrat/
 data/K_9_9_5/tail/
 CoveringCodes/Database/Sources/KnownBounds/K_9_9_5_TailData.lean
 CoveringCodes/Database/Sources/HexadecimaryFourTwoTailBoxLRATKernel*Data.lean
+CoveringCodes/Database/Sources/HexadecimaryFourTwoOAKernelData.lean
+CoveringCodes/Database/Sources/HexadecimaryFourTwoSupportKernelData.lean
+
+# Local strategy documentation (not for public repo)
+NATIVE_DECIDE_STRATEGY.md
 
 *~
 *.tmp
