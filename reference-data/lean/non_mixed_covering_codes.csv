@@ -7201,7 +7201,7 @@ q,n,r,lower_bound,upper_bound,lower_bound_reference,upper_bound_reference
 5,6,48,1,1,rule_sphere_covering_bound,rule_large_radius_upper
 5,7,1,2694,3125,rule_sphere_covering_bound,lean_hamming_perfect_upper;rule_free_lengthening
 5,7,2,215,625,rule_sphere_covering_bound,lean_hamming_perfect_upper;rule_dummy_coordinate_lengthening
-5,7,3,30,325,rule_sphere_covering_bound,lean_small_explicit_upper;rule_free_lengthening;rule_dummy_coordinate_lengthening
+5,7,3,30,227,rule_sphere_covering_bound,lean_lrat_sat_upper;rule_alphabet_projection
 5,7,4,7,25,rule_sphere_covering_bound,rule_constant_symbol;rule_free_lengthening
 5,7,5,5,5,rule_radius_n_minus_one_exact;rule_radius_back_propagation,rule_constant_symbol
 5,7,6,5,5,rule_radius_n_minus_one_exact,rule_constant_symbol
@@ -9505,7 +9505,7 @@ q,n,r,lower_bound,upper_bound,lower_bound_reference,upper_bound_reference
 6,6,48,1,1,rule_sphere_covering_bound,rule_large_radius_upper
 6,7,1,7776,23328,rule_sphere_covering_bound,lean_small_explicit_upper;rule_free_lengthening
 6,7,2,499,1296,rule_sphere_covering_bound,lean_known_bounds_q6_n7_r2_synchronized_syndrome
-6,7,3,57,648,rule_sphere_covering_bound,lean_small_explicit_upper;rule_free_lengthening;rule_dummy_coordinate_lengthening
+6,7,3,57,227,rule_sphere_covering_bound,lean_lrat_sat_upper
 6,7,4,11,108,rule_sphere_covering_bound,lean_small_explicit_upper;rule_free_lengthening;rule_dummy_coordinate_lengthening
 6,7,5,6,6,rule_radius_n_minus_one_exact;rule_radius_back_propagation,rule_constant_symbol
 6,7,6,6,6,rule_radius_n_minus_one_exact,rule_constant_symbol
@@ -9554,7 +9554,7 @@ q,n,r,lower_bound,upper_bound,lower_bound_reference,upper_bound_reference
 6,8,1,40967,117649,rule_sphere_covering_bound,lean_hamming_perfect_upper;rule_alphabet_projection
 6,8,2,2267,5184,rule_sphere_covering_bound,lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks
 6,8,3,217,1296,rule_sphere_covering_bound,lean_known_bounds_q6_n7_r2_synchronized_syndrome;rule_dummy_coordinate_lengthening
-6,8,4,33,343,rule_sphere_covering_bound,lean_known_bounds_q7_n8_r4_vandermonde_syndrome;rule_alphabet_projection
+6,8,4,33,227,rule_sphere_covering_bound,lean_lrat_sat_upper;rule_dummy_coordinate_lengthening
 6,8,5,8,36,rule_sphere_covering_bound,rule_constant_symbol;rule_free_lengthening
 6,8,6,6,6,rule_radius_n_minus_one_exact;rule_radius_back_propagation,rule_constant_symbol
 6,8,7,6,6,rule_radius_n_minus_one_exact,rule_constant_symbol

@@ -17,6 +17,7 @@ import CoveringCodes.Database.Sources.SmallExplicitUpper.K_4_4_1
 import CoveringCodes.Database.Sources.SmallExplicitUpper.K_4_4_2
 import CoveringCodes.Database.Sources.SmallExplicitUpper.K_5_3_1
 import CoveringCodes.Database.Sources.SmallExplicitUpper.K_6_3_1
+import CoveringCodes.Database.Sources.SmallExplicitUpper.K_6_7_3
 import CoveringCodes.Database.Sources.SmallExplicitUpper.K_7_3_1
 import CoveringCodes.Database.Sources.SmallExplicitUpper.K_8_3_1
 import CoveringCodes.Database.Sources.SmallExplicitUpper.K_9_3_1

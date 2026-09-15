@@ -40,6 +40,7 @@ private def primitiveUpperSources : List UpperBoundSource := [
   smallExplicitQuaternary442UpperSource,
   smallExplicitQuinary531UpperSource,
   smallExplicitSenary631UpperSource,
+  Senary673LRAT.lratSenary673UpperSource,
   smallExplicitSeptenary731UpperSource,
   smallExplicitOctonary831UpperSource,
   octonaryFourRadiusTwoUpperSource,

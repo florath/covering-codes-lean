@@ -515,9 +515,9 @@ def precomputedTable_chunk_49 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 5) (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))) },
   { key := { q := 5, n := 7, r := 3 }
     lowerValue := 30
-    upperValue := 325
+    upperValue := 227
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 7 3))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 5 3 1))))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lean_lrat_sat_upper" (primitiveUpper_valid 6 7 3))) },
   { key := { q := 5, n := 7, r := 4 }
     lowerValue := 7
     upperValue := 25
