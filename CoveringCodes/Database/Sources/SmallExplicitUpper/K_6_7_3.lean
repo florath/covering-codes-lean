@@ -13,9 +13,13 @@ a CNF built from one-hot coordinate-symbol variables, plus, per codeword, a
 "disagree in >= 4 positions" cardinality constraint (encoded directly as
 clauses over the negated one-hot literals -- no auxiliary variables).
 
-The code (found by local search, transcribed from `coldcase`'s
-`K6_7_3_M227.txt`) is unchanged from the earlier `covering_decide`-based
-formalization of this cell. What changed is the *proof strategy*: that
+The 227-word code is due to Mark Marosi, "New upper and lower bounds on
+covering codes K_q(n,R) for alphabets of size 5 <= q <= 21" (arXiv:2608.19872,
+`lit_marosi_2026`), which reports it among 25 upper-bound improvements across
+5 <= q <= 21; only this one cell is formalized here so far. The code (found
+by local search) is transcribed unchanged from the paper's ancillary file
+`K6_7_3_M227.txt` and from the earlier `covering_decide`-based formalization
+of this cell. What changed is the *proof strategy*: that
 version needed `Finset`/`Fintype` enumeration over the full 6^7 = 279,936
 point space, which is proof-mode-dependent (`native_decide`: ~613s; kernel
 `decide`: infeasible -- hits `maxRecDepth` after 91 minutes with no compiled
@@ -662,7 +666,7 @@ def k673Explicit : ExplicitQaryUpper 6 7 3 227 :=
     card_le := k673CodeFinset_card_le
     covers := k673CodeFinset_covers }
 
-def lratSenary673UpperName : String := "lean_lrat_sat_upper"
+def lratSenary673UpperName : String := "lit_marosi_2026"
 
 def lratSenary673Upper (q n r : Nat) : Nat :=
   if q = 6 ∧ n = 7 ∧ r = 3 then 227 else trivialUpper q n r

@@ -22,7 +22,7 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     lowerValue := 57
     upperValue := 227
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 7 3))
-    upperTrace := (.primitive "lean_lrat_sat_upper" (primitiveUpper_valid 6 7 3)) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 7 3)) },
   { key := { q := 6, n := 7, r := 4 }
     lowerValue := 11
     upperValue := 108
@@ -272,7 +272,7 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     lowerValue := 33
     upperValue := 227
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 8 4))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lean_lrat_sat_upper" (primitiveUpper_valid 6 7 3))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 7 3))) },
   { key := { q := 6, n := 8, r := 5 }
     lowerValue := 8
     upperValue := 36
