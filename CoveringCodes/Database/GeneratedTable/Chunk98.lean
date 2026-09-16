@@ -50,9 +50,9 @@ def precomputedTable_chunk_98 : Array AnyBoundEntry := #[
     upperTrace := (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 2 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))))) },
   { key := { q := 10, n := 10, r := 8 }
     lowerValue := 10
-    upperValue := 50
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 8 ≤ 9) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 10 10 9)))
-    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 10) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 10 3 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 4 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))))) },
   { key := { q := 10, n := 10, r := 9 }
     lowerValue := 10
     upperValue := 10

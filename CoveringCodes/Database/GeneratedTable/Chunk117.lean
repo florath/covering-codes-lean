@@ -45,9 +45,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 12) (@UpperTrace.alphabetExpand 6 12 2 8 2 5184 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 12, n := 9, r := 4 }
     lowerValue := 2632
-    upperValue := 124416
+    upperValue := 67392
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 9 4))
-    upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 3 (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))))) },
+    upperTrace := (.lengthenFreeN 3 (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 9, r := 5 }
     lowerValue := 232
     upperValue := 3168
@@ -60,9 +60,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))) },
   { key := { q := 12, n := 9, r := 7 }
     lowerValue := 12
-    upperValue := 72
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 7 ≤ 8) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 12 9 8)))
-    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 12) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 9, r := 8 }
     lowerValue := 12
     upperValue := 12
@@ -290,9 +290,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 12) (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
   { key := { q := 12, n := 10, r := 4 }
     lowerValue := 19111
-    upperValue := 1327104
+    upperValue := 808704
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 10 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 12) (@UpperTrace.alphabetExpand 6 12 2 8 2 5184 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
+    upperTrace := (.lengthenFreeN 4 (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 10, r := 5 }
     lowerValue := 1413
     upperValue := 38016
@@ -310,9 +310,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 2 (by decide : 0 < 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))) },
   { key := { q := 12, n := 10, r := 8 }
     lowerValue := 12
-    upperValue := 72
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 8 ≤ 9) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 12 10 9)))
-    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 12) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 10, r := 9 }
     lowerValue := 12
     upperValue := 12
@@ -535,9 +535,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
   { key := { q := 12, n := 11, r := 4 }
     lowerValue := 146900
-    upperValue := 15925248
+    upperValue := 9704448
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 11 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 12) (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 5 (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 11, r := 5 }
     lowerValue := 9351
     upperValue := 456192
@@ -560,9 +560,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 3 (by decide : 0 < 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))) },
   { key := { q := 12, n := 11, r := 9 }
     lowerValue := 12
-    upperValue := 72
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 9 ≤ 10) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 12 11 10)))
-    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 12) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 11, r := 10 }
     lowerValue := 12
     upperValue := 12
@@ -780,9 +780,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
   { key := { q := 12, n := 12, r := 4 }
     lowerValue := 1181217
-    upperValue := 191102976
+    upperValue := 116453376
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 12 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))))) },
+    upperTrace := (.lengthenFreeN 6 (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 12, r := 5 }
     lowerValue := 65996
     upperValue := 5474304
@@ -810,9 +810,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 4 (by decide : 0 < 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))) },
   { key := { q := 12, n := 12, r := 10 }
     lowerValue := 12
-    upperValue := 72
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 10 ≤ 11) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 12 12 11)))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 12) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 12 3 1))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 12, r := 11 }
     lowerValue := 12
     upperValue := 12
@@ -1025,9 +1025,9 @@ def precomputedTable_chunk_117 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 1 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
   { key := { q := 12, n := 13, r := 4 }
     lowerValue := 9853349
-    upperValue := 2293235712
+    upperValue := 1397440512
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 12 13 4))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 2 (by decide : 0 < 12) (.lengthenFreeN 1 (@UpperTrace.alphabetExpand 6 12 2 9 2 31104 (by decide : 0 < 6) (by decide : 0 < 2) (by decide : 12 ≤ 2 * 6) (by decide : 0 < 12) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))))) },
+    upperTrace := (.lengthenFreeN 7 (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))) },
   { key := { q := 12, n := 13, r := 5 }
     lowerValue := 490500
     upperValue := 65691648

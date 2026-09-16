@@ -535,9 +535,9 @@ def precomputedTable_chunk_68 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2))))) },
   { key := { q := 7, n := 6, r := 4 }
     lowerValue := 7
-    upperValue := 23
+    upperValue := 19
     lowerTrace := (.radiusBack (by decide : 4 ≤ 5) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 7 6 5)))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 7) (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 6 4))) },
   { key := { q := 7, n := 6, r := 5 }
     lowerValue := 7
     upperValue := 7
@@ -780,14 +780,14 @@ def precomputedTable_chunk_68 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 7) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))))) },
   { key := { q := 7, n := 7, r := 4 }
     lowerValue := 16
-    upperValue := 161
+    upperValue := 133
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 7 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 7) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2))))) },
+    upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 6 4)))) },
   { key := { q := 7, n := 7, r := 5 }
     lowerValue := 7
-    upperValue := 23
+    upperValue := 19
     lowerTrace := (.radiusBack (by decide : 5 ≤ 6) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 7 7 6)))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 7) (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2)))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 7) (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 6 4)))) },
   { key := { q := 7, n := 7, r := 6 }
     lowerValue := 7
     upperValue := 7
@@ -1030,9 +1030,9 @@ def precomputedTable_chunk_68 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4)) },
   { key := { q := 7, n := 8, r := 5 }
     lowerValue := 11
-    upperValue := 161
+    upperValue := 79
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 8 5))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 7) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lean_octonary_four_two_explicit_upper" (primitiveUpper_valid 8 4 2))))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 7) (by decide : 7 ≤ 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 5))) },
   { key := { q := 7, n := 8, r := 6 }
     lowerValue := 7
     upperValue := 7

@@ -45,9 +45,9 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5))))) },
   { key := { q := 9, n := 8, r := 6 }
     lowerValue := 9
-    upperValue := 41
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 6 ≤ 7) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 9 8 7)))
-    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 9) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 2 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4)))))) },
   { key := { q := 9, n := 8, r := 7 }
     lowerValue := 9
     upperValue := 9
@@ -295,9 +295,9 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 1 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lean_known_bounds_q12_n8_r5_quotient_majority" (primitiveUpper_valid 12 8 5)))))) },
   { key := { q := 9, n := 9, r := 7 }
     lowerValue := 9
-    upperValue := 41
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 7 ≤ 8) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 9 9 8)))
-    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 9) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 3 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4)))))) },
   { key := { q := 9, n := 9, r := 8 }
     lowerValue := 9
     upperValue := 9

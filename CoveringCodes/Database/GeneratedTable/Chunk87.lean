@@ -795,9 +795,9 @@ def precomputedTable_chunk_87 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 2 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1)))) },
   { key := { q := 9, n := 6, r := 4 }
     lowerValue := 9
-    upperValue := 41
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 4 ≤ 5) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 9 6 5)))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 9) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4))))) },
   { key := { q := 9, n := 6, r := 5 }
     lowerValue := 9
     upperValue := 9
@@ -1040,14 +1040,14 @@ def precomputedTable_chunk_87 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (@UpperTrace.blockGroup 3 2 6 2 2187 (.lengthenFreeN 1 (.primitive "lean_ternary_golay_upper" (primitiveUpper_valid 3 11 2))))) },
   { key := { q := 9, n := 7, r := 4 }
     lowerValue := 30
-    upperValue := 369
+    upperValue := 351
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 7 4))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1)))) },
+    upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4)))))) },
   { key := { q := 9, n := 7, r := 5 }
     lowerValue := 9
-    upperValue := 41
+    upperValue := 39
     lowerTrace := (.radiusBack (by decide : 5 ≤ 6) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 9 7 6)))
-    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 9) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 9 3 1))) },
+    upperTrace := (.alphabetProject (by decide : 0 < 9) (by decide : 9 ≤ 10) (.alphabetProject (by decide : 0 < 10) (by decide : 10 ≤ 11) (.lengthenDummyN 1 (by decide : 0 < 11) (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4)))))) },
   { key := { q := 9, n := 7, r := 6 }
     lowerValue := 9
     upperValue := 9

@@ -95,9 +95,9 @@ def precomputedTable_chunk_115 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 42 (.lengthenDummyN 2 (by decide : 0 < 11) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 11 3 1))))) },
   { key := { q := 11, n := 48, r := 4 }
     lowerValue := 49417672748294308008726103661136373883124
-    upperValue := 3340585653487067002792693368935741699583657781
+    upperValue := 2135784270262223165719918711286785676782994319
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 11 48 4))
-    upperTrace := (.lengthenFreeN 41 (.lengthenDummyN 3 (by decide : 0 < 11) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 11 3 1))))) },
+    upperTrace := (.lengthenFreeN 42 (.alphabetProject (by decide : 0 < 11) (by decide : 11 ≤ 12) (.primitive "lit_marosi_2026" (primitiveUpper_valid 12 6 4)))) },
   { key := { q := 11, n := 48, r := 5 }
     lowerValue := 560166360569721802391171889157825144465
     upperValue := 119484434699984512767547899932127870029817864

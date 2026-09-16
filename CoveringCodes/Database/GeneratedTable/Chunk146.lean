@@ -70,14 +70,14 @@ def precomputedTable_chunk_146 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 4 (by decide : 0 < 15) (.alphabetProject (by decide : 0 < 15) (by decide : 15 ≤ 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2)))) },
   { key := { q := 15, n := 10, r := 7 }
     lowerValue := 41
-    upperValue := 1695
+    upperValue := 855
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 10 7))
-    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1)))) },
+    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4)))) },
   { key := { q := 15, n := 10, r := 8 }
     lowerValue := 15
-    upperValue := 113
+    upperValue := 57
     lowerTrace := (.radiusBack (by decide : 8 ≤ 9) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 10 9)))
-    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 15) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 15) (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4))) },
   { key := { q := 15, n := 10, r := 9 }
     lowerValue := 15
     upperValue := 15
@@ -320,14 +320,14 @@ def precomputedTable_chunk_146 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 5 (by decide : 0 < 15) (.alphabetProject (by decide : 0 < 15) (by decide : 15 ≤ 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2)))) },
   { key := { q := 15, n := 11, r := 8 }
     lowerValue := 31
-    upperValue := 1695
+    upperValue := 855
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 11 8))
-    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1)))) },
+    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4)))) },
   { key := { q := 15, n := 11, r := 9 }
     lowerValue := 15
-    upperValue := 113
+    upperValue := 57
     lowerTrace := (.radiusBack (by decide : 9 ≤ 10) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 11 10)))
-    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 15) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 15) (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4))) },
   { key := { q := 15, n := 11, r := 10 }
     lowerValue := 15
     upperValue := 15
@@ -570,14 +570,14 @@ def precomputedTable_chunk_146 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 6 (by decide : 0 < 15) (.alphabetProject (by decide : 0 < 15) (by decide : 15 ≤ 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2)))) },
   { key := { q := 15, n := 12, r := 9 }
     lowerValue := 25
-    upperValue := 1695
+    upperValue := 855
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 12 9))
-    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1)))) },
+    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4)))) },
   { key := { q := 15, n := 12, r := 10 }
     lowerValue := 15
-    upperValue := 113
+    upperValue := 57
     lowerTrace := (.radiusBack (by decide : 10 ≤ 11) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 12 11)))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 15) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 15) (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4))) },
   { key := { q := 15, n := 12, r := 11 }
     lowerValue := 15
     upperValue := 15
@@ -820,14 +820,14 @@ def precomputedTable_chunk_146 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 7 (by decide : 0 < 15) (.alphabetProject (by decide : 0 < 15) (by decide : 15 ≤ 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2)))) },
   { key := { q := 15, n := 13, r := 10 }
     lowerValue := 20
-    upperValue := 1695
+    upperValue := 855
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 13 10))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1)))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4)))) },
   { key := { q := 15, n := 13, r := 11 }
     lowerValue := 15
-    upperValue := 113
+    upperValue := 57
     lowerTrace := (.radiusBack (by decide : 11 ≤ 12) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 13 12)))
-    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 15) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 15) (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4))) },
   { key := { q := 15, n := 13, r := 12 }
     lowerValue := 15
     upperValue := 15
@@ -1070,14 +1070,14 @@ def precomputedTable_chunk_146 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 8 (by decide : 0 < 15) (.alphabetProject (by decide : 0 < 15) (by decide : 15 ≤ 16) (.primitive "lean_known_bounds_q16_n6_r2_gf8_binary_lift" (primitiveUpper_valid 16 6 2)))) },
   { key := { q := 15, n := 14, r := 11 }
     lowerValue := 17
-    upperValue := 1695
+    upperValue := 855
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 15 14 11))
-    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1)))) },
+    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 15) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4)))) },
   { key := { q := 15, n := 14, r := 12 }
     lowerValue := 15
-    upperValue := 113
+    upperValue := 57
     lowerTrace := (.radiusBack (by decide : 12 ≤ 13) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 15 14 13)))
-    upperTrace := (.lengthenDummyN 11 (by decide : 0 < 15) (.primitive "lean_small_explicit_upper" (primitiveUpper_valid 15 3 1))) },
+    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 15) (.primitive "lit_marosi_2026" (primitiveUpper_valid 15 6 4))) },
   { key := { q := 15, n := 14, r := 13 }
     lowerValue := 15
     upperValue := 15
