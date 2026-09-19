@@ -30,14 +30,14 @@ def precomputedTable_chunk_90 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 9 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 9, n := 18, r := 13 }
     lowerValue := 24
-    upperValue := 6561
+    upperValue := 6156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 18 13))
-    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
+    upperTrace := (.lengthenDummyN 8 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 9, n := 18, r := 14 }
     lowerValue := 9
-    upperValue := 729
+    upperValue := 684
     lowerTrace := (.lengthBack (by decide : 0 < 9) (.lengthBack (by decide : 0 < 9) (.radiusBack (by decide : 14 ≤ 15) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 9 16 15)))))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
+    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 9) (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 18, r := 15 }
     lowerValue := 9
     upperValue := 81
@@ -280,14 +280,14 @@ def precomputedTable_chunk_90 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 10 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 9, n := 19, r := 14 }
     lowerValue := 20
-    upperValue := 6561
+    upperValue := 6156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 19 14))
-    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
+    upperTrace := (.lengthenDummyN 9 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 9, n := 19, r := 15 }
     lowerValue := 9
-    upperValue := 729
+    upperValue := 684
     lowerTrace := (.lengthBack (by decide : 0 < 9) (.lengthBack (by decide : 0 < 9) (.radiusBack (by decide : 15 ≤ 16) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 9 17 16)))))
-    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
+    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 9) (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 19, r := 16 }
     lowerValue := 9
     upperValue := 9
@@ -530,9 +530,9 @@ def precomputedTable_chunk_90 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 11 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 9, n := 20, r := 15 }
     lowerValue := 16
-    upperValue := 6561
+    upperValue := 6156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 20 15))
-    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
+    upperTrace := (.lengthenDummyN 10 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 9, n := 20, r := 16 }
     lowerValue := 9
     upperValue := 81

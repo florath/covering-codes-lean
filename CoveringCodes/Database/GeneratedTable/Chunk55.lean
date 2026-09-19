@@ -130,19 +130,19 @@ def precomputedTable_chunk_55 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 3 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
   { key := { q := 5, n := 36, r := 5 }
     lowerValue := 36236051160908051
-    upperValue := 931322574615478515625
+    upperValue := 886619091033935546875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 36 5))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 4 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))) },
   { key := { q := 5, n := 36, r := 6 }
     lowerValue := 1736558715541954
-    upperValue := 186264514923095703125
+    upperValue := 177323818206787109375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 36 6))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 5 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 36, r := 7 }
     lowerValue := 100255615042374
-    upperValue := 37252902984619140625
+    upperValue := 35464763641357421875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 36 7))
-    upperTrace := (.lengthenFreeN 23 (.lengthenDummyN 6 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 36, r := 8 }
     lowerValue := 6837374969187
     upperValue := 1490116119384765625
@@ -375,19 +375,19 @@ def precomputedTable_chunk_55 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 3 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
   { key := { q := 5, n := 37, r := 5 }
     lowerValue := 156885800575329326
-    upperValue := 4656612873077392578125
+    upperValue := 4433095455169677734375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 37 5))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 4 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))) },
   { key := { q := 5, n := 37, r := 6 }
     lowerValue := 7286093008910229
-    upperValue := 931322574615478515625
+    upperValue := 886619091033935546875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 37 6))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 5 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 37, r := 7 }
     lowerValue := 407235439903019
-    upperValue := 186264514923095703125
+    upperValue := 177323818206787109375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 37 7))
-    upperTrace := (.lengthenFreeN 24 (.lengthenDummyN 6 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 37, r := 8 }
     lowerValue := 26859629931198
     upperValue := 7450580596923828125
@@ -620,19 +620,19 @@ def precomputedTable_chunk_55 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 3 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
   { key := { q := 5, n := 38, r := 5 }
     lowerValue := 681989036302825868
-    upperValue := 23283064365386962890625
+    upperValue := 22165477275848388671875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 38 5))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 4 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 29 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))) },
   { key := { q := 5, n := 38, r := 6 }
     lowerValue := 30723095042212076
-    upperValue := 4656612873077392578125
+    upperValue := 4433095455169677734375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 38 6))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 5 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 38, r := 7 }
     lowerValue := 1664129960622509
-    upperValue := 931322574615478515625
+    upperValue := 886619091033935546875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 38 7))
-    upperTrace := (.lengthenFreeN 25 (.lengthenDummyN 6 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 38, r := 8 }
     lowerValue := 106263324635402
     upperValue := 37252902984619140625
@@ -865,19 +865,19 @@ def precomputedTable_chunk_55 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 3 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
   { key := { q := 5, n := 39, r := 5 }
     lowerValue := 2975957273803039618
-    upperValue := 116415321826934814453125
+    upperValue := 110827386379241943359375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 39 5))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 4 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 30 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))) },
   { key := { q := 5, n := 39, r := 6 }
     lowerValue := 130160875573002647
-    upperValue := 23283064365386962890625
+    upperValue := 22165477275848388671875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 39 6))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 5 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 39, r := 7 }
     lowerValue := 6838917830012498
-    upperValue := 4656612873077392578125
+    upperValue := 4433095455169677734375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 39 7))
-    upperTrace := (.lengthenFreeN 26 (.lengthenDummyN 6 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 39, r := 8 }
     lowerValue := 423217976368143
     upperValue := 186264514923095703125
@@ -1110,19 +1110,19 @@ def precomputedTable_chunk_55 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 30 (.lengthenDummyN 3 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
   { key := { q := 5, n := 40, r := 5 }
     lowerValue := 13032979015219993503
-    upperValue := 582076609134674072265625
+    upperValue := 554136931896209716796875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 40 5))
-    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 4 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 31 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))) },
   { key := { q := 5, n := 40, r := 6 }
     lowerValue := 553899671752975600
-    upperValue := 116415321826934814453125
+    upperValue := 110827386379241943359375
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 40 6))
-    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 5 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 29 (.lengthenDummyN 1 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 40, r := 7 }
     lowerValue := 28256064213070524
-    upperValue := 23283064365386962890625
+    upperValue := 22165477275848388671875
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 5 40 7))
-    upperTrace := (.lengthenFreeN 27 (.lengthenDummyN 6 (by decide : 0 < 5) (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 5 6 1))))) },
+    upperTrace := (.lengthenFreeN 28 (.lengthenDummyN 2 (by decide : 0 < 5) (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 5) (by decide : 5 ≤ 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)))))) },
   { key := { q := 5, n := 40, r := 8 }
     lowerValue := 1696216769459182
     upperValue := 931322574615478515625

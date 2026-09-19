@@ -1025,9 +1025,9 @@ def precomputedTable_chunk_68 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n7_r2_pair_syndrome_linear" (primitiveUpper_valid 7 7 2))) },
   { key := { q := 7, n := 8, r := 4 }
     lowerValue := 56
-    upperValue := 343
+    upperValue := 316
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 8 4))
-    upperTrace := (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4)) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 7 8 4)) },
   { key := { q := 7, n := 8, r := 5 }
     lowerValue := 11
     upperValue := 79

@@ -265,14 +265,14 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)) },
   { key := { q := 6, n := 8, r := 3 }
     lowerValue := 217
-    upperValue := 1296
+    upperValue := 1005
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 8 3))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n7_r2_synchronized_syndrome" (primitiveUpper_valid 6 7 2))) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 8 3)) },
   { key := { q := 6, n := 8, r := 4 }
     lowerValue := 33
-    upperValue := 227
+    upperValue := 166
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 8 4))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 7 3))) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 8 4)) },
   { key := { q := 6, n := 8, r := 5 }
     lowerValue := 8
     upperValue := 36
@@ -515,14 +515,14 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))) },
   { key := { q := 6, n := 9, r := 4 }
     lowerValue := 112
-    upperValue := 1296
+    upperValue := 660
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 9 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n7_r2_synchronized_syndrome" (primitiveUpper_valid 6 7 2))) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4)) },
   { key := { q := 6, n := 9, r := 5 }
     lowerValue := 21
-    upperValue := 216
+    upperValue := 119
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 9 5))
-    upperTrace := (.lengthenFreeN 2 (.primitive "rule_constant_symbol" (primitiveUpper_valid 6 7 5))) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5)) },
   { key := { q := 6, n := 9, r := 6 }
     lowerValue := 6
     upperValue := 36
@@ -760,19 +760,19 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
   { key := { q := 6, n := 10, r := 4 }
     lowerValue := 411
-    upperValue := 5184
+    upperValue := 3960
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 10 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4))) },
   { key := { q := 6, n := 10, r := 5 }
     lowerValue := 65
-    upperValue := 1296
+    upperValue := 660
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 10 5))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n7_r2_synchronized_syndrome" (primitiveUpper_valid 6 7 2))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4))) },
   { key := { q := 6, n := 10, r := 6 }
     lowerValue := 15
-    upperValue := 216
+    upperValue := 119
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 10 6))
-    upperTrace := (.lengthenFreeN 2 (.primitive "rule_constant_symbol" (primitiveUpper_valid 6 8 6))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5))) },
   { key := { q := 6, n := 10, r := 7 }
     lowerValue := 6
     upperValue := 36
@@ -1005,24 +1005,24 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
   { key := { q := 6, n := 11, r := 4 }
     lowerValue := 1590
-    upperValue := 31104
+    upperValue := 23760
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 11 4))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) },
+    upperTrace := (.lengthenFreeN 2 (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4))) },
   { key := { q := 6, n := 11, r := 5 }
     lowerValue := 217
-    upperValue := 5184
+    upperValue := 3960
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 11 5))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4)))) },
   { key := { q := 6, n := 11, r := 6 }
     lowerValue := 41
-    upperValue := 1296
+    upperValue := 660
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 11 6))
-    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 6) (.primitive "lean_known_bounds_q6_n7_r2_synchronized_syndrome" (primitiveUpper_valid 6 7 2))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4))) },
   { key := { q := 6, n := 11, r := 7 }
     lowerValue := 11
-    upperValue := 216
+    upperValue := 119
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 11 7))
-    upperTrace := (.lengthenFreeN 2 (.primitive "rule_constant_symbol" (primitiveUpper_valid 6 9 7))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 6) (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 5))) },
   { key := { q := 6, n := 11, r := 8 }
     lowerValue := 6
     upperValue := 36
@@ -1250,13 +1250,13 @@ def precomputedTable_chunk_59 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 2 (.lengthenDummyN 1 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
   { key := { q := 6, n := 12, r := 4 }
     lowerValue := 6430
-    upperValue := 186624
+    upperValue := 142560
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 12 4))
-    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 2 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2))))) },
+    upperTrace := (.lengthenFreeN 3 (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4))) },
   { key := { q := 6, n := 12, r := 5 }
     lowerValue := 774
-    upperValue := 31104
+    upperValue := 23760
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 6 12 5))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q6_n8_r2_mixed_radius_one_blocks" (primitiveUpper_valid 6 8 2)))) }]
+    upperTrace := (.lengthenFreeN 1 (.lengthenDummyN 1 (by decide : 0 < 6) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 6 9 4))))) }]
 
 end CoveringCodes.Database

@@ -25,14 +25,14 @@ def precomputedTable_chunk_80 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 6 (by decide : 0 < 8) (.primitive "lean_K_8_10_4_stage2_gf8_product_upper" (primitiveUpper_valid 8 10 4))) },
   { key := { q := 8, n := 16, r := 11 }
     lowerValue := 25
-    upperValue := 4096
+    upperValue := 2592
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 16 11))
-    upperTrace := (.lengthenFreeN 3 (.primitive "rule_constant_symbol" (primitiveUpper_valid 8 13 11))) },
+    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 10 6)))) },
   { key := { q := 8, n := 16, r := 12 }
     lowerValue := 8
-    upperValue := 512
+    upperValue := 324
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 16 12))
-    upperTrace := (.lengthenFreeN 2 (.primitive "rule_constant_symbol" (primitiveUpper_valid 8 14 12))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 10 6))) },
   { key := { q := 8, n := 16, r := 13 }
     lowerValue := 8
     upperValue := 64
@@ -275,14 +275,14 @@ def precomputedTable_chunk_80 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 7 (by decide : 0 < 8) (.primitive "lean_K_8_10_4_stage2_gf8_product_upper" (primitiveUpper_valid 8 10 4))) },
   { key := { q := 8, n := 17, r := 12 }
     lowerValue := 20
-    upperValue := 4096
+    upperValue := 2592
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 17 12))
-    upperTrace := (.lengthenFreeN 3 (.primitive "rule_constant_symbol" (primitiveUpper_valid 8 14 12))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 10 6)))) },
   { key := { q := 8, n := 17, r := 13 }
     lowerValue := 8
-    upperValue := 512
+    upperValue := 324
     lowerTrace := (.lengthBack (by decide : 0 < 8) (.lengthBack (by decide : 0 < 8) (.radiusBack (by decide : 13 ≤ 14) (.primitive "rule_radius_n_minus_one_exact" (primitiveLower_valid 8 15 14)))))
-    upperTrace := (.lengthenFreeN 2 (.primitive "rule_constant_symbol" (primitiveUpper_valid 8 15 13))) },
+    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 10 6))) },
   { key := { q := 8, n := 17, r := 14 }
     lowerValue := 8
     upperValue := 8
@@ -525,9 +525,9 @@ def precomputedTable_chunk_80 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 8 (by decide : 0 < 8) (.primitive "lean_K_8_10_4_stage2_gf8_product_upper" (primitiveUpper_valid 8 10 4))) },
   { key := { q := 8, n := 18, r := 13 }
     lowerValue := 16
-    upperValue := 4096
+    upperValue := 2592
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 18 13))
-    upperTrace := (.lengthenFreeN 3 (.primitive "rule_constant_symbol" (primitiveUpper_valid 8 15 13))) },
+    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 10 6)))) },
   { key := { q := 8, n := 18, r := 14 }
     lowerValue := 8
     upperValue := 64

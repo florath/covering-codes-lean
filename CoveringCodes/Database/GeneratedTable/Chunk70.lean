@@ -20,14 +20,14 @@ def precomputedTable_chunk_70 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 5 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 14, r := 9 }
     lowerValue := 26
-    upperValue := 2401
+    upperValue := 1680
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 14 9))
-    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4)))) },
+    upperTrace := (.lengthenDummyN 4 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 7 9 5)))) },
   { key := { q := 7, n := 14, r := 10 }
     lowerValue := 8
-    upperValue := 343
+    upperValue := 240
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 14 10))
-    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4))) },
+    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 7) (.primitive "lit_marosi_2026" (primitiveUpper_valid 7 9 5))) },
   { key := { q := 7, n := 14, r := 11 }
     lowerValue := 7
     upperValue := 49
@@ -270,14 +270,14 @@ def precomputedTable_chunk_70 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 6 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 15, r := 10 }
     lowerValue := 20
-    upperValue := 2401
+    upperValue := 1680
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 15 10))
-    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4)))) },
+    upperTrace := (.lengthenDummyN 5 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 7 9 5)))) },
   { key := { q := 7, n := 15, r := 11 }
     lowerValue := 7
-    upperValue := 343
+    upperValue := 240
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 15 11))
-    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 7) (.primitive "lit_marosi_2026" (primitiveUpper_valid 7 9 5))) },
   { key := { q := 7, n := 15, r := 12 }
     lowerValue := 7
     upperValue := 7
@@ -520,9 +520,9 @@ def precomputedTable_chunk_70 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 7 (by decide : 0 < 7) (.primitive "lean_known_bounds_q7_n9_r3_product" (primitiveUpper_valid 7 9 3))) },
   { key := { q := 7, n := 16, r := 11 }
     lowerValue := 16
-    upperValue := 2401
+    upperValue := 1680
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 7 16 11))
-    upperTrace := (.lengthenDummyN 7 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q7_n8_r4_vandermonde_syndrome" (primitiveUpper_valid 7 8 4)))) },
+    upperTrace := (.lengthenDummyN 6 (by decide : 0 < 7) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 7 9 5)))) },
   { key := { q := 7, n := 16, r := 12 }
     lowerValue := 7
     upperValue := 49

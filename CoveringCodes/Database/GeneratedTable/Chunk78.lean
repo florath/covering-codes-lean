@@ -530,9 +530,9 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (@UpperTrace.blockGroup 2 3 8 3 8192 (.lengthenFreeN 1 (.primitive "lean_hamming_perfect_upper" (primitiveUpper_valid 2 23 3)))) },
   { key := { q := 8, n := 8, r := 4 }
     lowerValue := 89
-    upperValue := 729
+    upperValue := 505
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 8 4))
-    upperTrace := (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4))) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 4)) },
   { key := { q := 8, n := 8, r := 5 }
     lowerValue := 15
     upperValue := 79
@@ -775,14 +775,14 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 8, n := 9, r := 4 }
     lowerValue := 403
-    upperValue := 5832
+    upperValue := 4040
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 9 4))
-    upperTrace := (.lengthenFreeN 1 (.alphabetProject (by decide : 0 < 8) (by decide : 8 ≤ 9) (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4)))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 4))) },
   { key := { q := 8, n := 9, r := 5 }
     lowerValue := 55
-    upperValue := 632
+    upperValue := 505
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 9 5))
-    upperTrace := (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 5))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 4))) },
   { key := { q := 8, n := 9, r := 6 }
     lowerValue := 11
     upperValue := 79
@@ -1025,14 +1025,14 @@ def precomputedTable_chunk_78 : Array AnyBoundEntry := #[
     upperTrace := (.primitive "lean_K_8_10_4_stage2_gf8_product_upper" (primitiveUpper_valid 8 10 4)) },
   { key := { q := 8, n := 10, r := 5 }
     lowerValue := 225
-    upperValue := 5056
+    upperValue := 4040
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 10 5))
-    upperTrace := (.lengthenFreeN 2 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 5))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 4)))) },
   { key := { q := 8, n := 10, r := 6 }
     lowerValue := 37
-    upperValue := 632
+    upperValue := 324
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 8 10 6))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 8) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 8 5)))) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 8 10 6)) },
   { key := { q := 8, n := 10, r := 7 }
     lowerValue := 9
     upperValue := 64

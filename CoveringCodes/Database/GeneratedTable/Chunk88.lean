@@ -285,9 +285,9 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n8_r4_block_product" (primitiveUpper_valid 9 8 4))) },
   { key := { q := 9, n := 9, r := 5 }
     lowerValue := 83
-    upperValue := 729
+    upperValue := 684
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 9 5))
-    upperTrace := (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)) },
+    upperTrace := (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5)) },
   { key := { q := 9, n := 9, r := 6 }
     lowerValue := 15
     upperValue := 264
@@ -530,14 +530,14 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 9, n := 10, r := 5 }
     lowerValue := 380
-    upperValue := 6561
+    upperValue := 6156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 10 5))
-    upperTrace := (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
+    upperTrace := (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 10, r := 6 }
     lowerValue := 55
-    upperValue := 729
+    upperValue := 684
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 10 6))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 10, r := 7 }
     lowerValue := 12
     upperValue := 264
@@ -780,14 +780,14 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 2 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 9, n := 11, r := 6 }
     lowerValue := 228
-    upperValue := 6561
+    upperValue := 6156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 11 6))
-    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
+    upperTrace := (.lengthenDummyN 1 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 9, n := 11, r := 7 }
     lowerValue := 38
-    upperValue := 729
+    upperValue := 684
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 11 7))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 9) (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 11, r := 8 }
     lowerValue := 9
     upperValue := 81
@@ -1030,14 +1030,14 @@ def precomputedTable_chunk_88 : Array AnyBoundEntry := #[
     upperTrace := (.lengthenDummyN 3 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r3_gf9_product" (primitiveUpper_valid 9 9 3))) },
   { key := { q := 9, n := 12, r := 7 }
     lowerValue := 147
-    upperValue := 6561
+    upperValue := 6156
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 12 7))
-    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5)))) },
+    upperTrace := (.lengthenDummyN 2 (by decide : 0 < 9) (.lengthenFreeN 1 (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5)))) },
   { key := { q := 9, n := 12, r := 8 }
     lowerValue := 28
-    upperValue := 729
+    upperValue := 684
     lowerTrace := (.primitive "rule_sphere_covering_bound" (primitiveLower_valid 9 12 8))
-    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 9) (.primitive "lean_known_bounds_q9_n9_r5_systematic_syndrome" (primitiveUpper_valid 9 9 5))) },
+    upperTrace := (.lengthenDummyN 3 (by decide : 0 < 9) (.primitive "lit_marosi_2026" (primitiveUpper_valid 9 9 5))) },
   { key := { q := 9, n := 12, r := 9 }
     lowerValue := 9
     upperValue := 81
